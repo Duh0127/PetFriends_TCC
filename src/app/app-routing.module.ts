@@ -1,3 +1,4 @@
+import { ReservaComponent } from './components/reserva/reserva.component';
 import { ClienteCadastroComponent } from './components/cadastro/cliente-cadastro/cliente-cadastro.component';
 import { AssociadoLoginComponent } from './components/login/associado-login/associado-login.component';
 import { HomeComponent } from './components/home/home.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
     {path:'login-cliente', component:ClienteLoginComponent},
     {path:'login-associado', component:AssociadoLoginComponent},
     {path:'cadastro-cliente', component:ClienteCadastroComponent},
-    {path:'cadastro-associado', component:AssociadoCadastroComponent}
+    {path:'cadastro-associado', component:AssociadoCadastroComponent},
+    {path:'reserva', component:ReservaComponent}
 ];
 
 @NgModule({

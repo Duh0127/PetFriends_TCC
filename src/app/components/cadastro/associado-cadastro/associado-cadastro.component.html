@@ -1,1 +1,127 @@
-<p>associado-cadastro works!</p>
+<body>
+  <div class="card" id="telaCadastro">
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <img src="/assets/img/logohoriz.png" class="img" />
+          <br />
+
+          <div class="row">
+            <div class="col-8">
+              <label for="exampleInputName" class="form-label"
+                >Nome Associado:
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputName"
+                aria-describedby="nomeHelp"
+                placeholder="Digite o nome aqui..."
+                style="width: 430px"
+              />
+              <div id="nomeHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputCnpj" class="form-label">CNPJ: </label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputCnpj"
+                placeholder="xx.xxx.xxx/000x-xx"
+                maxlength="15"
+                style="width: 221px;"
+              />
+            </div>
+          </div>
+          <!--fim div row-->
+
+          <div class="row">
+            <div class="col-8">
+              <label for="exampleInputEndereco" class="form-label"
+                >Endereço:
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputEndereco"
+                aria-describedby="enderecoHelp"
+                placeholder="Digite seu endereço aqui..."
+                style="width: 430px"
+              />
+              <div id="enderecoHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail" class="form-label">Tipo de Associado: </label>
+              <br>
+              <select autofocus style="width: 220px;">
+                <option value="PetShop">Pet Shop</option>
+                <option value="Veterinario">Veterinário</option>
+              </select>
+            </div>
+          </div>
+          <!--fim div row-->
+
+            <div class="mb-3">
+              <label for="exampleInputEmail" class="form-label">E-mail: </label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail"
+                placeholder="seuemail@dominio.com"
+                style="width: 700px"
+              />
+            </div>
+
+            <div class="row">
+              <div class="col-5">
+                <label for="exampleInputSenha" class="form-label">Senha:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputSenha"
+                  aria-describedby="senhaHelp"
+                  style="width: 340px;"
+                />
+                <div id="senhaHelp" class="form-text"></div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputSenha" class="form-label">Confirmar Senha: </label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputSenha"
+                  style="width: 335px; margin-left: 70px;"
+                />
+              </div>
+            </div>
+            <!--fim div row-->
+
+            <div class="col-5">
+            <button
+              type="submit"
+              class="btn btn-primary btn-block neon-blue zoom"
+              style="margin-left: 207px;"
+            >
+              Cadastrar Associado
+            </button>
+            </div>
+        </div>
+        <!--fim div row-->
+      </form>
+
+      <button type="button" class="btn btn-link" routerLink="/login-associado" style="margin-left: 207px;">
+        Login
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-link"
+        id="margleft"
+        routerLink="/cadastro-cliente">É Cliente?
+      </button>
+    </div>
+  </div>
+  <button type="button" class="btn btn-link" routerLink="" style="margin-left: 207px;">
+    Voltar para home
+  </button>
+</body>

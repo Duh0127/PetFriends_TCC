@@ -1,0 +1,52 @@
+#telaCadastro{
+  width: 750px;
+  position: absolute;
+  top: 43.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 5px 30px rgb(99, 99, 99);
+  opacity: 1;
+
+}
+
+.img {
+  height: 90px;
+  margin-left: 10.5vw;
+  margin-top: -1.5vh;
+}
+
+.card{
+  border-radius: 25px;
+  margin-top: 70px;
+}
+
+#margleft{
+  margin-left: 6vw;
+}
+
+.conf-senha{
+  margin-left: 68px;
+}
+
+.zoom{
+max-width: 100%;
+-moz-transition: all 0.5s;
+-webkit-transition: all 0.5s;
+transition: translate(10%,10%);
+overflow: hidden;
+}
+
+.zoom:hover{
+-moz-transform: scale(1.20,1.20);
+-webkit-transform: scale(1.20,1.20);
+transform: scale(1.02);
+}
+
+.neon-blue{
+cursor: pointer;
+overflow: hidden;
+}
+.neon-blue:hover{
+box-shadow: 0 0 3px #ff9100;
+}
+

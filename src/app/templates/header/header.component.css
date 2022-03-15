@@ -1,0 +1,46 @@
+.logo{ /*foto do logo*/
+  margin-left: 18vw;
+}
+
+.box-search{ /*barra de pesquisa*/
+  margin-left: -8vw;
+  margin-top: 2vh;
+  box-shadow: 5 5 15px rgb(49, 49, 49);
+
+}
+
+.tp{ /*topicos que estruturam os outros*/
+  margin-left: 35vw;
+}
+
+#embaixo{ /*topicos embaixo da barra de pesquisa*/
+  padding-right: 10vw;
+  margin-left: -7vw;
+
+}
+
+#imagens{
+  margin-top: 2vh;
+  margin-right: 0.2vw;
+  width: 25px;
+  height: 29px;
+  cursor: pointer;
+}
+
+.zoom{
+  max-width: 100%;
+  -moz-transition: all 10s;
+  -webkit-transition: all 10s;
+  transition: translate(10%,10%);
+}
+
+.zoom:hover{
+  -moz-transform: scale(1.25,1.25);
+  -webkit-transform: scale(1.25,1.25);
+  transform: scale(1.2);
+  transition: transform .5s ease;
+}
+
+
+
+

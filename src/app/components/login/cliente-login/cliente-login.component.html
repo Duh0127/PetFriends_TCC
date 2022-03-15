@@ -1,29 +1,36 @@
 <body>
-  <div class="card " id="telaLogin">
+  <div class="card" id="telaLogin">
     <div class="card-body">
-
       <form>
         <div class="mb-3">
-          <img src="/assets/img/logovert.png" class="img">
+          <img src="/assets/img/logovert.png" class="img" />
           <label for="exampleInputEmail1" class="form-label">Usuário:</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
           <div id="emailHelp" class="form-text"></div>
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Senha:</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"/>
         </div>
         <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
           <label class="form-check-label" for="exampleCheck1">Lembrar-me</label>
         </div>
         <button type="submit" class="btn btn-primary btn-block neon-blue zoom">Logar Cliente</button>
       </form>
 
-      <button type="button" class="btn btn-link">Cadastre-se</button>
+      <button type="button" class="btn btn-link" routerLink="/cadastro-cliente">Cadastre-se</button>
 
+      <button type="button" class="btn btn-link" id="margleft" routerLink="/login-associado">É Associado?</button>
     </div>
   </div>
-  <button type="button" class="btn btn-link" routerLink=''>Voltar para home</button>
+  <button type="button" class="btn btn-link" routerLink="">Voltar para home</button>
 </body>
-

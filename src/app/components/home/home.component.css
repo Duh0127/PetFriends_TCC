@@ -1,0 +1,9 @@
+.zoom{
+  max-width: 100%;
+  transition: translate(5%,5%);
+}
+
+.zoom:hover{
+  transform: scale(1.01);
+  transition: transform .2s ease;
+}

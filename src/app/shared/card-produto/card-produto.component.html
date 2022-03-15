@@ -1,0 +1,12 @@
+
+<div class="card rounded margem">
+  <img [src]="foto" class="card-img-top img img-area" alt="...">
+  <div class="card-body rounded">
+    <p class="card-text font">
+      {{nomeProduto}}
+      <br>
+      Quantidade : {{quantidade}}
+    </p>
+    <a href="reserva" class="text-primary">{{precoProduto | currency: 'BRL' }}</a>
+  </div>
+</div>
