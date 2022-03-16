@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReservaComponent implements OnInit {
 
+  carrinho: any = [
+    {id: 1, itens: 'Sachê Friskies Frango', 
+    quantidade: 1, valorUnitario: 'R$3,00'}
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

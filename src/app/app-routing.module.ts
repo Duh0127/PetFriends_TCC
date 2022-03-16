@@ -6,6 +6,9 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClienteLoginComponent } from './components/login/cliente-login/cliente-login.component';
 import { AssociadoCadastroComponent } from './components/cadastro/associado-cadastro/associado-cadastro.component';
+import { SenhaComponent } from './components/senha/senha.component';
+import { ValidacaoComponent } from './components/senha/validacao/validacao.component';
+import { RedefinicaoComponent } from './components/senha/redefinicao/redefinicao.component';
 
 
 const routes: Routes = [
@@ -15,7 +18,10 @@ const routes: Routes = [
     {path:'login-associado', component:AssociadoLoginComponent},
     {path:'cadastro-cliente', component:ClienteCadastroComponent},
     {path:'cadastro-associado', component:AssociadoCadastroComponent},
-    {path:'reserva', component:ReservaComponent}
+    {path:'reserva', component:ReservaComponent},
+    {path:'recuperacao-senha', component:SenhaComponent},
+    {path:'validacao-senha', component:ValidacaoComponent},
+    {path:'redefinicao-senha', component:RedefinicaoComponent}
 ];
 
 @NgModule({

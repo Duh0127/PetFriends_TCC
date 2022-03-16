@@ -7,3 +7,14 @@
   transform: scale(1.01);
   transition: transform .2s ease;
 }
+
+.margem-titulo{
+  margin-left: 390px;
+  margin-top: -70px;
+  margin-bottom: 30px;
+}
+.margem-titulo2{
+  margin-left: 390px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

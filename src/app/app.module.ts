@@ -12,6 +12,9 @@ import { ClienteCadastroComponent } from './components/cadastro/cliente-cadastro
 import { ReservaComponent } from './components/reserva/reserva.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { FooterComponent } from './templates/footer/footer.component';
+import { SenhaComponent } from './components/senha/senha.component';
+import { RedefinicaoComponent } from './components/senha/redefinicao/redefinicao.component';
+import { ValidacaoComponent } from './components/senha/validacao/validacao.component';
 
 
 
@@ -25,7 +28,10 @@ import { FooterComponent } from './templates/footer/footer.component';
     ClienteCadastroComponent,
     ReservaComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SenhaComponent,
+    RedefinicaoComponent,
+    ValidacaoComponent
   ],
   imports: [
     BrowserModule,

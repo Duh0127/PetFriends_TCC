@@ -1,0 +1,23 @@
+#imagemBotao{
+    width: 25px;
+}
+
+#totalCompra{
+    margin-top: 5px;
+}
+
+#trash{
+    width: 25px;
+}
+
+#contcomp{
+    margin-top: 7vh;
+    margin-left: 0.5vw;
+}
+#contcomp:hover{
+    box-shadow: 0 0 10px #ff0000;
+}
+
+#resbut:hover{
+    box-shadow: 0 0 10px #51ff00;
+}

@@ -1,0 +1,36 @@
+.img{
+    height: 100px;
+    width: 120px;
+  }
+  .img-area{
+    width: 60%;
+    height: 50%;
+    padding-top: 10px;
+    margin-left: 40px;
+  }
+
+  .card{
+    width: 12rem;
+    height: 18rem;
+  }
+
+  .font{
+    font-size:70%;
+  }
+
+  a{
+    font-size: 15px;
+    font-weight: bold;
+    font-style:unset;
+    text-decoration: none;
+  }
+
+  .margem{
+    margin-left: 05px;
+    margin-right: 05px;
+    margin-top: 10px;
+  }
+
+  .padding{
+    padding-bottom: 20px;
+  }
