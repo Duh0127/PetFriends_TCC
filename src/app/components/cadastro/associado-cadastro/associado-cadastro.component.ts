@@ -1,4 +1,8 @@
+
+import { ICadastroAssociado } from './../../../model/ICadastroAssociado.model';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CadastroAssociadoService } from 'src/app/services/cadassoc.service';
 
 @Component({
   selector: 'app-associado-cadastro',
@@ -7,9 +11,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssociadoCadastroComponent implements OnInit {
 
-  constructor() { }
+  cadastro: ICadastroAssociado = {
+    nomeCadAssociado: '',
+    enderecoCadAssociado: '',
+    emailCadAssociado: '',
+    tipoCadAssociado: '',
+    telCadAssociado: '',
+    cnpjCadAssociado: 0,
+    senhaCadAssociado: '',
+    confsenhaCadAssociado: ''
+  };
+
+
+  constructor(private cadastroService: CadastroAssociadoService, 
+              private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  
+  salvarCadastroAssoc(): void {
+    this.cadastroService.cadastrar(this.cadastro).subscribe(retorno => {
+      this.cadastro = retorno;
+    });
+    this.router.navigate(['']);
   }
 
 }

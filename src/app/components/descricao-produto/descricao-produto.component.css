@@ -1,0 +1,40 @@
+#box-white{
+    background-color: #fff;
+    width: 55vw;
+    height: 70vh;
+    border-radius: 3%;
+    margin: auto;
+    margin-top: 5vh;
+    border: 2.5px solid rgba(255, 165, 0, 0.5);
+}
+
+
+.padding{
+    padding: 20px;
+}
+ 
+.inputmargin{
+    margin-left: 20px;
+}
+
+.button{
+    margin-left: 30px;
+    width: 400px;
+    height: 30px;
+    border: 0px;
+    border-radius: 30px;
+
+}
+.marginleft{
+    margin-left: 100px;
+}
+
+.descricao{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.marginb{
+    margin-bottom: 40px;
+}
+

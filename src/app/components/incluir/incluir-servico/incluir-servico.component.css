@@ -1,0 +1,12 @@
+.bordinha{
+    border: 5px solid orange;
+    
+}
+
+.fundo-input{
+    background-color: rgb(226, 226, 226);
+}
+
+.botao{
+    margin-top: 10%;
+}

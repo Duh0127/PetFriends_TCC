@@ -1,0 +1,53 @@
+<br>
+<strong><h1><u>INCLUIR PRODUTO</u></h1></strong>
+<form class="bg-secondary p-4 mt-5 rounded bordinha">
+    <div class="form-row">
+        <div class="col-md-6 mb-3 text-light">
+            <label>Nome do produto:</label>
+            <input type="text" 
+                    class="form-control fundo-input" 
+                    name="nomeProduto" 
+                    [(ngModel)]="produto.nomeProduto">
+        </div>
+        <div class="col-md-6 mb-3 text-light">
+            <label>Descrição produto:</label>
+            <input type="text" 
+                    class="form-control fundo-input" 
+                    name="descProduto" 
+                    [(ngModel)]="produto.descProduto">
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="col-md-2 mb-3 text-light">
+            <label for="qtdade">Quantidade: </label>
+            <input
+                type="number"
+                class="form-control fundo-input"
+                placeholder="Digite a quantidade"
+                name = "qtdade"
+                [(ngModel)]="produto.qtdProduto"
+            >
+        </div>
+        <div class="col-md-4 mb-3 text-light">
+            <label>Preço do produto:</label>
+            <input type="number" 
+                    class="form-control fundo-input" 
+                    name="precoProduto" 
+                    [(ngModel)]="produto.precoProduto">
+        </div>
+        <div class="col-md-6 mb-3 text-light">
+            <label>Nome Associado:</label>
+            <input type="text" 
+                    class="form-control fundo-input" 
+                    name="assocProduto" 
+                    [(ngModel)]="produto.assocProduto">
+        </div>
+    </div>
+    
+</form>
+<button type="button" 
+            class="btn btn-success mt-3 float-right" 
+            (click)="salvarProduto()"
+    >Incluir
+    </button>

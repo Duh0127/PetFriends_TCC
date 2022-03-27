@@ -1,3 +1,37 @@
+.fundocomponent{ /*base de tudo na home*/
+  width: 57vw;
+  height: 140vh;
+  background-color: rgb(255, 255, 255);
+  margin-top: 3vh;
+  padding-right: 10vw;
+  border-radius: 1%;
+
+}
+
+hr{
+  margin-left: -10.8%;
+  margin-right: -31.7%;
+}
+
+.carousel{ /*fotos que mudam*/
+  margin-left: -5vw;
+  margin-right: -14.5vw;
+}
+
+.mar1{
+  margin-left: -10.8%;
+  margin-right: -5%
+}
+.mar3{
+  margin-left: -5%;
+  margin-right: -5%;
+}
+
+.mar5{
+  margin-left: -5%;
+  margin-right: -40%;
+}
+
 .zoom{
   max-width: 100%;
   transition: translate(5%,5%);
@@ -9,12 +43,20 @@
 }
 
 .margem-titulo{
-  margin-left: 390px;
-  margin-top: -70px;
-  margin-bottom: 30px;
+  margin-left: 21vw;
+  margin-top: 9vh;
+  margin-bottom: 3vh;
 }
 .margem-titulo2{
-  margin-left: 390px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-left: 21vw;
+  margin-top: 6vh;
+  margin-bottom: 3vh;
+}
+
+.footer{
+  margin-top: 30vh;
+  margin-left: -20.7vw;
+  width: 99.18vw;
+  height: 30vh;
+  background-color: rgb(255, 219, 152);
 }
