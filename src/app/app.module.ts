@@ -47,6 +47,7 @@ import { ComedourosBebedourosGatosComponent } from './components/dropview/gatos/
 import { ComedourosBebedourosCachorrosComponent } from './components/dropview/cachorros/comedouros-bebedouros-cachorros/comedouros-bebedouros-cachorros.component';
 import { OssinhosComponent } from './components/dropview/cachorros/ossinhos/ossinhos.component';
 import { PetiscosComponent } from './components/dropview/cachorros/petiscos/petiscos.component';
+import { HigieneGatosComponent } from './components/dropview/gatos/higiene-gatos/higiene-gatos.component';
 
 
 
@@ -94,7 +95,8 @@ import { PetiscosComponent } from './components/dropview/cachorros/petiscos/peti
     ComedourosBebedourosGatosComponent,
     ComedourosBebedourosCachorrosComponent,
     OssinhosComponent,
-    PetiscosComponent
+    PetiscosComponent,
+    HigieneGatosComponent
   ],
   imports: [
     BrowserModule,

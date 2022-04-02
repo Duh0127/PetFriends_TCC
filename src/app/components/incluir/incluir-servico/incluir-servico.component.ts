@@ -29,7 +29,7 @@ export class IncluirServicoComponent implements OnInit {
     this.servicoService.cadastrar(this.servico).subscribe(retorno => {
       this.servico = retorno;
     });
-    this.router.navigate(['']);
+    this.router.navigate(['perfil-associado']);
   }
 
 

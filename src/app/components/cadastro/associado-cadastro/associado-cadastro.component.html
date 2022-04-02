@@ -12,7 +12,7 @@
             <input type="text" 
                    class="form-control inputnome" 
                    name="nomeCadAssociado" 
-                   placeholder="DIGITE SEU NOME" 
+                   placeholder="Digite seu nome" 
                    [(ngModel)]="cadastro.nomeCadAssociado">
           </div>
 
@@ -21,7 +21,7 @@
             <input type="text" 
                    class="form-control" 
                    name="enderecoCadAssociado" 
-                   placeholder="DIGITE SEU ENDEREÇO" 
+                   placeholder="Digite o seu endereço" 
                    [(ngModel)]="cadastro.enderecoCadAssociado">
           </div>
 
@@ -30,7 +30,7 @@
             <input type="email" 
                    class="form-control" 
                    name="emailCadAssociado" 
-                   placeholder="E-MAIL" 
+                   placeholder="Digite o seu email" 
                    [(ngModel)]="cadastro.emailCadAssociado">
           </div>
 
@@ -39,7 +39,7 @@
             <input type="password" 
                    class="form-control" 
                    name="senhaCadAssociado" 
-                   placeholder="DIGITE SUA SENHA" 
+                   placeholder="Digite sua senha" 
                    [(ngModel)]="cadastro.senhaCadAssociado">
           </div>
 
@@ -61,7 +61,7 @@
           <div class="form-group">
             <label for="exampleInputPassword1">TELEFONE</label>
             <input type="tel" 
-                   placeholder="TELEFONE" 
+                   placeholder="(11) 99999-9999" 
                    class="form-control" 
                    name="telCadAssociado" 
                    [(ngModel)]="cadastro.telCadAssociado">
@@ -71,7 +71,7 @@
             <label for="exampleInputEmail1">CNPJ</label>
             <input type="number" 
                    class="form-control" 
-                   placeholder="CNPJ" 
+                   placeholder="Digite seu CNPJ" 
                    name="cnpjCadAssociado" 
                    [(ngModel)]="cadastro.cnpjCadAssociado">
           </div>
@@ -79,7 +79,7 @@
           <div class="form-group">
             <label for="exampleInputPassword1">CONFIRMAR SENHA</label>
             <input type="password" 
-                   placeholder="CONFIRME SENHA" 
+                   placeholder="Digite sua senha novamente" 
                    class="form-control" 
                    name="confsenhaCadAssociado" 
                    [(ngModel)]="cadastro.confsenhaCadAssociado"> <!--*ngIf="cadastro.confsenhaCadAssociado == cadastro.senhaCadAssociado"-->
@@ -90,7 +90,7 @@
         </div>
       </div>
     </form>
-    <button type="submit" routerLink="" class="btn btn-primary" (click)="salvarCadastroAssoc()">Cadastrar</button>
+    <button type="submit" routerLink="" class="btn btn-warning" (click)="salvarCadastroAssoc()">Cadastrar</button>
     
   </div>
 

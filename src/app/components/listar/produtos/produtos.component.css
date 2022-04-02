@@ -1,5 +1,31 @@
-.bordinha{
-    border: 5px solid orange;
-    
+body{
+    background: #ffffff url("src/assets/img/fundocachorro.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 84vh;
+    padding-top: 10%;
 }
 
+.cardproduto{
+    border: 5px solid rgb(255, 199, 96);
+    width: 80%;
+    margin: auto;
+    background-color: rgba(49, 49, 49, 0.904);
+}
+
+#listar{
+    margin-left: 10%;
+    margin-bottom: -2%;
+}
+
+#incluir{
+    float: right;
+    margin-right: 10%;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(255, 214, 79);
+    border-radius: 10px;
+    box-shadow: 2px 3px 18px rgb(117, 117, 117);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
