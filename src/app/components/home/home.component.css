@@ -1,36 +1,33 @@
-.fundocomponent{ /*base de tudo na home*/
-  width: 100vw;
+body {
+  /*base de tudo na home*/
+  width: 99.1vw;
   height: 2000px;
   background-color: rgba(255, 255, 255, 0.712);
-  
+}
+
+.carousel {
+  padding: 0;
+  margin: 0;
 }
 
 
 /*--------MARGEM CARDS----------*/
-.mar1{
+.mar1 {
   margin-left: 5%;
-  
-}
-.mar3{
-  
-}
-.mar5{
-  
-}
-/*--------MARGEM CARDS----------*/
 
-
+}
 
 
 /*TEXTO "PRODUTOS PARA SEUS PETS"*/
-.margem-titulo{
+.margem-titulo {
   margin-left: 41.7vw;
   margin-top: 9vh;
   margin-bottom: 3vh;
   color: rgb(248, 183, 61);
 }
+
 /*TEXTO "SERVIÇOS PARA SEUS PETS"*/
-.margem-titulo2{
+.margem-titulo2 {
   margin-left: 41.7vw;
   margin-top: 6%;
   margin-bottom: 2%;
@@ -39,8 +36,8 @@
 
 
 
-/*PARTE DE CADASTRO NA HOME*/
-.fundocad{
+/*------PARTE DE CADASTRO NA HOME-------*/
+.fundocad {
   width: 87%;
   height: 100px;
   margin-left: 5.4%;
@@ -48,66 +45,178 @@
   border-radius: 10px;
   background-color: antiquewhite;
 }
-.colunaum{
-  
-}
-.colunadois{
-  font-size:larger;
+
+.colunadois {
+  font-size: larger;
   margin-top: 25px;
 }
-.colunatres{
+
+.colunatres {
   margin-left: 100px;
 }
 
-#textocadastro{
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+#textocadastro {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   width: 900px;
   margin-left: 120px;
   font-size: 30px;
 }
 
-#buttonbtn{
+#buttonbtn {
   width: 150px;
   height: 40px;
   font-size: 20px;
   margin-top: 30px;
   margin-left: -50px;
-  background-color:rgb(255, 238, 0);
+  background-color: rgb(255, 238, 0);
   box-shadow: 0px 0px 15px rgb(255, 251, 21);
   border-radius: 15px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-#buttonbtn:hover{
-  width: 150px;
-  height: 40px;
-  font-size: 20px;
-  margin-top: 30px;
-  margin-left: -50px;
-  background-color:rgb(255, 217, 0);
+
+#buttonbtn:hover {
+  background-color: rgb(255, 217, 0);
   box-shadow: 0px 0px 15px rgb(255, 251, 21);
-  border-radius: 15px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-/*PARTE DE CADASTRO NA HOME*/
+/*-----PARTE DE CADASTRO NA HOME-----*/
 
 
 
-.footer{
+.footer {
   margin-top: 200px;
   width: 100%;
   height: 30vh;
   background-color: rgb(255, 219, 152);
 }
 
-.zoom{
+.zoom {
   max-width: 100%;
-  transition: translate(5%,5%);
+  transition: translate(5%, 5%);
 }
 
-.zoom:hover{
+.zoom:hover {
   transform: scale(1.01);
   transition: transform .2s ease;
 }
 
 
 
+
+
+/*------RESPONSIVO--------*/
+.carousel2 {
+  margin: 0px;
+  height: 0px;
+  width: 0px;
+  background-color: none;
+  display: none;
+}
+
+.carousel3 {
+  margin: 0px;
+  height: 0px;
+  width: 0px;
+  background-color: none;
+  display: none;
+}
+
+
+@media (max-width: 424px) {
+  .fundocomponent {
+    padding-left: 70px;
+  }
+
+  .margem-titulo {
+    width: 300px;
+    margin: -15px;
+    margin-bottom: 10px;
+  }
+
+  .margem-titulo2 {
+    width: 300px;
+    margin: -15px;
+    margin-bottom: 10px;
+  }
+
+  .footer {
+    background-color: black;
+  }
+
+  .carousel2 {
+    margin-left: 5px;
+    margin-right: 40vh;
+    margin-top: 30px;
+    margin-bottom: 250px;
+    width: 255px;
+    height: 45px;
+    size: auto;
+    display: block;
+
+  }
+
+  .carousel3 {
+    margin-left: 15px;
+    margin-right: 40vh;
+    margin-top: 30px;
+    margin-bottom: 300px;
+    width: 255px;
+    height: 45px;
+    size: auto;
+    display: block;
+  }
+
+  .itens {
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    display: none;
+  }
+
+  .mar5 {
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    display: none;
+  }
+
+  .carousel {
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  .fundocad {
+    width: 87%;
+    height: 100px;
+    margin-left: 5.4%;
+    margin-top: 80px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+  }
+
+  .colunaum {
+    display: none;
+  }
+
+  .colunadois {
+    font-size: larger;
+    margin-top: 25px;
+    display: none;
+  }
+
+  .colunatres {
+    margin-left: 100px;
+  }
+
+  #textocadastro {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 900px;
+    margin-left: 120px;
+    font-size: 30px;
+  }
+
+
+}

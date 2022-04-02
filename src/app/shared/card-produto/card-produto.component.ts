@@ -1,5 +1,8 @@
+import { ProdutosService } from './../../services/produtos.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { IProduto } from 'src/app/model/IProduto.model';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-card-produto',
@@ -16,10 +19,24 @@ export class CardProdutoComponent implements OnInit {
   @Input() quantidade: number = 0;
 
   listarProdutos: IProduto[] = [];
+  
 
-  constructor() { }
+  constructor(private produtosService : ProdutosService,
+              private activatedRouter: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit(): void {
-  }
+    this.carregarProdutos();
+    }
 
-}
+    carregarProdutos() : void{
+      this.produtosService.buscarTodos().subscribe(retorno => {
+        this.listarProdutos = retorno;
+      })
+    };
+
+
+
+
+
+  }

@@ -1,4 +1,8 @@
+import { CarrinhoService } from './../../services/carrinho.service';
+import { IProdutoCarrinho } from './../../model/IProdutoCarrinho.model';
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-reserva',
@@ -7,14 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReservaComponent implements OnInit {
 
-  carrinho: any = [
-    {id: 1, itens: 'Sachê Friskies Frango', 
-    quantidade: 1, valorUnitario: 'R$3,00'}
-  ];
+  listarCarrinho: IProdutoCarrinho[] = [];
 
-  constructor() { }
+
+  constructor(private carrinhoService : CarrinhoService) {
+
+  }
 
   ngOnInit(): void {
+    this.carregarCarrinho();
   }
+
+  carregarCarrinho() : void{
+    this.carrinhoService.buscarTodos().subscribe(retorno => {
+      this.listarCarrinho = retorno;
+    })
+  };
 
 }

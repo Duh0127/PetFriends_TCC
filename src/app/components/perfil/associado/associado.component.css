@@ -97,16 +97,17 @@
   }
   
   
-  .inputnome{
-    width: 91.6%;
-  }
-  
+
   .coluna1 input{
     width: 330px;
   }
   
   input{
     width: 350px;
+    border-style: none;
+  }
+  .input:focus{
+    border-style: none;
   }
 
   .padding{

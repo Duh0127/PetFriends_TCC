@@ -24,7 +24,6 @@ import { ServicosComponent } from './components/listar/servicos/servicos.compone
 import { IncluirProdutoComponent } from './components/incluir/incluir-produto/incluir-produto.component';
 import { IncluirServicoComponent } from './components/incluir/incluir-servico/incluir-servico.component';
 import { HttpClientModule } from '@angular/common/http';
-import { registerLocaleData } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HigieneComponent } from './components/dropview/cachorros/higiene/higiene.component';
 import { FarmaciaComponent } from './components/dropview/cachorros/farmacia/farmacia.component';

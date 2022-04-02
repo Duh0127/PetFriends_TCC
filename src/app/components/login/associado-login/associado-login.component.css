@@ -1,8 +1,8 @@
-body{
+#imagemfundo{
   background: #ffffff url("src/assets/img/fundocachorro.jpg");
   background-size: cover;
   width: 100vw;
-  height: 84vh;
+  height: 84.2vh;
   padding-top: 10%;
 }
 
@@ -43,6 +43,7 @@ h3{
 
 .btn-warning{
   width: 20.8vw;
+  box-shadow: 2px 3px 10px rgb(221, 163, 3);
 }
 
 .criar-conta{
@@ -60,6 +61,18 @@ h3{
 
 input{
   width: 400px;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background-color: transparent;
+  border-radius: 0px;
+}
+input:focus{
+  background-color: transparent;
+  box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+  border-bottom: 2px solid rgb(23, 162, 184);
+  border-radius: 0px;
 }
 
 
