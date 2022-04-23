@@ -1,0 +1,31 @@
+<body>
+    <div class="card" id="telaLogin">
+      <div class="card-body">
+        <form>
+          <div class="mb-3">
+            <img src="/assets/img/logovert.png" class="img" />
+
+            <div class="mx-auto" style="width: 160px; color: #FFA500;">
+                <h5>Auxilio de Senha</h5>
+            </div>
+            <label class="form-label"> Insira o endereço de e-mail ou o número do telefone celular associado à sua conta PetFriends.</label>
+
+            <label for="exampleInputEmail1" class="form-label"><b>Digite seu E-mail:</b></label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+    
+          <button type="submit" class="btn btn-primary btn-block neon-blue zoom" routerLink="/validacao-senha">Recuperar Senha</button>
+        </form>
+  
+        <button type="button" class="btn btn-link" style="width: 165px;" id="margleft" routerLink="/login-cliente">Voltar</button>
+  
+      </div>
+    </div>
+    <button type="button" class="btn btn-link" routerLink="">Voltar para home</button>
+  </body>

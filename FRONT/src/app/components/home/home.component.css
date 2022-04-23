@@ -1,0 +1,338 @@
+body {
+  /*base de tudo na home*/
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.712);
+}
+
+
+
+/*TEXTO "PRODUTOS PARA SEUS PETS"*/
+.margem-titulo {
+  text-align: center;
+  margin-top: 9vh;
+  margin-bottom: 8vh;
+  color: rgb(248, 183, 61);
+}
+
+
+
+/*TEXTO "SERVIÇOS PARA SEUS PETS"*/
+.margem-titulo2 {
+  margin-left: 41.7vw;
+  margin-top: 6%;
+  margin-bottom: 2%;
+}
+
+
+
+
+
+                  /*CARDS SLIDER*/
+                  /*CARDS SLIDER*/
+
+.cards{ /*TAMANHO DE LARGURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+  width: 98vw;
+}
+.card-slider{/*TAMANHO DE ALTURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+  height: 100vh;
+}
+.carousel{/*MARGINS PARA ESPAÇOS DA BORDAS*/
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.button-slider{/*POSICIONAMENTOS DOS BOTÕES*/
+  margin-top: 170px;
+  height: 50px;
+}
+.carousel-control-prev{/*COR E TAMANHO DO BOTÃO DE PREVIA*/
+  margin-left: 10px;
+  width: 40vw;
+  color: black;
+}
+.carousel-control-next{/*COR E TAMANHO DO BOTÃO DE NEXT*/
+  width: 40vw;
+  color: black;
+}
+.mar-card-slider{/*MARGEN DO PRIMEIRO CARD*/
+  margin-left: 100px;
+}
+.mar2-card-slider{/*MARGEN DO SEGUNDO CARD*/
+  margin-right: 20px;
+}
+
+
+
+
+
+              /*IMAGENS DAS CATEGORIAS*/
+              /*IMAGENS DAS CATEGORIAS*/
+
+.categorias{/*MARGENS PARA POSICIONAMENTO DE TODAS AS IMAGENS*/
+  margin-top: 50px;
+  margin-left: 19%;
+  margin-right: 16%;
+}
+.categoria{/*MARGEM PARA ESPAÇO ENTRE AS IMAGENS*/
+  margin-right: 70px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.linha1{/*MARGEM DA LINHA DE IMAGEM*/
+  margin-bottom: 50px;
+}
+.titulo-categoria{/*ALINHAMENTO DO TITULO*/
+  text-align: center;
+}
+.image_categoria{/*FORMATO E TAMANHO DAS IMAGENS*/
+  height: 210px;
+  width: 240px;
+  border-radius: 10px;
+  margin-left: 0px;
+}
+.icon-list{/*MARGEM DO ICONE DE LISTA*/
+  margin-top: 150px;
+  margin-left: 30px;
+}
+
+
+
+
+
+
+
+/*DIVISOR DO DEPARTAMENTO E DO CADASTRE-SE*/
+.divisor{
+  border-bottom: 2px solid rgb(223, 223, 223);
+  width: 199vh;
+  margin-left: -15px;
+  margin-top: 150px;
+}
+
+
+
+
+
+/*--------MARGEM CARDS----------*/
+.mar1 {
+  margin-left: 5%;
+}
+
+
+
+
+
+
+/*------PARTE DE CADASTRO NA HOME-------*/
+.fundocad {
+  width: 90%;
+  height: 100px;
+  margin-left: 5.4%;
+  margin-top: 80px;
+  border-radius: 10px;
+  background-color: antiquewhite;
+}
+.colunadois {
+  font-size: larger;
+  margin-top: 25px;
+}
+.colunatres {
+  margin-left: 100px;
+}
+#textocadastro {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 900px;
+  margin-left: 120px;
+  font-size: 30px;
+}
+#buttonbtn {
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: -50px;
+  background-color: rgb(255, 238, 0);
+  box-shadow: 0px 0px 15px rgb(255, 251, 21);
+  border-radius: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#buttonbtn:hover {
+  background-color: rgb(255, 217, 0);
+  box-shadow: 0px 0px 15px rgb(255, 251, 21);
+}
+/*-----PARTE DE CADASTRO NA HOME-----*/
+
+
+
+
+
+
+                  /*FOOTER*/
+                  /*FOOTER*/
+
+.footer {
+  margin-top: 200px;
+  height: 30vh;
+  width: 199vh;
+  border-top: 2px solid rgb(223, 223, 223);
+  margin-right: -15px;
+  margin-left: -15px;
+  background-color: #ffff;
+}
+.coluna{
+  border: 2px solid rgb(223, 223, 223);
+  height: 10vh;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+}
+.sac:hover{
+  color: rgb(248, 183, 61);
+  cursor: pointer;
+}
+.rede{
+  text-align: center;
+}
+.redes{
+  align-items: center;
+  margin-top: 5%;
+}
+.image_redonda{
+  height: 50px;
+  width: 50px;
+  border-radius: 30%;
+}
+
+
+
+
+
+
+
+
+              /*principais marcas imagens*/
+              /*principais marcas imagens*/
+.marca{
+  text-align: center;
+}
+
+.marcas{
+  margin-left: -75px;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.image_marca{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+              /*------RESPONSIVO--------*/
+              /*------RESPONSIVO--------*/
+.carousel2 {
+  margin: 0px;
+  height: 0px;
+  width: 0px;
+  background-color: none;
+  display: none;
+}
+.carousel3 {
+  margin: 0px;
+  height: 0px;
+  width: 0px;
+  background-color: none;
+  display: none;
+}
+@media (max-width: 424px) {
+  .fundocomponent {
+    padding-left: 70px;
+  }
+  .margem-titulo {
+    width: 300px;
+    margin: -15px;
+    margin-bottom: 10px;
+  }
+  .margem-titulo2 {
+    width: 300px;
+    margin: -15px;
+    margin-bottom: 10px;
+  }
+  .footer {
+    background-color: black;
+  }
+  .carousel2 {
+    margin-left: 5px;
+    margin-right: 40vh;
+    margin-top: 30px;
+    margin-bottom: 250px;
+    width: 255px;
+    height: 45px;
+    size: auto;
+    display: block;
+  }
+  .carousel3 {
+    margin-left: 15px;
+    margin-right: 40vh;
+    margin-top: 30px;
+    margin-bottom: 300px;
+    width: 255px;
+    height: 45px;
+    size: auto;
+    display: block;
+  }
+  .itens {
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    display: none;
+  }
+  .mar5 {
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    display: none;
+  }
+  .carousel {
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    display: none;
+  }
+  .fundocad {
+    width: 87%;
+    height: 100px;
+    margin-left: 5.4%;
+    margin-top: 80px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+  }
+  .colunaum {
+    display: none;
+  }
+  .colunadois {
+    font-size: larger;
+    margin-top: 25px;
+    display: none;
+  }
+  .colunatres {
+    margin-left: 100px;
+  }
+  #textocadastro {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 900px;
+    margin-left: 120px;
+    font-size: 30px;
+  }
+}

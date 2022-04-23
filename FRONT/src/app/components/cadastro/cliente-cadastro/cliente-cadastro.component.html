@@ -1,0 +1,100 @@
+<body>
+  <nav class="navbar navbar-expand navbar-dark fundonav">
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand ">
+        <img src="/assets/img/logovert.png" routerLink="" width="80" height="80" class="d-inline-block logo">
+      </a>
+      <div class="form-group container-xl ">
+      </div>
+    </nav>
+  </nav>
+
+  <div class="fundo ">
+    <form>
+      <h3 class="text-usuario padding">CADASTRO USUÁRIO</h3>
+
+      <div class="nomecompleto form-group" [formGroup]="cadastroForm" (submit)="salvarCadastroCliente()">
+        <label for="exampleInputEmail1">NOME COMPLETO</label>
+        <input type="text"
+               class="form-control inputnome"
+               placeholder="Digite o seu nome"
+               name="nomeCadCliente"
+               formControlName="nomeCadCliente">
+      </div>
+
+      <div class="row">
+        <div class="col coluna1"><!--COLUNA 1-->
+
+          <div class="form-group" [formGroup]="cadastroForm" (submit)="salvarCadastroCliente()">
+            <label for="exampleInputEmail1">ENDEREÇO</label>
+            <input type="text"
+                   class="form-control"
+                   name="emailCadCliente"
+                   placeholder="Digite o seu endereço"
+                   formControlName="enderecoCadCliente">
+          </div>
+
+          <div class="form-group" [formGroup]="cadastroForm" (submit)="salvarCadastroCliente()">
+            <label for="exampleInputEmail1">E-MAIL</label>
+            <input type="email"
+                   class="form-control"
+                   placeholder="Digite seu email"
+                   name="emailCadCliente"
+                   formControlName="emailCadCliente">
+          </div>
+
+          <div class="form-group" [formGroup]="cadastroForm" (submit)="salvarCadastroCliente()">
+            <label for="exampleInputEmail1">SENHA</label>
+            <input type="password"
+                   class="form-control"
+                   name="senhaCadCliente"
+                   placeholder="Digite sua senha"
+                   formControlName="senhaCadCliente">
+          </div>
+
+        </div><!--COLUNA 1-->
+
+
+        <div class="col coluna2"><!--COLUNA 2-->
+          <div class="form-group" [formGroup]="cadastroForm" (submit)="salvarCadastroCliente()">
+            <label for="exampleInputPassword1">TELEFONE</label>
+            <input type="tel"
+                   placeholder="(11) 99999-9999"
+                   class="form-control"
+                   name="telCadCliente"
+                   formControlName="telCadCliente">
+          </div>
+
+          <div class="form-group" [formGroup]="cadastroForm" (submit)="salvarCadastroCliente()">
+            <label for="exampleInputEmail1">CPF</label>
+            <input type="text"
+                   class="form-control"
+                   placeholder="Digite seu CPF"
+                   name="cpfCadCliente"
+                   formControlName="cpfCadCliente">
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="exampleInputPassword1">CONFIRMAR SENHA</label>
+            <input type="password"
+                   placeholder="Digite sua senha novamente"
+                   class="form-control"
+                   name="confsenhaCadCliente"
+                   >
+          </div> -->
+
+
+
+        </div>
+      </div>
+    </form>
+    <button type="submit" [disabled]="!cadastroForm.valid"  class="btn btn-warning"(click)="salvarCadastroCliente()">Cadastrar</button>
+
+
+    <h3 class="criar-conta">Ainda não possui uma conta associado? <a routerLink="/cadastro-associado">Crie a sua!</a></h3>
+  </div>
+
+
+
+
+</body>

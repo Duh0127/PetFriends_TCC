@@ -1,0 +1,147 @@
+<nav class="navbar navbar-expand navbar-dark fundonav">
+  <nav class="navbar navbar-light">
+    <a class="navbar-brand ">
+      <img src="/assets/img/logovert.png" routerLink="" width="80" height="80" class="d-inline-block logo">
+    </a>
+    <div class="form-group container-xl ">
+      <input type="text" class="form-control box-search pesquisa" placeholder="Pesquise no PetFriends">
+      <img src="/assets/img/user.png" id="login" class="zoom" routerLink="/login-cliente">
+      <img src="/assets/img/carrinho-de-compras.png" id="carrinho" class="zoom" routerLink="/reserva">
+    </div>
+    <ul class="nav tp">
+      <li class="nav-item dropdown embaixo" id="embaixo">
+        <a class="nav-link dropdown-toggle text-dark zoom" id="navbarDropdown" role="button" data-toggle="dropdown">Cachorros</a>
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/comedouros-bebeoduros-cachorros">Comedouros e Bebedouros</a>
+          <a class="dropdown-item zoomdrop" routerLink="/farmacia">Farmácia</a>
+          <a class="dropdown-item zoomdrop" routerLink="/higiene">Higiene</a>
+          <a class="dropdown-item zoomdrop" routerLink="/ossinhos">Ossinhos</a>
+          <a class="dropdown-item zoomdrop" routerLink="/petiscos">Petiscos</a>
+        </div>
+      </li>
+      <li class="nav-item mt-2" id="embaixo">
+        <a></a>
+      </li>
+      <li class="nav-item dropdown embaixo" id="embaixo">
+        <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gatos</a>
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/areia">Areia</a>
+          <a class="dropdown-item zoomdrop" routerLink="/comedouros-bebedouros-gatos">Comedouros e Bebedouros</a>
+          <a class="dropdown-item zoomdrop" routerLink="/escovas-pentes">Escovas e Pentes</a>
+          <a class="dropdown-item zoomdrop" routerLink="/higiene-gatos">Higiene</a>
+          <a class="dropdown-item zoomdrop" routerLink="/transporte">Transporte</a>
+        </div>
+      </li>
+      <li class="nav-item mt-2" id="embaixo">
+        <a></a>
+      </li>
+      <li class="nav-item dropdown embaixo" id="embaixo">
+        <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Brinquedos</a>
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/bolinhas">Bolinhas</a>
+          <a class="dropdown-item zoomdrop" routerLink="/frisbees">Frisbees</a>
+          <a class="dropdown-item zoomdrop" routerLink="/varinhas">Varinhas</a>
+        </div>
+      </li>
+      <li class="nav-item mt-2" id="embaixo">
+        <a></a>
+      </li>
+      <li class="nav-item dropdown embaixo" id="embaixo">
+        <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ração</a>
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/racao-seca">Ração Seca</a>
+          <a class="dropdown-item zoomdrop" routerLink="/racao-umida">Ração Úmida</a>
+          <a class="dropdown-item zoomdrop" routerLink="/racao-diet">Ração Diet</a>
+        </div>
+      </li>
+      <li class="nav-item mt-2" id="embaixo">
+        <a></a>
+      </li>
+      <li class="nav-item dropdown embaixo" id="embaixo">
+        <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acessórios</a>
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/camas-casinhas">Camas e Casinhas</a>
+          <a class="dropdown-item zoomdrop" routerLink="/coleiras-guias-peitorais">Coleiras, Guias e Peitorais</a>
+          <a class="dropdown-item zoomdrop" routerLink="/roupas">Roupas</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <input type="text" class="form-control box-search pesquisa2" placeholder="Pesquise no PetFriends">
+</nav>
+
+
+<body class="container-fluid">
+  <div class="my-3 text-warning"><h2>ROUPAS</h2></div>
+    
+  <div class="row centro"><!--inicio row 1-->
+    <div class="col"><!--inicio col 1-->
+        <app-card-produto
+          foto='https://static.petz.com.br/fotos/1600799325415.jpg'
+          nomeProduto="Camiseta Piticas Capitã Marvel"
+          [precoProduto]="49.99"
+          >
+        </app-card-produto>
+    </div><!--fim col 1-->
+
+    <div class="col"><!--inicio col 2-->
+        <app-card-produto
+          foto='https://static.petz.com.br/fotos/1646858878950.jpg'
+          nomeProduto="Moletom Bonito pra Cachorro Dino Neon Verde para Cães"
+          [precoProduto]="84.99">
+        </app-card-produto>
+    </div><!--fim col 2-->
+
+    <div class="col"><!--inicio col 3-->
+        <app-card-produto
+          foto='https://static.petz.com.br/fotos/1600801575224.jpg'
+          nomeProduto="Camiseta Piticas Homem Aranha"
+          [precoProduto]="49.99">
+        </app-card-produto>
+    </div><!--fim col 3-->
+
+    <div class="col"><!--inicio col 4-->
+        <app-card-produto
+          foto='https://static.petz.com.br/fotos/1638997951836.jpg'
+          nomeProduto="Regata Fábrica Pet Barbie para Cães e Gatos"
+          [precoProduto]="59.99">
+        </app-card-produto>
+    </div><!--fim col 4-->
+  </div><!--fim row 1-->
+
+  <div class="row centro"><!--inicio col 2-->
+
+    <div class="col"><!--inicio col 5-->
+      <app-card-produto
+        foto='https://static.petz.com.br/fotos/1648049780545.jpg'
+        nomeProduto="Vestido Griff Dog Lã Vermelho para Cães e Gatos"
+        [precoProduto]="59.99">
+      </app-card-produto>
+    </div><!--fim col 5-->
+
+    <div class="col"><!--inicio col 3-->
+        <app-card-produto
+          foto='https://static.petz.com.br/fotos/1632231545218.jpg'
+          nomeProduto="Camiseta Piticas Naruto Akatsuki para Cães"
+          [precoProduto]="49.99">
+        </app-card-produto>
+    </div><!--fim col 3-->
+
+    <div class="col"><!--inicio col 4-->
+        <app-card-produto
+          foto='https://static.petz.com.br/fotos/1600805767028.jpg'
+          nomeProduto="Camiseta Piticas Pantera Negra"
+          [precoProduto]="49.99">
+        </app-card-produto>
+    </div><!--fim col 4-->
+
+    <div class="col"><!--inicio col 5-->
+      <app-card-produto
+        foto='https://static.petz.com.br/fotos/1585853335327.jpg'
+        nomeProduto="Moletom Pickorruchos Soft para Cães e Gatos"
+        [precoProduto]="79.99">
+      </app-card-produto>
+    </div><!--fim col 5-->
+  </div><!--fim row 2-->
+
+</body>

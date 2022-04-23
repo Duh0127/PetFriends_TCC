@@ -1,0 +1,148 @@
+<nav class="navbar navbar-expand navbar-dark fundonav">
+  <nav class="navbar navbar-light">
+    <a class="navbar-brand ">
+      <img src="/assets/img/logovert.png" routerLink="" width="80" height="80" class="d-inline-block logo">
+    </a>
+    <div class="form-group container-xl ">
+      <input type="text" class="form-control box-search pesquisa" placeholder="Pesquise no PetFriends">
+      <img src="/assets/img/user.png" id="login" class="zoom" routerLink="/login-cliente">
+      <img src="/assets/img/carrinho-de-compras.png" id="carrinho" class="zoom" routerLink="/reserva">
+    </div>
+    <ul class="nav tp">
+      <li class="nav-item dropdown embaixo" id="embaixo">
+        <a class="nav-link dropdown-toggle text-dark zoom" id="navbarDropdown" role="button" data-toggle="dropdown">Cachorros</a>
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/comedouros-bebeoduros-cachorros">Comedouros e Bebedouros</a>
+          <a class="dropdown-item zoomdrop" routerLink="/farmacia">Farmácia</a>
+          <a class="dropdown-item zoomdrop" routerLink="/higiene">Higiene</a>
+          <a class="dropdown-item zoomdrop" routerLink="/ossinhos">Ossinhos</a>
+          <a class="dropdown-item zoomdrop" routerLink="/petiscos">Petiscos</a>
+        </div>
+      </li>
+      <li class="nav-item mt-2" id="embaixo">
+        <a></a>
+      </li>
+      <li class="nav-item dropdown embaixo" id="embaixo">
+        <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gatos</a>
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/areia">Areia</a>
+          <a class="dropdown-item zoomdrop" routerLink="/comedouros-bebedouros-gatos">Comedouros e Bebedouros</a>
+          <a class="dropdown-item zoomdrop" routerLink="/escovas-pentes">Escovas e Pentes</a>
+          <a class="dropdown-item zoomdrop" routerLink="/higiene-gatos">Higiene</a>
+          <a class="dropdown-item zoomdrop" routerLink="/transporte">Transporte</a>
+        </div>
+      </li>
+      <li class="nav-item mt-2" id="embaixo">
+        <a></a>
+      </li>
+      <li class="nav-item dropdown embaixo" id="embaixo">
+        <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Brinquedos</a>
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/bolinhas">Bolinhas</a>
+          <a class="dropdown-item zoomdrop" routerLink="/frisbees">Frisbees</a>
+          <a class="dropdown-item zoomdrop" routerLink="/varinhas">Varinhas</a>
+        </div>
+      </li>
+      <li class="nav-item mt-2" id="embaixo">
+        <a></a>
+      </li>
+      <li class="nav-item dropdown embaixo" id="embaixo">
+        <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ração</a>
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/racao-seca">Ração Seca</a>
+          <a class="dropdown-item zoomdrop" routerLink="/racao-umida">Ração Úmida</a>
+          <a class="dropdown-item zoomdrop" routerLink="/racao-diet">Ração Diet</a>
+        </div>
+      </li>
+      <li class="nav-item mt-2" id="embaixo">
+        <a></a>
+      </li>
+      <li class="nav-item dropdown embaixo" id="embaixo">
+        <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acessórios</a>
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/camas-casinhas">Camas e Casinhas</a>
+          <a class="dropdown-item zoomdrop" routerLink="/coleiras-guias-peitorais">Coleiras, Guias e Peitorais</a>
+          <a class="dropdown-item zoomdrop" routerLink="/roupas">Roupas</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <input type="text" class="form-control box-search pesquisa2" placeholder="Pesquise no PetFriends">
+</nav>
+
+
+<div class="container-fluid">
+  <div class="my-3 text-warning"><h2>FRISBEES</h2></div>
+    
+  <div class="row centro"><!--inicio row 1-->
+    <div class="col"><!--inicio col 1-->
+        <app-card-produto
+          foto='https://www.petlove.com.br/images/products/211051/product/Brinquedo_Chalesco_Frisbee_Tot%C3%B3ys_Disco_Flex_Sabor_Frango_-_Cores_Variadas_3101511.jpg?1627676984'
+          nomeProduto="Brinquedo Chalesco Frisbee Totóys Disco Flex Sabor Frango"
+          [precoProduto]="54.90">
+        </app-card-produto>
+    </div><!--fim col 1-->
+
+    <div class="col"><!--inicio col 2-->
+        <app-card-produto
+          foto='https://www.petlove.com.br/images/products/236279/product/2644415_Frisbee_Furac%C3%A3o_Pet_Pop_Pl%C3%A1stico_Vermelho_1.jpg?1627758288'
+          nomeProduto="Brinquedo Frisbee Furacão Pet Pop Plástico Vermelho"
+          [precoProduto]="10.90">
+        </app-card-produto>
+    </div><!--fim col 2-->
+
+    <div class="col"><!--inicio col 3-->
+        <app-card-produto
+          foto='https://www.petlove.com.br/images/products/236278/product/2644414_Frisbee_Furac%C3%A3o_Pet_Pop_Pl%C3%A1stico_Rosa_1.jpg?1627758280'
+          nomeProduto="Brinquedo Frisbee Furacão Pet Pop Plástico Rosa"
+          [precoProduto]="10.90">
+        </app-card-produto>
+    </div><!--fim col 3-->
+
+    <div class="col"><!--inicio col 4-->
+        <app-card-produto
+          foto='https://www.petlove.com.br/images/products/234795/product/Mini_Frisbee_Flex%C3%ADvel_Lilo_Dog_para_C%C3%A3es_2636145_1.jpg?1627753265'
+          nomeProduto="Mini Frisbee Flexível Lilo Dog Natural para Cães"
+          [precoProduto]="15.90">
+        </app-card-produto>
+    </div><!--fim col 4-->
+  </div>
+
+  <div class="row centro">
+    <div class="col"><!--inicio col 5-->
+      <app-card-produto
+        foto='https://www.petlove.com.br/images/products/234805/product/Mini_Frisbee_Flex%C3%ADvel_Lilo_Dog_para_C%C3%A3es_2636147_1.jpg?1627753306'
+        nomeProduto="Mini Frisbee Flexível Lilo Dog Rosa para Cães"
+        [precoProduto]="15.90">
+      </app-card-produto>
+    </div><!--fim col 5-->
+
+    <div class="col"><!--inicio col 3-->
+      <app-card-produto
+        foto='https://static.petz.com.br/fotos/1457992830084.jpg'
+        nomeProduto="Brinquedo Chalesco Para Cães Totóys Disco Flex Sabor Frango"
+        [precoProduto]="62.99">
+      </app-card-produto>
+    </div><!--fim col 3-->
+
+    <div class="col"><!--inicio col 4-->
+      <app-card-produto
+        foto='https://static.petz.com.br/fotos/1606396830223.jpg'
+        nomeProduto="Brinquedo Kong para Cães Extreme Flyer Grande Preto"
+        [precoProduto]="148.99">
+      </app-card-produto>
+    </div><!--fim col 4-->
+
+    <div class="col"><!--inicio col 5-->
+      <app-card-produto
+        foto='https://static.petz.com.br/fotos/1606317116302.jpg'
+        nomeProduto="Brinquedo Kong para Cães Puppy Flyer - Cores Sortidas"
+        [precoProduto]="104.99">
+      </app-card-produto>
+    </div><!--fim col 5-->
+
+
+  </div><!--fim row 1-->
+
+</div>
+
