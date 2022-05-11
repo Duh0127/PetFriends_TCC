@@ -1,9 +1,10 @@
 body{
   background: #ffffff url("src/assets/img/fundocachorro.jpg");
   background-size: cover;
+  background-attachment: fixed;
   width: 100vw;
   height: 84vh;
-  padding-top: 10%;
+  padding-top: 6%;
 }
 
 .padding{

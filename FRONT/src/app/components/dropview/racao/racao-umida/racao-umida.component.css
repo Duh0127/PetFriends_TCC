@@ -8,20 +8,10 @@
   transition: transform .2s ease;
 }
 
-/*CARDS*/
-.mar1{
-  margin-left: 37%;
+.centro{
+  margin-left: 8%;
 }
 
-.mar2{
-  margin-left: 37%;
-}
-
-.mar3{
-  margin-right: -37%;
-  
-}
-/*FIM CARDS*/
 
 .my-3{
   text-align: center;

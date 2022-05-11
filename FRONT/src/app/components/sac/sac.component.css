@@ -1,183 +1,155 @@
-body{
-    background-image: url("src/assets/img/fundocachorro.jpg");
-    background-size: cover;
-    width: 100%;
-    height: 110vh;
-    padding-top: 10%;
-  }
-  
-  .fundo{
-      background-color: transparent;
-      width: 40vw;
-      height: 10vh;
-      background-color: rgba(255, 219, 152, 0.808);
-      box-shadow: 2px 2px 10px rgb(117, 117, 117);
-      border-radius: 50px;
-      margin-top: -10vh;
-      margin-left: 30vw;
-      border-radius: 1%;
-      
-  }
-  
-  .fundo2{
-      width: 40vw;
-      height: 51vh;
-      background-color: rgba(255, 219, 152, 0.808);
-      box-shadow: 2px 2px 10px rgb(117, 117, 117);
-      border-radius: 40px;
-      margin-top: 3vh;
-      margin-left: 4.5vw;
-      border-radius: 1%;
-      /*padding-top: 1px;*/
-      
-    
-    }
+body {
+  background-image: url("src/assets/img/fundocachorro.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 115vh;
+  padding-top: 10%;
+}
 
-.fundo3{
-        width: 40vw;
-        height: 35vh;
-        background-color: rgba(255, 219, 152, 0.808);
-        box-shadow: 2px 2px 10px rgb(117, 117, 117);
-        border-radius: 40px;
-        margin-top: 1vh;
-        margin-left: 4.5vw;
-        border-radius: 1%;
-        /*padding-top: 1px;*/
-        
-      
+.fundo {
+  background-color: transparent;
+  width: 40vw;
+  height: 8vh;
+  background-color: rgba(255, 219, 152, 0.808);
+  box-shadow: 2px 2px 10px rgb(117, 117, 117);
+  margin-top: -13vh;
+  margin-left: 30vw;
+  border-radius: 10px;
 }
-   
-.row{
-      padding-top: 6%;
-      margin-left: 6%;
+
+.fundo2 {
+  width: 40vw;
+  height: 56vh;
+  background-color: rgba(255, 219, 152, 0.808);
+  box-shadow: 2px 2px 10px rgb(117, 117, 117);
+  margin-top: 0.5vh;
+  margin-left: 4.5vw;
+  border-radius: 10px;
 }
-  
-.titulo-card{
-    font-size: 15px;
-    margin-left: 25%;
-    margin-top: -5%; 
-    text-align: center;
+
+.fundo3 {
+  width: 40vw;
+  height: 35vh;
+  background-color: rgba(255, 219, 152, 0.808);
+  box-shadow: 2px 2px 10px rgb(117, 117, 117);
+  margin-top: 0.5vh;
+  margin-left: 4.5vw;
+  border-radius: 10px;
 }
-  
-  
-.titulo-text{
+
+.row {
+  padding-top: 6%;
+  margin-left: 6%;
+}
+
+.titulo-card {
+  font-size: 15px;
+  margin-left: 25%;
+  margin-top: -5%;
+  text-align: center;
+}
+
+.titulo-text {
   text-align: center;
   justify-content: center;
 }
 
-    
-    
-    .coluna1{
-      margin-top: -5%;
-      margin-left: 20%;
-    }
-    
-    .btn-dark{
-      width: 19.1vw;
-      margin-left: 27.3%;
-      margin-top: 1vw;
-
-    }
-    
-    .criar-conta{
-      margin-left: 31%;
-      margin-top: 1%;
-      font-size: 15px;
-    }
-    
-    .cadastro-usuario{
-      font-size: 15px;
-      margin-left: 33%;
-      margin-top: 4%; 
-    }
-    
-  .coluna1 input{
-      width: 350px;
-  }
-  
-    .padding{
-      padding-top: 25px;
-      margin-left: -6.5%;
-  
-  }
-  
-  .bi-cart-fill{
-      margin-left: 48.2%;
-  }
-  
-  .btn-primary{
-    width: 20.8vw;
-    margin-left: 28%;
-    margin-top: 2%;
-  }
-  
-  .criar-conta{
-    margin-left: 31%;
-    margin-top: 1%;
-    font-size: 15px;
-  }
-  
-  .cadastro-usuario{
-    font-size: 15px;
-    margin-left: 33%;
-    margin-top: 4%; 
-  }
-  
-  .divlabel{
-    margin-bottom: 2%;
-  }
-
-  .descricaoPrb{
-    margin-left: 12%;
-    width: 70%;
-    margin-top: -5%;
+.coluna1 {
+  margin-top: -5%;
+  margin-left: 20%;
 }
-  
-  
-  input{
-    width: 100%;
-    border-top: transparent;
-    border-left: transparent;
-    border-right: transparent;
-    border-bottom: 2px solid rgb(0, 0, 0);
-    background-color: transparent;
-    border-radius: 0px;
-  }
-  input:focus{
-    background-color: transparent;
-    box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
-    border-bottom: 2px solid rgb(23, 162, 184);
-    border-radius: 0px;
-  }
-  
-  
-  
+
+.btn-dark {
+  width: 19.1vw;
+  margin-left: 27.3%;
+  margin-top: 1vw;
+}
+
+.criar-conta {
+  margin-left: 31%;
+  margin-top: 1%;
+  font-size: 15px;
+}
+
+.cadastro-usuario {
+  font-size: 15px;
+  margin-left: 33%;
+  margin-top: 4%;
+}
+
+.coluna1 input {
+  width: 350px;
+}
+
+.padding {
+  padding-top: 25px;
+  margin-left: -6.5%;
+}
+
+.bi-cart-fill {
+  margin-left: 48.2%;
+}
+
+.btn-primary {
+  width: 20.8vw;
+  margin-left: 28%;
+  margin-top: 2%;
+}
+
+.criar-conta {
+  margin-left: 31%;
+  margin-top: 1%;
+  font-size: 15px;
+}
+
+.cadastro-usuario {
+  font-size: 15px;
+  margin-left: 33%;
+  margin-top: 4%;
+}
+
+.divlabel {
+  margin-bottom: 2%;
+}
+
+.descricaoPrb {
+  margin-left: 12%;
+  width: 70%;
+  margin-top: -5%;
+}
 
 
+input {
+  width: 100%;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background-color: transparent;
+  border-radius: 0px;
+}
 
+input:focus {
+  background-color: transparent;
+  box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+  border-bottom: 2px solid rgb(23, 162, 184);
+  border-radius: 0px;
+}
 
+.vistipo{
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid #000;
+  margin-bottom: 2%;
+}
 
-
-  
-  
-  .zoom{
-  max-width: 100%;
-  -moz-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: translate(10%,10%);
-  overflow: hidden;
-  }
-  
-  .zoom:hover{
-  -moz-transform: scale(1.20,1.20);
-  -webkit-transform: scale(1.20,1.20);
-  transform: scale(1.02);
-  }
-  
-  .neon-blue{
-  cursor: pointer;
-  overflow: hidden;
-  }
-  .neon-blue:hover{
-  box-shadow: 0 0 3px #0044ff;
-  }
+option{
+    background-color:transparent;
+    border-left: none;
+    border-right: none;
+    border-top: 0.5px solid black;
+    border-bottom: 2px solid #000;
+}
