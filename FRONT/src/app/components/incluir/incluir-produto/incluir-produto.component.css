@@ -1,8 +1,52 @@
-.bordinha{
-    border: 5px solid rgb(255, 218, 150);
-    
+body{
+    background-image: url("src/assets/img/fundocachorro.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 84vh;
+    padding-top: 10%;
 }
 
 .fundo-input{
-    background-color: rgb(226, 226, 226);
+    color: rgb(161, 160, 160);
+}
+
+.cardproduto{
+    border: 5px solid rgb(255, 199, 96);
+    width: 70%;
+    height: 40%;
+    margin: auto;
+    background-color: rgba(49, 49, 49, 0.945);
+    
+}
+
+input{
+    background-color: transparent;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 2px solid rgb(255, 175, 27);
+    border-radius: 0px;
+}
+input:focus{
+    background-color: transparent;
+    box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+    border-bottom: 2px solid rgb(23, 162, 184);
+    border-left: transparent;
+    border-radius: 0px;
+}
+
+h1{
+    margin-left: 15%;
+    margin-bottom: -2%;
+}
+
+.btn-warning{
+    width: 10%;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: 0px 0px 10px rgb(255, 220, 21);
+}
+.btn-warning:hover{
+    background-color: rgb(255, 217, 0);
+    box-shadow: 0px 0px 15px rgb(255, 217, 0);
 }

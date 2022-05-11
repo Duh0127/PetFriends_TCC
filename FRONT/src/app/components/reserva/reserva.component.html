@@ -15,12 +15,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let prod of carrinho">
-            <td>{{ prod.id }}</td>
-            <td>{{ prod.itens }}</td>
-            <td>{{ prod.quantidade }}</td>
-            <td>{{ prod.valorUnitario }}</td>
-            <td>
+        <tr *ngFor = "let produtoCarrinho of listarCarrinho">
+          <td>{{ produtoCarrinho.id}}</td>
+          <td>{{ produtoCarrinho.nomeProduto}}</td>
+          <td>{{ produtoCarrinho.qtdProduto}}</td>
+          <td>{{ produtoCarrinho.precoProduto | currency: 'BRL'}}</td>
+          <td>
                 <button class="btn" id="trash">
                     <img src="assets/img/icons8-lixo.png">
                 </button>

@@ -1,3 +1,4 @@
+import { IProdutoCarrinho } from './../model/IProdutoCarrinho.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -7,27 +8,31 @@ import { IProduto } from '../model/IProduto.model';
 @Injectable({
     providedIn: 'root'
   })
-  export class ProdutosService {
+  export class CarrinhoService {
   
     private URL: string = 'http://localhost:3000/produtos';
+    private URLcarrinho : string = 'http://localhost:3000/carrinho';
   
     
   
     constructor(private http: HttpClient){ }
   
-    listarProdutos(id: number){
-      return this.http.get<IProduto>(this.URL);
-      }
+    buscarTodosCarrinho() : Observable<IProdutoCarrinho[]> {
+        return this.http.get<IProdutoCarrinho[]>(this.URLcarrinho).pipe(
+          map(retorno => retorno),
+          //catchError(erro => this.exibirErro(erro))
+        );
+    }
 
 
-    
     buscarTodos() : Observable<IProduto[]> {
       return this.http.get<IProduto[]>(this.URL).pipe(
         map(retorno => retorno),
         //catchError(erro => this.exibirErro(erro))
       );
-  
     }
+
+
   
     buscarPorId(id: number) : Observable<IProduto> {
       return this.http.get<IProduto>(`${this.URL}/${id}`).pipe(
@@ -36,14 +41,7 @@ import { IProduto } from '../model/IProduto.model';
       );
     }
   
-  
-    atualizar( produto: IProduto): Observable<IProduto> {
-      return this.http.put<IProduto>(`${this.URL}/${produto.id}`, produto).pipe(
-        map(retorno => retorno),
-        //catchError(erro => this.exibirErro(erro))
-      );
-    }
-  
+
     excluir( id: number): Observable<any> {
       return this.http.delete<any>(`${this.URL}/${id}`).pipe(
         map(retorno => retorno),

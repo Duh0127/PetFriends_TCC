@@ -8,27 +8,26 @@ import { IProduto } from '../model/IProduto.model';
     providedIn: 'root'
   })
   export class ProdutosService {
-  
     private URL: string = 'http://localhost:3000/produtos';
+    private apiURL: string = 'http://localhost:3000'
   
-    
+    constructor(private http: HttpClient){
+        this.apiURL;
+     }
   
-    constructor(private http: HttpClient){ }
-  
-    listarProdutos(id: number){
-      return this.http.get<IProduto>(this.URL);
-      }
-
-
-    
     buscarTodos() : Observable<IProduto[]> {
       return this.http.get<IProduto[]>(this.URL).pipe(
         map(retorno => retorno),
         //catchError(erro => this.exibirErro(erro))
       );
-  
     }
+
+    listarTodosProdutos(){
+        this.http.get(`${this.apiURL }/produtos`)
+            .subscribe(resultado => console.log(resultado));
+      }
   
+
     buscarPorId(id: number) : Observable<IProduto> {
       return this.http.get<IProduto>(`${this.URL}/${id}`).pipe(
         map(retorno => retorno),
@@ -44,6 +43,7 @@ import { IProduto } from '../model/IProduto.model';
       );
     }
   
+
     excluir( id: number): Observable<any> {
       return this.http.delete<any>(`${this.URL}/${id}`).pipe(
         map(retorno => retorno),

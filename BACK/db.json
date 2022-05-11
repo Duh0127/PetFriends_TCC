@@ -25,11 +25,11 @@
       "id": 3
     },
     {
-      "nomeProduto": "oi",
-      "qtdProduto": 123,
-      "precoProduto": 4324,
-      "assocProduto": "oi",
-      "descProduto": "oi",
+      "nomeProduto": "Produto Teste ",
+      "qtdProduto": 1233,
+      "precoProduto": 98889,
+      "assocProduto": "Associado E",
+      "descProduto": "testeee",
       "id": 4
     }
   ],
@@ -89,28 +89,6 @@
       "senhaCadAssociado": "",
       "confsenhaCadAssociado": "",
       "id": 3
-    },
-    {
-      "nomeCadAssociado": "",
-      "enderecoCadAssociado": "",
-      "emailCadAssociado": "",
-      "tipoCadAssociado": "",
-      "telCadAssociado": "",
-      "cnpjCadAssociado": 0,
-      "senhaCadAssociado": "",
-      "confsenhaCadAssociado": "",
-      "id": 4
-    },
-    {
-      "nomeCadAssociado": "",
-      "enderecoCadAssociado": "",
-      "emailCadAssociado": "",
-      "tipoCadAssociado": "",
-      "telCadAssociado": "",
-      "cnpjCadAssociado": 0,
-      "senhaCadAssociado": "",
-      "confsenhaCadAssociado": "",
-      "id": 5
     }
   ],
   "cadcliente": [
@@ -134,5 +112,6 @@
       "confsenhaCadCliente": "senha",
       "id": 2
     }
-  ]
+  ],
+  "carrinho": []
 }
