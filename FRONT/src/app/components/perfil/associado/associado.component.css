@@ -1,9 +1,20 @@
+body{
+  background-image: url("src/assets/img/fundocachorro.jpg");
+  background-size: cover;
+  width: 1864px;
+  height: 160vh;
+  padding-top: 10%;
+}
+
 .fundo{
+    background-color: transparent;
     width: 50vw;
-    height: 22vh;
-    background-color: rgb(255, 219, 152);
+    height: 28vh;
+    background-color: rgba(255, 219, 152, 0.808);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    border-radius: 50px;
     margin-top: 2vh;
-    margin-left: 4.5vw;
+    margin-left: 25vw;
     border-radius: 1%;
     
 }
@@ -11,8 +22,10 @@
 .fundo2{
     width: 50vw;
     height: 53vh;
-    background-color: rgb(255, 219, 152);
-    margin-top: 2vh;
+    background-color: rgba(255, 219, 152, 0.808);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    border-radius: 40px;
+    margin-top: 3vh;
     margin-left: 4.5vw;
     border-radius: 1%;
     /*padding-top: 1px;*/
@@ -23,7 +36,9 @@
 .fundo3{
     width: 50vw;
     height: autovh;
-    background-color: rgb(255, 219, 152);
+    background-color: rgba(255, 219, 152, 0.808);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    border-radius: 40px;
     margin-top: 2vh;
     margin-left: -3vw;
     border-radius: 1%;
@@ -35,7 +50,9 @@
 .fundo4{
     width: 50vw;
     height: autovh;
-    background-color: rgb(255, 219, 152);
+    background-color: rgba(255, 219, 152, 0.808);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    border-radius: 40px;
     margin-top: 2vh;
     margin-left: -3vw;
     margin-bottom: 3vh;

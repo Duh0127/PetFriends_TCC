@@ -16,7 +16,8 @@ export class CardProdutoComponent implements OnInit {
   @Input() nomeProduto: string = '';
   @Input() precoProduto: number = 0;
   @Input() associados: string = '';
-  
+  @Input() quantidade: number = 0;
+
   listarProdutos: IProduto[] = [];
   
 

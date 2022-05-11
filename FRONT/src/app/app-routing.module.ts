@@ -39,6 +39,7 @@ import { ComedourosBebedourosGatosComponent } from './components/dropview/gatos/
 import { ComedourosBebedourosCachorrosComponent } from './components/dropview/cachorros/comedouros-bebedouros-cachorros/comedouros-bebedouros-cachorros.component';
 import { OssinhosComponent } from './components/dropview/cachorros/ossinhos/ossinhos.component';
 import { PetiscosComponent } from './components/dropview/cachorros/petiscos/petiscos.component';
+import { PremiumComponent } from './components/premium/premium.component';
 
 
 
@@ -82,7 +83,8 @@ const routes: Routes = [
     {path:'comedouros-bebeoduros-cachorros', component:ComedourosBebedourosCachorrosComponent},
     {path:'comedouros-bebedouros-gatos', component:ComedourosBebedourosGatosComponent},
     {path:'ossinhos', component:OssinhosComponent},
-    {path:'petiscos', component:PetiscosComponent}
+    {path:'petiscos', component:PetiscosComponent},
+    {path:'plano-premium', component:PremiumComponent}
 
 
 

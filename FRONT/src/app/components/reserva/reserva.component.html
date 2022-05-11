@@ -1,53 +1,75 @@
-<h1 class="my-3 text-warning">
-    CARRINHO
+<div class="fundo3 padding ">
+  <!--TERCEIRO CARD-->
+  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart-fill"
+    viewBox="0 0 16 16">
+    <path
+      d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+  </svg>
+  <h5 class="text-pedidos">CARRINHO</h5>
+  <form>
 
-  </h1>
-
-  <div class="card shadow" id="card">
-    <table class="table table-striped">
+    <table class="table table-dark mt-5 bordinha">
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Itens</th>
-          <th>Quantidade</th>
-          <th>Valor Unitário</th>
-          <th>Ações</th>
+          <th scope="col">ID</th>
+          <th scope="col">Itens</th>
+          <th scope="col">Quantidade</th>
+          <th scope="col">Valor Unitário</th>
+          <th scope="col">Associado</th>
+          <th scope="col">Ações</th>
         </tr>
       </thead>
+
       <tbody>
-        <tr *ngFor = "let produtoCarrinho of listarCarrinho">
+        <tr *ngFor="let produtoCarrinho of listarCarrinho">
           <td>{{ produtoCarrinho.id}}</td>
           <td>{{ produtoCarrinho.nomeProduto}}</td>
           <td>{{ produtoCarrinho.qtdProduto}}</td>
           <td>{{ produtoCarrinho.precoProduto | currency: 'BRL'}}</td>
           <td>
-                <button class="btn" id="trash">
-                    <img src="assets/img/icons8-lixo.png">
-                </button>
-            </td>
-        </tr>
-        <button type="button" class="btn btn-danger" id="contcomp" routerLink="">Continuar Comprando</button>
-        <td></td>
-        <td></td>
-        <td>
-            <div class="totalCompra ml-5" id="totalCompra">
-                <h5>Total: R$0,00</h5>
-            </div>
-            <button routerLink="" class="btn btn-success mt-2" id="resbut">
-                <img src="/assets/img/icons8-comprar.png" id="imagemBotao">Reservar Produto
+            <button class="btn btn-secondary" routerLink="{{produtoCarrinho.id}}">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16"
+                fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path
+                  d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd"
+                  d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+              </svg>
             </button>
-        </td>
-        
-        
-        
-    
-    
-    
-    </tbody>
+            <button class="btn btn-outline-warning ml-2">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16"
+                fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+              </svg>
+            </button>
+          </td>
+        </tr>
+</tbody>
     </table>
-  </div>
-<br>
-  
 
-    
+    <div>
+      <button type="button" class="btn btn-danger" routerLink="">Continuar Comprando
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class=""
+      viewBox="0 0 16 16">
+      <path
+        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </svg>
+      </button>
 
+        
+          
+        
+
+      <button type="button" class="btn btn-success" routerLink="">Reservar Produto
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class=""
+      viewBox="0 0 16 16">
+      <path
+        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </svg>
+      </button>
+
+
+    </div>
+  </form>
+</div>
