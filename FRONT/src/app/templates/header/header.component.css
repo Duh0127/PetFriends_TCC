@@ -10,7 +10,7 @@
 }
 
 .tp{ /*topicos que estruturam os outros*/
-  margin-left: 32vw;
+  margin-left: 33.5vw;
 }
 
 #embaixo{ /*topicos embaixo da barra de pesquisa*/
@@ -49,6 +49,19 @@
   transition: transform .5s ease;
 }
 
+.zoomdrop{
+  max-width: 100%;
+  -moz-transition: all 10s;
+  -webkit-transition: all 10s;
+  transition: translate(5%,5%);
+}
+
+.zoomdrop:hover{
+  -moz-transform: scale(1.02,1.02);
+  -webkit-transform: scale(1.02,1.02);
+  transform: scale(1.01);
+  transition: transform .3s ease
+}
 
 
 

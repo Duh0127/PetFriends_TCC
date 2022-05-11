@@ -15,6 +15,12 @@ import { FooterComponent } from './templates/footer/footer.component';
 import { SenhaComponent } from './components/senha/senha.component';
 import { RedefinicaoComponent } from './components/senha/redefinicao/redefinicao.component';
 import { ValidacaoComponent } from './components/senha/validacao/validacao.component';
+import { ClienteComponent } from './components/perfil/cliente/cliente.component';
+import { AssociadoComponent } from './components/perfil/associado/associado.component';
+import { DescricaoProdutoComponent } from './components/descricao-produto/descricao-produto.component';
+import { ProdutoComponent } from './components/Incluir/produto/produto.component';
+import { ServicoComponent } from './components/Incluir/servico/servico.component';
+import { SacComponent } from './components/sac/sac.component';
 
 
 
@@ -31,7 +37,13 @@ import { ValidacaoComponent } from './components/senha/validacao/validacao.compo
     FooterComponent,
     SenhaComponent,
     RedefinicaoComponent,
-    ValidacaoComponent
+    ValidacaoComponent,
+    ClienteComponent,
+    AssociadoComponent,
+    DescricaoProdutoComponent,
+    ProdutoComponent,
+    ServicoComponent,
+    SacComponent
   ],
   imports: [
     BrowserModule,

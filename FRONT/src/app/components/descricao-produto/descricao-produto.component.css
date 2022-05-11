@@ -1,0 +1,10 @@
+#box-white{
+    background-color: #fff;
+    width: 55vw;
+    height: 70vh;
+    border-radius: 3%;
+    margin: auto;
+    margin-top: 7vh;
+    border: 2.5px solid rgba(255, 165, 0, 0.5);
+}
+
