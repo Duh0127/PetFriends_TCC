@@ -1,9 +1,28 @@
 .zoom{
-    max-width: 100%;
-    transition: translate(5%,5%);
-  }
+  max-width: 100%;
+  transition: translate(5%,5%);
+}
+
+.zoom:hover{
+  transform: scale(1.1);
+  transition: transform .2s ease;
+}
+
+/*CARDS*/
+.mar1{
+  margin-left: 37%;
+}
+
+.mar2{
+  margin-left: 37%;
+}
+
+.mar3{
+  margin-right: -37%;
   
-  .zoom:hover{
-    transform: scale(1.1);
-    transition: transform .2s ease;
-  }
+}
+/*FIM CARDS*/
+
+.my-3{
+  text-align: center;
+}
