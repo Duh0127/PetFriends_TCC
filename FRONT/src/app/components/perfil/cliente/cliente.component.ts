@@ -21,8 +21,9 @@ export class ClienteComponent implements OnInit {
     enderecoCadCliente: '',
     emailCadCliente: '',
     telCadCliente: '',
-    cpfCadCliente: 0,
-    senhaCadCliente: ''
+    cpfCadCliente: '',
+    senhaCadCliente: '',
+    confsenhaCadCliente: ''
   };
 
   constructor(private cadastroService: CadastroClienteService,

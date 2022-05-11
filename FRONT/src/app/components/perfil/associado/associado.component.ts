@@ -20,14 +20,13 @@ export class AssociadoComponent implements OnInit {
     emailCadAssociado: '',
     tipoCadAssociado: '',
     telCadAssociado: '',
-    cnpjCadAssociado: 0,
+    cnpjCadAssociado: '',
     senhaCadAssociado: '',
     confsenhaCadAssociado: ''
   };
 
   listarAssociados: ICadastroAssociado[] = [];
   listarProdutos: IProduto[] = [];
-  listarServicos: IServico[] = [];
 
   constructor(
     private cadastroService: CadastroAssociadoService,

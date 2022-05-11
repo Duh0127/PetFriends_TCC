@@ -4,6 +4,9 @@ export interface ICadastroCliente {
     enderecoCadCliente: string;
     emailCadCliente: string
     telCadCliente: string;
-    cpfCadCliente: number;
+    cpfCadCliente: string;
     senhaCadCliente: string;
+    confsenhaCadCliente: string;
+    
+
   }

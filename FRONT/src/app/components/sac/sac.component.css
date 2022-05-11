@@ -137,19 +137,36 @@ input:focus {
   border-radius: 0px;
 }
 
-.vistipo{
-  background-color: transparent;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  border-bottom: 2px solid #000;
-  margin-bottom: 2%;
+option{
+  background-color: rgba(245, 218, 167, 0.808);
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  border-radius: 0px;
 }
 
-option{
-    background-color:transparent;
-    border-left: none;
-    border-right: none;
-    border-top: 0.5px solid black;
-    border-bottom: 2px solid #000;
+option:hover{
+background-color: rgba(255, 150, 52, 0.808);
+}
+
+#tipo{
+  width: 500px;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background-color: transparent;
+  border-radius: 0px;
+  margin-bottom: 2%;
+}
+#tipo:focus{
+  width: 350px;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+  border-bottom: 2px solid rgb(255, 150, 52);
+  background-color: transparent;
+  border-radius: 0px;
 }

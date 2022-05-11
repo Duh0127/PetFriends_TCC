@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ICadastroAssociado } from 'src/app/model/ICadastroAssociado.model';
 import { IProduto } from 'src/app/model/IProduto.model';
 import { ProdutosService } from 'src/app/services/produtos.service';
+import { CadastroAssociadoService } from 'src/app/services/cadassoc.service';
 
 @Component({
   selector: 'app-incluir-produto',
@@ -20,11 +22,19 @@ export class IncluirProdutoComponent implements OnInit {
     fabricante: '',
   };
 
+  listarAssociados: ICadastroAssociado[] = [];
+  listarProdutos: IProduto[] = [];
+
   //Objeto.atributo
 
-  constructor(private produtosService: ProdutosService, private activatedRouter: ActivatedRoute, private router: Router) { }
+  constructor(
+    private produtosService: ProdutosService, 
+    private activatedRouter: ActivatedRoute,
+    private cadastroService: CadastroAssociadoService, 
+    private router: Router) { }
 
-  ngOnInit() {
+
+  ngOnInit(): void {
   }
 
    salvarProduto() {

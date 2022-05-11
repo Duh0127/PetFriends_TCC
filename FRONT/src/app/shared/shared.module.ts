@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardProdutoComponent } from './card-produto/card-produto.component';
@@ -10,7 +11,8 @@ import { CardProdutoComponent } from './card-produto/card-produto.component';
     CardProdutoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [CardProdutoComponent
   ]

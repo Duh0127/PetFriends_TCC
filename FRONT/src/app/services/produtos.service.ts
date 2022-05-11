@@ -12,7 +12,7 @@ import { IProduto } from '../model/IProduto.model';
   
     //private URL: string = 'http://localhost:3000/produtos';
 
-    baseUrl = `${environment.UrlPrincipal}/Produtos`;
+    baseUrl = `${environment.UrlPrincipal}/Produto`;
   
     
   

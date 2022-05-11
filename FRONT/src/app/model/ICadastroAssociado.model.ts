@@ -7,7 +7,7 @@ export interface ICadastroAssociado {
     emailCadAssociado: string
     tipoCadAssociado: string;
     telCadAssociado: string;
-    cnpjCadAssociado: number;
+    cnpjCadAssociado: string;
     senhaCadAssociado: string;
     confsenhaCadAssociado: string;
     
