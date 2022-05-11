@@ -3,13 +3,9 @@ body{
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    height: 100%;
+    height: 43.5vw;
     padding-top: 10%;
     padding-bottom: 10%;
-}
-
-#formulario{
-    
 }
 
 
@@ -26,6 +22,7 @@ body{
   }
 
 .bi-cart-fill{
+    margin-top: 1%;
     margin-left: 48.2%;
 }
 
@@ -44,6 +41,6 @@ body{
     display: inline-flex;
     margin-bottom: 1%;
     margin-right: 59%;
-    margin-left: 5px;
+    margin-left: 7px;
     
 }
