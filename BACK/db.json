@@ -15,6 +15,14 @@
       "assocProduto": "Associado B",
       "descProduto": "descrição produto B",
       "id": 2
+    },
+    {
+      "nomeProduto": "Produto C",
+      "qtdProduto": 1,
+      "precoProduto": 20,
+      "assocProduto": "Associado C",
+      "descProduto": "descrição produto C",
+      "id": 3
     }
   ],
   "servicos": [
@@ -31,6 +39,38 @@
       "assocServico": "Associado B",
       "descServico": "descrição serviço B",
       "id": 2
+    },
+    {
+      "nomeServico": "Serviço C",
+      "precoServico": 50,
+      "assocServico": "Associado C",
+      "descServico": "descrição serviço C",
+      "id": 3
+    }
+  ],
+  "cadassoc": [
+    {
+      "nomeCadAssociado": "associado A",
+      "enderecoCadAssociado": "rua A",
+      "emailCadAssociado": "email@gmail.com",
+      "tipoCadAssociado": "",
+      "telCadAssociado": "192898129839",
+      "cnpjCadAssociado": 938989999999,
+      "senhaCadAssociado": "123",
+      "confsenhaCadAssociado": "123",
+      "id": 1
+    }
+  ],
+  "cadcliente": [
+    {
+      "nomeCadCliente": "usuario A",
+      "enderecoCadCliente": "rua A",
+      "emailCadCliente": "email@gmail.com",
+      "telCadCliente": "1100000000",
+      "cpfCadCliente": 91823981238,
+      "senhaCadCliente": "123",
+      "confsenhaCadCliente": "123",
+      "id": 1
     }
   ]
 }

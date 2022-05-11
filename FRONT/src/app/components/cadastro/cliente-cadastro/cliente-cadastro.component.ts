@@ -1,4 +1,7 @@
+import { ICadastroCliente } from './../../../model/ICadastroCliente.model';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CadastroClienteService } from 'src/app/services/cadcliente.service';
 
 @Component({
   selector: 'app-cliente-cadastro',
@@ -7,9 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteCadastroComponent implements OnInit {
 
-  constructor() { }
+  cadastro: ICadastroCliente = {
+    nomeCadCliente: '',
+    enderecoCadCliente: '',
+    emailCadCliente: '',
+    telCadCliente: '',
+    cpfCadCliente: 0,
+    senhaCadCliente: '',
+    confsenhaCadCliente: ''
+  };
+
+
+  constructor(private cadastroService: CadastroClienteService, 
+              private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  
+  salvarCadastroCliente(): void {
+    this.cadastroService.cadastrar(this.cadastro).subscribe(retorno => {
+      this.cadastro = retorno;
+    });
+    this.router.navigate(['']);
   }
 
 }

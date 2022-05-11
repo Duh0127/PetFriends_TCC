@@ -1,1 +1,188 @@
-<p>cliente works!</p>
+<body>
+  
+    <div class="fundo shadow-1"> <!--PRIMEIRO CARD-->
+      <form>
+        <div class="row">
+            <div class="usuario-perfil">
+<!--Campo de imagem redondo --><svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140 </text></svg>
+                <h4>Bem-vindo, Usuario</h4>
+                <b><p>usuario@hotmail.com</p></b>
+            </div>
+
+            <div class="fundo2 padding"> <!--SEGUNDO CARD-->
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-usuario" width="" height="30" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+                    <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
+                  </svg>
+                <h5 class="text-usuario">MEUS DADOS</h5>
+                <form>
+                  <div class="nomecompleto form-group">
+                    <label for="exampleInputEmail1">NOME COMPLETO</label>
+                    <input type="text" 
+                           class="form-control inputnome" 
+                           placeholder="DIGITE SEU NOME" 
+                           name="nomeCadCliente"
+                           [(ngModel)]="cadastro.nomeCadCliente">
+                  </div>
+            
+                  <div class="row">
+                    <div class="col coluna1"><!--COLUNA 1-->
+            
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">ENDEREÇO</label>
+                        <input type="text" 
+                               class="form-control" 
+                               name="emailCadCliente"
+                               placeholder="DIGITE SEU ENDEREÇO" 
+                               [(ngModel)]="cadastro.enderecoCadCliente">
+                      </div>
+            
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">E-MAIL</label>
+                        <input type="email" 
+                               class="form-control" 
+                               placeholder="E-MAIL" 
+                               name="emailCadCliente"
+                               [(ngModel)]="cadastro.emailCadCliente">
+                      </div>
+            
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">SENHA</label>
+                        <input type="password" 
+                               class="form-control" 
+                               name="senhaCadCliente"
+                               placeholder="DIGITE SUA SENHA" 
+                               [(ngModel)]="cadastro.senhaCadCliente">
+                      </div>
+            
+                    </div><!--COLUNA 1-->
+                    
+            
+                    
+                    <div class="col coluna2"><!--COLUNA 2-->
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">TELEFONE</label>
+                        <input type="tel" 
+                               placeholder="TELEFONE" 
+                               class="form-control" 
+                               name="telCadCliente"
+                               [(ngModel)]="cadastro.telCadCliente">
+                      </div>
+            
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">CPF</label>
+                            <input type="number" 
+                               class="form-control" 
+                               placeholder="CPF" 
+                               name="cpfCadCliente" 
+                               value="cpfCadCliente"
+                               [(ngModel)]="cadastro.cpfCadCliente"   disabled>
+                      </div>
+            
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">CONFIRMAR SENHA</label>
+                        <input type="password" 
+                               placeholder="CONFIRME SENHA" 
+                               class="form-control" 
+                               name="confsenhaCadCliente"
+                               [(ngModel)]="cadastro.confsenhaCadCliente">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <button type="submit" routerLink="" class="btn btn-primary"(click)="salvarCadastroCliente()">Atualizar Perfil</button>
+              </div>
+
+                <div class="fundo3 padding"> <!--TERCEIRO CARD-->
+                    <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                      </svg>
+                        <h5 class="text-pedidos">MEUS PRODUTOS</h5>
+                        <form>
+
+                            <table class="table table-dark mt-5 bordinha">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">##</th>
+                                    <th scope="col">Nome Produto</th> <!--NOME PRODUTO-->
+                                    <th scope="col">Quantidade</th> <!--QUANTIDADE PRODUTO-->
+                                    <th scope="col">Preço</th> <!--PREÇO PRODUTO-->
+                                    <th scope="col">Associado</th> <!--NOME ASSOCIADO-->
+                                    <th scope="col">Ações</th>
+                                  </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    <tr *ngFor = "let produto of listarProdutos">
+                                        <td>{{ produto.id}}</td>
+                                        <td>{{ produto.nomeProduto}}</td>
+                                        <td>{{ produto.qtdProduto}}</td>
+                                        <td>{{ produto.precoProduto | currency: 'BRL'}}</td>
+                                        <td>{{ produto.assocProduto}}</td>
+                                        <td>
+                                          <button class="btn btn-secondary" routerLink="{{produto.id}}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                            </svg>
+                                          </button>
+                                          <button class="btn btn-outline-warning ml-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                            </svg>
+                                          </button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                              </table>
+                        </form>
+                </div>
+
+                <div class="fundo4 padding"> <!--QUARTO CARD-->
+                    <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                      </svg>
+                        <h5 class="text-pedidos">MEUS SERVIÇOS</h5>
+                    <form>
+                        
+                        <table class="table table-dark mt-5 bordinha">
+                            <thead>
+                              <tr>
+                                <th scope="col">##</th>
+                                <th scope="col">Nome Serviço</th> <!--NOME SERVICO-->
+                                <th scope="col">Preço</th> <!--PREÇO SERVICO-->
+                                <th scope="col">Associado</th> <!--NOME ASSOCIADO-->
+                                <th scope="col">Descrição</th> <!--DESCRIÇÃO SERVICO-->
+                                <th scope="col">Ações</th>
+                              </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <tr *ngFor = "let servico of listarServicos">
+                                    <td>{{ servico.id}}</td>
+                                    <td>{{ servico.nomeServico}}</td>
+                                    <td>{{ servico.precoServico | currency: 'BRL'}}</td>
+                                    <td>{{ servico.assocServico}}</td>
+                                    <td>{{ servico.descServico}}</td>
+                                    <td>
+                                      <button class="btn btn-secondary" routerLink="{{servico.id}}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                          <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                          <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                        </svg>
+                                      </button>
+                                      <button class="btn btn-outline-warning ml-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                        </svg>
+                                      </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                          </table>
+                    </form>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,150 @@
+.fundo{
+    width: 50vw;
+    height: 22vh;
+    background-color: rgb(255, 219, 152);
+    margin-top: 2vh;
+    margin-left: 4.5vw;
+    border-radius: 1%;
+    
+}
+
+.fundo2{
+    width: 50vw;
+    height: 51vh;
+    background-color: rgb(255, 219, 152);
+    margin-top: 2vh;
+    margin-left: 4.5vw;
+    border-radius: 1%;
+    /*padding-top: 1px;*/
+    
+  
+  }
+
+.fundo3{
+    width: 50vw;
+    height: autovh;
+    background-color: rgb(255, 219, 152);
+    margin-top: 2vh;
+    margin-left: -3vw;
+    border-radius: 1%;
+    /*padding-top: 1px;*/
+    
+  
+  }
+
+.fundo4{
+    width: 50vw;
+    height: autovh;
+    background-color: rgb(255, 219, 152);
+    margin-top: 2vh;
+    margin-left: -3vw;
+    margin-bottom: 3vh;
+    border-radius: 1%;
+    /*padding-top: 1px;*/
+    
+  
+  }
+
+
+
+
+.row{
+    padding-top: 6%;
+    margin-left: 6%;
+}
+
+.usuario-perfil{
+        font-size: 15px;
+        margin-left: 34.5%;
+        margin-top: -5%; 
+        text-align: center;
+}
+
+.text-usuario{
+    text-align: center;
+  }
+
+.text-pedidos{
+    text-align: center;
+    margin-top: 1%;
+}
+  
+  .coluna2{
+    margin-left: 1%;
+    margin-top: -5.2%;
+  }
+  
+  .coluna1{
+    margin-top: -5%;
+  }
+  
+  .btn-primary{
+    width: 20.8vw;
+    margin-left: 28%;
+    
+  }
+  
+  .criar-conta{
+    margin-left: 31%;
+    margin-top: 1%;
+    font-size: 15px;
+  }
+  
+  .cadastro-usuario{
+    font-size: 15px;
+    margin-left: 33%;
+    margin-top: 4%; 
+  }
+  
+  .nomecompleto{
+    margin-left: 7.6%;
+  }
+  
+  .inputnome{
+    width: 91.6%;
+  }
+  
+  .coluna1 input{
+    width: 330px;
+  }
+  
+  input{
+    width: 350px;
+  }
+
+  .padding{
+    padding-top: 25px;
+    margin-left: -6.5%;
+
+}
+
+.bi-cart-fill{
+    margin-left: 48.2%;
+}
+
+
+
+
+
+
+.zoom{
+max-width: 100%;
+-moz-transition: all 0.5s;
+-webkit-transition: all 0.5s;
+transition: translate(10%,10%);
+overflow: hidden;
+}
+
+.zoom:hover{
+-moz-transform: scale(1.20,1.20);
+-webkit-transform: scale(1.20,1.20);
+transform: scale(1.02);
+}
+
+.neon-blue{
+cursor: pointer;
+overflow: hidden;
+}
+.neon-blue:hover{
+box-shadow: 0 0 3px #0044ff;
+}

@@ -5,7 +5,11 @@
     <form>
       <div class="nomecompleto form-group">
         <label for="exampleInputEmail1">NOME COMPLETO</label>
-        <input type="text" class="form-control inputnome" placeholder="DIGITE SEU NOME" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="text" 
+               class="form-control inputnome" 
+               placeholder="DIGITE SEU NOME" 
+               name="nomeCadCliente"
+               [(ngModel)]="cadastro.nomeCadCliente">
       </div>
 
       <div class="row">
@@ -13,17 +17,29 @@
 
           <div class="form-group">
             <label for="exampleInputEmail1">ENDEREÇO</label>
-            <input type="text" class="form-control" placeholder="DIGITE SEU ENDEREÇO" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" 
+                   class="form-control" 
+                   name="emailCadCliente"
+                   placeholder="DIGITE SEU ENDEREÇO" 
+                   [(ngModel)]="cadastro.enderecoCadCliente">
           </div>
 
           <div class="form-group">
             <label for="exampleInputEmail1">E-MAIL</label>
-            <input type="email" class="form-control" placeholder="E-MAIL" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" 
+                   class="form-control" 
+                   placeholder="E-MAIL" 
+                   name="emailCadCliente"
+                   [(ngModel)]="cadastro.emailCadCliente">
           </div>
 
           <div class="form-group">
             <label for="exampleInputEmail1">SENHA</label>
-            <input type="password" class="form-control" placeholder="DIGITE SUA SENHA" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="password" 
+                   class="form-control" 
+                   name="senhaCadCliente"
+                   placeholder="DIGITE SUA SENHA" 
+                   [(ngModel)]="cadastro.senhaCadCliente">
           </div>
 
         </div><!--COLUNA 1-->
@@ -33,17 +49,29 @@
         <div class="col coluna2"><!--COLUNA 2-->
           <div class="form-group">
             <label for="exampleInputPassword1">TELEFONE</label>
-            <input type="tel" placeholder="TELEFONE" class="form-control" id="exampleInputPassword1">
+            <input type="tel" 
+                   placeholder="TELEFONE" 
+                   class="form-control" 
+                   name="telCadCliente"
+                   [(ngModel)]="cadastro.telCadCliente">
           </div>
 
           <div class="form-group">
             <label for="exampleInputEmail1">CPF</label>
-            <input type="number" class="form-control" placeholder="CPF" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="number" 
+                   class="form-control" 
+                   placeholder="CPF" 
+                   name="cpfCadCliente"
+                   [(ngModel)]="cadastro.cpfCadCliente">
           </div>
 
           <div class="form-group">
             <label for="exampleInputPassword1">CONFIRMAR SENHA</label>
-            <input type="password" placeholder="CONFIRME SENHA" class="form-control" id="exampleInputPassword1">
+            <input type="password" 
+                   placeholder="CONFIRME SENHA" 
+                   class="form-control" 
+                   name="confsenhaCadCliente"
+                   [(ngModel)]="cadastro.confsenhaCadCliente">
           </div>
 
 
@@ -51,7 +79,7 @@
         </div>
       </div>
     </form>
-    <button type="submit" routerLink="" class="btn btn-primary">Cadastrar</button>
+    <button type="submit" routerLink="" class="btn btn-primary"(click)="salvarCadastroCliente()">Cadastrar</button>
     <h3 class="criar-conta">Ainda não possui uma conta associado? <a routerLink="/cadastro-associado">Crie a sua!</a></h3>
   </div>
 

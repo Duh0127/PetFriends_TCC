@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { EMPTY, Observable } from 'rxjs';
-//import { ToastrService } from 'ngx-toastr';
-import { catchError, map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { IProduto } from '../model/IProduto.model';
 
 @Injectable({
@@ -14,11 +13,10 @@ import { IProduto } from '../model/IProduto.model';
   
     
   
-    constructor(private http: HttpClient)/*metodo com classe http que usa o HttpClient*/ { }
+    constructor(private http: HttpClient){ }
   
-    //metodo(tipo) : retorno{codigo}
-    buscarTodos() : Observable<IProduto[]> { //Método
-      //pipe :  juntas os metodos
+    
+    buscarTodos() : Observable<IProduto[]> {
       return this.http.get<IProduto[]>(this.URL).pipe(
         map(retorno => retorno),
         //catchError(erro => this.exibirErro(erro))

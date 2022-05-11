@@ -29,7 +29,7 @@ export class IncluirProdutoComponent implements OnInit {
     this.produtosService.cadastrar(this.produto).subscribe(retorno => {
       this.produto = retorno;
     });
-    this.router.navigate(['']);
+    this.router.navigate(['perfil-associado']);
   }
 
 }
