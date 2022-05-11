@@ -20,13 +20,14 @@ export class AssociadoComponent implements OnInit {
     emailCadAssociado: '',
     tipoCadAssociado: '',
     telCadAssociado: '',
-    cnpjCadAssociado: '',
+    cnpjCadAssociado: 0,
     senhaCadAssociado: '',
     confsenhaCadAssociado: ''
   };
 
   listarAssociados: ICadastroAssociado[] = [];
   listarProdutos: IProduto[] = [];
+  listarServicos: IServico[] = [];
 
   constructor(
     private cadastroService: CadastroAssociadoService,
@@ -53,11 +54,16 @@ export class AssociadoComponent implements OnInit {
     })
   };
 
-  // deletarProdutos(produto: IProduto) : void {
-  //   this.produtosService.excluir(produto.id!).subscribe(() => {
-  //     this.carregarProdutos();
-  //   });
-  // };
+   deletarProdutos(produto: IProduto) {
+     this.produtosService.excluir(produto.produtoId).subscribe(produto => {
+      if (produto) {
+        alert('Produto Deletado com Sucesso');
+      } else {
+        alert('Falha ao Deletar Produto ');
+      }
+       this.carregarProdutos();
+     });
+   };
 
 
   salvarCadastroAssoc(): void {

@@ -61,7 +61,7 @@
             <label for="exampleInputEmail" class="form-label">TIPO ASSOCIADO </label>
             <br>
             <select autofocus id="tipo" style="width: 200px; height: 40px;">
-              <option value="PetShop">Pet Shop</option>
+              <option class="opcao" value="PetShop">Pet Shop</option>
               <option value="Veterinario">Veterinário</option>
             </select>
           </div><!--melhor mudar para text pq da pra diferenciar com o ngIF-->
@@ -78,8 +78,9 @@
 
           <div class="form-group">
             <label for="exampleInputEmail1">CNPJ</label>
-            <input type="string" 
+            <input type="number" 
                    class="form-control" 
+                   min=0
                    placeholder="Digite seu CNPJ" 
                    name="cnpjCadAssociado" 
                    [(ngModel)]="cadastro.cnpjCadAssociado">

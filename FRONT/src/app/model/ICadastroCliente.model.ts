@@ -1,12 +1,9 @@
 export interface ICadastroCliente {
-    id?: number;
+    clienteId: number;
     nomeCadCliente: string;
     enderecoCadCliente: string;
     emailCadCliente: string
     telCadCliente: string;
-    cpfCadCliente: string;
+    cpfCadCliente: number;
     senhaCadCliente: string;
-    confsenhaCadCliente: string;
-    
-
   }

@@ -1,4 +1,4 @@
-body, .container-fluid{
+body{
   background-image: url("src/assets/img/fundocachorro.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -6,51 +6,50 @@ body, .container-fluid{
   height: 180vh;
 }
 
-
-.fundo-tudo{
-  width: 50vw;
-  height: 27vh;
-  background-color: rgba(255, 219, 152, 0.808);
-  box-shadow: 2px 2px 10px rgb(117, 117, 117);
-  border-radius: 10px;
-  margin-left: 25vw;
-  margin-top: 50px;
+.fundo{
+  margin-top: 2.5%;
+    width: 50vw;
+    height: 27vh;
+    background-color: rgba(255, 219, 152, 0.808);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    border-radius: 10px;
+    margin-left: 25vw;
 }
 
 .fundo2{
-  width: 50vw;
-  height: 64vh;
-  background-color: rgba(255, 219, 152, 0.808);
-  box-shadow: 2px 2px 10px rgb(117, 117, 117);
-  border-radius: 10px;
-  margin-top: 2vh;
-  margin-left: 25vw;
-}
+    width: 50vw;
+    height: 55vh;
+    background-color: rgba(255, 219, 152, 0.808);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    border-radius: 10px;
+    margin-top: 3vh;
+    margin-left: 4.5vw;
+  }
 
 .fundo3{
   width: 50vw;
   height: 64vh;
   background-color: rgba(255, 219, 152, 0.808);
   box-shadow: 2px 2px 10px rgb(117, 117, 117);
-  margin-top: 2vh;
+  margin-top: 3vh;
   border-radius: 10px;
-  margin-left: 25vw;
 }
 
-.padding-incluir{
-    padding-top: 25px;
-    align-items: center;
+
+.row{
+  padding-top: 6%;
+  margin-left: 6%;
 }
 
 .usuario-perfil{
   font-size: 15px;
-  padding-top: 10px; 
+  margin-left: 34.5%;
+  margin-top: -5%; 
   text-align: center;
 }
 
 .text-usuario{
   text-align: center;
-  margin-bottom: 50px;
 }
 
 .text-pedidos{
@@ -59,11 +58,12 @@ body, .container-fluid{
 }
   
 .coluna2{
-  margin-left: 70px;
+  margin-left: 1%;
+  margin-top: -5.2%;
 }
   
 .coluna1{
-  margin-left: 50px;
+  margin-top: -5%;
 }
   
 .btn-primary{
@@ -92,9 +92,22 @@ body, .container-fluid{
   width: 300px;
 }
 
+.padding{
+  padding-top: 25px;
+  margin-left: -6.5%;
+}
 
 .bi-cart-fill{
   margin-left: 48.2%;
+}
+
+.coluna2{
+  margin-left: 1%;
+  margin-top: -5.2%;
+}
+
+.coluna1{
+  margin-top: -5%;
 }
 
 .btn-primary{
@@ -135,9 +148,7 @@ input:focus{
   border-radius: 0px;
 }
 
-.padding{
-  padding-top: 25px;
-}
+
 
 
 /*header*/
@@ -151,34 +162,4 @@ input:focus{
   /*foto do logo*/
   margin-left: 19vw;
   margin-bottom: -2%;
-}
-
-.fundo-input{
-  color: rgb(161, 160, 160);
-}
-
-.cardproduto{
-  border: 5px solid rgb(255, 199, 96);
-  width: 70%;
-  height: 40%;
-  margin: auto;
-  background-color: rgba(49, 49, 49, 0.945);
-  
-}
-
-
-h1{
-  margin-left: 15%;
-  margin-bottom: -2%;
-}
-
-.btn-warning{
-  width: 10%;
-  font-size: 18px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  box-shadow: 0px 0px 10px rgb(255, 220, 21);
-}
-.btn-warning:hover{
-  background-color: rgb(255, 217, 0);
-  box-shadow: 0px 0px 15px rgb(255, 217, 0);
 }

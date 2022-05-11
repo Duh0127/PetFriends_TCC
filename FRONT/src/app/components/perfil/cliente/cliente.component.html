@@ -9,31 +9,25 @@
     </nav>
   </nav>
 
-  <div class="container-fluid">
-    
-    <div class="row">
+
+  <div class="fundo shadow-1">
     <!--PRIMEIRO CARD-->
     <form>
-            <div class="col">
-                <div class="fundo-tudo shadow-1">
-                    <div class="usuario-perfil">
-                        <!--Campo de imagem redondo --><svg class="bd-placeholder-img rounded-circle" width="120" height="120"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">
-                        </text>
-                        </svg>
-                        <h4>Bem-vindo, Usuario</h4>
-                        <b>
-                        <p>usuario@hotmail.com</p>
-                        <button type="button" routerLink="/plano-premium" class="btn btn-dark">Obter Plano Premium</button>
-                        </b>
-                    </div>
-                </div>    
-            </div>
-    
-      <div class="col">
+      <div class="row">
+        <div class="usuario-perfil">
+          <!--Campo de imagem redondo --><svg class="bd-placeholder-img rounded-circle" width="120" height="120"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140
+            </text>
+          </svg>
+          <h4>Bem-vindo, Usuario</h4>
+          <b>
+            <p>usuario@hotmail.com</p>
+          </b>
+        </div>
+
         <div class="fundo2 padding">
           <!--SEGUNDO CARD-->
           <svg xmlns="http://www.w3.org/2000/svg" class="text-usuario" width="" height="30" fill="currentColor"
@@ -84,25 +78,25 @@
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">CPF</label>
-                  <input type="text" class="form-control" placeholder="CPF" name="cpfCadCliente" value="cpfCadCliente"
-                    [(ngModel)]="cadastro.cpfCadCliente">
+                  <input type="number" class="form-control" placeholder="CPF" name="cpfCadCliente" value="cpfCadCliente"
+                    [(ngModel)]="cadastro.cpfCadCliente" disabled>
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <label for="exampleInputPassword1">CONFIRMAR SENHA</label>
                   <input type="password" placeholder="CONFIRME SENHA" class="form-control" name="confsenhaCadCliente"
                     [(ngModel)]="cadastro.confsenhaCadCliente">
-                </div>
+                </div> -->
               </div>
             </div>
           </form>
           <button type="submit" routerLink="" class="btn btn-primary" (click)="salvarCadastroCliente()">Atualizar
             Perfil</button>
         </div>
-      </div>
 
-    </form>
+
+
       </div>
-   
+    </form>
   </div>
 </body>

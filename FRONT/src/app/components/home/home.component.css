@@ -87,54 +87,22 @@ body {
 .footer {
   margin-top: 200px;
   height: 30vh;
-  width: 199vh;
-  border-top: 2px solid rgb(223, 223, 223);
+  border-top: 2px solid grey;
   margin-right: -15px;
   margin-left: -15px;
   background-color: #ffff;
 }
 
-.coluna{
-  border: 2px solid rgb(223, 223, 223);
-  height: 10vh;
-  border-top: none;
-  border-bottom: none;
-  border-right: none;
-  
-}
-
-.sac:hover{
-  color: rgb(248, 183, 61);
-
-}
-
-.rede{
+.marca{
   text-align: center;
 }
-.redes{
+.marcas{
   align-items: center;
   margin-top: 5%;
 }
 .image_redonda{
   height: 50px;
   width: 50px;
-  border-radius: 50%;
-}
-
-.marca{
-  text-align: center;
-
-}
-
-.marcas{
-  margin-left: -75px;
-  align-items: center;
-}
-
-
-.image_marca{
-  height: 150px;
-  width: 150px;
   border-radius: 50%;
 }
 

@@ -2,16 +2,13 @@ import { ProdutosService } from './../../services/produtos.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { IProduto } from 'src/app/model/IProduto.model';
 import { ActivatedRoute, Router } from '@angular/router';
-import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-card-produto',
   templateUrl: './card-produto.component.html',
-  styleUrls: ['./card-produto.component.css'],
+  styleUrls: ['./card-produto.component.css']
 })
-
-
 export class CardProdutoComponent implements OnInit {
 
 
@@ -41,4 +38,4 @@ export class CardProdutoComponent implements OnInit {
 
 
 
-}
+  }

@@ -9,32 +9,25 @@
     </nav>
   </nav>
 
-
-  <div class="container-fluid">
-    
-    <div class="row">
+  <div class="fundo shadow-1">
     <!--PRIMEIRO CARD-->
     <form>
-            <div class="col">
-                <div class="fundo-tudo shadow-1">
-                    <div class="usuario-perfil">
-                        <!--Campo de imagem redondo --><svg class="bd-placeholder-img rounded-circle" width="120" height="120"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">
-                        </text>
-                        </svg>
-                        <h4>Bem-vindo, Usuario</h4>
-                        <b>
-                        <p>usuario@hotmail.com</p>
-                        <button type="button" routerLink="/plano-premium" class="btn btn-dark">Obter Plano Premium</button>
-                        </b>
-                    </div>
-                </div>    
-            </div>
-    </form>
-        <div class="col">
+      <div class="row">
+        <div class="usuario-perfil">
+          <!--Campo de imagem redondo --><svg class="bd-placeholder-img rounded-circle" width="120" height="120"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">
+            </text>
+          </svg>
+          <h4>Bem-vindo, Usuario</h4>
+          <b>
+            <p>usuario@hotmail.com</p>
+            <button type="button" routerLink="/plano-premium" class="btn btn-dark">Obter Plano Premium</button>
+          </b>
+        </div>
+
         <div class="fundo2 padding">
           <!--SEGUNDO CARD-->
           <svg xmlns="http://www.w3.org/2000/svg" class="text-usuario" width="" height="30" fill="currentColor"
@@ -97,8 +90,8 @@
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">CNPJ</label>
-                  <input type="text" class="form-control" placeholder="CNPJ" name="cnpjCadAssociado"
-                    [(ngModel)]="cadastro.cnpjCadAssociado">
+                  <input type="number" class="form-control" placeholder="CNPJ" name="cnpjCadAssociado"
+                    [(ngModel)]="cadastro.cnpjCadAssociado" disabled>
                 </div>
 
                 <div class="form-group">
@@ -116,9 +109,7 @@
           <button type="submit" routerLink="" class="btn btn-primary" (click)="salvarCadastroAssoc()">Atualizar
             Perfil</button>
         </div>
-      </div>
 
-      <div class="col">
         <div class="fundo3 padding">
           <!--TERCEIRO CARD-->
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart-fill"
@@ -157,13 +148,9 @@
                   <td>{{ produto.preco | currency: 'BRL'}}</td>
                   <td>{{ produto.fabricante}}</td>
                   <td>
-                    <button class="btn btn-secondary" routerLink="{{produto.produtoId}}">
-                      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16"
-                        fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                        <path
-                          d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                        <path fill-rule="evenodd"
-                          d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                    <button class="btn btn-danger" (click)="deletarProdutos(produto)">
+                      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                       </svg>
                     </button>
                     <button class="btn btn-outline-warning ml-2">
@@ -181,8 +168,8 @@
             <button type="button" class="btn btn-primary" routerLink="/incluir-produto">Incluir Produto</button>
           </form>
         </div>
-        </div>
 
       </div>
+    </form>
   </div>
 </body>

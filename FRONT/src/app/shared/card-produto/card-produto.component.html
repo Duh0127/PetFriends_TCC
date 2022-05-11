@@ -3,7 +3,7 @@
 </head>
 
 
-<div class="card rounded margem shadow bg-white" routerLink="/desc-produto">
+<div class="card rounded margem shadow bg-white">
   <img [src]="foto" class="card-img-top img img-area">
   <div class="card-body rounded">
     <p class="card-text font">
@@ -15,5 +15,4 @@
   </div>
   <h5 class="text-primary">{{precoProduto | currency: 'BRL' }}</h5>
 </div>
-
-<input type="button" routerLink="/reserva" id="botaocard" value="RESERVAR">
+<input type="button" routerLink="reserva" id="botaocard" value="RESERVAR">

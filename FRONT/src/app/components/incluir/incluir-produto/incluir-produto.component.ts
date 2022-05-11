@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ICadastroAssociado } from 'src/app/model/ICadastroAssociado.model';
 import { IProduto } from 'src/app/model/IProduto.model';
 import { ProdutosService } from 'src/app/services/produtos.service';
-import { CadastroAssociadoService } from 'src/app/services/cadassoc.service';
 
 @Component({
   selector: 'app-incluir-produto',
@@ -15,6 +13,7 @@ export class IncluirProdutoComponent implements OnInit {
 
 
   produto: IProduto = {
+    produtoId: 0,
     nome: '',
     codigo: '',
     quantidade: 0,
@@ -22,26 +21,27 @@ export class IncluirProdutoComponent implements OnInit {
     fabricante: '',
   };
 
-  listarAssociados: ICadastroAssociado[] = [];
-  listarProdutos: IProduto[] = [];
-
   //Objeto.atributo
 
-  constructor(
-    private produtosService: ProdutosService, 
-    private activatedRouter: ActivatedRoute,
-    private cadastroService: CadastroAssociadoService, 
-    private router: Router) { }
+  constructor(private produtosService: ProdutosService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
-
-  ngOnInit(): void {
+  ngOnInit() {
   }
+
+  listarProdutos: IProduto[] = [];
+
+  carregarProdutos() : void{
+    this.produtosService.buscarTodos().subscribe(retorno => {
+      this.listarProdutos = retorno;
+    })
+  };
 
    salvarProduto() {
      
       this.produtosService.cadastrar(this.produto).subscribe(produto => {
         if (produto) {
           alert('Produto Cadastrado com Sucesso');
+          this.carregarProdutos();
         } else {
           alert('Falha ao Cadastrar Produto ');
         }

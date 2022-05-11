@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   listarProdutos: IProduto[] = [];
 
   produtoHome: IProduto = {
+    produtoId: 0,
     //imgProduto
     nome: '',
     codigo: '',

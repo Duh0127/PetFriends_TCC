@@ -2,7 +2,7 @@
 //Serve para receber as informções do JSON do BackEnd
 
 export interface IProduto {
-    produtoId?: number;
+    produtoId: number;
     codigo: string;
     nome: string;
     quantidade: number;

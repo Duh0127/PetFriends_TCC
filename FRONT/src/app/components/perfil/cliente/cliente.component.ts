@@ -17,13 +17,13 @@ export class ClienteComponent implements OnInit {
   listarServicos: IServico[] = [];
 
   cadastro: ICadastroCliente = {
+    clienteId: 0,
     nomeCadCliente: '',
     enderecoCadCliente: '',
     emailCadCliente: '',
     telCadCliente: '',
-    cpfCadCliente: '',
-    senhaCadCliente: '',
-    confsenhaCadCliente: ''
+    cpfCadCliente: 0,
+    senhaCadCliente: ''
   };
 
   constructor(private cadastroService: CadastroClienteService,

@@ -17,7 +17,7 @@ export class AssociadoCadastroComponent implements OnInit {
     emailCadAssociado: '',
     tipoCadAssociado: '',
     telCadAssociado: '',
-    cnpjCadAssociado: '',
+    cnpjCadAssociado: 0,
     senhaCadAssociado: '',
     confsenhaCadAssociado: ''
   };

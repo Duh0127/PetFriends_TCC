@@ -12,7 +12,7 @@ import { IProduto } from '../model/IProduto.model';
   
     //private URL: string = 'http://localhost:3000/produtos';
 
-    baseUrl = `${environment.UrlPrincipal}/Produto`;
+    baseUrl = `${environment.UrlPrincipal}/Produtos`;
   
     
   
@@ -31,6 +31,13 @@ import { IProduto } from '../model/IProduto.model';
         //catchError(erro => this.exibirErro(erro))
       );
     }
+
+     excluir(id: number): Observable<IProduto> {
+       return this.http.delete<IProduto>(`${this.baseUrl}/${id}`).pipe(
+         map(retorno => retorno),
+        // catchError(erro => this.exibirErro(erro))
+       );
+     }
 
 
   
@@ -53,12 +60,6 @@ import { IProduto } from '../model/IProduto.model';
     //   );
     // }
   
-    // excluir( id: number): Observable<any> {
-    //   return this.http.delete<any>(`${this.URL}/${id}`).pipe(
-    //     map(retorno => retorno),
-    //    // catchError(erro => this.exibirErro(erro))
-    //   );
-    // }
   
   
     
