@@ -1,9 +1,23 @@
+.my-3{
+    text-align: center;
+}
+
+
 #imagemBotao{
     width: 25px;
 }
 
 #totalCompra{
-    margin-top: 5px;
+    margin-top: 11vh;
+}
+
+.table-striped{
+    margin-left: 0%;
+}
+
+#card{
+    margin-left: 37%;
+    margin-right: -35%;
 }
 
 #trash{
@@ -12,9 +26,10 @@
 }
 
 #contcomp{
-    margin-top: 7vh;
+    margin-top: 17vh;
     margin-left: 0.5vw;
 }
+
 #contcomp:hover{
     box-shadow: 0 0 10px #ff0000;
 }

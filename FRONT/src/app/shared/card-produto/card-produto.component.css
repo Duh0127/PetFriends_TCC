@@ -10,13 +10,13 @@
 }
 
 .card{
-  width: 12rem;
-  height: 18rem;
+  width: 15rem;
+  height: 21rem;
   background-color: white;
 }
 
 .font{
-  font-size:70%;
+  font-size:100%;
 }
 
 a{

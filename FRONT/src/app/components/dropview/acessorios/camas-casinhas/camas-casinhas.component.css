@@ -1,9 +1,48 @@
 .zoom{
-    max-width: 100%;
-    transition: translate(5%,5%);
-  }
+  max-width: 100%;
+  transition: translate(5%,5%);
+}
+
+.zoom:hover{
+  transform: scale(1.1);
+  transition: transform .2s ease;
+}
+
+
+/*CARDS*/
+.mar1{
+  margin-left: 28%;
+}
+
+.mar2{
+  margin-left: 28%;
+}
+
+.mar3{
+  margin-right: -28%;
   
-  .zoom:hover{
-    transform: scale(1.1);
-    transition: transform .2s ease;
-  }
+}
+/*FIM CARDS*/
+
+.my-3{
+  text-align: center;
+}
+
+.card-body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card{
+  width: 15rem;
+  margin-left: 1.5%;
+}
+
+#resbut{
+  width: 14.2rem;
+  margin-left: -7%;
+}
+
+#imagemBotao{
+  width: 25px;
+  margin-left: -1%;
+}
