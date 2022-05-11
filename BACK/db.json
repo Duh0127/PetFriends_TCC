@@ -1,0 +1,45 @@
+{
+  "produtos": [
+    {
+      "nomeProduto": "Teste",
+      "qtdProduto": 0,
+      "precoProduto": 34.92,
+      "assocProduto": "rober",
+      "descProduto": "TEsteeeee",
+      "id": 1
+    },
+    {
+      "nomeProduto": "produto",
+      "qtdProduto": 10,
+      "precoProduto": 90.29,
+      "assocProduto": "alex",
+      "descProduto": "teste",
+      "id": 2
+    },
+    {
+      "nomeProduto": "Testi",
+      "qtdProduto": 32,
+      "precoProduto": 988,
+      "assocProduto": "robertson",
+      "descProduto": "oi desc",
+      "id": 3
+    },
+    {
+      "nomeProduto": "",
+      "qtdProduto": 0,
+      "precoProduto": 0,
+      "assocProduto": "",
+      "descProduto": "",
+      "id": 4
+    }
+  ],
+  "servicos": [
+    {
+      "id": 1,
+      "nomeServico": "",
+      "precoServico": 0,
+      "assocServico": "",
+      "descServico": ""
+    }
+  ]
+}

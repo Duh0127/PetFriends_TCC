@@ -1,28 +1,53 @@
-<form class="bg-dark p-4 mt-5 rounded bordinha">
+<br>
+<strong><h1><u>INCLUIR PRODUTO</u></h1></strong>
+<form class="bg-secondary p-4 mt-5 rounded bordinha">
     <div class="form-row">
         <div class="col-md-6 mb-3 text-light">
-            <label for="validationDefault01">Nome Produto:</label>
-            <input type="text" class="form-control fundo-input" required>
+            <label>Nome do produto:</label>
+            <input type="text" 
+                    class="form-control fundo-input" 
+                    name="nomeProduto" 
+                    [(ngModel)]="produto.nomeProduto">
         </div>
         <div class="col-md-6 mb-3 text-light">
-            <label for="validationDefault02">Descrição:</label>
-            <input type="text" class="form-control fundo-input" required>
+            <label>Descrição produto:</label>
+            <input type="text" 
+                    class="form-control fundo-input" 
+                    name="descProduto" 
+                    [(ngModel)]="produto.descProduto">
         </div>
     </div>
     
     <div class="form-row">
         <div class="col-md-2 mb-3 text-light">
-            <label for="validationDefault02">Quantidade:</label>
-            <input type="number" class="form-control fundo-input" max="500" min="0" required>
+            <label for="qtdade">Quantidade: </label>
+            <input
+                type="number"
+                class="form-control fundo-input"
+                placeholder="Digite a quantidade"
+                name = "qtdade"
+                [(ngModel)]="produto.qtdProduto"
+            >
         </div>
         <div class="col-md-4 mb-3 text-light">
-            <label for="validationDefault03">Preço:</label>
-            <input type="number" class="form-control fundo-input" required>
-         </div>
+            <label>Preço do produto:</label>
+            <input type="number" 
+                    class="form-control fundo-input" 
+                    name="precoProduto" 
+                    [(ngModel)]="produto.precoProduto">
+        </div>
         <div class="col-md-6 mb-3 text-light">
-            <label for="validationDefault03">Nome Associado:</label>
-            <input type="text" class="form-control fundo-input" required>
+            <label>Nome Associado:</label>
+            <input type="text" 
+                    class="form-control fundo-input" 
+                    name="assocProduto" 
+                    [(ngModel)]="produto.assocProduto">
         </div>
     </div>
-    <button class="btn btn-warning mt-3" type="submit">Incluir Produto</button>
-  </form>
+    
+</form>
+<button type="button" 
+            class="btn btn-success mt-3 float-right" 
+            (click)="salvarProduto()"
+    >Incluir
+    </button>

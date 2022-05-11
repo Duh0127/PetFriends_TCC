@@ -6,12 +6,13 @@
   width: 60%;
   height: 50%;
   padding-top: 10px;
-  margin-left: 40px;
+  margin: auto;
 }
 
 .card{
   width: 12rem;
   height: 18rem;
+  background-color: white;
 }
 
 .font{

@@ -1,5 +1,10 @@
 .logo{ /*foto do logo*/
-  margin-left: 18vw;
+  margin-left: 19vw;
+}
+
+.fundo{
+  background-color: rgb(255, 194, 81);
+  padding-bottom: 2%;
 }
 
 .box-search{ /*barra de pesquisa*/
@@ -16,7 +21,7 @@
 #embaixo{ /*topicos embaixo da barra de pesquisa*/
   padding-right: 12vw;
   margin-left: -10vw;
-
+  margin-bottom: -2vh;
 }
 
 #login{
@@ -29,7 +34,7 @@
 
 #carrinho{
   margin-top: 2vh;
-  margin-right: 10vw;
+  margin-right: 12vw;
   width: 25px;
   height: 29px;
   cursor: pointer;

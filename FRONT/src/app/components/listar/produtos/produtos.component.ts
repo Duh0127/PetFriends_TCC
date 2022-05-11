@@ -24,14 +24,14 @@ export class ProdutosComponent implements OnInit {
     })
   };
 
-  //Ã© preciso de ! depois do id, pois o id pode ser null
+  
   deletar(produto: IProduto) : void {
-
     this.produtosService.excluir(produto.id!).subscribe(() => {
-
       this.carregarProdutos();
-
     });
   };
+
+
+  
 
 }

@@ -23,6 +23,10 @@ import { ProdutosComponent } from './components/listar/produtos/produtos.compone
 import { ServicosComponent } from './components/listar/servicos/servicos.component';
 import { IncluirProdutoComponent } from './components/incluir/incluir-produto/incluir-produto.component';
 import { IncluirServicoComponent } from './components/incluir/incluir-servico/incluir-servico.component';
+import { HttpClientModule } from '@angular/common/http';
+import { registerLocaleData } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -53,7 +57,9 @@ import { IncluirServicoComponent } from './components/incluir/incluir-servico/in
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    FormsModule,
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

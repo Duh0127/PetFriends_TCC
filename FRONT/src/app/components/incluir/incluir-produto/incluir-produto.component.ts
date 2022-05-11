@@ -20,9 +20,7 @@ export class IncluirProdutoComponent implements OnInit {
 
   //Objeto.atributo
 
-  constructor(private produtosService: ProdutosService, 
-              private activatedRouter: ActivatedRoute, 
-              private router: Router) { }
+  constructor(private produtosService: ProdutosService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -31,8 +29,9 @@ export class IncluirProdutoComponent implements OnInit {
     this.produtosService.cadastrar(this.produto).subscribe(retorno => {
       this.produto = retorno;
     });
-    this.router.navigate(['/produtos']);
+    this.router.navigate(['']);
   }
+
 }
 
 

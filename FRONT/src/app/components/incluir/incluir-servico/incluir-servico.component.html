@@ -1,1 +1,43 @@
-<p>incluir-servico works!</p>
+<br>
+<strong><h1><u>INCLUIR SERVIÇO</u></h1></strong>
+<form class="bg-dark p-4 mt-5 rounded bordinha">
+    <div class="form-row">
+        <div class="col-md-6 mb-3 text-light">
+            <label>Nome do serviço:</label>
+            <input type="text" 
+                    class="form-control fundo-input" 
+                    name="nomeServico" 
+                    [(ngModel)]="servico.nomeServico">
+        </div>
+        <div class="col-md-6 mb-3 text-light">
+            <label>Descrição do serviço:</label>
+            <input type="text" 
+                    class="form-control fundo-input" 
+                    name="descServico" 
+                    [(ngModel)]="servico.descServico">
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="col-md-4 mb-3 text-light">
+            <label>Preço do serviço:</label>
+            <input type="number" 
+                    class="form-control fundo-input" 
+                    name="precoServico" 
+                    [(ngModel)]="servico.precoServico">
+        </div>
+        <div class="col-md-6 mb-3 text-light">
+            <label>Nome do associado:</label>
+            <input type="text" 
+                    class="form-control fundo-input" 
+                    name="assocServico" 
+                    [(ngModel)]="servico.assocServico">
+        </div>
+    </div>
+    <button type="button" 
+            class="btn btn-success mt-3 float-right" 
+            (click)="salvarServico()"
+    >Incluir
+    </button>
+</form>
+

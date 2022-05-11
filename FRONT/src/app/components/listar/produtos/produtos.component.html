@@ -11,14 +11,14 @@
     </thead>
     
     <tbody>
-        <tr *ngFor = "let prod of listarProdutos">
-            <td>{{ prod.id }}</td>
-            <td>{{ prod.nomeProduto }}</td>
-            <td>{{ prod.qtdProduto}}</td>
-            <td>{{ prod.precoProduto | currency: "BRL" }}</td>
-            <td>{{ prod.assocProduto}}</td>
+        <tr *ngFor = "let produto of listarProdutos">
+            <td>{{ produto.id}}</td>
+            <td>{{ produto.nomeProduto}}</td>
+            <td>{{ produto.qtdProduto}}</td>
+            <td>{{ produto.precoProduto | currency: 'BRL'}}</td>
+            <td>{{ produto.assocProduto}}</td>
             <td>
-              <button class="btn btn-secondary" routerLink="/produtos/atualizar/{{ prod.id}}">
+              <button class="btn btn-secondary" routerLink="{{produto.id}}">
                 <i class="fa fa-pencil" aria-hidden="true"></i>
               </button>
               <button class="btn btn-outline-warning ml-2">

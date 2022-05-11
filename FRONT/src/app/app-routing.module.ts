@@ -15,6 +15,8 @@ import { AssociadoComponent } from './components/perfil/associado/associado.comp
 import { SacComponent } from './components/sac/sac.component';
 import { ProdutosComponent } from './components/listar/produtos/produtos.component';
 import { IncluirProdutoComponent } from './components/incluir/incluir-produto/incluir-produto.component';
+import { IncluirServicoComponent } from './components/incluir/incluir-servico/incluir-servico.component';
+import { ServicosComponent } from './components/listar/servicos/servicos.component';
 
 
 
@@ -34,7 +36,9 @@ const routes: Routes = [
     {path:'perfil-associado', component:AssociadoComponent},
     {path:'sac', component:SacComponent},
     {path:'listar-produto', component:ProdutosComponent},
-    {path:'incluir-produto', component:IncluirProdutoComponent}
+    {path:'incluir-produto', component:IncluirProdutoComponent},
+    {path:'incluir-servico', component:IncluirServicoComponent},
+    {path:'listar-servico', component:ServicosComponent}
     
 ];
 

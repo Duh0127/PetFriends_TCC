@@ -22,7 +22,7 @@ import { IProduto } from '../model/IProduto.model';
       return this.http.get<IProduto[]>(this.URL).pipe(
         map(retorno => retorno),
         //catchError(erro => this.exibirErro(erro))
-      ); // O http recebe a URL = 'http://localhost:3000/produtos'
+      );
   
     }
   

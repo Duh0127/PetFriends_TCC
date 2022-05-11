@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IProduto } from 'src/app/model/IProduto.model';
 
 @Component({
   selector: 'app-card-produto',
@@ -13,6 +14,8 @@ export class CardProdutoComponent implements OnInit {
   @Input() precoProduto: number = 0;
   @Input() associados: string = '';
   @Input() quantidade: number = 0;
+
+  listarProdutos: IProduto[] = [];
 
   constructor() { }
 

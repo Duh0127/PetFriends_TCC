@@ -1,9 +1,5 @@
 
 body{
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("./assets/img/wallpaper.jpg");
-
+    background-color: rgb(255, 255, 255);
 
 }
