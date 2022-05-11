@@ -3,7 +3,7 @@ import { ReservaComponent } from './components/reserva/reserva.component';
 import { ClienteCadastroComponent } from './components/cadastro/cliente-cadastro/cliente-cadastro.component';
 import { AssociadoLoginComponent } from './components/login/associado-login/associado-login.component';
 import { HomeComponent } from './components/home/home.component';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClienteLoginComponent } from './components/login/cliente-login/cliente-login.component';
 import { AssociadoCadastroComponent } from './components/cadastro/associado-cadastro/associado-cadastro.component';
@@ -13,8 +13,9 @@ import { RedefinicaoComponent } from './components/senha/redefinicao/redefinicao
 import { ClienteComponent } from './components/perfil/cliente/cliente.component';
 import { AssociadoComponent } from './components/perfil/associado/associado.component';
 import { SacComponent } from './components/sac/sac.component';
-import { ProdutoComponent } from './components/Incluir/produto/produto.component';
-import { ServicoComponent } from './components/Incluir/servico/servico.component';
+import { ProdutosComponent } from './components/listar/produtos/produtos.component';
+import { IncluirProdutoComponent } from './components/incluir/incluir-produto/incluir-produto.component';
+
 
 
 const routes: Routes = [
@@ -32,9 +33,9 @@ const routes: Routes = [
     {path:'perfil-cliente', component:ClienteComponent},
     {path:'perfil-associado', component:AssociadoComponent},
     {path:'sac', component:SacComponent},
-    {path:'incluir-produto', component:ProdutoComponent},
-    {path:'incluir-servico', component:ServicoComponent}
-
+    {path:'listar-produto', component:ProdutosComponent},
+    {path:'incluir-produto', component:IncluirProdutoComponent}
+    
 ];
 
 @NgModule({

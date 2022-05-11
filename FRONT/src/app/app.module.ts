@@ -18,9 +18,12 @@ import { ValidacaoComponent } from './components/senha/validacao/validacao.compo
 import { ClienteComponent } from './components/perfil/cliente/cliente.component';
 import { AssociadoComponent } from './components/perfil/associado/associado.component';
 import { DescricaoProdutoComponent } from './components/descricao-produto/descricao-produto.component';
-import { ProdutoComponent } from './components/Incluir/produto/produto.component';
-import { ServicoComponent } from './components/Incluir/servico/servico.component';
 import { SacComponent } from './components/sac/sac.component';
+import { ProdutosComponent } from './components/listar/produtos/produtos.component';
+import { ServicosComponent } from './components/listar/servicos/servicos.component';
+import { IncluirProdutoComponent } from './components/incluir/incluir-produto/incluir-produto.component';
+import { IncluirServicoComponent } from './components/incluir/incluir-servico/incluir-servico.component';
+
 
 
 
@@ -41,9 +44,11 @@ import { SacComponent } from './components/sac/sac.component';
     ClienteComponent,
     AssociadoComponent,
     DescricaoProdutoComponent,
-    ProdutoComponent,
-    ServicoComponent,
-    SacComponent
+    SacComponent,
+    ProdutosComponent,
+    ServicosComponent,
+    IncluirProdutoComponent,
+    IncluirServicoComponent
   ],
   imports: [
     BrowserModule,
