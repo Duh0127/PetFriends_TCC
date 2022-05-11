@@ -26,7 +26,6 @@ export class AssociadoComponent implements OnInit {
     confsenhaCadAssociado: ''
   };
 
-  listarAssociados: ICadastroAssociado[] = [];
   listarProdutos: IProduto[] = [];
   listarServicos: IServico[] = [];
 
@@ -39,16 +38,8 @@ export class AssociadoComponent implements OnInit {
   ngOnInit(): void {
     this.carregarServicos();
     this.carregarProdutos();
-    //this.carregarAssociados();
-
     
   }
-
-  /*carregarAssociados() : void{
-    this.cadastroService.buscarTodos().subscribe(retorno => {
-      this.listarAssociados = retorno;
-    })
-  };*/
 
   carregarServicos() : void{
     this.servicosService.buscarTodos().subscribe(retorno => {

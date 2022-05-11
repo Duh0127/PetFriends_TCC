@@ -1,19 +1,5 @@
-  <meta name="google-signin-client_id" content="783017677176-jl5qbms08409ts13boc6i7i8bodr44gt.apps.googleusercontent.com">
-  
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap-theme.min.css">
-
-
-  <script src="https://apis.google.com/js/api:client.js"></script>
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-  <!--JQuery e Bootstrap - Não são obrigatórios para ao autenticação -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!-- função para iniciar o app -->
-  <script>startApp();</script>
-
 <body>
+  
       <div class="fundo shadow-1">
         <form>
           <div class="row">
@@ -27,26 +13,7 @@
                 <label for="exampleInputPassword1"></label>
                 <input type="password" placeholder="Senha" class="form-control" id="exampleInputPassword1">
               </div>
-
-
-
               <button type="submit" class="btn btn-primary">Entrar</button>
-              <br>
-              <br>
-              <div class="box-login">
-                <!-- Código html do botão de login -->
-                <div id="gSignInWrapper">
-                  <div id="customBtn" class="customGPlusSignIn">
-                    <span class="icon"></span>
-                    <span class="buttonText">Logar com o Google</span>
-                  </div>
-                </div>
-                <div id="name"></div>
-                <hr/>
-              </div>
-
-
-
               <h3 class="criar-conta">Ainda não possui uma conta? <a routerLink="/cadastro-cliente">Crie a sua!</a></h3>
               <h3 class="cadastro-usuario"><a routerLink="/login-associado">É nosso associado?</a></h3>
             </div>  
