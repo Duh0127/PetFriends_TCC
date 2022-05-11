@@ -10,7 +10,7 @@ import { IServico } from '../model/IServico.model';
   })
   export class ServicosService {
   
-    private URL: string = 'http://localhost:3000/produtos';
+    private URL: string = 'http://localhost:3000/servicos';
   
     
   

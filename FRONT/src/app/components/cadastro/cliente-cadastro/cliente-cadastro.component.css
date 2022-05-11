@@ -1,4 +1,4 @@
-#telaCadastro{
+/*#telaCadastro{
   width: 750px;
   position: absolute;
   top: 43.5%;
@@ -48,5 +48,80 @@ overflow: hidden;
 }
 .neon-blue:hover{
 box-shadow: 0 0 3px #ff9100;
+}*/
+
+
+.padding{
+  padding-top: 25px;
 }
+
+.fundo{
+  width: 50vw;
+  height: 53vh;
+  background-color: rgb(255, 219, 152);
+  margin-top: 12vh;
+  margin-left: 4.5vw;
+  border-radius: 2%;
+  /*padding-top: 1px;*/
+  
+
+}
+
+.row{
+  padding-top: 6%;
+  margin-left: 6%;
+}
+
+h3{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  margin-left: -6%;
+}
+
+.text-usuario{
+  margin-left: 40%;
+}
+
+.coluna2{
+  margin-left: 1%;
+  margin-top: -5.2%;
+}
+
+.coluna1{
+  margin-top: -5%;
+}
+
+.btn-primary{
+  width: 20.8vw;
+  margin-left: 28%;
+}
+
+.criar-conta{
+  margin-left: 31%;
+  margin-top: 1%;
+  font-size: 15px;
+}
+
+.cadastro-usuario{
+  font-size: 15px;
+  margin-left: 33%;
+  margin-top: 4%; 
+}
+
+.nomecompleto{
+  margin-left: 7.6%;
+}
+
+.inputnome{
+  width: 91.6%;
+}
+
+.coluna1 input{
+  width: 330px;
+}
+
+input{
+  width: 350px;
+}
+
 

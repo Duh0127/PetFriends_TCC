@@ -17,6 +17,27 @@ import { ProdutosComponent } from './components/listar/produtos/produtos.compone
 import { IncluirProdutoComponent } from './components/incluir/incluir-produto/incluir-produto.component';
 import { IncluirServicoComponent } from './components/incluir/incluir-servico/incluir-servico.component';
 import { ServicosComponent } from './components/listar/servicos/servicos.component';
+import { HigieneComponent } from './components/dropview/cachorros/higiene/higiene.component';
+import { FarmaciaComponent } from './components/dropview/cachorros/farmacia/farmacia.component';
+import { AreiaComponent } from './components/dropview/gatos/areia/areia.component';
+import { EscovasPentesComponent } from './components/dropview/gatos/escovas-pentes/escovas-pentes.component';
+import { TransporteComponent } from './components/dropview/gatos/transporte/transporte.component';
+import { BanhoTosaComponent } from './components/dropview/servicos/banho-tosa/banho-tosa.component';
+import { SpaComponent } from './components/dropview/servicos/spa/spa.component';
+import { TaxiDogComponent } from './components/dropview/servicos/taxi-dog/taxi-dog.component';
+import { RacaoSecaComponent } from './components/dropview/racao/racao-seca/racao-seca.component';
+import { RacaoUmidaComponent } from './components/dropview/racao/racao-umida/racao-umida.component';
+import { RacaoDietComponent } from './components/dropview/racao/racao-diet/racao-diet.component';
+import { ColeirasGuiasPeitoraisComponent } from './components/dropview/acessorios/coleiras-guias-peitorais/coleiras-guias-peitorais.component';
+import { CamasCasinhasComponent } from './components/dropview/acessorios/camas-casinhas/camas-casinhas.component';
+import { RoupasComponent } from './components/dropview/acessorios/roupas/roupas.component';
+import { BolinhasComponent } from './components/dropview/brinquedos/bolinhas/bolinhas.component';
+import { VarinhasComponent } from './components/dropview/brinquedos/varinhas/varinhas.component';
+import { FrisbeesComponent } from './components/dropview/brinquedos/frisbees/frisbees.component';
+import { ComedourosBebedourosGatosComponent } from './components/dropview/gatos/comedouros-bebedouros-gatos/comedouros-bebedouros-gatos.component';
+import { ComedourosBebedourosCachorrosComponent } from './components/dropview/cachorros/comedouros-bebedouros-cachorros/comedouros-bebedouros-cachorros.component';
+import { OssinhosComponent } from './components/dropview/cachorros/ossinhos/ossinhos.component';
+import { PetiscosComponent } from './components/dropview/cachorros/petiscos/petiscos.component';
 
 
 
@@ -38,7 +59,32 @@ const routes: Routes = [
     {path:'listar-produto', component:ProdutosComponent},
     {path:'incluir-produto', component:IncluirProdutoComponent},
     {path:'incluir-servico', component:IncluirServicoComponent},
-    {path:'listar-servico', component:ServicosComponent}
+    {path:'listar-servico', component:ServicosComponent},
+    {path:'coleiras-guias-peitorais', component:ColeirasGuiasPeitoraisComponent},
+    {path:'camas-casinhas', component:CamasCasinhasComponent},
+    {path:'roupas', component:RoupasComponent},
+    {path:'frisbees', component:FrisbeesComponent},
+    {path:'varinhas', component:VarinhasComponent},
+    {path:'racao-seca', component:RacaoSecaComponent},
+    {path:'racao-umida', component:RacaoUmidaComponent},
+    {path:'bolinhas', component:BolinhasComponent},
+    {path:'racao-diet', component:RacaoDietComponent},
+    {path:'taxi-dog', component:TaxiDogComponent},
+    {path:'spa', component:SpaComponent},
+    {path:'banho-tosa', component:BanhoTosaComponent},
+    {path:'transporte', component:TransporteComponent},
+    {path:'escovas-pentes', component:EscovasPentesComponent},
+    {path:'areia', component:AreiaComponent},
+    {path:'farmacia', component:FarmaciaComponent},
+    {path:'higiene', component:HigieneComponent},
+    {path:'comedouros-bebeoduros-cachorros', component:ComedourosBebedourosCachorrosComponent},
+    {path:'comedouros-bebedouros-gatos', component:ComedourosBebedourosGatosComponent},
+    {path:'ossinhos', component:OssinhosComponent},
+    {path:'petiscos', component:PetiscosComponent}
+
+
+
+
     
 ];
 

@@ -1,45 +1,36 @@
 {
   "produtos": [
     {
-      "nomeProduto": "Teste",
-      "qtdProduto": 0,
-      "precoProduto": 34.92,
-      "assocProduto": "rober",
-      "descProduto": "TEsteeeee",
+      "nomeProduto": "Produto A",
+      "qtdProduto": 2,
+      "precoProduto": 34,
+      "assocProduto": "Associado A",
+      "descProduto": "descrição produto A",
       "id": 1
     },
     {
-      "nomeProduto": "produto",
-      "qtdProduto": 10,
-      "precoProduto": 90.29,
-      "assocProduto": "alex",
-      "descProduto": "teste",
+      "nomeProduto": "Produto B",
+      "qtdProduto": 23,
+      "precoProduto": 98,
+      "assocProduto": "Associado B",
+      "descProduto": "descrição produto B",
       "id": 2
-    },
-    {
-      "nomeProduto": "Testi",
-      "qtdProduto": 32,
-      "precoProduto": 988,
-      "assocProduto": "robertson",
-      "descProduto": "oi desc",
-      "id": 3
-    },
-    {
-      "nomeProduto": "",
-      "qtdProduto": 0,
-      "precoProduto": 0,
-      "assocProduto": "",
-      "descProduto": "",
-      "id": 4
     }
   ],
   "servicos": [
     {
-      "id": 1,
-      "nomeServico": "",
-      "precoServico": 0,
-      "assocServico": "",
-      "descServico": ""
+      "nomeServico": "Serviço A",
+      "precoServico": 39,
+      "assocServico": "Associado A",
+      "descServico": "descrição serviço A",
+      "id": 1
+    },
+    {
+      "nomeServico": "Serviço B",
+      "precoServico": 96,
+      "assocServico": "Associado B",
+      "descServico": "descrição serviço B",
+      "id": 2
     }
   ]
 }

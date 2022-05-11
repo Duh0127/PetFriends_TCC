@@ -1,132 +1,60 @@
 <body>
-  <div class="card" id="telaCadastro">
-    <div class="card-body">
-      <form>
-        <div class="mb-3">
-          <img src="/assets/img/logohoriz.png" class="img" />
-          <br>
+  
+  <div class="fundo padding">
+    <h3 class="text-usuario ">CADASTRO USUÁRIO</h3>
+    <form>
+      <div class="nomecompleto form-group">
+        <label for="exampleInputEmail1">NOME COMPLETO</label>
+        <input type="text" class="form-control inputnome" placeholder="DIGITE SEU NOME" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
 
-          <!--Inicio div row-->
-          <div class="row">
-            <div class="col-8">
-              <label for="exampleInputName" class="form-label">Nome Completo:</label>
-              <input
-                type="text"
-                class="form-control"
-                id="exampleInputName"
-                aria-describedby="nomeHelp"
-                placeholder="Digite seu nome completo..."
-                style="width: 430px"/>
-              <div id="nomeHelp" class="form-text"></div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputCpf" class="form-label">CPF: </label>
-              <input
-                type="text"
-                class="form-control"
-                id="exampleInputCpf"
-                placeholder="xxx.xxx.xxx-xx"
-                maxlength="11"/>
-            </div>
+      <div class="row">
+        <div class="col coluna1"><!--COLUNA 1-->
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">ENDEREÇO</label>
+            <input type="text" class="form-control" placeholder="DIGITE SEU ENDEREÇO" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
-          <!--fim div row-->
 
-          <!--Inicio div row-->
-          <div class="row">
-            <div class="col-8">
-              <label for="exampleInputEndereco" class="form-label"
-                >Endereço:
-              </label>
-              <input
-                type="text"
-                class="form-control"
-                id="exampleInputEndereco"
-                aria-describedby="enderecoHelp"
-                placeholder="Digite seu endereço aqui..."
-                style="width: 430px"
-              />
-              <div id="enderecoHelp" class="form-text"></div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputTel" class="form-label">Telefone: </label>
-              <input
-                type="tel"
-                class="form-control"
-                id="exampleInputTel"
-                placeholder="(xx)xxxxx-xxxx"
-                maxlength="11"
-              />
-            </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">E-MAIL</label>
+            <input type="email" class="form-control" placeholder="E-MAIL" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
-          <!--fim div row-->
 
-            <div class="mb-3">
-              <label for="exampleInputEmail" class="form-label">E-mail: </label>
-              <input
-                type="email"
-                class="form-control"
-                id="exampleInputEmail"
-                placeholder="seuemail@dominio.com"
-                style="width: 710px"
-              />
-            </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">SENHA</label>
+            <input type="password" class="form-control" placeholder="DIGITE SUA SENHA" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
 
-            <!--Inicio div row-->
-            <div class="row">
-              <div class="col-5">
-                <label for="exampleInputSenha" class="form-label"
-                  >Senha:
-                </label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="exampleInputSenha"
-                  aria-describedby="senhaHelp"
-                  style="width: 350px"
-                />
-                <div id="senhaHelp" class="form-text"></div>
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputSenha" class="form-label conf-senha">Confirmar Senha: </label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="exampleInputSenha"
-                  style="margin-left: 67px; width: 350px"
-                />
-              </div>
-            </div>
-            <!--fim div row-->
+        </div><!--COLUNA 1-->
+        
 
-            <div class="col-5">
-            <button
-              type="submit"
-              class="btn btn-primary btn-block neon-blue zoom"
-              style="margin-left: 207px;"
-            >
-              Cadastrar Cliente
-            </button>
-            </div>
+        
+        <div class="col coluna2"><!--COLUNA 2-->
+          <div class="form-group">
+            <label for="exampleInputPassword1">TELEFONE</label>
+            <input type="tel" placeholder="TELEFONE" class="form-control" id="exampleInputPassword1">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">CPF</label>
+            <input type="number" class="form-control" placeholder="CPF" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">CONFIRMAR SENHA</label>
+            <input type="password" placeholder="CONFIRME SENHA" class="form-control" id="exampleInputPassword1">
+          </div>
+
+
+
         </div>
-        <!--fim div row-->
-      </form>
-
-      <button type="button"
-              class="btn btn-link"
-              routerLink="/login-cliente"
-              style="margin-left: 207px;">Login</button>
-
-      <button
-        type="button"
-        class="btn btn-link"
-        id="margleft"
-        routerLink="/cadastro-associado">É Associado?</button>
-    </div>
+      </div>
+    </form>
+    <button type="submit" routerLink="" class="btn btn-primary">Cadastrar</button>
+    <h3 class="criar-conta">Ainda não possui uma conta associado? <a routerLink="/cadastro-associado">Crie a sua!</a></h3>
   </div>
-  <button type="button"
-          class="btn btn-link"
-          id="margrig"
-          routerLink=""
-          style="margin-left: 207px;">Voltar para home</button>
+
+
 
 </body>

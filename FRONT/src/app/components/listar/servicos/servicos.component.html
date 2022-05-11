@@ -1,4 +1,4 @@
-<button type="button" routerLink="incluir-servico">Incluir Serviço</button>
+<button type="button" routerLink="/incluir-servico">Incluir Serviço</button>
 <table class="table table-dark mt-5 bordinha">
     <thead>
       <tr>
@@ -15,7 +15,7 @@
         <tr *ngFor = "let servico of listarServicos">
             <td>{{ servico.id}}</td>
             <td>{{ servico.nomeServico}}</td>
-            <td>{{ servico.precoServico}}</td>
+            <td>{{ servico.precoServico | currency: 'BRL'}}</td>
             <td>{{ servico.assocServico}}</td>
             <td>{{ servico.descServico}}</td>
             <td>
