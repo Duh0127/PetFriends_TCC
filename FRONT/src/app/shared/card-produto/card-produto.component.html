@@ -1,19 +1,12 @@
-<head>
-  <script src="/src/app/shared/card-produto/funcoesProduto.js"></script>
-</head>
 
-
-<div class="card rounded margem shadow bg-white"><!-- ESTRUTURA DO CARD -->
-  <img [src]="foto" class="card-img-top img img-area"><!-- IMG DENTRO DO CARD -->
-  <div class="card-body rounded"><!-- CONTEÚDO DO CARD -->
-    <p class="card-text font">{{nomeProduto}}<!-- NOME DO PRODUTO -->
+<div class="card rounded margem">
+  <img [src]="foto" class="card-img-top img img-area" alt="...">
+  <div class="card-body rounded">
+    <p class="card-text font">
+      {{nomeProduto}}
       <br>
+      Quantidade : {{quantidade}}
     </p>
-    <br>
+    <a href="reserva" class="text-primary">{{precoProduto | currency: 'BRL' }}</a>
   </div>
-
-  <h5 class="text-primary">{{precoProduto | currency: 'BRL' }}</h5><!-- PREÇO CARD -->
-
 </div>
-
-<input type="button" routerLink="/reserva" id="botaocard" value="RESERVAR"><!-- BOTÃO DE RESERVAR PRODUTO -->

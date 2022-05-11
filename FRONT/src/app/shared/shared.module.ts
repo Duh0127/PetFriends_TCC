@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardProdutoComponent } from './card-produto/card-produto.component';
-import { RouterModule } from '@angular/router';
-
-
+import { CardServicoComponent } from './card-servico/card-servico.component';
 
 
 
 @NgModule({
   declarations: [
-    CardProdutoComponent
+    CardProdutoComponent,
+    CardServicoComponent
   ],
   imports: [
-    CommonModule,
-    RouterModule
+    CommonModule
   ],
-  exports: [CardProdutoComponent
+  exports: [CardProdutoComponent,
+            CardServicoComponent
   ]
 })
 export class SharedModule { }

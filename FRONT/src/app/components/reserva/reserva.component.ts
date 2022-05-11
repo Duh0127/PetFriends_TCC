@@ -1,7 +1,4 @@
-import { CarrinhoService } from './../../services/carrinho.service';
 import { Component, OnInit } from '@angular/core';
-import { IProduto } from 'src/app/model/IProduto.model';
-
 
 @Component({
   selector: 'app-reserva',
@@ -10,35 +7,14 @@ import { IProduto } from 'src/app/model/IProduto.model';
 })
 export class ReservaComponent implements OnInit {
 
+  carrinho: any = [
+    {id: 1, itens: 'Sachê Friskies Frango', 
+    quantidade: 1, valorUnitario: 'R$3,00'}
+  ];
 
-
-  produto: IProduto = {
-    produtoId: 0,
-    associadoId: 0,
-    nomeProduto: '',
-    codigoProduto: '',
-    qtdProduto: 0,
-    precoProduto: 0,
-    fabricanteProduto: '',
-    descricaoProduto: '',
-    produtoReservado: false,
-  };
-
-  listarProduto: IProduto[] = [];
-
-
-  constructor(private carrinhoService : CarrinhoService) {
-
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    this.carregarCarrinho();
   }
-
-  carregarCarrinho() : void{
-    this.carrinhoService.buscarTodos().subscribe(retorno => {
-      this.listarProduto = retorno;
-    })
-  };
 
 }

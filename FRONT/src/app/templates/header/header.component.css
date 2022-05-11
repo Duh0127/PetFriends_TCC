@@ -1,162 +1,54 @@
-.fundonav{/* FUNDO DA NAVBAR */
-  background-color: #ffd13a;
-  padding: 0px;
-  margin: 0px;
-}
-
-
-
-.dropdown-menu{/* DROPVIEW DOS CONTEÚDOS DA NAVBAR */
-  background-color: rgb(254, 255, 199);
-  border: 2px solid rgb(255, 255, 255);
-}
-
-
-
 .logo{ /*foto do logo*/
-  margin-left: 19vw;
+  margin-left: 18vw;
 }
-
-
-
 
 .box-search{ /*barra de pesquisa*/
-  margin-left: -5%;
-  margin-top: 2%;
-  width: 70%;
-  border: none;
+  margin-left: -3vw;
+  margin-top: 2vh;
+  box-shadow: 5 5 15px rgb(49, 49, 49);
+  width: 40vw;
 }
-.box-search:focus{ /*barra de pesquisa*/
-  box-shadow: 0px 5px 6px rgba(255, 255, 255, 0.274);
-}
-
-
 
 .tp{ /*topicos que estruturam os outros*/
-  margin-left: 37.7vw;
-  padding-bottom: 0.6%;
+  margin-left: 32vw;
 }
-
-
 
 #embaixo{ /*topicos embaixo da barra de pesquisa*/
-  margin-right: 11.9vw;
+  padding-right: 12vw;
   margin-left: -10vw;
-  margin-bottom: -1%;
+
 }
 
-
-
-#login{/* LOGIN  */
-  margin-top: 2%;
-  width: 3%;
-  height: 3.5%;
+#login{
+  margin-top: 2vh;
+  margin-right: 1vw;
+  width: 25px;
+  height: 29px;
   cursor: pointer;
 }
 
-
-
-#carrinho{/* CARRINHO DE RESERVA */
-  margin-top: 2%;
-  margin-right: 10%;
-  width: 30px;
-  height: 34px;
+#carrinho{
+  margin-top: 2vh;
+  margin-right: 10vw;
+  width: 25px;
+  height: 29px;
   cursor: pointer;
 }
 
-
-
-
-
-
-
-/*------RESPONSIVO--------*/
-.pesquisa2{
-  margin: 0px;
-  width: 0px;
-  height: 0px;
-  display: none;
+.zoom{
+  max-width: 100%;
+  -moz-transition: all 10s;
+  -webkit-transition: all 10s;
+  transition: translate(10%,10%);
 }
 
-@media (max-width: 424px) {
-
-  .tp{
-    margin-left: 10px;
-  }
-
-  .pesquisa{
-    margin: 0px;
-    width: 0px;
-    height: 0px;
-    display: none;
-    background-color: transparent;
-  }
-
-  .pesquisa2{
-    margin: auto;
-    margin: 10px;
-    margin-left: 10px;
-    height: 50px;
-    width: 1000px;
-    display: block;
-  }
-
-  .logo{
-    margin-left: -10px;
-  }
-
-  #login{
-    margin-top: -80px;
-    margin-left: 250px;
-    width: 25px;
-    height: 29px;
-    cursor: pointer;
-  }
-
-  #carrinho{
-    margin-top: -80px;
-    margin-right: 1px;
-    width: 25px;
-    height: 29px;
-    cursor: pointer;
-  }
-
+.zoom:hover{
+  -moz-transform: scale(1.25,1.25);
+  -webkit-transform: scale(1.25,1.25);
+  transform: scale(1.2);
+  transition: transform .5s ease;
 }
 
-@media (max-width: 400px){
 
-  #login{
-    margin-top: -80px;
-    margin-left: 220px;
-    width: 25px;
-    height: 29px;
-    cursor: pointer;
-  }
 
-  #carrinho{
-    margin-top: -80px;
-    margin-right: 1px;
-    width: 25px;
-    height: 29px;
-    cursor: pointer;
-  }
-}
 
-@media (max-width: 361px){ /*config do s8+*/
-
-  #login{
-    margin-top: -80px;
-    margin-left: 200px;
-    width: 25px;
-    height: 29px;
-    cursor: pointer;
-  }
-
-  #carrinho{
-    margin-top: -80px;
-    margin-right: 1px;
-    width: 25px;
-    height: 29px;
-    cursor: pointer;
-  }
-}

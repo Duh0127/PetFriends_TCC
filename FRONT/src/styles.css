@@ -1,22 +1,9 @@
 
 body{
-    background-color: rgb(255, 255, 255);
-    margin: 0px;
-    padding: 0px;
-}
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./assets/img/backgroundteste.jpg");
 
-::-webkit-scrollbar-track {
-    background-color: #000000;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-    background: #F4F4F4;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #f89500;
-    border-radius: 2px;
 
 }
-

@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\FRONT",
+    "\\FRONT\\.angular",
+    "\\FRONT\\src",
+    "\\FRONT\\src\\app",
+    "\\FRONT\\src\\app\\components",
+    "\\FRONT\\src\\app\\components\\login",
+    "\\FRONT\\src\\app\\components\\login\\associado-login"
+  ],
+  "SelectedNode": "\\FRONT\\src\\app\\components\\login\\associado-login\\associado-login.component.html",
+  "PreviewInSolutionExplorer": false
+}

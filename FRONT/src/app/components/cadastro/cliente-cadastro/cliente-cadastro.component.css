@@ -1,110 +1,52 @@
-body{
-  background: #ffffff url("src/assets/img/fundocachorro.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  width: 100vw;
-  height: 100vh;
+#telaCadastro{
+  width: 750px;
+  position: absolute;
+  top: 43.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 5px 30px rgb(99, 99, 99);
+  opacity: 1;
+
 }
 
-.padding{
-  padding-top: 25px;
+.img {
+  height: 90px;
+  margin-left: 10.5vw;
+  margin-top: -1.5vh;
 }
 
-.fundo{
-  margin-top: 6%;
-  position: relative;
-  width: 50%;
-  height: 55%;
-  background-color: rgba(255, 219, 152, 0.808);
-  margin-left: 25%;
-  border-radius: 20px;
-  box-shadow: 2px 3px 18px rgb(117, 117, 117);
+.card{
+  border-radius: 25px;
+  margin-top: 70px;
 }
 
-.row{
-  padding-top: 6%;
-  margin-left: 6%;
+#margleft{
+  margin-left: 6vw;
 }
 
-h3{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
+.conf-senha{
+  margin-left: 68px;
 }
 
-.text-usuario{
-  margin-left: 40%;
+.zoom{
+max-width: 100%;
+-moz-transition: all 0.5s;
+-webkit-transition: all 0.5s;
+transition: translate(10%,10%);
+overflow: hidden;
 }
 
-.coluna2{
-  margin-left: 1%;
-  margin-top: -5.2%;
+.zoom:hover{
+-moz-transform: scale(1.20,1.20);
+-webkit-transform: scale(1.20,1.20);
+transform: scale(1.02);
 }
 
-.coluna1{
-  margin-top: -5%;
+.neon-blue{
+cursor: pointer;
+overflow: hidden;
 }
-
-.btn-warning{
-  margin-top: 2%;
-  width: 20.8vw;
-  margin-left: 28%;
-  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.452);
-  
+.neon-blue:hover{
+box-shadow: 0 0 3px #ff9100;
 }
-
-.criar-conta{
-  margin-left: 31%;
-  margin-top: 1%;
-  font-size: 15px;
-}
-
-.cadastro-usuario{
-  font-size: 15px;
-  margin-left: 33%;
-  margin-top: 4%; 
-}
-
-.nomecompleto{
-  margin-left: 7.6%;
-}
-
-.inputnome{
-  width: 91.6%;
-}
-
-.coluna1 input{
-  width: 330px;
-}
-
-input{
-  width: 350px;
-  border-top: transparent;
-  border-left: transparent;
-  border-right: transparent;
-  border-bottom: 2px solid rgb(0, 0, 0);
-  background-color: transparent;
-  border-radius: 0px;
-}
-input:focus{
-  background-color: transparent;
-  box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
-  border-bottom: 2px solid rgb(255, 150, 52);
-  border-radius: 0px;
-}
-
-
-/*header*/
-
-.fundonav {
-  background-color: #ffd13a;
-  padding: 0px;
-}
-
-.logo {
-  /*foto do logo*/
-  margin-left: 19vw;
-  margin-bottom: -5%;
-  margin-top: -2%;
-}
-
 

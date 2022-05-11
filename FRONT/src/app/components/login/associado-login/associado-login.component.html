@@ -1,47 +1,41 @@
-<div id="imagemfundo"><!-- IMG DO FUNDO DA PAGINA -->
-<!--  -->
-
-  <nav class="navbar navbar-expand navbar-dark fundonav"><!-- NAVBAR -->
-    <nav class="navbar navbar-light">
-      <a class="navbar-brand ">
-        <img src="/assets/img/logovert.png" routerLink="" width="80" height="80" class="d-inline-block logo">
-      </a>
-      <div class="form-group container-xl ">
-      </div>
-    </nav>
-  </nav>
-
-
-
-  <form class="fundo shadow"><!-- FUNDO AMARELO QUE CONTÉM AS INFORMAÇÕES -->
-    <div class="row"><!-- LINHA -->
-
-      <div class="col coluna1"><!-- COLUNA ESQUERDA -->
-        <h1 class="text-associado">ASSOCIADO</h1><!-- TEXTO ASSOCIADO -->
-
-        <div class="form-group" [formGroup]="loginForm" (submit)="LoginAssociado()"><!-- INPUT EMAIL -->
-          <input type="email" class="form-control" placeholder="Digite seu email" name="emailCadCliente"
-            formControlName="emailCadAssociado">
+<body>
+  <div class="card" id="telaLogin">
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <img src="/assets/img/logovert.png" class="img" />
+          <label for="exampleInputEmail2" class="form-label">Usuário:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail2"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text"></div>
         </div>
-
-        <div class="form-group" [formGroup]="loginForm" (submit)="LoginAssociado()"><!-- INPUT SENHA -->
-          <label for="exampleInputPassword1"></label>
-          <input type="password" class="form-control" name="senhaCadCliente" placeholder="Digite sua senha"
-            formControlName="senhaCadAssociado">
+        <div class="mb-3">
+          <label for="exampleInputPassword2" class="form-label">Senha: </label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword2"
+          />
         </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck2" />
+          <label class="form-check-label" for="exampleCheck2">Lembrar-me</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block neon-blue zoom">Logar Associado</button>
+      </form>
 
-        <button type="submit" [disabled]="!loginForm.valid" (click)="LoginAssociado()" class="btn btn-warning">Entrar</button><!-- BOTÃO ENTRAR -->
-        <h3 class="criar-conta">Ainda não possui uma conta associado? <a routerLink="/cadastro-associado">Crie a sua!</a></h3> <!-- LINK PARA CADASTRO ASSOCIADO -->
-      </div>
+      <button
+        type="button"
+        class="btn btn-link"
+        routerLink="/cadastro-associado">Cadastre-se</button>
 
-      <div class="col coluna2"><!-- COLUNA DIREITA -->
-        <h3>Entre ou crie sua conta no PetFriends</h3><!-- TEXTO -->
-        <img src="/assets/img/logovert.png" style="width: 270px; height: 260px;"><!-- LOGO -->
-      </div>
-
+      <button type="button" class="btn btn-link" id="margleft" routerLink="/login-cliente">É Cliente?</button>
+      <button type="button" class="btn btn-link" style="width: 315px;" routerLink="/recuperacao-senha">Esqueceu a senha?</button>
     </div>
-  </form>
-
-
-
-</div>
+  </div>
+  <button type="button" class="btn btn-link" routerLink="">Voltar para home</button>
+</body>

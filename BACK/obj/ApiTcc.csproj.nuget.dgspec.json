@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eduar\\Desktop\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj": {}
+    "C:\\Users\\Lucas\\Desktop\\TCC\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eduar\\Desktop\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj": {
+    "C:\\Users\\Lucas\\Desktop\\TCC\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eduar\\Desktop\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\TCC\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj",
         "projectName": "ApiTcc",
-        "projectPath": "C:\\Users\\eduar\\Desktop\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj",
-        "packagesPath": "C:\\Users\\eduar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eduar\\Desktop\\TCC_ETEC - GIT\\BACK\\obj\\",
+        "projectPath": "C:\\Users\\Lucas\\Desktop\\TCC\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj",
+        "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lucas\\Desktop\\TCC\\TCC_ETEC - GIT\\BACK\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\eduar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
