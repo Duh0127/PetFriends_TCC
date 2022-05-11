@@ -3,8 +3,7 @@ body{
   background-size: cover;
   background-attachment: fixed;
   width: 100vw;
-  height: 84vh;
-  padding-top: 10%;
+  height: 100vh;
 }
 
 .padding{
@@ -12,9 +11,10 @@ body{
 }
 
 .fundo{
+  margin-top: 6%;
   position: relative;
   width: 50%;
-  height: 79%;
+  height: 55%;
   background-color: rgba(255, 219, 152, 0.808);
   margin-left: 25%;
   border-radius: 20px;
@@ -119,5 +119,19 @@ input:focus{
   border-bottom: 2px solid rgb(0, 0, 0);
   background-color: transparent;
   border-radius: 0px;
+}
+
+
+/*header*/
+
+.fundonav {
+  background-color: #ffd13a;
+  padding: 0px;
+}
+
+.logo {
+  /*foto do logo*/
+  margin-left: 19vw;
+  margin-bottom: -2%;
 }
 

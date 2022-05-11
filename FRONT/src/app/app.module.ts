@@ -20,9 +20,7 @@ import { AssociadoComponent } from './components/perfil/associado/associado.comp
 import { DescricaoProdutoComponent } from './components/descricao-produto/descricao-produto.component';
 import { SacComponent } from './components/sac/sac.component';
 import { ProdutosComponent } from './components/listar/produtos/produtos.component';
-import { ServicosComponent } from './components/listar/servicos/servicos.component';
 import { IncluirProdutoComponent } from './components/incluir/incluir-produto/incluir-produto.component';
-import { IncluirServicoComponent } from './components/incluir/incluir-servico/incluir-servico.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HigieneComponent } from './components/dropview/cachorros/higiene/higiene.component';
@@ -30,9 +28,6 @@ import { FarmaciaComponent } from './components/dropview/cachorros/farmacia/farm
 import { AreiaComponent } from './components/dropview/gatos/areia/areia.component';
 import { EscovasPentesComponent } from './components/dropview/gatos/escovas-pentes/escovas-pentes.component';
 import { TransporteComponent } from './components/dropview/gatos/transporte/transporte.component';
-import { BanhoTosaComponent } from './components/dropview/servicos/banho-tosa/banho-tosa.component';
-import { SpaComponent } from './components/dropview/servicos/spa/spa.component';
-import { TaxiDogComponent } from './components/dropview/servicos/taxi-dog/taxi-dog.component';
 import { RacaoSecaComponent } from './components/dropview/racao/racao-seca/racao-seca.component';
 import { RacaoUmidaComponent } from './components/dropview/racao/racao-umida/racao-umida.component';
 import { RacaoDietComponent } from './components/dropview/racao/racao-diet/racao-diet.component';
@@ -73,17 +68,12 @@ import { PremiumComponent } from './components/premium/premium.component';
     DescricaoProdutoComponent,
     SacComponent,
     ProdutosComponent,
-    ServicosComponent,
     IncluirProdutoComponent,
-    IncluirServicoComponent,
     HigieneComponent,
     FarmaciaComponent,
     AreiaComponent,
     EscovasPentesComponent,
     TransporteComponent,
-    BanhoTosaComponent,
-    SpaComponent,
-    TaxiDogComponent,
     RacaoSecaComponent,
     RacaoUmidaComponent,
     RacaoDietComponent,

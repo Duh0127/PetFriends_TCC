@@ -1,9 +1,17 @@
 <body>
-  
+  <nav class="navbar navbar-expand navbar-dark fundonav">
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand ">
+        <img src="/assets/img/botao.png" routerLink="" width="70" height="70" class="d-inline-block logo">
+      </a>
+      <div class="form-group container-xl ">
+      </div>
+    </nav>
+  </nav>
+
   <div class="fundo padding">
     <h3 class="text-usuario ">CADASTRO ASSOCIADO</h3>
     <form>
-
       <div class="row">
         <div class="col coluna1"><!--COLUNA 1-->
 
@@ -62,6 +70,7 @@
             <label for="exampleInputPassword1">TELEFONE</label>
             <input type="tel" 
                    placeholder="(11) 99999-9999" 
+                   min=0
                    class="form-control" 
                    name="telCadAssociado" 
                    [(ngModel)]="cadastro.telCadAssociado">
@@ -71,6 +80,7 @@
             <label for="exampleInputEmail1">CNPJ</label>
             <input type="number" 
                    class="form-control" 
+                   min=0
                    placeholder="Digite seu CNPJ" 
                    name="cnpjCadAssociado" 
                    [(ngModel)]="cadastro.cnpjCadAssociado">

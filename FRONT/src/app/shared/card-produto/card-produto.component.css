@@ -11,19 +11,26 @@
 
 .card{
   width: 15rem;
-  height: 21rem;
+  height: 22rem;
   background-color: white;
+}
+
+.card:hover{
+  border: 1px solid rgb(255, 153, 0);
 }
 
 .font{
   font-size:100%;
 }
 
-a{
-  font-size: 15px;
+h5{
+  font-size: 20px;
   font-weight: bold;
   font-style:unset;
   text-decoration: none;
+  /*margin-left: 54%;*/
+  margin: auto;
+  margin-bottom: 6px;
 }
 
 .margem{
@@ -31,3 +38,19 @@ a{
   margin-right: 05px;
   margin-top: 10px;
 }
+
+
+#botaocard{
+  background-color: rgb(255, 208, 0);
+  border: none;
+  margin-top: 1px;
+  margin-left: 2%;
+  width:auto;
+  box-shadow: 0px 0px 3px black;
+}
+
+#botaocard:hover{
+  transform: scale(1.001);
+  transition: transform .1s ease;
+}
+

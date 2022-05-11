@@ -5,7 +5,6 @@ import { IProduto } from 'src/app/model/IProduto.model';
 import { IServico } from 'src/app/model/IServico.model';
 import { CadastroClienteService } from 'src/app/services/cadcliente.service';
 import { ProdutosService } from 'src/app/services/produtos.service';
-import { ServicosService } from 'src/app/services/servicos.service';
 
 @Component({
   selector: 'app-cliente',
@@ -28,21 +27,14 @@ export class ClienteComponent implements OnInit {
   };
 
   constructor(private cadastroService: CadastroClienteService,
-    private servicosService: ServicosService,
     private produtosService: ProdutosService,
     private router: Router) { }
 
   ngOnInit(): void {
-    this.carregarServicos();
     this.carregarProdutos();
     
   }
 
-  carregarServicos() : void{
-    this.servicosService.buscarTodos().subscribe(retorno => {
-      this.listarServicos = retorno;
-    })
-  };
 
   carregarProdutos() : void{
     this.produtosService.buscarTodos().subscribe(retorno => {

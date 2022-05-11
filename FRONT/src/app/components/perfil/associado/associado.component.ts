@@ -6,7 +6,6 @@ import { IServico } from 'src/app/model/IServico.model';
 import { CadastroAssociadoService } from 'src/app/services/cadassoc.service';
 import { CadastroClienteService } from 'src/app/services/cadcliente.service';
 import { ProdutosService } from 'src/app/services/produtos.service';
-import { ServicosService } from 'src/app/services/servicos.service';
 
 @Component({
   selector: 'app-associado',
@@ -32,12 +31,10 @@ export class AssociadoComponent implements OnInit {
 
   constructor(
     private cadastroService: CadastroAssociadoService,
-    private servicosService: ServicosService,
     private produtosService: ProdutosService,
     private router: Router) { }
 
   ngOnInit(): void {
-    this.carregarServicos();
     this.carregarProdutos();
     //this.carregarAssociados();
 
@@ -50,11 +47,6 @@ export class AssociadoComponent implements OnInit {
     })
   };*/
 
-  carregarServicos() : void{
-    this.servicosService.buscarTodos().subscribe(retorno => {
-      this.listarServicos = retorno;
-    })
-  };
 
   carregarProdutos() : void{
     this.produtosService.buscarTodos().subscribe(retorno => {
@@ -68,11 +60,6 @@ export class AssociadoComponent implements OnInit {
     });
   };
 
-  deletarServicos(servico: IServico) : void {
-    this.servicosService.excluir(servico.id!).subscribe(() => {
-      this.carregarServicos();
-    });
-  };
 
   salvarCadastroAssoc(): void {
     this.cadastroService.cadastrar(this.cadastro).subscribe(retorno => {

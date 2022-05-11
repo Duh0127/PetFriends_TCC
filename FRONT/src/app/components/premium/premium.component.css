@@ -1,13 +1,12 @@
-body{
+body {
     background-image: url("src/assets/img/fundocachorro.jpg");
     background-size: cover;
     background-attachment: fixed;
     width: 100vw;
-    height: 87vh;
-    padding-top: 2%;
-  }
+    height: 100vh;
+}
 
-.fundo{
+.fundo {
     width: 20vw;
     height: 60vh;
     background-color: rgba(255, 219, 152, 0.808);
@@ -16,11 +15,10 @@ body{
     margin-top: 12vh;
     margin-left: 20vw;
     display: inline-block;
-    
 }
 
 
-.fundo2{
+.fundo2 {
     width: 20vw;
     height: 60vh;
     background-color: rgba(255, 219, 152, 0.808);
@@ -30,11 +28,9 @@ body{
     margin-left: 1vw;
     margin-right: 7vw;
     display: inline-block;
-    
-    
 }
 
-.fundo3{
+.fundo3 {
     width: 20vw;
     height: 60vh;
     background-color: rgba(255, 219, 152, 0.808);
@@ -43,61 +39,55 @@ body{
     margin-top: 12vh;
     margin-left: -6vw;
     display: inline-block;
-    
-    
 }
 
-
-
-.row{
+.row {
     padding-top: 6%;
     margin-left: 6%;
 }
 
-h3{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     margin-left: -6%;
 }
 
-.text-planos{
+.text-planos {
     margin-left: 30%;
 }
 
-.text-platinum{
+.text-platinum {
     margin-left: 25%;
 }
 
-
-
-
-
-.coluna1{
+.coluna1 {
     margin-top: 6%;
 }
 
-.btn-dark{
+.btn-dark {
+    margin-top: 10%;
     width: 15vw;
+    height: 4vh;
 }
 
-.criar-conta{
+.criar-conta {
     margin-left: 16%;
     margin-top: 10%;
     font-size: 15px;
 }
 
-.cadastro-usuario{
+.cadastro-usuario {
     font-size: 15px;
     margin-left: 33%;
-    margin-top: 4%; 
+    margin-top: 4%;
 }
 
 
-input{
+input {
     width: 300px;
 }
 
-.bi-thermometer-low{
+.bi-thermometer-low {
     margin-top: 5%;
     margin-left: 47%;
     margin-bottom: -10%;
@@ -119,30 +109,15 @@ input{
 }
 
 
+/*header*/
 
-
-
-
-
-.zoom{
-max-width: 100%;
--moz-transition: all 0.5s;
--webkit-transition: all 0.5s;
-transition: translate(10%,10%);
-overflow: hidden;
-}
-
-.zoom:hover{
--moz-transform: scale(1.20,1.20);
--webkit-transform: scale(1.20,1.20);
-transform: scale(1.02);
-}
-
-.neon-blue{
-cursor: pointer;
-overflow: hidden;
-}
-.neon-blue:hover{
-box-shadow: 0 0 3px #0044ff;
-}
-
+.fundonav {
+    background-color: #ffd13a;
+    padding: 0px;
+  }
+  
+  .logo {
+    /*foto do logo*/
+    margin-left: 19vw;
+    margin-bottom: -2%;
+  }
