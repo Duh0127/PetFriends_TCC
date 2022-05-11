@@ -5,35 +5,35 @@
     <form class="p-4 mt-5 rounded cardproduto">
         <div class="form-row">
             <div class="col-md-6 mb-3 text-light">
-                <label>Nome do produto:</label>
-                <input type="text" class="form-control fundo-input" name="nomeProduto"
-                    [(ngModel)]="produto.nomeProduto">
+                <label>Nome do Produto:</label>
+                <input type="text" class="form-control fundo-input" name="nome"
+                    [(ngModel)]="produto.nome">
             </div>
             <div class="col-md-6 mb-3 text-light">
-                <label>Descrição produto:</label>
-                <input type="text" class="form-control fundo-input" name="descProduto"
-                    [(ngModel)]="produto.descProduto">
+                <label>Código Produto:</label>
+                <input type="text" class="form-control fundo-input" name="codigo"
+                    [(ngModel)]="produto.codigo">
             </div>
         </div>
 
         <div class="form-row">
             <div class="col-md-2 mb-3 text-light">
                 <label for="qtdade">Quantidade: </label>
-                <input type="number" class="form-control fundo-input" max="10000" min="1" name="qtdade"
-                    [(ngModel)]="produto.qtdProduto">
+                <input type="number" class="form-control fundo-input" max="10000" min="1" name="quantidade"
+                    [(ngModel)]="produto.quantidade">
             </div>
             <div class="col-md-4 mb-3 text-light">
                 <label>Preço do produto:</label>
-                <input type="number" class="form-control fundo-input" name="precoProduto"
-                    [(ngModel)]="produto.precoProduto">
+                <input type="number" class="form-control fundo-input" name="preco"
+                    [(ngModel)]="produto.preco">
             </div>
             <div class="col-md-6 mb-3 text-light">
                 <label>Nome Associado:</label>
-                <input type="text" class="form-control fundo-input" name="assocProduto"
-                    [(ngModel)]="produto.assocProduto">
+                <input type="text" class="form-control fundo-input" name="fabricante"
+                    [(ngModel)]="produto.fabricante">
             </div>
         </div>
-        <button type="button" class="btn btn-warning mt-3 float-right" (click)="salvarProduto()">Incluir</button>
+        <button type="button" class="btn btn-warning mt-3 float-right" (click)="salvarProduto()">Incluir</button> -->
     </form>
     
 </body>

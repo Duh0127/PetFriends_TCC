@@ -37,7 +37,7 @@ import { IProduto } from '../model/IProduto.model';
   
   
     atualizar( produto: IProduto): Observable<IProduto> {
-      return this.http.put<IProduto>(`${this.URL}/${produto.id}`, produto).pipe(
+      return this.http.put<IProduto>(`${this.URL}/${produto.produtoId}`, produto).pipe(
         map(retorno => retorno),
         //catchError(erro => this.exibirErro(erro))
       );

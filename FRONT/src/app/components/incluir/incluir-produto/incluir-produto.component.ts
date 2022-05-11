@@ -10,12 +10,14 @@ import { ProdutosService } from 'src/app/services/produtos.service';
 })
 export class IncluirProdutoComponent implements OnInit {
 
+
+
   produto: IProduto = {
-    nomeProduto: '',
-    qtdProduto: 0,
-    precoProduto: 0,
-    assocProduto: '',
-    descProduto: ''
+    nome: '',
+    codigo: '',
+    quantidade: 0,
+    preco: 0,
+    fabricante: '',
   };
 
   //Objeto.atributo
@@ -25,17 +27,22 @@ export class IncluirProdutoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  salvarProduto(): void {
-    this.produtosService.cadastrar(this.produto).subscribe(retorno => {
-      this.produto = retorno;
-    });
-    this.router.navigate(['perfil-associado']);
-  }
+   salvarProduto() {
+     
+      this.produtosService.cadastrar(this.produto).subscribe(produto => {
+        if (produto) {
+          alert('Produto Cadastrado com Sucesso');
+        } else {
+          alert('Falha ao Cadastrar Produto ');
+        }
+     }, error => {
+       console.log(error);
+       alert('erro interno do sistema');
+     });
+      this.router.navigate(['perfil-associado']);
+    }
 
 }
-
-
-
 
 
 

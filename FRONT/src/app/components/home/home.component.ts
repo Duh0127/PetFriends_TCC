@@ -14,11 +14,12 @@ export class HomeComponent implements OnInit {
 
   produtoHome: IProduto = {
     //imgProduto
-    nomeProduto: '',
-    precoProduto: 0,
-    qtdProduto: 0,
-    assocProduto: '',
-    descProduto: ''
+    nome: '',
+    codigo: '',
+    preco: 0,
+    quantidade: 0,
+    fabricante: '',
+
   };
 
   constructor(private produtosService : ProdutosService,

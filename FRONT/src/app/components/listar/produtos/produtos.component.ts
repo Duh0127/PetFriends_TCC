@@ -25,11 +25,11 @@ export class ProdutosComponent implements OnInit {
   };
 
   
-  deletar(produto: IProduto) : void {
-    this.produtosService.excluir(produto.id!).subscribe(() => {
-      this.carregarProdutos();
-    });
-  };
+  // deletar(produto: IProduto) : void {
+  //   this.produtosService.excluir(produto.id!).subscribe(() => {
+  //     this.carregarProdutos();
+  //   });
+  // };
 
 
   

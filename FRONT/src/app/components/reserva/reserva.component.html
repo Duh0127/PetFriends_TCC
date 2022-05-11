@@ -25,13 +25,14 @@
 
         <tbody>
           <tr *ngFor="let produtoCarrinho of listarProduto">
-            <td>{{ produtoCarrinho.id}}</td>
-            <td>{{ produtoCarrinho.nomeProduto}}</td>
-            <td>{{ produtoCarrinho.qtdProduto}}</td>
-            <td>{{ produtoCarrinho.precoProduto | currency: 'BRL'}}</td>
-            <td>{{ produtoCarrinho.assocProduto}}</td>
+            <td>{{ produtoCarrinho.produtoId}}</td>
+            <td>{{ produtoCarrinho.codigo}}</td>
+            <td>{{ produtoCarrinho.nome}}</td>
+            <td>{{ produtoCarrinho.quantidade}}</td>
+            <td>{{ produtoCarrinho.preco | currency: 'BRL'}}</td>
+            <td>{{ produtoCarrinho.fabricante}}</td>
             <td>
-              <button class="btn btn-secondary" routerLink="{{produtoCarrinho.id}}">
+              <button class="btn btn-secondary" routerLink="{{produtoCarrinho.produtoId}}">
                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor"
                   class="bi bi-pencil-square" viewBox="0 0 16 16">
                   <path

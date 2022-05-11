@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { IProduto } from '../model/IProduto.model';
 
 @Injectable({
@@ -9,55 +10,67 @@ import { IProduto } from '../model/IProduto.model';
   })
   export class ProdutosService {
   
-    private URL: string = 'http://localhost:3000/produtos';
+    //private URL: string = 'http://localhost:3000/produtos';
+
+    baseUrl = `${environment.UrlPrincipal}/Produto`;
   
     
   
     constructor(private http: HttpClient){ }
+
+      buscarTodos() : Observable<IProduto[]> {
+        return this.http.get<IProduto[]>(`${this.baseUrl}/GetAll`).pipe(
+        map(retorno => retorno),
+        //catchError(erro => this.exibirErro(erro))
+       );
+     }
+
+     cadastrar(produto: IProduto): Observable<IProduto>{
+      return this.http.post<IProduto>(`${this.baseUrl}`, produto).pipe(
+        map(retorno => retorno),
+        //catchError(erro => this.exibirErro(erro))
+      );
+    }
+
+
   
-    listarProdutos(id: number){
-      return this.http.get<IProduto>(this.URL);
-      }
-
-
+    // listarProdutos(id: number){
+    //   return this.http.get<IProduto>(this.URL);
+    //   }
+  
+    // buscarPorId(id: number) : Observable<IProduto> {
+    //   return this.http.get<IProduto>(`${this.URL}/${id}`).pipe(
+    //     map(retorno => retorno),
+    //    // catchError(erro => this.exibirErro(erro))
+    //   );
+    // }
+  
+  
+    // atualizar( produto: IProduto): Observable<IProduto> {
+    //   return this.http.put<IProduto>(`${this.URL}/${produto.id}`, produto).pipe(
+    //     map(retorno => retorno),
+    //     //catchError(erro => this.exibirErro(erro))
+    //   );
+    // }
+  
+    // excluir( id: number): Observable<any> {
+    //   return this.http.delete<any>(`${this.URL}/${id}`).pipe(
+    //     map(retorno => retorno),
+    //    // catchError(erro => this.exibirErro(erro))
+    //   );
+    // }
+  
+  
     
-    buscarTodos() : Observable<IProduto[]> {
-      return this.http.get<IProduto[]>(this.URL).pipe(
-        map(retorno => retorno),
-        //catchError(erro => this.exibirErro(erro))
-      );
-  
-    }
-  
-    buscarPorId(id: number) : Observable<IProduto> {
-      return this.http.get<IProduto>(`${this.URL}/${id}`).pipe(
-        map(retorno => retorno),
-       // catchError(erro => this.exibirErro(erro))
-      );
-    }
-  
-  
-    atualizar( produto: IProduto): Observable<IProduto> {
-      return this.http.put<IProduto>(`${this.URL}/${produto.id}`, produto).pipe(
-        map(retorno => retorno),
-        //catchError(erro => this.exibirErro(erro))
-      );
-    }
-  
-    excluir( id: number): Observable<any> {
-      return this.http.delete<any>(`${this.URL}/${id}`).pipe(
-        map(retorno => retorno),
-       // catchError(erro => this.exibirErro(erro))
-      );
-    }
-  
-  
-    cadastrar( produto: IProduto): Observable<IProduto> {
-      return this.http.post<IProduto>(this.URL, produto).pipe(
-        map(retorno => retorno),
-        //catchError(erro => this.exibirErro(erro))
-      );
-    }
+
+      // cadastrar( produto: IProduto): Observable<IProduto> {
+      //   return this.http.post<IProduto>(`${this.baseUrl}`).pipe(
+      //    map(retorno => retorno),
+      //     //catchError(erro => this.exibirErro(erro))
+      //   );
+      // }
+
+    //----------------------------------------------------------------------------------------------------------
   
     //Observable: ele vai ficar observando toda hora para ver se aconteceu alguma mudança
     /*exibirErro(e: any) : Observable<any> {

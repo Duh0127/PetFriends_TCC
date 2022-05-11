@@ -54,11 +54,11 @@ export class AssociadoComponent implements OnInit {
     })
   };
 
-  deletarProdutos(produto: IProduto) : void {
-    this.produtosService.excluir(produto.id!).subscribe(() => {
-      this.carregarProdutos();
-    });
-  };
+  // deletarProdutos(produto: IProduto) : void {
+  //   this.produtosService.excluir(produto.id!).subscribe(() => {
+  //     this.carregarProdutos();
+  //   });
+  // };
 
 
   salvarCadastroAssoc(): void {
