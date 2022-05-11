@@ -23,6 +23,14 @@
       "assocProduto": "Associado C",
       "descProduto": "descrição produto C",
       "id": 3
+    },
+    {
+      "nomeProduto": "oi",
+      "qtdProduto": 123,
+      "precoProduto": 4324,
+      "assocProduto": "oi",
+      "descProduto": "oi",
+      "id": 4
     }
   ],
   "servicos": [
@@ -71,6 +79,16 @@
       "senhaCadCliente": "123",
       "confsenhaCadCliente": "123",
       "id": 1
+    },
+    {
+      "nomeCadCliente": "teste",
+      "enderecoCadCliente": "rua da rua",
+      "emailCadCliente": "email@email.com",
+      "telCadCliente": "912839123712",
+      "cpfCadCliente": 999888,
+      "senhaCadCliente": "senha",
+      "confsenhaCadCliente": "senha",
+      "id": 2
     }
   ]
 }
