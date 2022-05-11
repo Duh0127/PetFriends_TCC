@@ -24,7 +24,7 @@ export class IncluirProdutoComponent implements OnInit {
 
   constructor(private produtosService: ProdutosService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
    salvarProduto() {

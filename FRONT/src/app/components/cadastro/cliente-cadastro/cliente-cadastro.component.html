@@ -67,28 +67,28 @@
 
           <div class="form-group">
             <label for="exampleInputEmail1">CPF</label>
-            <input type="number"
+            <input type="text"
                    class="form-control" 
                    placeholder="Digite seu CPF" 
                    name="cpfCadCliente"
                    [(ngModel)]="cadastro.cpfCadCliente">
           </div>
 
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="exampleInputPassword1">CONFIRMAR SENHA</label>
             <input type="password" 
                    placeholder="Digite sua senha novamente" 
                    class="form-control" 
                    name="confsenhaCadCliente"
                    [(ngModel)]="cadastro.confsenhaCadCliente">
-          </div>
+          </div> -->
 
 
 
         </div>
       </div>
     </form>
-    <button type="submit" routerLink="" class="btn btn-warning"(click)="salvarCadastroCliente()">Cadastrar</button>
+    <button type="submit" class="btn btn-warning"(click)="salvarCadastroCliente()">Cadastrar</button>
     <h3 class="criar-conta">Ainda não possui uma conta associado? <a routerLink="/cadastro-associado">Crie a sua!</a></h3>
   </div>
 

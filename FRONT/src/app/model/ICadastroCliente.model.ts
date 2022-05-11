@@ -6,7 +6,4 @@ export interface ICadastroCliente {
     telCadCliente: string;
     cpfCadCliente: number;
     senhaCadCliente: string;
-    confsenhaCadCliente: string;
-    
-
   }

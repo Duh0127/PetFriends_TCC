@@ -16,8 +16,7 @@ export class ClienteCadastroComponent implements OnInit {
     emailCadCliente: '',
     telCadCliente: '',
     cpfCadCliente: 0,
-    senhaCadCliente: '',
-    confsenhaCadCliente: ''
+    senhaCadCliente: ''
   };
 
 
@@ -28,11 +27,20 @@ export class ClienteCadastroComponent implements OnInit {
   }
 
   
-  salvarCadastroCliente(): void {
-    this.cadastroService.cadastrar(this.cadastro).subscribe(retorno => {
-      this.cadastro = retorno;
-    });
-    this.router.navigate(['']);
+  salvarCadastroCliente() {
+    this.cadastroService.cadastrar(this.cadastro).subscribe(cadastro => {
+      if (cadastro) {
+        alert('Cliente Cadastrado com Sucesso');
+      } else {
+        alert('Parabéns SQL');
+      }
+   }, error => {
+     console.log(error);
+     alert('erro interno do sistema');
+   });
+    // this.router.navigate(['']);
   }
+
+  
 
 }
