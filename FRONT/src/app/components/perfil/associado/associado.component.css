@@ -1,6 +1,6 @@
 .fundo{
     width: 50vw;
-    height: 28vh;
+    height: 22vh;
     background-color: rgb(255, 219, 152);
     margin-top: 2vh;
     margin-left: 4.5vw;
@@ -12,7 +12,7 @@
     width: 50vw;
     height: 53vh;
     background-color: rgb(255, 219, 152);
-    margin-top: 3vh;
+    margin-top: 2vh;
     margin-left: 4.5vw;
     border-radius: 1%;
     /*padding-top: 1px;*/

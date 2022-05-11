@@ -54,10 +54,10 @@
 }
 
 .usuario-perfil{
-        font-size: 15px;
-        margin-left: 34.5%;
-        margin-top: -5%; 
-        text-align: center;
+    font-size: 15px;
+    margin-left: 34.5%;
+    margin-top: -5%; 
+    text-align: center;
 }
 
 .text-usuario{
@@ -123,28 +123,3 @@
 }
 
 
-
-
-
-
-.zoom{
-max-width: 100%;
--moz-transition: all 0.5s;
--webkit-transition: all 0.5s;
-transition: translate(10%,10%);
-overflow: hidden;
-}
-
-.zoom:hover{
--moz-transform: scale(1.20,1.20);
--webkit-transform: scale(1.20,1.20);
-transform: scale(1.02);
-}
-
-.neon-blue{
-cursor: pointer;
-overflow: hidden;
-}
-.neon-blue:hover{
-box-shadow: 0 0 3px #0044ff;
-}

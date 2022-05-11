@@ -18,6 +18,7 @@ import { IncluirProdutoComponent } from './components/incluir/incluir-produto/in
 import { IncluirServicoComponent } from './components/incluir/incluir-servico/incluir-servico.component';
 import { ServicosComponent } from './components/listar/servicos/servicos.component';
 import { HigieneComponent } from './components/dropview/cachorros/higiene/higiene.component';
+import { HigieneGatosComponent } from './components/dropview/gatos/higiene-gatos/higiene-gatos.component';
 import { FarmaciaComponent } from './components/dropview/cachorros/farmacia/farmacia.component';
 import { AreiaComponent } from './components/dropview/gatos/areia/areia.component';
 import { EscovasPentesComponent } from './components/dropview/gatos/escovas-pentes/escovas-pentes.component';
@@ -38,7 +39,6 @@ import { ComedourosBebedourosGatosComponent } from './components/dropview/gatos/
 import { ComedourosBebedourosCachorrosComponent } from './components/dropview/cachorros/comedouros-bebedouros-cachorros/comedouros-bebedouros-cachorros.component';
 import { OssinhosComponent } from './components/dropview/cachorros/ossinhos/ossinhos.component';
 import { PetiscosComponent } from './components/dropview/cachorros/petiscos/petiscos.component';
-import { PremiumComponent } from './components/premium/premium.component';
 
 
 
@@ -78,11 +78,11 @@ const routes: Routes = [
     {path:'areia', component:AreiaComponent},
     {path:'farmacia', component:FarmaciaComponent},
     {path:'higiene', component:HigieneComponent},
+    {path:'higiene-gatos', component:HigieneGatosComponent},
     {path:'comedouros-bebeoduros-cachorros', component:ComedourosBebedourosCachorrosComponent},
     {path:'comedouros-bebedouros-gatos', component:ComedourosBebedourosGatosComponent},
     {path:'ossinhos', component:OssinhosComponent},
-    {path:'petiscos', component:PetiscosComponent},
-    {path:'plano-premium', component:PremiumComponent}
+    {path:'petiscos', component:PetiscosComponent}
 
 
 

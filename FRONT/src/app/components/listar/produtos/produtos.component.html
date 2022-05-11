@@ -1,13 +1,15 @@
-<button type="button" routerLink="/incluir-produto">Incluir Produto</button>
-<table class="table table-dark mt-5 bordinha">
+<body>
+  <h1 id="listar">LISTAR PRODUTO</h1>
+  <button type="button" id="incluir" routerLink="/incluir-produto">Incluir Produto</button>
+  <table class="table table-dark mt-5 cardproduto">
     <thead>
       <tr>
-        <th scope="col">##</th>
+        <th scope="col">Código</th>
         <th scope="col">Nome Produto</th> <!--NOME PRODUTO-->
         <th scope="col">Quantidade</th> <!--QUANTIDADE PRODUTO-->
         <th scope="col">Preço</th> <!--PREÇO PRODUTO-->
         <th scope="col">Associado</th> <!--NOME ASSOCIADO-->
-        <th scope="col">Ações</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     
@@ -20,16 +22,21 @@
             <td>{{ produto.assocProduto}}</td>
             <td>
               <button class="btn btn-secondary" routerLink="{{produto.id}}">
-                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                </svg>
               </button>
               <button class="btn btn-outline-warning ml-2">
-                <i class="fa fa-heart" aria-hidden="true"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                </svg>
               </button>
             </td>
         </tr>
-     
-
-
-
     </tbody>
   </table>
+
+
+
+</body>

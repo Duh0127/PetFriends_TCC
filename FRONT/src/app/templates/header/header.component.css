@@ -1,21 +1,28 @@
+.fundo{
+  background-color: rgb(255, 207, 75);
+  padding-bottom: 20px;
+}
+
 .logo{ /*foto do logo*/
   margin-left: 19vw;
 }
 
-.fundo{
-  background-color: rgb(255, 194, 81);
-  padding-bottom: 2%;
-}
-
 .box-search{ /*barra de pesquisa*/
-  margin-left: -3vw;
-  margin-top: 2vh;
-  box-shadow: 5 5 15px rgb(49, 49, 49);
-  width: 40vw;
+  margin-left: -50px;
+  margin-top: 20px;
+  width: 800px;
+  border: none;
+}
+.box-search:focus{ /*barra de pesquisa*/
+  margin-left: -50px;
+  margin-top: 20px;
+  box-shadow: 0px 3px 15px rgba(68, 68, 68, 0.274);
+  width: 800px;
+  border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .tp{ /*topicos que estruturam os outros*/
-  margin-left: 33.5vw;
+  margin-left: 33vw;
 }
 
 #embaixo{ /*topicos embaixo da barra de pesquisa*/
@@ -25,48 +32,18 @@
 }
 
 #login{
-  margin-top: 2vh;
-  margin-right: 1vw;
+  margin-top: 2%;
+  margin-right: 3%;
+  margin-left: 8%;
   width: 25px;
   height: 29px;
   cursor: pointer;
 }
 
 #carrinho{
-  margin-top: 2vh;
-  margin-right: 12vw;
+  margin-top: 2%;
+  margin-right: 13%;
   width: 25px;
   height: 29px;
   cursor: pointer;
 }
-
-.zoom{
-  max-width: 100%;
-  -moz-transition: all 10s;
-  -webkit-transition: all 10s;
-  transition: translate(10%,10%);
-}
-
-.zoom:hover{
-  -moz-transform: scale(1.25,1.25);
-  -webkit-transform: scale(1.25,1.25);
-  transform: scale(1.2);
-  transition: transform .5s ease;
-}
-
-.zoomdrop{
-  max-width: 100%;
-  -moz-transition: all 10s;
-  -webkit-transition: all 10s;
-  transition: translate(5%,5%);
-}
-
-.zoomdrop:hover{
-  -moz-transform: scale(1.02,1.02);
-  -webkit-transform: scale(1.02,1.02);
-  transform: scale(1.01);
-  transition: transform .3s ease
-}
-
-
-
