@@ -5,63 +5,46 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IProduto } from '../model/IProduto.model';
 import { environment } from 'src/environments/environment';
+import { IPedido } from '../model/IPedido.model';
 
 @Injectable({
     providedIn: 'root'
   })
-  export class CarrinhoService {
+  export class PedidoService {
   
-    baseUrl = `${environment.UrlPrincipal}/Produtos`;
     pedidosUrl = `${environment.UrlPrincipal}/Pedidos`;
-
-    public cartItemList : any = []
-    public listarProduto = new BehaviorSubject<any>([]);
-    public search = new BehaviorSubject<string>("");
-  
-    
   
     constructor(private http: HttpClient){ }
 
+    buscarTodos() : Observable<IPedido[]> {
+        return this.http.get<IPedido[]>(`${this.pedidosUrl}/GetAll`).pipe(
+        map(retorno => retorno),
+        //catchError(erro => this.exibirErro(erro))
+       );
+     }
 
-    getProducts(){
-      return this.listarProduto.asObservable();
+    cadastrar(produto: any): Observable<any>{
+      return this.http.post<any>(`${this.pedidosUrl}`, produto).pipe(
+        map(retorno => retorno),
+          //catchError(erro => this.exibirErro(erro))
+        );
+      }
+
+      buscarByUser() : Observable<IPedido[]> {
+        return this.http.get<IPedido[]>(`${this.pedidosUrl}/GetByUser`).pipe(
+        map(retorno => retorno),
+        //catchError(erro => this.exibirErro(erro))
+       );
+     }
+
+     excluir(id: number): Observable<IPedido> {
+        return this.http.delete<IPedido>(`${this.pedidosUrl}/${id}`).pipe(
+          map(retorno => retorno),
+         // catchError(erro => this.exibirErro(erro))
+        );
+      }
+
     }
-
-    setProduct(produto : any){
-      this.cartItemList.push(...produto);
-      this.listarProduto.next(produto);
-    }
-
-    addtoCar(produto : any){
-      this.cartItemList.push(produto);
-      this.listarProduto.next(this.cartItemList);
-      this.getTotalPrice();
-      console.log(this.cartItemList);
-    }
-
-    getTotalPrice(): number {
-      let grandTotal = 0;
-      this.cartItemList.map((a:any) => {
-        grandTotal += a.precoProduto;
-      })
-      return grandTotal;
-    }
-
-    removeCartItem(produto: any) {
-      this.cartItemList.map((a:any, index: any) => {
-        if(produto.produtoId === a.produtoId){
-          this.cartItemList.splice(index,1);
-        }
-      })
-      this.listarProduto.next(this.cartItemList);
-    }
-
-    removeAllCart(){
-      this.cartItemList = []
-      this.listarProduto.next(this.cartItemList);
-    }
-
-  }
     // buscarTodosCarrinho() : Observable<IProdutoCarrinho[]> {
     //     return this.http.get<IProdutoCarrinho[]>(this.URLcarrinho).pipe(
     //       map(retorno => retorno),

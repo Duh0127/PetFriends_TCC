@@ -36,6 +36,7 @@ export class SacComponent implements OnInit {
     this.sacService.cadastrar(dadosSac).subscribe(cadastro => {
       if (cadastro) {
         alert('Reclamação Enviada com Sucesso!');
+        window.location.reload();
 
       } else {
         alert('Parabéns SQL');

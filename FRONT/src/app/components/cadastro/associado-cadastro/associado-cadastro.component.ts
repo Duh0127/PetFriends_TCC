@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CadastroAssociadoService } from 'src/app/services/cadassoc.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-associado-cadastro',
@@ -51,9 +52,10 @@ export class AssociadoCadastroComponent implements OnInit {
     this.cadastroService.cadastrar(dadosCadastro).subscribe(cadastro => {
       if (cadastro) {
         alert('Associado Cadastrado com Sucesso');
+        Swal.fire('Associado Cadastrado com Sucesso', 'Entre agora', 'success');
         this.router.navigate(['/login-associado']);
       } else {
-        alert('Dados Inválidos');
+        Swal.fire('Falha ao Cadastrar Usuário', 'Algo deu errado', 'error');
       }
    }, error => {
      console.log(error);

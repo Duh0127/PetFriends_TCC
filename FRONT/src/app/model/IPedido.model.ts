@@ -5,6 +5,8 @@ export interface IPedido {
 
     pedidoId: number;
     produtoId: number;
+    clienteId: number;
+    nomeCadCliente: string;
     nomeProduto: string;
     codigoProduto: string;
     qtdProduto: number;

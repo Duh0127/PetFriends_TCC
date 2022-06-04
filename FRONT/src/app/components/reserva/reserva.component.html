@@ -31,7 +31,7 @@
             <td (submit)="salvarCadastroPedido(produto.nomeProduto)">{{ produto.nomeProduto}}</td>
             <td (submit)="salvarCadastroPedido(produto.qtdProduto)">{{ produto.qtdProduto}}</td>
             <td (submit)="salvarCadastroPedido(produto.precoProduto)">{{ produto.precoProduto | currency: 'BRL'}}</td>
-            <td>{{ produto.fabricanteProduto}}</td>
+            <td (submit)="salvarCadastroPedido(produto.fabricanteProduto)">{{ produto.fabricanteProduto}}</td>
             <td></td>
             <td>
               <button class="btn btn-danger" (click)="removeItem(produto)">

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ICadastroAssociado } from 'src/app/model/ICadastroAssociado.model';
 import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 import { CadastroAssociadoService } from 'src/app/services/cadassoc.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-associado-login',
@@ -46,10 +47,17 @@ export class AssociadoLoginComponent implements OnInit {
         this.autenticacaoService.DefineToken(tokenAssociado);
         sessionStorage.setItem('Associado', 'Perfil');
         this.router.navigate(['/perfil-associado']);
-        alert('Bem-Vindo Associado');
+
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Bem-Vindo Associado',
+          showConfirmButton: false,
+          timer: 1800
+        })
       }, error => {
            console.log(error);
-          alert('Associado Não Cadastrado');
+           Swal.fire('Associado Não Cadastrado', 'Revise as credenciais', 'error');
       }
     )
   }

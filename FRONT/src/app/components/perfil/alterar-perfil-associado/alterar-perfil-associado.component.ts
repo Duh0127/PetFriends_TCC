@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AutenticacaoService } from 'src/app/services/autenticacao.service';
     import { CadastroAssociadoService } from 'src/app/services/cadassoc.service';
     import { ProdutosService } from 'src/app/services/produtos.service';
+import Swal from 'sweetalert2';
 
 
     @Component({
@@ -68,17 +69,28 @@ import { AutenticacaoService } from 'src/app/services/autenticacao.service';
       // };
 
       deletarPerfilAssociado(associado: ICadastroAssociado) {
-        this.cadastroService.excluir(associado.associadoId).subscribe(associado => {
-         if (associado) {
-  
-           this.autenticacaoService.LimparToken();
-           alert('Perfil Deletado com Sucesso');
-         } else {
-           alert('Falha ao Deletar Perfil ');
-         }
-          this.router.navigate(['/login-associado']);
-        });
+        Swal.fire({
+          icon: 'warning',
+          title: 'Tem Certeza que Deseja Deletar Conta?',
+          text: 'Esta ação não pode ser desfeita',
+          showCancelButton: true,
+          confirmButtonText: 'Sim',
+          cancelButtonText: 'Não'
+        }).then(result => {
+          if(result.value){
+            this.cadastroService.excluir(associado.associadoId).subscribe(associado => {
+              if (associado) {
+                this.autenticacaoService.LimparToken();
+                Swal.fire('Perfil Deletado com Sucesso', 'Foi bom ter você com a gente', 'success');
+              } else {
+                Swal.fire('Falha ao Deletar Perfil', 'Algo deu errado', 'error');
+              }
+               this.router.navigate(['/login-associado']);
+             });
+          }
+        })
       };
+
 
       // atualizarPerfilAssociado(associado: ICadastroAssociado) {
 

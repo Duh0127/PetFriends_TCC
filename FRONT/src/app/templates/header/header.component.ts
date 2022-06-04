@@ -50,7 +50,8 @@ export class HeaderComponent implements OnInit {
   };
 
   public totalProduto : number = 0;
-
+  public searchTerm : string = '';
+  
 
   constructor(private router: Router,
               private autenticacaoService: AutenticacaoService,
@@ -66,6 +67,12 @@ export class HeaderComponent implements OnInit {
   sair(){
     this.autenticacaoService.LimparToken();
     this.router.navigate(["/login-cliente"])
+  }
+
+  search(event: any){
+    this.searchTerm = (event.target as HTMLInputElement).value;
+    console.log(this.searchTerm);
+    this.cartService.search.next(this.searchTerm);
   }
 
 }

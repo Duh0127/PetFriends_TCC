@@ -5,6 +5,10 @@ import { BehaviorSubject } from 'rxjs';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IPedido } from 'src/app/model/IPedido.model';
 import { Router } from '@angular/router';
+import { PedidoService } from 'src/app/services/pedido.service';
+import { ICadastroCliente } from 'src/app/model/ICadastroCliente.model';
+import { CadastroClienteService } from 'src/app/services/cadcliente.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -31,10 +35,14 @@ export class ReservaComponent implements OnInit {
   //   produtoReservado: false,
   // };
   
+  listarCliente: ICadastroCliente[] = [];
   public listarProduto: any = [];
   public grandTotal : number = 0;
 
+
   constructor(private carrinhoService : CarrinhoService,
+              private pedidoService: PedidoService,
+              private cadastroClienteService: CadastroClienteService,
               private formBuilder: FormBuilder,
               private router: Router) {
 
@@ -44,6 +52,7 @@ export class ReservaComponent implements OnInit {
 
   ngOnInit(): void {
     // this.carregarCarrinho();
+
     this.carrinhoService.getProducts().subscribe(
       res => {
         this.listarProduto = res;
@@ -95,18 +104,19 @@ export class ReservaComponent implements OnInit {
 
   salvarCadastroPedido(produto: any) {
 
-    this.carrinhoService.cadastrar(produto).subscribe(cadastro => {
+    this.pedidoService.cadastrar(produto).subscribe(cadastro => {
       if (cadastro) {
-        alert('Pedido efetuado com sucesso!');
-        this.router.navigate(['/reserva']);
+        Swal.fire('Pedido efetuado com sucesso!', 'Entre em contato com o Associado Responsável pelo Produto, e Informe o Número do Pedido', 'success');
+        window.location.reload();
       } else {
-        alert('Parabéns SQL');
+        Swal.fire('Falha ao Efetuar Reserva', 'Algo deu errado', 'error');
       }
    }, error => {
      console.log(error);
      alert('mais um erro de cria');
    });
-    // this.router.navigate(['']);
+     
+    
   }
 
   // carregarCarrinho() : void{

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ICadastroCliente } from 'src/app/model/ICadastroCliente.model';
 import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 import { CadastroClienteService } from 'src/app/services/cadcliente.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cliente-login',
@@ -47,10 +48,17 @@ export class ClienteLoginComponent implements OnInit {
         this.autenticacaoService.DefineToken(tokenCliente);
         sessionStorage.setItem('Cliente', 'Perfil');
         this.router.navigate(['/perfil-cliente']);
-        alert('Bem-Vindo Cliente');
+       
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Bem-Vindo Cliente',
+          showConfirmButton: false,
+          timer: 1800
+        })
       }, error => {
            console.log(error);
-           alert('Cliente Não Cadastrado');
+           Swal.fire('Cliente Não Cadastrado', 'Revise as credenciais', 'error');
       }
     )
   }

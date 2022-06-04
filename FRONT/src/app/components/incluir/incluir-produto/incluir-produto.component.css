@@ -30,7 +30,7 @@ body {/* FUNDO DA PAGINA */
           /* BLOCO DO PERFIL *//* BLOCO DO PERFIL */
 .fundo-perfil {
   width: 50vw;
-  height: 27vh;
+  height: 21vh;
   background-color: rgba(255, 219, 152, 0.808);
   box-shadow: 2px 2px 10px rgb(117, 117, 117);
   border-radius: 10px;

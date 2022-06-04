@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  UrlPrincipal: "http://localhost:5000"
+  UrlPrincipal: "http://backend.somee.com/BackendTCC2"
 };
 
 /*

@@ -12,6 +12,7 @@ import { CarrinhoService } from 'src/app/services/carrinho.service';
 export class HomeComponent implements OnInit {
 
   public listarProdutos: any ;
+  searchKey:string = "";
 
 
 
@@ -33,6 +34,9 @@ export class HomeComponent implements OnInit {
     this.listarProdutos.forEach((a:any) => {
       Object.assign(a, {qtdProduto: 1, total: a.precoProduto});
       });
+    });
+    this.carrinhoService.search.subscribe((val:any) => {
+      this.searchKey = val;
     })
   }
 

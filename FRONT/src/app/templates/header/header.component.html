@@ -4,14 +4,23 @@
       <img src="/assets/img/logovert.png" routerLink="" width="90" height="90" class="d-inline-block logo">
 
     <div class="divLinha form-group container-xl">
-      <ng-autocomplete
+
+     <ng-autocomplete
+          placeholder="Pesquise no PetFriends"
+          (selected)='itemSelecionadoPesquisa()'
+          [itemTemplate]="itemTemplate"
+          [(ngModel)]="searchTerm" (keyup)="search($event)">
+    </ng-autocomplete> 
+
+    <!-- <ng-autocomplete
           [data]="data"
           [searchKeyword]="keyword"
           placeholder="Pesquise no PetFriends"
           (selected)='itemSelecionadoPesquisa()'
           [itemTemplate]="itemTemplate"
-          [notFoundTemplate]="notFoundTemplate">
-    </ng-autocomplete>
+          [notFoundTemplate]="notFoundTemplate"
+          [(ngModel)]="'serchTerm">
+    </ng-autocomplete>  -->
 
       <ng-template #itemTemplate let-item>
         <a [innerHTML]="item.name"></a>

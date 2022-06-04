@@ -5,6 +5,7 @@
 import { AutenticacaoService } from 'src/app/services/autenticacao.service';
   import { CadastroClienteService } from 'src/app/services/cadcliente.service';
   import { ProdutosService } from 'src/app/services/produtos.service';
+import Swal from 'sweetalert2';
 
 
 
@@ -52,17 +53,31 @@ export class AlterarPerfilClienteComponent implements OnInit {
     }
 
     deletarPerfilCliente(cliente: ICadastroCliente) {
-      this.cadastroService.excluir(cliente.clienteId).subscribe(cliente => {
-       if (cliente) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Tem Certeza que Deseja Deletar Conta?',
+        text: 'Esta ação não pode ser desfeita',
+        showCancelButton: true,
+        confirmButtonText: 'Sim',
+        cancelButtonText: 'Não'
+      }).then(result => {
+        if(result.value){
+          this.cadastroService.excluir(cliente.clienteId).subscribe(cliente => {
+            if (cliente) {
+              this.autenticacaoService.LimparToken();
+              Swal.fire('Perfil Deletado com Sucesso', 'Foi bom ter você com a gente', 'success');
+            } else {
+              Swal.fire('Falha ao Deletar Perfil', 'Algo deu errado', 'error');
+            }
+             this.router.navigate(['/login-cliente']);
+           });
+        }
+      })
+    }
+  
+      
 
-         this.autenticacaoService.LimparToken();
-         alert('Perfil Deletado com Sucesso');
-       } else {
-         alert('Falha ao Deletar Perfil ');
-       }
-        this.router.navigate(['/login-cliente']);
-      });
-    };
+    
 
     
 

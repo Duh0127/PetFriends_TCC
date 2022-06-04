@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiTcc.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220514163611_ReservaProduto")]
+    [Migration("20220516000346_ReservaProduto")]
     partial class ReservaProduto
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

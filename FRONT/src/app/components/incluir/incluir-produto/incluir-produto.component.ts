@@ -5,6 +5,7 @@ import { ICadastroAssociado } from 'src/app/model/ICadastroAssociado.model';
 import { IProduto } from 'src/app/model/IProduto.model';
 import { CadastroAssociadoService } from 'src/app/services/cadassoc.service';
 import { ProdutosService } from 'src/app/services/produtos.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-incluir-produto',
@@ -75,16 +76,16 @@ export class IncluirProdutoComponent implements OnInit {
     })
   };
 
-   deletarProdutos(produto: IProduto) {
-     this.produtosService.excluir(produto.produtoId).subscribe(produto => {
-      if (produto) {
-        alert('Produto Deletado com Sucesso');
-      } else {
-        alert('Falha ao Deletar Produto ');
-      }
-       this.carregarProdutos();
-     });
-   };
+  //  deletarProdutos(produto: IProduto) {
+  //    this.produtosService.excluir(produto.produtoId).subscribe(produto => {
+  //     if (produto) {
+  //       alert('Produto Deletado com Sucesso');
+  //     } else {
+  //       alert('Falha ao Deletar Produto ');
+  //     }
+  //      this.carregarProdutos();
+  //    });
+  //  };
 
    salvarProduto() {
 
@@ -92,10 +93,11 @@ export class IncluirProdutoComponent implements OnInit {
 
       this.produtosService.cadastrar(dadosProduto).subscribe(produto => {
         if (produto) {
-          alert('Produto Cadastrado com Sucesso');
+          Swal.fire('Produto Cadastrado com Sucesso', 'Tudo certo', 'success');
+          window.location.reload();
           this.carregarProdutos();
         } else {
-          alert('Falha ao Cadastrar Produto ');
+          Swal.fire('Falha ao Cadastrar Produto', 'Algo deu errado', 'error');
         }
      }, error => {
        console.log(error);
@@ -103,6 +105,29 @@ export class IncluirProdutoComponent implements OnInit {
      });
       this.router.navigate(['perfil-associado']);
     }
+
+    deletarProdutos(produto: IProduto) {    
+      Swal.fire({
+        icon: 'warning',
+        title: 'Confirma a exclusão do(a) ' + produto.nomeProduto + '?',
+        text: 'Esta ação não pode ser desfeita',
+        showCancelButton: true,
+        confirmButtonText: 'Sim',
+        cancelButtonText: 'Não'
+      })
+      .then(result => {
+        if(result.value){
+          this.produtosService.excluir(produto.produtoId).subscribe(produto => {
+            if (produto) {
+              Swal.fire('Produto Deletado com Sucesso', 'Tudo certo', 'success');
+            } else {
+              Swal.fire('Falha ao Deletar Produto', 'Algo deu errado', 'error');
+            }
+             this.carregarProdutos();
+           });
+        }
+      })
+    };
 
 }
 

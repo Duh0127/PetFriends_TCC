@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CadastroClienteService } from 'src/app/services/cadcliente.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cliente-cadastro',
@@ -49,10 +50,10 @@ export class ClienteCadastroComponent implements OnInit {
 
     this.cadastroService.cadastrar(dadosCadastro).subscribe(cadastro => {
       if (cadastro) {
-        alert('Cliente Cadastrado com Sucesso');
+        Swal.fire('Cliente Cadastrado com Sucesso', 'Entre agora', 'success');
         this.router.navigate(['/login-cliente']);
       } else {
-        alert('Parabéns SQL');
+        Swal.fire('Falha ao Cadastrar Usuário', 'Algo deu errado', 'error');
       }
    }, error => {
      console.log(error);
