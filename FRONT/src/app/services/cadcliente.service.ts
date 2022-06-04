@@ -39,6 +39,13 @@ export class CadastroClienteService {
    );
   }
 
+  excluir(id: number): Observable<ICadastroCliente> {
+    return this.http.delete<ICadastroCliente>(`${this.baseUrl}/${id}`).pipe(
+      map(retorno => retorno),
+     // catchError(erro => this.exibirErro(erro))
+    );
+  }
+
 
 
 

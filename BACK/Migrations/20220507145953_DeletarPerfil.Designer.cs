@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiTcc.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220430150458_TesteReserva")]
-    partial class TesteReserva
+    [Migration("20220507145953_DeletarPerfil")]
+    partial class DeletarPerfil
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -264,24 +264,32 @@ namespace ApiTcc.Migrations
                     b.Property<int?>("clienteId")
                         .HasColumnType("int");
 
-                    b.Property<string>("dataPedido")
+                    b.Property<string>("codigoProduto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("qtdPedido")
-                        .HasColumnType("int");
+                    b.Property<DateTime?>("dataPedido")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("statusPedido")
+                    b.Property<double>("grandTotal")
+                        .HasColumnType("float");
+
+                    b.Property<string>("nomeProduto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("valorTotalPedido")
+                    b.Property<double>("precoProduto")
+                        .HasColumnType("float");
+
+                    b.Property<int?>("produtoId")
                         .HasColumnType("int");
 
-                    b.Property<int>("valorUniPedido")
+                    b.Property<int>("qtdProduto")
                         .HasColumnType("int");
 
                     b.HasKey("pedidoId");
 
                     b.HasIndex("clienteId");
+
+                    b.HasIndex("produtoId");
 
                     b.ToTable("Pedidos");
 
@@ -289,114 +297,23 @@ namespace ApiTcc.Migrations
                         new
                         {
                             pedidoId = 1,
-                            dataPedido = "12/05/2022",
-                            qtdPedido = 1,
-                            statusPedido = "Aguardando Confirmação",
-                            valorTotalPedido = 95,
-                            valorUniPedido = 95
+                            grandTotal = 95.0,
+                            precoProduto = 95.0,
+                            qtdProduto = 1
                         },
                         new
                         {
                             pedidoId = 2,
-                            dataPedido = "13/06/2022",
-                            qtdPedido = 2,
-                            statusPedido = "Aguardando Confirmação",
-                            valorTotalPedido = 45,
-                            valorUniPedido = 22
+                            grandTotal = 45.0,
+                            precoProduto = 22.0,
+                            qtdProduto = 2
                         },
                         new
                         {
                             pedidoId = 3,
-                            dataPedido = "14/07/2022",
-                            qtdPedido = 3,
-                            statusPedido = "Reservado",
-                            valorTotalPedido = 85,
-                            valorUniPedido = 25
-                        });
-                });
-
-            modelBuilder.Entity("ApiTcc.Models.Pet", b =>
-                {
-                    b.Property<int>("petId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("caracteristicaPet")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("clienteId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("corPet")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("especiePet")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("microshipPet")
-                        .HasColumnType("int");
-
-                    b.Property<string>("nomePet")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte[]>("petImagem")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<string>("portePet")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("racaPet")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("rgaPet")
-                        .HasColumnType("int");
-
-                    b.HasKey("petId");
-
-                    b.HasIndex("clienteId");
-
-                    b.ToTable("Pets");
-
-                    b.HasData(
-                        new
-                        {
-                            petId = 1,
-                            caracteristicaPet = "Característica A",
-                            clienteId = 1,
-                            corPet = "Cor A",
-                            especiePet = "Gato A",
-                            microshipPet = 1233211243,
-                            nomePet = "Gato A",
-                            portePet = "Pequeno A",
-                            racaPet = "Raça A",
-                            rgaPet = 123321125
-                        },
-                        new
-                        {
-                            petId = 2,
-                            caracteristicaPet = "Característica B",
-                            clienteId = 2,
-                            corPet = "Cor B",
-                            especiePet = "Gato B",
-                            microshipPet = 1233211233,
-                            nomePet = "Gato B",
-                            portePet = "Pequeno B",
-                            racaPet = "Raça B",
-                            rgaPet = 123321123
-                        },
-                        new
-                        {
-                            petId = 3,
-                            caracteristicaPet = "Característica C",
-                            clienteId = 3,
-                            corPet = "Cor C",
-                            especiePet = "Cachorro",
-                            microshipPet = 1233211233,
-                            nomePet = "Cachorro C",
-                            portePet = "Pequeno C",
-                            racaPet = "Raça C",
-                            rgaPet = 123321123
+                            grandTotal = 85.0,
+                            precoProduto = 25.0,
+                            qtdProduto = 3
                         });
                 });
 
@@ -478,6 +395,9 @@ namespace ApiTcc.Migrations
                     b.Property<string>("nomeProduto")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("pedidoId")
+                        .HasColumnType("int");
+
                     b.Property<int>("precoProduto")
                         .HasColumnType("int");
 
@@ -490,6 +410,8 @@ namespace ApiTcc.Migrations
                     b.HasKey("produtoId");
 
                     b.HasIndex("associadoId");
+
+                    b.HasIndex("pedidoId");
 
                     b.ToTable("Produtos");
 
@@ -528,22 +450,15 @@ namespace ApiTcc.Migrations
 
             modelBuilder.Entity("ApiTcc.Models.Pedido", b =>
                 {
-                    b.HasOne("ApiTcc.Models.Cliente", "Cliente")
+                    b.HasOne("ApiTcc.Models.Cliente", null)
                         .WithMany("Pedidos")
                         .HasForeignKey("clienteId");
 
-                    b.Navigation("Cliente");
-                });
+                    b.HasOne("ApiTcc.Models.Produto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("produtoId");
 
-            modelBuilder.Entity("ApiTcc.Models.Pet", b =>
-                {
-                    b.HasOne("ApiTcc.Models.Cliente", "Cliente")
-                        .WithMany("Pets")
-                        .HasForeignKey("clienteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Cliente");
+                    b.Navigation("Produto");
                 });
 
             modelBuilder.Entity("ApiTcc.Models.Produto", b =>
@@ -554,17 +469,24 @@ namespace ApiTcc.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("ApiTcc.Models.Pedido", null)
+                        .WithMany("Produtos")
+                        .HasForeignKey("pedidoId");
+
                     b.Navigation("Associado");
                 });
 
             modelBuilder.Entity("ApiTcc.Models.Cliente", b =>
                 {
                     b.Navigation("Pedidos");
-
-                    b.Navigation("Pets");
                 });
 
             modelBuilder.Entity("ApiTcc.Models.Enuns.Associado", b =>
+                {
+                    b.Navigation("Produtos");
+                });
+
+            modelBuilder.Entity("ApiTcc.Models.Pedido", b =>
                 {
                     b.Navigation("Produtos");
                 });

@@ -37,6 +37,20 @@ export class CadastroAssociadoService {
    );
   }
 
+  excluir(id: number): Observable<ICadastroAssociado> {
+    return this.http.delete<ICadastroAssociado>(`${this.baseUrl}/${id}`).pipe(
+      map(retorno => retorno),
+     // catchError(erro => this.exibirErro(erro))
+    );
+  }
+
+  atualizar(associado: any): Observable<ICadastroAssociado>{
+    return this.http.put<any>(`${this.baseUrl}`, associado).pipe(
+      map(retorno => retorno),
+      //catchError(erro => this.exibirErro(erro))
+    );
+  }
+
 
 
 

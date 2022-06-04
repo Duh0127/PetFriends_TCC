@@ -73,9 +73,6 @@ export class DescricaoProdutoComponent implements OnInit {
         this.produto = produto;
         console.log(this.produto)
 
-        this.produto.forEach((a:any) => {
-          Object.assign(a, {qtdProduto: 1, total: a.precoProduto});
-          });
       })
   }
 

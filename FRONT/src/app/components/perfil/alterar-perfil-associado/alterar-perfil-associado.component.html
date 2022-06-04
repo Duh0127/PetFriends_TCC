@@ -17,7 +17,7 @@
       <div class="row">
         <!--BEM-VINDO-->
                 <div class="fundo-tudo shadow-1">
-                  <div class="usuario-associado" *ngFor="let associado of listarAssociados">
+                  <div class="usuario-associado" *ngFor="let associado of listarAssociado">
                     <!--Campo de imagem redondo -->
                     <svg class="bd-placeholder-img rounded-circle" width="120" height="120" xmlns="http://www.w3.org/2000/svg"
                       role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -46,10 +46,10 @@
           <form>
 
             <!-- CORPO DO CARD COM CAMPOS PARA ALTERAÇÃO DE INFORMAÇÕES -->
-            <div class="nomecompleto form-group">
+            <div class="nomecompleto form-group" >
               <label for="exampleInputEmail1">NOME COMPLETO</label>
               <input type="text" class="form-control" name="nomeCadAssociado" placeholder="DIGITE O NOME DA SUA EMPRESA"
-                [(ngModel)]="cadastro.nomeCadAssociado">
+              [(ngModel)]="cadastro.nomeCadAssociado">
             </div>
 
             <div class="row">
@@ -111,11 +111,10 @@
 
 
           <!-- BOTÃO 'ATUALIZAR PERFIL' DENTRO DO CARD -->
-          <button type="submit" routerLink="" class="btn btn-primary" (click)="salvarCadastroAssoc()">Atualizar
-            Perfil</button>
+          <button type="submit"  class="btn btn-primary" >Atualizar Perfil</button>
 
           <!-- BOTÃO 'DELETAR PERFIL' DENTRO DO CARD -->
-          <button type="submit" class="btn btn-warning">Deletar Perfil</button>
+          <button *ngFor="let associado of listarAssociado" type="submit" class="btn btn-warning" (click)="deletarPerfilAssociado(associado)">Deletar Perfil</button>
 
         </div>
       </div>

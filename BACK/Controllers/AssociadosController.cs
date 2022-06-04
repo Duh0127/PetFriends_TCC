@@ -39,9 +39,9 @@ namespace ApiTcc.Controllers
             }
         }
 
-         public async Task<bool> AssociadoExistente(string email)
+         public async Task<bool> AssociadoExistente(string email, string nome)
         {
-            if (await _context.Associados.AnyAsync(x => x.emailCadAssociado.ToLower() == email.ToLower()))
+            if (await _context.Associados.AnyAsync(x => x.emailCadAssociado.ToLower() == email.ToLower() && x.nomeCadAssociado.ToLower() == nome.ToLower()))
             {
                 return true;
             }
@@ -160,26 +160,27 @@ namespace ApiTcc.Controllers
         //     //  }           
         // }
 
-        [HttpPut]
-        public async Task<IActionResult> Update(Associado novoAssociado)
-        {
-            try
-             {
-                 if (novoAssociado.cnpjCadAssociado == "" && novoAssociado.nomeCadAssociado == "")
-                 {
-                     throw new Exception("Campos CNPJ e Nome não podem estar vazios!");
-                 }
-                 _context.Associados.Update(novoAssociado);
-                 int linhasAfestadas = await _context.SaveChangesAsync();
 
-                 return Ok(linhasAfestadas);
-             }
-             catch (Exception ex)
-            {
+          [HttpPut]
+          public async Task<IActionResult> Update(Associado novoAssociado)
+          {
+              try
+               {
+                   if (novoAssociado.nomeCadAssociado == "")
+                   {
+                       throw new Exception("Nome não pode estar vazio!");
+                   }
+                   _context.Associados.Update(novoAssociado);
+                   int linhasAfestadas = await _context.SaveChangesAsync();
+
+                   return Ok(linhasAfestadas);
+               }
+               catch (Exception ex)
+              {
                 
-                 return BadRequest(ex.Message);
-             }
-        }
+                   return BadRequest(ex.Message);
+               }
+          }
 
       
         [HttpDelete("{id}")]
@@ -209,8 +210,8 @@ namespace ApiTcc.Controllers
         {
             try
             {
-                if (await AssociadoExistente(associado.emailCadAssociado))
-                    throw new SystemException("Email de usuário já existe");
+                if (await AssociadoExistente(associado.emailCadAssociado, associado.nomeCadAssociado))
+                    throw new SystemException("Email ou Nome de usuário já existe");
 
                 CriarPasswordHash(associado.senhaCadAssociado, out byte[] hash, out byte[] salt);
                 associado.senhaCadAssociado = string.Empty;

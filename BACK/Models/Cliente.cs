@@ -26,7 +26,6 @@ namespace ApiTcc.Models
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
         public byte[] clienteImagem { get; set; }
-        public List<Pet> Pets { get; set; }
         public List<Pedido> Pedidos { get; set; }
         public string senhaCadCliente { get; set; }
 

@@ -1,13 +1,20 @@
+using System;
+using System.Collections.Generic;
+
 namespace ApiTcc.Models
 {
     public class Pedido
     {
-        public Cliente Cliente { get; set; }
+        public Produto Produto { get; set; }
         public int pedidoId { get; set; }
-        public int valorTotalPedido { get; set; }
-        public int qtdPedido { get; set; } // = 3;
-        public string dataPedido { get; set; } // = "12/04";
-        public string statusPedido { get; set; } // = "Reservado";
-        public int valorUniPedido { get; set; }  //= 180;
+        public string nomeProduto {get; set;}
+        public string codigoProduto {get; set; }
+        public int qtdProduto { get; set; } // = 3;
+        public DateTime? dataPedido { get; set; } // = "12/04";
+        //public string statusPedido { get; set; } // = "Reservado";
+        public double precoProduto { get; set; }  //= 180;
+        public double grandTotal  { get; set; }
+        public List<Produto> Produtos { get; set; }
+
     }
 }

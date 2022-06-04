@@ -119,11 +119,11 @@
         </tbody>-->
 
           <!-- BOTÃO 'ATUALIZAR PERFIL' DENTRO DO CARD -->
-          <button type="submit" routerLink="" class="btn btn-primary" (click)="salvarCadastroCliente()">Atualizar
+          <button type="submit" routerLink="" class="btn btn-primary" >Atualizar
             Perfil</button>
 
           <!-- BOTÃO 'DELETAR PERFIL' DENTRO DO CARD -->
-          <button type="submit" class="btn btn-warning">Deletar Perfil</button>
+          <button *ngFor="let cliente of listarCliente" type="submit" class="btn btn-warning" (click)="deletarPerfilCliente(cliente)">Deletar Perfil</button>
 
         </div>
       </div>

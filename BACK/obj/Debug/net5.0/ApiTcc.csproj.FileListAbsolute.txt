@@ -194,7 +194,6 @@ C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\ApiTcc.deps.json
 C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\ApiTcc.runtimeconfig.json
 C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\ApiTcc.runtimeconfig.dev.json
 C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\ApiTcc.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\ref\ApiTcc.dll
 C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\ApiTcc.pdb
 C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\Humanizer.dll
 C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
@@ -243,7 +242,6 @@ C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ApiTcc.csproj.CoreCo
 C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\staticwebassets\ApiTcc.StaticWebAssets.Manifest.cache
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\staticwebassets\ApiTcc.StaticWebAssets.xml
 C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\scopedcss\bundle\ApiTcc.styles.css
 C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ApiTcc.RazorTargetAssemblyInfo.cache
 C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ApiTcc.csproj.CopyComplete
@@ -644,7 +642,6 @@ C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\ApiTcc.deps.json
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\ApiTcc.runtimeconfig.json
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\ApiTcc.runtimeconfig.dev.json
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\ApiTcc.dll
-C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\ref\ApiTcc.dll
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\ApiTcc.pdb
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\Humanizer.dll
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
@@ -694,7 +691,6 @@ C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ApiTcc.csproj.Co
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\staticwebassets\ApiTcc.StaticWebAssets.Manifest.cache
-C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\staticwebassets\ApiTcc.StaticWebAssets.xml
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\scopedcss\bundle\ApiTcc.styles.css
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ApiTcc.RazorTargetAssemblyInfo.cache
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ApiTcc.csproj.CopyComplete
@@ -707,3 +703,5 @@ C:\Users\RXpari\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\publish\publish\Api
 C:\Users\RXpari\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\publish\publish\ApiTcc.runtimeconfig.json
 C:\Users\RXpari\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\publish\publish\appsettings.Development.json
 C:\Users\RXpari\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\publish\publish\appsettings.json
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\refint\ApiTcc.dll
+C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\refint\ApiTcc.dll

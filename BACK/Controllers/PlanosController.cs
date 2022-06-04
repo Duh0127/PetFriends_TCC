@@ -21,6 +21,7 @@ namespace ApiTcc.Controllers
             _context = context;
         }
 
+
         [HttpGet("GetAll")]
         public async Task<IActionResult> Get()
         {

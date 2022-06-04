@@ -18,8 +18,6 @@ namespace ApiTcc.Data
 
         public DbSet<Pedido> Pedidos { get; set; }
 
-        public DbSet<Pet> Pets { get; set; }
-
         public DbSet<Plano> Planos { get; set; }
 
         public DbSet<Produto> Produtos { get; set; }
@@ -55,17 +53,11 @@ namespace ApiTcc.Data
 
             modelBuilder.Entity<Pedido>().HasData
             (
-                new Pedido() { pedidoId = 1, valorTotalPedido = 95, qtdPedido = 1, dataPedido = "12/05/2022", statusPedido = "Aguardando Confirmação", valorUniPedido = 95  },
-                new Pedido() { pedidoId = 2, valorTotalPedido = 45, qtdPedido = 2, dataPedido = "13/06/2022", statusPedido = "Aguardando Confirmação", valorUniPedido = 22 },
-                new Pedido() { pedidoId = 3, valorTotalPedido = 85, qtdPedido = 3, dataPedido = "14/07/2022", statusPedido = "Reservado", valorUniPedido = 25 }
+                new Pedido() { pedidoId = 1, grandTotal = 95,  qtdProduto = 1, precoProduto = 95  },
+                new Pedido() { pedidoId = 2, grandTotal = 45,  qtdProduto = 2, precoProduto = 22 },
+                new Pedido() { pedidoId = 3, grandTotal = 85,  qtdProduto = 3, precoProduto = 25 }
             );
 
-            modelBuilder.Entity<Pet>().HasData
-            (
-                new Pet() { petId = 1, nomePet = "Gato A", rgaPet = 123321125, racaPet = "Raça A", portePet = "Pequeno A", caracteristicaPet = "Característica A", corPet = "Cor A", microshipPet = 1233211243, especiePet = "Gato A", clienteId = 1},
-                new Pet() { petId = 2, nomePet = "Gato B", rgaPet = 123321123, racaPet = "Raça B", portePet = "Pequeno B", caracteristicaPet = "Característica B", corPet = "Cor B", microshipPet = 1233211233, especiePet = "Gato B", clienteId = 2 },
-                new Pet() { petId = 3, nomePet = "Cachorro C", rgaPet = 123321123, racaPet = "Raça C", portePet = "Pequeno C", caracteristicaPet = "Característica C", corPet = "Cor C", microshipPet = 1233211233, especiePet = "Cachorro", clienteId = 3}
-            );
 
             modelBuilder.Entity<Plano>().HasData
             (

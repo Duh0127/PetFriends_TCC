@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment';
   export class CarrinhoService {
   
     baseUrl = `${environment.UrlPrincipal}/Produtos`;
+    pedidosUrl = `${environment.UrlPrincipal}/Pedidos`;
 
     public cartItemList : any = []
     public listarProduto = new BehaviorSubject<any>([]);
@@ -40,7 +41,7 @@ import { environment } from 'src/environments/environment';
     getTotalPrice(): number {
       let grandTotal = 0;
       this.cartItemList.map((a:any) => {
-        grandTotal += a.total;
+        grandTotal += a.precoProduto;
       })
       return grandTotal;
     }
@@ -58,7 +59,18 @@ import { environment } from 'src/environments/environment';
       this.cartItemList = []
       this.listarProduto.next(this.cartItemList);
     }
-  
+
+    cadastrar(produto: any): Observable<any>{
+
+      this.cartItemList.push(...produto);
+      this.listarProduto.next(produto);
+      
+      return this.http.post<any>(`${this.pedidosUrl}`, produto).pipe(
+        map(retorno => retorno),
+          //catchError(erro => this.exibirErro(erro))
+        );
+      }
+    }
     // buscarTodosCarrinho() : Observable<IProdutoCarrinho[]> {
     //     return this.http.get<IProdutoCarrinho[]>(this.URLcarrinho).pipe(
     //       map(retorno => retorno),
@@ -115,4 +127,4 @@ import { environment } from 'src/environments/environment';
       //No toastr será exibido mensagem, titulo, botão para fechar, barra com tempo de vizualização e o tipo
     }*/
   
-  }
+  

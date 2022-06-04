@@ -42,9 +42,9 @@ namespace ApiTcc.Controllers
             }
         }
 
-        public async Task<bool> ClienteExistente(string email)
+        public async Task<bool> ClienteExistente(string email, string nome)
         {
-            if (await _context.Clientes.AnyAsync(x => x.emailCadCliente.ToLower() == email.ToLower()))
+            if (await _context.Clientes.AnyAsync(x => x.emailCadCliente.ToLower() == email.ToLower() && x.nomeCadCliente.ToLower() == nome.ToLower()))
             {
                 return true;
             }
@@ -167,12 +167,12 @@ namespace ApiTcc.Controllers
         //     }
         // }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Update(Cliente novoCliente)
         {
             try
             {
-                if (novoCliente.nomeCadCliente == "" && novoCliente.cpfCadCliente == "")
+                if (novoCliente.nomeCadCliente == "" )
                 {
                     throw new Exception("Campos Nome e CPF não podem estar vazios!");
                 }
@@ -216,8 +216,8 @@ namespace ApiTcc.Controllers
         {
             try
             {
-                if (await ClienteExistente(cliente.emailCadCliente))
-                    throw new SystemException("Email de usuário já existe");
+                if (await ClienteExistente(cliente.emailCadCliente, cliente.nomeCadCliente))
+                    throw new SystemException("Email ou Nome de usuário já existe");
 
                 CriarPasswordHash(cliente.senhaCadCliente, out byte[] hash, out byte[] salt);
                 cliente.senhaCadCliente = string.Empty;

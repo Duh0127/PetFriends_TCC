@@ -29,6 +29,15 @@ namespace ApiTcc.Controllers
             _httpContextAccessor = httpContextAccessor;
         }
 
+        public async Task<bool> ProdutoExistente (string codigoProduto)
+        {
+            if(await _context.Produtos.AnyAsync(x => x.codigoProduto.ToLower() == codigoProduto.ToLower()))
+            {
+                return true;
+            }
+            return false;
+        }
+
         private int ObterUsuarioId()
         {
             return int.Parse(_httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -44,7 +53,7 @@ namespace ApiTcc.Controllers
         {
             try
             {
-                List<Produto> lista = await _context.Produtos.ToListAsync();
+                List<Produto> lista = await _context.Produtos.OrderByDescending(p => p.produtoId).ToListAsync();
                 return Ok(lista);
             }
             catch (Exception ex)
@@ -121,8 +130,8 @@ namespace ApiTcc.Controllers
 
              try
              {
-                 if (novoProduto.nomeProduto == "" && novoProduto.precoProduto == 0)
-                     throw new Exception("Campos Nome e Preço não podem estar vazios!");
+                 if (await ProdutoExistente(novoProduto.codigoProduto))
+                     throw new System.Exception("Código de produto já existe");
                 
                 novoProduto.Associado = _context.Associados.FirstOrDefault(aBusca => aBusca.associadoId == ObterUsuarioId());
 

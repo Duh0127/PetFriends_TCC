@@ -12,10 +12,9 @@ export class DataService {
 
 
 
-  getAll():Observable<any>{
-    return this.
-
-  }
+  // getAll():Observable<any>{
+  //   return this.
+  // }
 
 
 

@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RXpari\\Desktop\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj": {}
+    "C:\\Users\\Lucas\\Desktop\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RXpari\\Desktop\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj": {
+    "C:\\Users\\Lucas\\Desktop\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RXpari\\Desktop\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj",
         "projectName": "ApiTcc",
-        "projectPath": "C:\\Users\\RXpari\\Desktop\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj",
-        "packagesPath": "C:\\Users\\RXpari\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RXpari\\Desktop\\TCC_ETEC - GIT\\BACK\\obj\\",
+        "projectPath": "C:\\Users\\Lucas\\Desktop\\TCC_ETEC - GIT\\BACK\\ApiTcc.csproj",
+        "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lucas\\Desktop\\TCC_ETEC - GIT\\BACK\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\RXpari\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,6 +81,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.16, 5.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -87,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

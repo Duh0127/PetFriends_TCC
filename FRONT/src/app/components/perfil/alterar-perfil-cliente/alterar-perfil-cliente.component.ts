@@ -2,6 +2,7 @@
   import { Router } from '@angular/router';
   import { ICadastroCliente } from 'src/app/model/ICadastroCliente.model';
   import { IProduto } from 'src/app/model/IProduto.model';
+import { AutenticacaoService } from 'src/app/services/autenticacao.service';
   import { CadastroClienteService } from 'src/app/services/cadcliente.service';
   import { ProdutosService } from 'src/app/services/produtos.service';
 
@@ -28,8 +29,9 @@ export class AlterarPerfilClienteComponent implements OnInit {
     listarCliente: ICadastroCliente[] = [];
 
     constructor(private cadastroService: CadastroClienteService,
-      private produtosService: ProdutosService,
-      private router: Router) { }
+                private produtosService: ProdutosService,
+                private autenticacaoService: AutenticacaoService,
+                private router: Router) { }
 
     ngOnInit(): void {
       this.carregarUsuario();
@@ -48,6 +50,21 @@ export class AlterarPerfilClienteComponent implements OnInit {
       });
       this.router.navigate(['']);
     }
+
+    deletarPerfilCliente(cliente: ICadastroCliente) {
+      this.cadastroService.excluir(cliente.clienteId).subscribe(cliente => {
+       if (cliente) {
+
+         this.autenticacaoService.LimparToken();
+         alert('Perfil Deletado com Sucesso');
+       } else {
+         alert('Falha ao Deletar Perfil ');
+       }
+        this.router.navigate(['/login-cliente']);
+      });
+    };
+
+    
 
   /*   deletarPerfilCliente(cliente: ICadastroCliente) {
       this.produtosService.excluir(cliente.clienteId).subscribe(cliente => {

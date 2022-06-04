@@ -62,10 +62,14 @@ namespace ApiTcc.Controllers
         {
             try
             {
-                if (novoPedido.valorUniPedido == 0)
-                {
-                    throw new Exception("Campo Valor não pode estar vazio!");
-                }
+                // if (novoPedido.valorUniPedido == 0)
+                // {
+                //     throw new Exception("Campo Valor não pode estar vazio!");
+                // }
+
+                // Pedido p = await _context.Pedidos
+                //         .FirstOrDefaultAsync(p => p.Produtos == novoPedido.Produtos);
+
                 await _context.Pedidos.AddAsync(novoPedido);
                 await _context.SaveChangesAsync();
 
@@ -83,7 +87,7 @@ namespace ApiTcc.Controllers
         {
             try
             {
-                if (novoPedido.valorUniPedido == 0)
+                if (novoPedido.precoProduto == 0)
                 {
                     throw new Exception("Campo Valor não pode estar vazio!");
                 }
