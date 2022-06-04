@@ -48,16 +48,20 @@ export class AssociadoLoginComponent implements OnInit {
         sessionStorage.setItem('Associado', 'Perfil');
         this.router.navigate(['/perfil-associado']);
 
-        Swal.fire({
+        Swal.fire({icon: 'success',
           position: 'top-end',
-          icon: 'success',
           title: 'Bem-Vindo Associado',
-          showConfirmButton: false,
-          timer: 1800
+          showConfirmButton: true,
+          confirmButtonColor: '#ffd13a',
+          timer: 1800,
         })
       }, error => {
            console.log(error);
-           Swal.fire('Associado Não Cadastrado', 'Revise as credenciais', 'error');
+           Swal.fire( {icon: 'error',
+             title: 'Associado Não Cadastrado',
+             text: 'Revise as credenciais',
+             showConfirmButton: true,
+             confirmButtonColor: '#ffd13a',});
       }
     )
   }

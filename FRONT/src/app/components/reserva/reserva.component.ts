@@ -34,7 +34,7 @@ export class ReservaComponent implements OnInit {
   //   descricaoProduto: '',
   //   produtoReservado: false,
   // };
-  
+
   listarCliente: ICadastroCliente[] = [];
   public listarProduto: any = [];
   public grandTotal : number = 0;
@@ -68,7 +68,7 @@ export class ReservaComponent implements OnInit {
         //     dataPedido: ['', [Validators]],
         //     precoProduto: ['', [Validators]],
         //     grandTotal: ['', [Validators]]
-            
+
         //   });
       })
   }
@@ -88,7 +88,7 @@ export class ReservaComponent implements OnInit {
 
   // pedidoForm() {
   //   this.form = this.formBuilder.group({
-     
+
   //         pedidoId: [''],
   //         produtoId:[''],
   //         nomeProduto: [''],
@@ -97,26 +97,38 @@ export class ReservaComponent implements OnInit {
   //         dataPedido: [''],
   //         precoProduto: [''],
   //         grandTotal: ['']
-          
+
   //       });
   //   }
-  
+
 
   salvarCadastroPedido(produto: any) {
 
     this.pedidoService.cadastrar(produto).subscribe(cadastro => {
       if (cadastro) {
-        Swal.fire('Pedido efetuado com sucesso!', 'Entre em contato com o Associado Responsável pelo Produto, e Informe o Número do Pedido', 'success');
+        Swal.fire({icon: 'success',
+          title: 'Pedido efetuado com sucesso!',
+          text: 'Entre em contato com o Associado responsável pelo produto, e informe o número do pedido.',
+          showConfirmButton: true,
+          confirmButtonColor: '#ffd13a'});
         window.location.reload();
       } else {
-        Swal.fire('Falha ao Efetuar Reserva', 'Algo deu errado', 'error');
+        Swal.fire({icon: 'error',
+          title: 'Falha ao efetuar reserva',
+          text: 'Algo deu errado',
+          showConfirmButton: true,
+          confirmButtonColor: '#ffd13a'});
       }
    }, error => {
      console.log(error);
-     alert('mais um erro de cria');
+     //alert('mais um erro de cria');
+     Swal.fire({icon: 'error',
+      title: 'Erro no sistema',
+      showConfirmButton: true,
+      confirmButtonColor: '#ffd13a',});
    });
-     
-    
+
+
   }
 
   // carregarCarrinho() : void{

@@ -93,35 +93,53 @@ export class IncluirProdutoComponent implements OnInit {
 
       this.produtosService.cadastrar(dadosProduto).subscribe(produto => {
         if (produto) {
-          Swal.fire('Produto Cadastrado com Sucesso', 'Tudo certo', 'success');
+          Swal.fire({icon: 'success',
+            title: 'Produto Cadastrado com Sucesso',
+            text: 'Tudo certo!',
+            showConfirmButton: true,
+            confirmButtonColor: '#ffd13a'});
+
           window.location.reload();
           this.carregarProdutos();
         } else {
-          Swal.fire('Falha ao Cadastrar Produto', 'Algo deu errado', 'error');
+          Swal.fire({icon: 'error',
+            title: 'Falha ao Cadastrar Produto',
+            text: 'Algo deu errado',
+            showConfirmButton: true,
+            confirmButtonColor: '#ffd13a'});
         }
      }, error => {
        console.log(error);
-       alert('erro interno do sistema');
+       //alert('erro interno do sistema');
      });
       this.router.navigate(['perfil-associado']);
     }
 
-    deletarProdutos(produto: IProduto) {    
+    deletarProdutos(produto: IProduto) {
       Swal.fire({
         icon: 'warning',
         title: 'Confirma a exclusão do(a) ' + produto.nomeProduto + '?',
-        text: 'Esta ação não pode ser desfeita',
+        text: 'Esta ação não poderá ser desfeita',
         showCancelButton: true,
         confirmButtonText: 'Sim',
-        cancelButtonText: 'Não'
+        cancelButtonText: 'Não',
+        confirmButtonColor: '#ffd13a'
       })
       .then(result => {
         if(result.value){
           this.produtosService.excluir(produto.produtoId).subscribe(produto => {
             if (produto) {
-              Swal.fire('Produto Deletado com Sucesso', 'Tudo certo', 'success');
+              Swal.fire({icon: 'success',
+                title: 'Produto Deletado com Sucesso',
+                text: 'Tudo certo!',
+                showConfirmButton: true,
+                confirmButtonColor: '#ffd13a'});
             } else {
-              Swal.fire('Falha ao Deletar Produto', 'Algo deu errado', 'error');
+              Swal.fire({icon: 'error',
+                title: 'Falha ao Deletar Produto',
+                text: 'Algo deu errado',
+                showConfirmButton: true,
+                confirmButtonColor: '#ffd13a'});
             }
              this.carregarProdutos();
            });

@@ -50,14 +50,26 @@ export class ClienteCadastroComponent implements OnInit {
 
     this.cadastroService.cadastrar(dadosCadastro).subscribe(cadastro => {
       if (cadastro) {
-        Swal.fire('Cliente Cadastrado com Sucesso', 'Entre agora', 'success');
+        Swal.fire({icon: 'success',
+        title: 'Cliente Cadastrado com Sucesso',
+        text: 'Entre agora',
+        showConfirmButton: true,
+        confirmButtonColor: '#ffd13a'});
         this.router.navigate(['/login-cliente']);
       } else {
-        Swal.fire('Falha ao Cadastrar Usuário', 'Algo deu errado', 'error');
+        Swal.fire({icon: 'error',
+        title: 'Falha ao Cadastrar Cliente',
+        text: 'Algo deu errado',
+        showConfirmButton: true,
+        confirmButtonColor: '#ffd13a'});
       }
    }, error => {
      console.log(error);
-     alert('erro interno do sistema');
+     //alert('erro interno do sistema');
+     Swal.fire({icon: 'error',
+      title: 'Email de usuário já existe!',
+      showConfirmButton: true,
+      confirmButtonColor: '#ffd13a',});
    });
     // this.router.navigate(['']);
   }

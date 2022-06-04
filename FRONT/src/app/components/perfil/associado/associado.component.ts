@@ -66,22 +66,31 @@ export class AssociadoComponent implements OnInit {
     })
   };
 
-  deletarProdutos(produto: IProduto) {    
+  deletarProdutos(produto: IProduto) {
     Swal.fire({
       icon: 'warning',
       title: 'Confirma a exclusão do(a) ' + produto.nomeProduto + '?',
       text: 'Esta ação não pode ser desfeita',
       showCancelButton: true,
       confirmButtonText: 'Sim',
-      cancelButtonText: 'Não'
+      cancelButtonText: 'Não',
+      confirmButtonColor: '#ffd13a'
     })
     .then(result => {
       if(result.value){
         this.produtosService.excluir(produto.produtoId).subscribe(produto => {
           if (produto) {
-            Swal.fire('Produto Deletado com Sucesso', 'Tudo certo', 'success');
+            Swal.fire({icon: 'success',
+            title: 'Produto deletado com sucesso!',
+            text: 'Tudo certo',
+            showConfirmButton: true,
+            confirmButtonColor: '#ffd13a'});
           } else {
-            Swal.fire('Falha ao Deletar Produto', 'Algo deu errado', 'error');
+            Swal.fire({icon: 'error',
+            title: 'Falha ao Deletar Produto',
+            text: 'Algo deu errado',
+            showConfirmButton: true,
+            confirmButtonColor: '#ffd13a'});
           }
            this.carregarProdutos();
          });
@@ -96,23 +105,33 @@ export class AssociadoComponent implements OnInit {
       text: 'Esta ação não pode ser desfeita',
       showCancelButton: true,
       confirmButtonText: 'Sim',
-      cancelButtonText: 'Não'
+      cancelButtonText: 'Não',
+     confirmButtonColor: '#ffd13a'
     }).then(result => {
       if(result.value)
       {
         this.pedidoService.excluir(pedido.pedidoId).subscribe(produto => {
           if (produto) {
-            alert('Pedido Deletado com Sucesso');
-            Swal.fire('Pedido Deletado com Sucesso', 'Não precisa mais aguardar', 'success');
+            //alert('Pedido Deletado com Sucesso');
+            Swal.fire({icon: 'success',
+            title: 'Pedido deletado com sucesso!',
+            text: 'Não precisa mais aguardar',
+            showConfirmButton: true,
+            confirmButtonColor: '#ffd13a'});
             window.location.reload();
           } else {
-            Swal.fire('Falha ao Deletar Pedido', 'Algo deu errado', 'error');
+            Swal.fire({icon: 'error',
+              title: 'Falha ao deletar pedido',
+              text: 'Algo deu errado',
+              showConfirmButton: true,
+              confirmButtonColor: '#ffd13a'
+            });
           }
            this.carregarPedidos();
          });
       }
     })
-    
+
   };
 
 

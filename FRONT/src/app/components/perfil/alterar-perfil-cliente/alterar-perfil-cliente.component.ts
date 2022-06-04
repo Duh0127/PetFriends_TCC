@@ -59,27 +59,36 @@ export class AlterarPerfilClienteComponent implements OnInit {
         text: 'Esta ação não pode ser desfeita',
         showCancelButton: true,
         confirmButtonText: 'Sim',
-        cancelButtonText: 'Não'
+        cancelButtonText: 'Não',
+        confirmButtonColor: '#ffd13a'
       }).then(result => {
         if(result.value){
           this.cadastroService.excluir(cliente.clienteId).subscribe(cliente => {
             if (cliente) {
               this.autenticacaoService.LimparToken();
-              Swal.fire('Perfil Deletado com Sucesso', 'Foi bom ter você com a gente', 'success');
+              Swal.fire({icon: 'success',
+                title: 'Perfil Deletado com Sucesso',
+                text: 'Foi bom ter você com a gente! :)',
+                showConfirmButton: true,
+                confirmButtonColor: '#ffd13a'});
             } else {
-              Swal.fire('Falha ao Deletar Perfil', 'Algo deu errado', 'error');
+              Swal.fire({icon: 'error',
+                title: 'Falha ao Deletar Perfil',
+                text: 'Algo deu errado',
+                showConfirmButton: true,
+                confirmButtonColor: '#ffd13a'});
             }
              this.router.navigate(['/login-cliente']);
            });
         }
       })
     }
-  
-      
 
-    
 
-    
+
+
+
+
 
   /*   deletarPerfilCliente(cliente: ICadastroCliente) {
       this.produtosService.excluir(cliente.clienteId).subscribe(cliente => {

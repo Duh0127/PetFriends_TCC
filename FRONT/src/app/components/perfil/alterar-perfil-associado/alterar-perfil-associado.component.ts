@@ -43,13 +43,13 @@ import Swal from 'sweetalert2';
 
         // this.cadastroForm = this.formBuilder.group(
         //   {
-    
+
         //     nomeCadAssociado: ['', [Validators.required]],
         //     emailCadAssociado: ['', [Validators.required, Validators.email]],
         //     enderecoCadAssociado: ['', [Validators.required]],
         //     telCadAssociado: ['', [Validators.required]],
         //     cnpjCadAssociado: ['', [Validators.required]],
-    
+
         //   }
         // )
 
@@ -75,15 +75,24 @@ import Swal from 'sweetalert2';
           text: 'Esta ação não pode ser desfeita',
           showCancelButton: true,
           confirmButtonText: 'Sim',
-          cancelButtonText: 'Não'
+          cancelButtonText: 'Não',
+          confirmButtonColor: '#ffd13a'
         }).then(result => {
           if(result.value){
             this.cadastroService.excluir(associado.associadoId).subscribe(associado => {
               if (associado) {
                 this.autenticacaoService.LimparToken();
-                Swal.fire('Perfil Deletado com Sucesso', 'Foi bom ter você com a gente', 'success');
+                Swal.fire({icon: 'success',
+                title: 'Perfil Deletado com Sucesso',
+                text: 'Foi bom ter você com a gente! :)',
+                showConfirmButton: true,
+                confirmButtonColor: '#ffd13a'});
               } else {
-                Swal.fire('Falha ao Deletar Perfil', 'Algo deu errado', 'error');
+                Swal.fire({icon: 'error',
+                title: 'Falha ao Deletar Perfil',
+                text: 'Algo deu errado',
+                showConfirmButton: true,
+                confirmButtonColor: '#ffd13a'});
               }
                this.router.navigate(['/login-associado']);
              });
@@ -107,7 +116,7 @@ import Swal from 'sweetalert2';
       // atualizarPerfilAssociado() {
 
       //   var dadosProduto = this.cadastroForm.getRawValue() as ProdutosService;
-    
+
       //     this.cadastroService.atualizar(dadosProduto).subscribe(associado => {
       //       if (associado) {
       //         alert('Perfil Atualizado com Sucesso');
@@ -124,8 +133,8 @@ import Swal from 'sweetalert2';
 
 
 
-  
-   
+
+
 
 
     /*  deletarPerfilAssoc(associado: ICadastroAssociado) {

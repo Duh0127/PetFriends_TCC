@@ -48,17 +48,21 @@ export class ClienteLoginComponent implements OnInit {
         this.autenticacaoService.DefineToken(tokenCliente);
         sessionStorage.setItem('Cliente', 'Perfil');
         this.router.navigate(['/perfil-cliente']);
-       
-        Swal.fire({
+
+        Swal.fire({icon: 'success',
           position: 'top-end',
-          icon: 'success',
           title: 'Bem-Vindo Cliente',
-          showConfirmButton: false,
+          showConfirmButton: true,
+          confirmButtonColor: '#ffd13a',
           timer: 1800
         })
       }, error => {
            console.log(error);
-           Swal.fire('Cliente Não Cadastrado', 'Revise as credenciais', 'error');
+           Swal.fire({icon: 'error',
+            title: 'Cliente Não Cadastrado',
+           text: 'Revise as credenciais',
+           showConfirmButton: true,
+           confirmButtonColor: '#ffd13a'});
       }
     )
   }

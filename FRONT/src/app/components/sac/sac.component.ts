@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -35,15 +36,31 @@ export class SacComponent implements OnInit {
 
     this.sacService.cadastrar(dadosSac).subscribe(cadastro => {
       if (cadastro) {
-        alert('Reclamação Enviada com Sucesso!');
+        //alert('Reclamação Enviada com Sucesso!');
+        Swal.fire({icon: 'success',
+        title: 'Reclamação enviada com sucesso!',
+        showConfirmButton: true,
+        confirmButtonColor: '#ffd13a'
+      })
         window.location.reload();
 
       } else {
-        alert('Parabéns SQL');
+        //alert('Parabéns SQL');
+        Swal.fire({icon: 'error',
+      title: 'Erro ao enviar reclamação',
+      text: 'Por favor, tente novamente',
+      showConfirmButton: true,
+      confirmButtonColor: '#ffd13a'
+     })
       }
    }, error => {
      console.log(error);
-     alert('erro interno do sistema');
+     //alert('erro interno do sistema');
+     Swal.fire({icon: 'error',
+     title: 'Erro no sistema',
+     showConfirmButton: true,
+     confirmButtonColor: '#ffd13a'
+     })
    });
     // this.router.navigate(['']);
   }
