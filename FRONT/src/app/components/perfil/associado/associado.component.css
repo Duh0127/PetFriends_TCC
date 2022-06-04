@@ -1,263 +1,349 @@
 	/*HEADER*/
-  .fundonav {
-    background-color: #ffd13a;
-    padding: 0px;
-  }
-  .logo {
-    /*IMAGEM LOGO*/
-    margin-left: 19vw;
-    margin-bottom: -5%;
-    margin-top: -2%;
-  }
+	.fundonav {
+	  background-color: #ffd13a;
+	  padding: 0px;
+	}
+
+	.logo {
+	  /*IMAGEM LOGO*/
+	  margin-left: 19vw;
+	  margin-bottom: -5%;
+	  margin-top: -2%;
+	}
 
 
 
 
 
 
-        /*CORPO DA PAGINA PERFIL-ASSOCIADO*/
-        /*CORPO DA PAGINA PERFIL-ASSOCIADO*/
-        /*CORPO DA PAGINA PERFIL-ASSOCIADO*/
+	/*CORPO DA PAGINA PERFIL-ASSOCIADO*/
+	/*CORPO DA PAGINA PERFIL-ASSOCIADO*/
+	/*CORPO DA PAGINA PERFIL-ASSOCIADO*/
 
-  body {
-    background-image: url("src/assets/img/fundocachorro.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 100%;
-    padding-bottom: 50vh;
-  }
-  .fundo { /*PARTE LARANJA QUE HOSPEDA AS INFORMAÇÕES DO PERFIL*/
-    width: 50vw;
-    height: 35vh;
-    background-color: rgba(255, 219, 152, 0.808);
-    box-shadow: 2px 2px 10px rgb(117, 117, 117);
-    border-radius: 10px;
-    margin-top: 2vh;
-    margin-left: 25vw;
-    padding-top: 40px;
-    margin-bottom: -4vh;
-  }
-  .margin-dados { /*LINHA PARA AJUSTAR A POSIÇÃO DOS DADOS DO ASSOCIADO E OS BOTÕES*/
-    padding-top: 6vh;
-    margin-left: 3vw;
-  }
+	body {
+	  background-image: url("src/assets/img/fundocachorro.jpg");
+	  background-size: cover;
+	  background-attachment: fixed;
+	  width: 100%;
+	  height: 100%;
+	  padding-bottom: 50vh;
+	}
 
-  .margin-incluir { /*LINHA PARA AJUSTAR A POSIÇÃO DOS DADOS De INCLUSÃO DE PRODUTOS*/
-    padding-top: 6vh;
-    margin-left: 3vw;
-  }
+	.fundo {
+	  /*PARTE LARANJA QUE HOSPEDA AS INFORMAÇÕES DO PERFIL*/
+	  width: 50vw;
+	  height: 35vh;
+	  background-color: rgba(255, 219, 152, 0.808);
+	  box-shadow: 2px 2px 10px rgb(117, 117, 117);
+	  border-radius: 10px;
+	  margin-top: 2vh;
+	  margin-left: 25vw;
+	  padding-top: 40px;
+	  margin-bottom: -4vh;
+	}
 
+	.margin-dados {
+	  /*LINHA PARA AJUSTAR A POSIÇÃO DOS DADOS DO ASSOCIADO E OS BOTÕES*/
+	  padding-top: 6vh;
+	  margin-left: 3vw;
+	}
 
-  .margin-associado { /*LINHA PARA AJUSTAR A POSIÇÃO DOS DADOS DO CLIENTE E OS BOTÕES*/
-    padding-top: 6vh;
-    width: 50vw;
-    margin-left: 0.02vw;
-    text-align: center;
-    align-items: center;
-  }
-
-  .usuario-associado{ /*LUGAR ONDE A IMAGEM DO ASSOCIADO ESTARÁ*/
-    font-size: 15px;
-    width: 50vw;
-    margin-left: 0.7vw;
-    text-align: center;
-    align-items: center;
-  }
+	.margin-incluir {
+	  /*LINHA PARA AJUSTAR A POSIÇÃO DOS DADOS De INCLUSÃO DE PRODUTOS*/
+	  padding-top: 6vh;
+	  margin-left: 3vw;
+	}
 
 
-  .padding { /*ESPAÇAMENTO UTILIZADO NO SITE*/
-    padding-top: 25px;
-    margin-left: -6.5vw;
-  }
+	.margin-associado {
+	  /*LINHA PARA AJUSTAR A POSIÇÃO DOS DADOS DO CLIENTE E OS BOTÕES*/
+	  padding-top: 6vh;
+	  width: 50vw;
+	  margin-left: 0.02vw;
+	  text-align: center;
+	  align-items: center;
+	}
+
+	.usuario-associado {
+	  /*LUGAR ONDE A IMAGEM DO ASSOCIADO ESTARÁ*/
+	  font-size: 15px;
+	  width: 50vw;
+	  margin-left: 0.7vw;
+	  text-align: center;
+	  align-items: center;
+	}
 
 
-
-
-
-
-          /*BOTÕES MENU DO PERFIL*/
-          /*BOTÕES MENU DO PERFIL*/
-          /*BOTÕES MENU DO PERFIL*/
-
-  ul{/*ESTRUTURA EM QUE OS BOTÕES, PARA ACESSAR OS MODALS, ESTÃO*/
-    margin-top: 3vh;
-    margin-left: 6vw;
-  }
-
-  .btnpg{ /*BOTÃO PÁGINA INICIAL*/
-    margin-right: 5vw;
-    background-color: #ffae00;
-    color: #000000;
-    border-color: #ff5e00;
-    width: 12vw;
-    margin-left: 2.5vw;
-  }
-  .btnmds{ /*BOTÃO MODAL MEUS DADOS*/
-    background-color: #ffae00;
-    color: #000000;
-    border-color: #ff5e00;
-    width: 12vw;
-  }
-
-  .btnpg:hover{/*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE PÁGINA INICIAL*/
-    transform: scale(1.1);
-    transition: transform .2s ease;
-  }
-  .btnmds:hover{/*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE MEUS DADOS*/
-    transform: scale(1.1);
-    transition: transform .2s ease;
-  }
+	.padding {
+	  /*ESPAÇAMENTO UTILIZADO NO SITE*/
+	  padding-top: 25px;
+	  margin-left: -6.5vw;
+	}
 
 
 
 
 
 
+	/*BOTÕES MENU DO PERFIL*/
+	/*BOTÕES MENU DO PERFIL*/
+	/*BOTÕES MENU DO PERFIL*/
 
+	ul {
+	  /*ESTRUTURA EM QUE OS BOTÕES, PARA ACESSAR OS MODALS, ESTÃO*/
+	  margin-top: 3vh;
+	  margin-left: 3.8vw;
+	}
 
-            /* PARTE INTERNA MODAL'DADOS' */
-            /* PARTE INTERNA MODAL'DADOS' */
-            /* PARTE INTERNA MODAL'DADOS' */
+	.btnpg {
+	  /*BOTÃO PÁGINA INICIAL*/
+	  background-color: #ffae00;
+	  color: #000000;
+	  border-color: #ff5e00;
+	  width: 12vw;
+	}
 
-  .bi-file-person-fill{ /*IMAGEM DE USER DO MODAL, ACIMA DO 'ALTERAR DADOS' */
-    margin-left: 12vw;
-  }
-  .close{ /*BOTÃO 'X' PARA SAIR DO MODAL*/
-    margin-right: -18vw;
-    margin-top: -11vh;
-    color: black;
-  }
-  #meusDados{/*TEXTO 'MEUS DADOS' */
-    margin-top: 1vh;
-    margin-left: 56vh;
-    width: 10vw;
-  }
+	.btnmds {
+	  /*BOTÃO MODAL MEUS DADOS*/
+	  background-color: #ffae00;
+	  color: #000000;
+	  border-color: #ff5e00;
+	  width: 12vw;
+	  margin-left: 1vw;
+	}
 
-  :disabled{
-    background-color: transparent;
-  }
+	.btnpg:hover {
+	  /*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE PÁGINA INICIAL*/
+	  transform: scale(1.05);
+	  transition: transform .2s ease;
+	}
 
+	.btnmds:hover {
+	  /*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE MEUS DADOS*/
+	  transform: scale(1.05);
+	  transition: transform .2s ease;
+	}
 
-  .btn-info{/*BOTÃO 'EDITAR PERFIL' DENTRO DO MODAL*/
-    margin-left: 8vw;
-    margin-top: -15vh;
-    background-color: #ffd13a;
-    border-color: #ff9d00;
-    color: #000000;
-  }
-
-  .modal-body{/*CORPO DO MODAL ONDE LOCALIZAM AS INFORMAÇÕES*/
-    margin-left: -33vw;
-    margin-top: 10vh;
-  }
-
-  .modal-content{ /* CONTAINER DO MODAL, QUE POSSUI COR AMARELADA */
-    width: 50vw;
-    height: 60vh;
-    background-color: rgba(255, 219, 152, 0.808);
-    box-shadow: 2px 2px 10px rgb(117, 117, 117);
-    margin-left: -11.7vw;
-    margin-top: 17vh;
-  }
-
-  .nomecompleto { /*CONFIGURAÇÃO DO INPUT DO NOME COMPLETO*/
-    width: 44vw;
-    margin-left: 3.7vw;
-  }
-  .coluna1 { /*COLUNA 1 QUE POSSUI ENDEREÇO, EMAIL E SENHA*/
-    margin-top: -5vh;
-    margin-right: -10px;
-  }
-  .coluna1 input { /*INPUT DA COLUNA 1*/
-    width: 400px;
-  }
-  .coluna2{ /*COLUNA QUE POSSUI TELEFONE E CPF*/
-    margin-top: -5.2vh;
-    margin-right: 30px;
-  }
-  input { /*PARTE DO INPUT, CAMPO DE ESCREVER*/
-    width: 100%;
-    border-top: transparent;
-    border-left: transparent;
-    border-right: transparent;
-    border-bottom: 2px solid rgb(0, 0, 0);
-    background-color: transparent;
-    border-radius: 0px;
-  }
-
-  input:hover{ /*CONFIGURAÇÃO AO SELECIONAR O INPUT*/
-    background-color: transparent;
-    box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
-    border-bottom: 2px solid rgb(23, 162, 184);
-    border-radius: 0px;
-  }
-
-  .btn-secondary{ /*BOTÃO 'FECHAR' */
-    width: 13vw;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    margin-left: 15vw;
-    background-color: #ffae00;
-    border-color: #ffae00;
-    color: #000000;
-    }
-
-  .modal-footer{ /*PARTE INTERNA DO BOTÃO *FECHAR*  */
-    border: none;
-  }
+	.btnmds:hover {
+	  /*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE MEUS DADOS*/
+	  transform: scale(1.05);
+	  transition: transform .2s ease;
+	}
 
 
 
 
 
-  /*DESIGN TELA INCLUIR PRODUTO*/
-  /*DESIGN TELA INCLUIR PRODUTO*/
-  /*DESIGN TELA INCLUIR PRODUTO*/
 
-  .fundo3{ /*PARTE LARANJA QUE HOSPEDA AS INFORMAÇÕES DOS PRODUTOS*/
-    width: 50vw;
-    height: auto;
-    background-color: rgba(255, 219, 152, 0.808);
-    box-shadow: 2px 2px 10px rgb(117, 117, 117);
-    border-radius: 10px;
-    margin-left: 22.1vw;
-  }
 
-  .padding-incluir{ /*ESPAÇAMENTO UTILIZADO NA TELA DE INCLUSÃO*/
-    padding-top: 25px;
-    align-items: center;
-  }
 
-  .btn-warning{ /*BOTÃO DE DELETAR PRODUTO*/
-    width: 10%;
-    font-size: 18px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    box-shadow: 0px 0px 10px rgb(255, 220, 21);
-  }
-  .btn-warning:hover{ /*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE DELETAR PRODUTO*/
-    background-color: rgb(255, 217, 0);
-    box-shadow: 0px 0px 15px rgb(255, 217, 0);
-  }
+	/* PARTE INTERNA MODAL'DADOS' */
+	/* PARTE INTERNA MODAL'DADOS' */
+	/* PARTE INTERNA MODAL'DADOS' */
 
-  .text-pedidos{ /*TEXTO MEUS PRODUTOS*/
-    text-align: center;
-    margin-top: 1%;
-  }
+	.bi-file-person-fill {
+	  /*IMAGEM DE USER DO MODAL, ACIMA DO 'ALTERAR DADOS' */
+	  margin-left: 23.5vw;
+	}
 
-  .bi-cart-fill{ /*IMAGEM CARRINHO MEUS PRODUTOS*/
-    margin-left: 48.2%;
-  }
+	.close {
+	  /*BOTÃO 'X' PARA SAIR DO MODAL*/
+	  margin-top: -9vh;
+	  color: black;
+	}
 
-  .btn-primary{ /*BOTÃO DE INCLUIR PRODUTO*/
-    width: 20.8vw;
-    margin-left: 28%;
-    margin-bottom: 2%;
-    background-color: #ffae00;
-    color: #000000;
-    border-color: #ff5e00;
-  }
+	#meusDados-text {
+	  /*TEXTO 'MEUS DADOS' */
+	  margin-top: 1vh;
+	  margin-left: 21.2vw;
+	  width: 10vw;
+	  height: auto;
+	}
 
-  .padding{ /*ESPAÇAMENTO DA PÁGINA*/
-    padding-top: 25px;
-  }
+	.btn-info {
+	  /*BOTÃO 'EDITAR PERFIL' DENTRO DO MODAL*/
+	  margin-left: 1vw;
+	  margin-top: -13vh;
+	  background-color: #ffd13a;
+	  border-color: #ff9d00;
+	  color: #000000;
+	}
+
+
+	.fade {
+	  margin-left: -11vw;
+	  width: 100vw;
+	}
+
+	.fundo2 {
+	  width: 100%;
+	}
+
+	.modal-header {
+	  border: none;
+	}
+
+	.modal-content {
+	  /* CONTAINER DO MODAL, QUE POSSUI COR AMARELADA */
+	  width: 50vw;
+	  height: auto;
+	  background-color: rgba(255, 219, 152, 0.808);
+	  box-shadow: 2px 2px 10px rgb(117, 117, 117);
+	  margin-right: 20vw;
+	  margin-top: 17vh;
+	  border: none;
+	}
+
+	.modal-body {
+	  /*CORPO DO MODAL ONDE LOCALIZAM AS INFORMAÇÕES*/
+	  border: none;
+	  height: auto;
+	}
+
+	.modal-footer {
+	  /*PARTE INTERNA DO BOTÃO *FECHAR*  */
+	  border: none;
+	  padding: 0;
+	  width: 100%;
+	}
+
+
+
+	:disabled {
+	  background-color: transparent;
+	}
+
+	.nomecompleto {
+	  /*CONFIGURAÇÃO DO INPUT DO NOME COMPLETO*/
+	  width: 43vw;
+	  margin-left: 3vw;
+	}
+
+	.coluna1 {
+	  /*COLUNA 1 QUE POSSUI ENDEREÇO, EMAIL E SENHA*/
+	  margin-top: -5vh;
+	  margin-right: -10px;
+	  margin-left: -1vw;
+	}
+
+	.coluna1 input {
+	  /*INPUT DA COLUNA 1*/
+	  width: 100%;
+	}
+
+	.coluna2 {
+	  /*COLUNA QUE POSSUI TELEFONE E CPF*/
+	  margin-top: -5.05vh;
+	  margin-right: 3vw;
+	}
+
+	input {
+	  /*PARTE DO INPUT, CAMPO DE ESCREVER*/
+	  width: 100%;
+	  border-top: transparent;
+	  border-left: transparent;
+	  border-right: transparent;
+	  border-bottom: 2px solid rgb(0, 0, 0);
+	  background-color: transparent;
+	  border-radius: 0px;
+	}
+
+	input:focus {
+	  /*CONFIGURAÇÃO AO SELECIONAR O INPUT*/
+	  background-color: transparent;
+	  box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+	  border-bottom: 2px solid rgb(23, 162, 184);
+	  border-radius: 0px;
+	}
+
+	.btn-secondary {
+	  /*BOTÃO 'FECHAR' */
+	  width: 13vw;
+	  margin-top: 1vh;
+	  margin-bottom: 1vh;
+	  margin-left: 15vw;
+	  background-color: #ffae00;
+	  border-color: #ffae00;
+	  color: #000000;
+	}
+
+	.btn-fecharmodal {
+	  width: 13vw;
+	  margin-top: 1vh;
+	  margin-bottom: 1vh;
+	  margin-right: 18vw;
+	  background-color: #ffae00;
+	  border-color: #ffae00;
+	  color: #000000;
+	}
+
+
+
+
+
+
+	#meusDados-text-reservas {
+	  margin-left: 20vw;
+	}
+
+
+
+
+	/*DESIGN TELA INCLUIR PRODUTO*/
+	/*DESIGN TELA INCLUIR PRODUTO*/
+	/*DESIGN TELA INCLUIR PRODUTO*/
+
+	.fundo3 {
+	  /*PARTE LARANJA QUE HOSPEDA AS INFORMAÇÕES DOS PRODUTOS*/
+	  width: 50vw;
+	  height: auto;
+	  background-color: rgba(255, 219, 152, 0.808);
+	  box-shadow: 2px 2px 10px rgb(117, 117, 117);
+	  border-radius: 10px;
+	  margin-left: 22.1vw;
+	}
+
+	.padding-incluir {
+	  /*ESPAÇAMENTO UTILIZADO NA TELA DE INCLUSÃO*/
+	  padding-top: 25px;
+	  align-items: center;
+	}
+
+	.btn-warning {
+	  /*BOTÃO DE DELETAR PRODUTO*/
+	  width: 10%;
+	  font-size: 18px;
+	  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	}
+
+	.btn-warning:hover {
+	  /*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE DELETAR PRODUTO*/
+	  background-color: rgb(255, 217, 0);
+	  box-shadow: 0px 0px 15px rgb(255, 217, 0);
+	}
+
+	.text-pedidos {
+	  /*TEXTO MEUS PRODUTOS*/
+	  text-align: center;
+	  margin-top: 1%;
+	}
+
+	.bi-cart-fill {
+	  /*IMAGEM CARRINHO MEUS PRODUTOS*/
+	  margin-left: 48.2%;
+	}
+
+	.btn-primary {
+	  /*BOTÃO DE INCLUIR PRODUTO*/
+	  width: 20.8vw;
+	  margin-left: 28%;
+	  margin-bottom: 2%;
+	  background-color: #ffae00;
+	  color: #000000;
+	  border-color: #ff5e00;
+	}
+
+	.padding {
+	  /*ESPAÇAMENTO DA PÁGINA*/
+	  padding-top: 25px;
+	}

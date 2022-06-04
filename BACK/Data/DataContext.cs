@@ -13,14 +13,12 @@ namespace ApiTcc.Data
 
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Associado> Associados { get; set; }
-
         public DbSet<Comissao> Comissoes { get; set; }
-
         public DbSet<Pedido> Pedidos { get; set; }
-
+        public DbSet<ItemPedido> ItensPedido { get; set; }
         public DbSet<Plano> Planos { get; set; }
-
         public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Sac> Sac { get; set; }
 
         //public DbSet<TiposProduto> TiposProdutos { get; set; }
 
@@ -53,9 +51,9 @@ namespace ApiTcc.Data
 
             modelBuilder.Entity<Pedido>().HasData
             (
-                new Pedido() { pedidoId = 1, grandTotal = 95,  qtdProduto = 1, precoProduto = 95  },
-                new Pedido() { pedidoId = 2, grandTotal = 45,  qtdProduto = 2, precoProduto = 22 },
-                new Pedido() { pedidoId = 3, grandTotal = 85,  qtdProduto = 3, precoProduto = 25 }
+                new Pedido() { pedidoId = 1, clienteId = 1, produtoId = 1, precoProduto = 20 },
+                new Pedido() { pedidoId = 2, clienteId = 2, produtoId = 2, precoProduto = 150 },
+                new Pedido() { pedidoId = 3, clienteId = 3, produtoId = 3, precoProduto = 146 }
             );
 
 
@@ -68,9 +66,9 @@ namespace ApiTcc.Data
 
             modelBuilder.Entity<Produto>().HasData
             (
-                new Produto() { produtoId = 1, codigoProduto = "9191", nomeProduto = "Produto A", fabricanteProduto = "Fabricante A", qtdProduto = 5, precoProduto = 20, associadoId = 1},
-                new Produto() { produtoId = 2, codigoProduto = "9192", nomeProduto = "Produto B", fabricanteProduto = "Fabricante B", qtdProduto = 1, precoProduto = 15, associadoId = 2 },
-                new Produto() { produtoId = 3, codigoProduto = "1010", nomeProduto = "Produto C", fabricanteProduto = "Fabricante C", qtdProduto = 7, precoProduto = 350, associadoId = 3 }
+                new Produto() { produtoId = 1, codigoProduto = "10001310000310", nomeProduto = "Ração Golden Fórmula Mini Bits Para Cães Adultos Pequeno Porte Sabor Carne e Arroz", fabricanteProduto = "Fabricante A", qtdProduto = 5, precoProduto = 20, associadoId = 1},
+                new Produto() { produtoId = 2, codigoProduto = "10001320000030", nomeProduto = "Ração Seca PremieR Pet Golden Mega Cães Filhotes Raças Grandes Frango e Arroz", fabricanteProduto = "Fabricante B", qtdProduto = 1, precoProduto = 150, associadoId = 2 },
+                new Produto() { produtoId = 3, codigoProduto = "3108200-1", nomeProduto = "Ração Premier Golden Formula Cães Filhotes Carne e Arroz", fabricanteProduto = "Fabricante B", qtdProduto = 1, precoProduto = 146, associadoId = 3 }
             );
 
             /*modelBuilder.Entity<TiposProduto>().HasData

@@ -65,7 +65,7 @@
                    min=0
                    class="form-control"
                    name="telCadAssociado"
-                   formControlName="telCadAssociado">
+                   formControlName="telCadAssociado" mask="(00) 00000-0000">
           </div>
 
           <div class="form-group" [formGroup]="cadastroForm" (submit)="salvarCadastroAssociado()">
@@ -75,7 +75,7 @@
                    min=0
                    placeholder="Digite seu CNPJ"
                    name="cnpjCadAssociado"
-                   formControlName="cnpjCadAssociado">
+                   formControlName="cnpjCadAssociado" mask="00.000.000/0000-00">
           </div>
 
           <!-- <div class="form-group">

@@ -43,7 +43,7 @@ export class HeaderComponent implements OnInit {
 
     var condicao = this.data.length;
 
-      if(condicao != 0 )
+      if(condicao != 0)
       {
         window.location.href = "/camas-casinhas";
       }

@@ -26,11 +26,10 @@ namespace ApiTcc.Models
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
         public byte[] clienteImagem { get; set; }
-        public List<Pedido> Pedidos { get; set; }
         public string senhaCadCliente { get; set; }
-
         //[Required]
         public string Perfil {get; set; }
+        public List<Pedido> Pedido { get; set; }
 
         // [NotMapped]
         // //[Required(ErrorMessage = "Senha não pode ser nulo")]

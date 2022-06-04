@@ -30,7 +30,7 @@ export class ReservaComponent implements OnInit {
   //   descricaoProduto: '',
   //   produtoReservado: false,
   // };
-
+  
   public listarProduto: any = [];
   public grandTotal : number = 0;
 
@@ -38,7 +38,7 @@ export class ReservaComponent implements OnInit {
               private formBuilder: FormBuilder,
               private router: Router) {
 
-              this.pedidoForm();
+              //this.pedidoForm();
 
   }
 
@@ -77,27 +77,25 @@ export class ReservaComponent implements OnInit {
   //   this.carrinhoService.cadastrar(produto);
   // }
 
-  pedidoForm() {
-    this.form = this.formBuilder.group({
+  // pedidoForm() {
+  //   this.form = this.formBuilder.group({
      
-          pedidoId: [''],
-          produtoId:[''],
-          nomeProduto: [''],
-          codigoProduto: [''],
-          qtdProduto: [''],
-          dataPedido: [''],
-          precoProduto: [''],
-          grandTotal: ['']
+  //         pedidoId: [''],
+  //         produtoId:[''],
+  //         nomeProduto: [''],
+  //         codigoProduto: [''],
+  //         qtdProduto: [''],
+  //         dataPedido: [''],
+  //         precoProduto: [''],
+  //         grandTotal: ['']
           
-        });
-    }
+  //       });
+  //   }
   
 
-  salvarCadastroPedido() {
+  salvarCadastroPedido(produto: any) {
 
-    var dadosPedido = this.form.getRawValue() as IPedido;
-
-    this.carrinhoService.cadastrar(dadosPedido).subscribe(cadastro => {
+    this.carrinhoService.cadastrar(produto).subscribe(cadastro => {
       if (cadastro) {
         alert('Pedido efetuado com sucesso!');
         this.router.navigate(['/reserva']);

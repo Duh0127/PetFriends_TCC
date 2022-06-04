@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiTcc.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220507145953_DeletarPerfil")]
-    partial class DeletarPerfil
+    [Migration("20220514163611_ReservaProduto")]
+    partial class ReservaProduto
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -254,6 +254,32 @@ namespace ApiTcc.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ApiTcc.Models.ItemPedido", b =>
+                {
+                    b.Property<int>("itemPedidoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("clienteId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("precoProduto")
+                        .HasColumnType("float");
+
+                    b.Property<int>("produtoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("qtdProduto")
+                        .HasColumnType("int");
+
+                    b.HasKey("itemPedidoId");
+
+                    b.HasIndex("clienteId");
+
+                    b.ToTable("ItensPedido");
+                });
+
             modelBuilder.Entity("ApiTcc.Models.Pedido", b =>
                 {
                     b.Property<int>("pedidoId")
@@ -261,7 +287,7 @@ namespace ApiTcc.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("clienteId")
+                    b.Property<int>("clienteId")
                         .HasColumnType("int");
 
                     b.Property<string>("codigoProduto")
@@ -270,16 +296,13 @@ namespace ApiTcc.Migrations
                     b.Property<DateTime?>("dataPedido")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("grandTotal")
-                        .HasColumnType("float");
-
                     b.Property<string>("nomeProduto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("precoProduto")
-                        .HasColumnType("float");
+                    b.Property<int>("precoProduto")
+                        .HasColumnType("int");
 
-                    b.Property<int?>("produtoId")
+                    b.Property<int>("produtoId")
                         .HasColumnType("int");
 
                     b.Property<int>("qtdProduto")
@@ -297,23 +320,26 @@ namespace ApiTcc.Migrations
                         new
                         {
                             pedidoId = 1,
-                            grandTotal = 95.0,
-                            precoProduto = 95.0,
-                            qtdProduto = 1
+                            clienteId = 1,
+                            precoProduto = 20,
+                            produtoId = 1,
+                            qtdProduto = 0
                         },
                         new
                         {
                             pedidoId = 2,
-                            grandTotal = 45.0,
-                            precoProduto = 22.0,
-                            qtdProduto = 2
+                            clienteId = 2,
+                            precoProduto = 150,
+                            produtoId = 2,
+                            qtdProduto = 0
                         },
                         new
                         {
                             pedidoId = 3,
-                            grandTotal = 85.0,
-                            precoProduto = 25.0,
-                            qtdProduto = 3
+                            clienteId = 3,
+                            precoProduto = 146,
+                            produtoId = 3,
+                            qtdProduto = 0
                         });
                 });
 
@@ -395,9 +421,6 @@ namespace ApiTcc.Migrations
                     b.Property<string>("nomeProduto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("pedidoId")
-                        .HasColumnType("int");
-
                     b.Property<int>("precoProduto")
                         .HasColumnType("int");
 
@@ -411,8 +434,6 @@ namespace ApiTcc.Migrations
 
                     b.HasIndex("associadoId");
 
-                    b.HasIndex("pedidoId");
-
                     b.ToTable("Produtos");
 
                     b.HasData(
@@ -420,9 +441,9 @@ namespace ApiTcc.Migrations
                         {
                             produtoId = 1,
                             associadoId = 1,
-                            codigoProduto = "9191",
+                            codigoProduto = "10001310000310",
                             fabricanteProduto = "Fabricante A",
-                            nomeProduto = "Produto A",
+                            nomeProduto = "Ração Golden Fórmula Mini Bits Para Cães Adultos Pequeno Porte Sabor Carne e Arroz",
                             precoProduto = 20,
                             qtdProduto = 5
                         },
@@ -430,33 +451,77 @@ namespace ApiTcc.Migrations
                         {
                             produtoId = 2,
                             associadoId = 2,
-                            codigoProduto = "9192",
+                            codigoProduto = "10001320000030",
                             fabricanteProduto = "Fabricante B",
-                            nomeProduto = "Produto B",
-                            precoProduto = 15,
+                            nomeProduto = "Ração Seca PremieR Pet Golden Mega Cães Filhotes Raças Grandes Frango e Arroz",
+                            precoProduto = 150,
                             qtdProduto = 1
                         },
                         new
                         {
                             produtoId = 3,
                             associadoId = 3,
-                            codigoProduto = "1010",
-                            fabricanteProduto = "Fabricante C",
-                            nomeProduto = "Produto C",
-                            precoProduto = 350,
-                            qtdProduto = 7
+                            codigoProduto = "3108200-1",
+                            fabricanteProduto = "Fabricante B",
+                            nomeProduto = "Ração Premier Golden Formula Cães Filhotes Carne e Arroz",
+                            precoProduto = 146,
+                            qtdProduto = 1
                         });
+                });
+
+            modelBuilder.Entity("ApiTcc.Models.Sac", b =>
+                {
+                    b.Property<int>("sacId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("descSac")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("emailSac")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nomeSac")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("problemaSac")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("telefoneSac")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("sacId");
+
+                    b.ToTable("Sac");
+                });
+
+            modelBuilder.Entity("ApiTcc.Models.ItemPedido", b =>
+                {
+                    b.HasOne("ApiTcc.Models.Cliente", "Cliente")
+                        .WithMany()
+                        .HasForeignKey("clienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cliente");
                 });
 
             modelBuilder.Entity("ApiTcc.Models.Pedido", b =>
                 {
-                    b.HasOne("ApiTcc.Models.Cliente", null)
-                        .WithMany("Pedidos")
-                        .HasForeignKey("clienteId");
+                    b.HasOne("ApiTcc.Models.Cliente", "Cliente")
+                        .WithMany("Pedido")
+                        .HasForeignKey("clienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ApiTcc.Models.Produto", "Produto")
                         .WithMany()
-                        .HasForeignKey("produtoId");
+                        .HasForeignKey("produtoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cliente");
 
                     b.Navigation("Produto");
                 });
@@ -469,24 +534,15 @@ namespace ApiTcc.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ApiTcc.Models.Pedido", null)
-                        .WithMany("Produtos")
-                        .HasForeignKey("pedidoId");
-
                     b.Navigation("Associado");
                 });
 
             modelBuilder.Entity("ApiTcc.Models.Cliente", b =>
                 {
-                    b.Navigation("Pedidos");
+                    b.Navigation("Pedido");
                 });
 
             modelBuilder.Entity("ApiTcc.Models.Enuns.Associado", b =>
-                {
-                    b.Navigation("Produtos");
-                });
-
-            modelBuilder.Entity("ApiTcc.Models.Pedido", b =>
                 {
                     b.Navigation("Produtos");
                 });

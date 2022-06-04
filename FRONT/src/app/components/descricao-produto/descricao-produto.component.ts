@@ -12,6 +12,8 @@ import { ProdutosService } from 'src/app/services/produtos.service';
 })
 export class DescricaoProdutoComponent implements OnInit {
 
+  listarProdutos: IProduto[] = [];
+
   public keyword = "name";
 
   data = [
@@ -38,7 +40,7 @@ export class DescricaoProdutoComponent implements OnInit {
     }
 
   ];
-  
+
 
   itemSelecionadoPesquisa(){
 
@@ -50,6 +52,8 @@ export class DescricaoProdutoComponent implements OnInit {
       }
   };
 
+  public totalProduto : number = 0;
+
 
   produtoId: any;
   produto: any;
@@ -59,11 +63,17 @@ export class DescricaoProdutoComponent implements OnInit {
               private autenticacaoService: AutenticacaoService,
               private produtosService: ProdutosService,
               private carrinhoService: CarrinhoService,
+              private cartService : CarrinhoService,
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
     this.produtoId = this.route.snapshot.params['produtoId'];
     this.buscarProduto();
+
+    this.cartService.getProducts().subscribe (res => {
+      this.totalProduto = res.length
+    })
   }
 
   buscarProduto()
@@ -73,6 +83,9 @@ export class DescricaoProdutoComponent implements OnInit {
         this.produto = produto;
         console.log(this.produto)
 
+        this.produto.forEach((a:any) => {
+          Object.assign(a, {qtdProduto: 1, total: a.precoProduto});
+          });
       })
   }
 
@@ -80,7 +93,11 @@ export class DescricaoProdutoComponent implements OnInit {
     this.carrinhoService.addtoCar(produto);
   }
 
-  
+  /*ngOnInit(): void {
+    this.cartService.getProducts().subscribe (res => {
+      this.totalProduto = res.length
+    })
+  }*/
 
   sair(){
     this.autenticacaoService.LimparToken();

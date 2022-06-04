@@ -62,7 +62,7 @@
                    placeholder="(11) 99999-9999"
                    class="form-control"
                    name="telCadCliente"
-                   formControlName="telCadCliente">
+                   formControlName="telCadCliente" mask="(00) 00000-0000">
           </div>
 
           <div class="form-group" [formGroup]="cadastroForm" (submit)="salvarCadastroCliente()">
@@ -71,7 +71,7 @@
                    class="form-control"
                    placeholder="Digite seu CPF"
                    name="cpfCadCliente"
-                   formControlName="cpfCadCliente">
+                   formControlName="cpfCadCliente" mask="000.000.000-00">
           </div>
 
           <!-- <div class="form-group">

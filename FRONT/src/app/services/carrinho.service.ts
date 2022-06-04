@@ -62,14 +62,20 @@ import { environment } from 'src/environments/environment';
 
     cadastrar(produto: any): Observable<any>{
 
-      this.cartItemList.push(...produto);
-      this.listarProduto.next(produto);
-      
+      this.getProducts
+    
       return this.http.post<any>(`${this.pedidosUrl}`, produto).pipe(
         map(retorno => retorno),
           //catchError(erro => this.exibirErro(erro))
         );
       }
+
+      buscarByUser() : Observable<IProduto[]> {
+        return this.http.get<IProduto[]>(`${this.pedidosUrl}/GetByUser`).pipe(
+        map(retorno => retorno),
+        //catchError(erro => this.exibirErro(erro))
+       );
+     }
     }
     // buscarTodosCarrinho() : Observable<IProdutoCarrinho[]> {
     //     return this.http.get<IProdutoCarrinho[]>(this.URLcarrinho).pipe(

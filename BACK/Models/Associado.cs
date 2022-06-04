@@ -17,11 +17,10 @@ namespace ApiTcc.Models.Enuns
         public string enderecoCadAssociado { get; set; }
         public byte[] associadoImagem { get; set; }
         public PlanoEnum tipoPlano { get; set; } //= PlanoEnum.PremiumBlack;
-        public List<Produto> Produtos { get; set; }
         public string senhaCadAssociado{ get; set; }
-
         //[Required]
         public string Perfil {get; set; }
+        public List<Produto> Produtos { get; set; }
 
 
         // [NotMapped]

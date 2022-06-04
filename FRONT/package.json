@@ -22,6 +22,7 @@
     "animate.css": "^4.1.1",
     "bootstrap": "^4.6.1",
     "jquery": "^3.6.0",
+    "ngx-mask": "^13.1.13",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",

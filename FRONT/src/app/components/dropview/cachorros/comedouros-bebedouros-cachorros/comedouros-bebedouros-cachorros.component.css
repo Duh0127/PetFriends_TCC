@@ -26,75 +26,54 @@
   padding: 0px;
   margin: 0px;
 }
-
-
-
-.dropdown-menu{/* DROPVIEW DOS CONTEÚDOS DA NAVBAR */
-  background-color: rgb(254, 255, 199);
-  border: 2px solid rgb(255, 255, 255);
+.navbar-light{
+  width: 100vw;
 }
+
 
 
 
 .logo{ /*foto do logo*/
+  position: absolute;
   margin-left: 19vw;
+  margin-top: -3vh;
+}
+.divLinha{
+  margin-left: 33vw;
+  height: 10vh;
+}
+.topicos{ /*topicos que estruturam os outros*/
+  margin-left: 25vw;
+  width: 100%;
+}
+.dropdown-menu{/* DROPVIEW DOS CONTEÚDOS DA NAVBAR */
+  background-color: rgb(254, 255, 199);
+  border: 2px solid rgb(255, 255, 255);
+}
+.embaixo{
+  margin-left: 3.5vw;
 }
 
 
-
-
-.box-search{ /*barra de pesquisa*/
-  margin-left: -5%;
-  margin-top: 2%;
-  width: 70%;
-  border: none;
-}
-.box-search:focus{ /*barra de pesquisa*/
-  box-shadow: 0px 5px 6px rgba(255, 255, 255, 0.274);
-}
-
-
-
-.tp{ /*topicos que estruturam os outros*/
-  margin-left: 37.7vw;
-  padding-bottom: 0.6%;
-}
-
-
-
-#embaixo{ /*topicos embaixo da barra de pesquisa*/
-  margin-right: 11.9vw;
-  margin-left: -10vw;
-  margin-bottom: -1%;
-}
 
 
 
 #login{/* LOGIN  */
-  margin-top: 2%;
   width: 3%;
-  height: 3.5%;
+  height: 34px;
   cursor: pointer;
+  margin-left: 5vw;
 }
-
-
-
 #carrinho{/* CARRINHO DE RESERVA */
-  margin-top: 2%;
-  margin-right: 20%;
+  margin-right: 8vw;
   width: 30px;
   height: 34px;
   cursor: pointer;
 }
-
-
-
 b{
-  margin-right: -5.7vw;
+  margin-right: -4.5vw;
+  margin-top: -2%;
 }
-
-
-
 
 
 

@@ -117,7 +117,7 @@ namespace ApiTcc.Controllers
                 int id = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value);
 
                 List<Associado> lista = await _context.Associados
-                    .Where(a => a.associadoId == id).ToListAsync();
+                    .Where(a => a.associadoId == id).Include(p => p.Produtos).ToListAsync();
 
                 return Ok(lista);
             }

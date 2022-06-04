@@ -4,6 +4,7 @@ import { ICadastroCliente } from 'src/app/model/ICadastroCliente.model';
 import { IProduto } from 'src/app/model/IProduto.model';
 import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 import { CadastroClienteService } from 'src/app/services/cadcliente.service';
+import { CarrinhoService } from 'src/app/services/carrinho.service';
 import { ProdutosService } from 'src/app/services/produtos.service';
 
 @Component({
@@ -30,6 +31,7 @@ export class ClienteComponent implements OnInit {
   constructor(private cadastroService: CadastroClienteService,
     private produtosService: ProdutosService,
     private autenticacaoService: AutenticacaoService,
+    private carrinhoService: CarrinhoService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -44,7 +46,7 @@ export class ClienteComponent implements OnInit {
   }
 
   carregarProdutos() : void{
-    this.produtosService.buscarTodos().subscribe(retorno => {
+    this.carrinhoService.buscarByUser().subscribe(retorno => {
       this.listarProdutos = retorno;
     })
   };

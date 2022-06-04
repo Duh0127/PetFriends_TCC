@@ -51,6 +51,7 @@ import { AuthGuard } from './guard/auth.guard';
 import { AlterarPerfilAssociadoComponent } from './components/perfil/alterar-perfil-associado/alterar-perfil-associado.component';
 import { AlterarPerfilClienteComponent } from './components/perfil/alterar-perfil-cliente/alterar-perfil-cliente.component';
 import { PerfilGuard } from './guard/perfil.guard';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 const serviceAutenticacao = [Interceptor]
@@ -107,7 +108,10 @@ const serviceAutenticacao = [Interceptor]
     SharedModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AutocompleteLibModule
+    AutocompleteLibModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false
+    }),
   ],
   providers: [
 
