@@ -1,11 +1,12 @@
-using System.Text.Json.Serialization;
 using ApiTcc.Models.Enuns;
+using BACK.Models.Enuns;
 
 namespace ApiTcc.Models
 {
     public class Produto
     {
         public int produtoId { get; set; } 
+        public CategoriaEnum categoriaProduto {get; set;}
         public string codigoProduto { get; set; }
         public string nomeProduto { get; set; }
         public string fabricanteProduto { get; set; }
@@ -13,26 +14,11 @@ namespace ApiTcc.Models
         public byte[] produtoImagem { get; set; }
         public int precoProduto { get; set; } 
         public string descricaoProduto { get; set; } 
-       // public string linkProduto {get; set;}
+
+
         public Associado Associado { get; set; }
         public int associadoId { get; set; }
-
-        //erro na conversão de int para string
         
+
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

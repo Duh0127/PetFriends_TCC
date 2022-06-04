@@ -19,6 +19,97 @@ namespace ApiTcc.Migrations
                 .HasAnnotation("ProductVersion", "5.0.15")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("ApiTcc.Models.Associado", b =>
+                {
+                    b.Property<int>("associadoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<byte[]>("PasswordHash")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("Perfil")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("Associado");
+
+                    b.Property<byte[]>("associadoImagem")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("cnpjCadAssociado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("emailCadAssociado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("enderecoCadAssociado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nomeCadAssociado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("senhaCadAssociado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("telCadAssociado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("associadoId");
+
+                    b.ToTable("Associados");
+
+                    b.HasData(
+                        new
+                        {
+                            associadoId = 1,
+                            cnpjCadAssociado = "1231134",
+                            emailCadAssociado = "associadoa@associadoa.com",
+                            enderecoCadAssociado = "Rua do Associado A",
+                            nomeCadAssociado = "Associado A",
+                            senhaCadAssociado = "123456"
+                        },
+                        new
+                        {
+                            associadoId = 2,
+                            cnpjCadAssociado = "1231134",
+                            emailCadAssociado = "associadob@associadob.com",
+                            enderecoCadAssociado = "Rua do Associado B",
+                            nomeCadAssociado = "Associado B",
+                            senhaCadAssociado = "123456"
+                        },
+                        new
+                        {
+                            associadoId = 3,
+                            cnpjCadAssociado = "1231134",
+                            emailCadAssociado = "associadoc@associadoc.com",
+                            enderecoCadAssociado = "Rua do Associado C",
+                            nomeCadAssociado = "Associado C",
+                            senhaCadAssociado = "123456"
+                        },
+                        new
+                        {
+                            associadoId = 4,
+                            cnpjCadAssociado = "1231134",
+                            emailCadAssociado = "associadod@associadod.com",
+                            enderecoCadAssociado = "Rua do Associado D",
+                            nomeCadAssociado = "Associado D",
+                            senhaCadAssociado = "123456"
+                        },
+                        new
+                        {
+                            associadoId = 5,
+                            cnpjCadAssociado = "1231134",
+                            emailCadAssociado = "associadoe@associadoe.com",
+                            enderecoCadAssociado = "Rua do Associado E",
+                            nomeCadAssociado = "Associado E",
+                            senhaCadAssociado = "123456"
+                        });
+                });
+
             modelBuilder.Entity("ApiTcc.Models.Cliente", b =>
                 {
                     b.Property<int>("clienteId")
@@ -115,141 +206,18 @@ namespace ApiTcc.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ApiTcc.Models.Comissao", b =>
+            modelBuilder.Entity("ApiTcc.Models.ComissaoAssociado", b =>
                 {
-                    b.Property<int>("comissaoId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("associadoId")
+                        .HasColumnType("int");
 
                     b.Property<double>("porcentagemComissao")
                         .HasColumnType("float");
 
-                    b.Property<double>("valor")
+                    b.Property<double>("valorFixo")
                         .HasColumnType("float");
 
-                    b.HasKey("comissaoId");
-
-                    b.ToTable("Comissoes");
-
-                    b.HasData(
-                        new
-                        {
-                            comissaoId = 1,
-                            porcentagemComissao = 10.0,
-                            valor = 100.0
-                        },
-                        new
-                        {
-                            comissaoId = 2,
-                            porcentagemComissao = 10.0,
-                            valor = 130.0
-                        },
-                        new
-                        {
-                            comissaoId = 3,
-                            porcentagemComissao = 10.0,
-                            valor = 250.0
-                        });
-                });
-
-            modelBuilder.Entity("ApiTcc.Models.Enuns.Associado", b =>
-                {
-                    b.Property<int>("associadoId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<byte[]>("PasswordHash")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<byte[]>("PasswordSalt")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<string>("Perfil")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(max)")
-                        .HasDefaultValue("Associado");
-
-                    b.Property<byte[]>("associadoImagem")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<string>("cnpjCadAssociado")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("emailCadAssociado")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("enderecoCadAssociado")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("nomeCadAssociado")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("senhaCadAssociado")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("telCadAssociado")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("tipoPlano")
-                        .HasColumnType("int");
-
-                    b.HasKey("associadoId");
-
-                    b.ToTable("Associados");
-
-                    b.HasData(
-                        new
-                        {
-                            associadoId = 1,
-                            cnpjCadAssociado = "1231134",
-                            emailCadAssociado = "associadoa@associadoa.com",
-                            enderecoCadAssociado = "Rua do Associado A",
-                            nomeCadAssociado = "Associado A",
-                            senhaCadAssociado = "123456",
-                            tipoPlano = 0
-                        },
-                        new
-                        {
-                            associadoId = 2,
-                            cnpjCadAssociado = "1231134",
-                            emailCadAssociado = "associadob@associadob.com",
-                            enderecoCadAssociado = "Rua do Associado B",
-                            nomeCadAssociado = "Associado B",
-                            senhaCadAssociado = "123456",
-                            tipoPlano = 0
-                        },
-                        new
-                        {
-                            associadoId = 3,
-                            cnpjCadAssociado = "1231134",
-                            emailCadAssociado = "associadoc@associadoc.com",
-                            enderecoCadAssociado = "Rua do Associado C",
-                            nomeCadAssociado = "Associado C",
-                            senhaCadAssociado = "123456",
-                            tipoPlano = 0
-                        },
-                        new
-                        {
-                            associadoId = 4,
-                            cnpjCadAssociado = "1231134",
-                            emailCadAssociado = "associadod@associadod.com",
-                            enderecoCadAssociado = "Rua do Associado D",
-                            nomeCadAssociado = "Associado D",
-                            senhaCadAssociado = "123456",
-                            tipoPlano = 0
-                        },
-                        new
-                        {
-                            associadoId = 5,
-                            cnpjCadAssociado = "1231134",
-                            emailCadAssociado = "associadoe@associadoe.com",
-                            enderecoCadAssociado = "Rua do Associado E",
-                            nomeCadAssociado = "Associado E",
-                            senhaCadAssociado = "123456",
-                            tipoPlano = 0
-                        });
+                    b.ToTable("ComissoesAssociados");
                 });
 
             modelBuilder.Entity("ApiTcc.Models.ItemPedido", b =>
@@ -259,11 +227,17 @@ namespace ApiTcc.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("associadoId")
+                        .HasColumnType("int");
+
                     b.Property<int>("clienteId")
                         .HasColumnType("int");
 
-                    b.Property<double>("precoProduto")
-                        .HasColumnType("float");
+                    b.Property<string>("codigoProduto")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("precoProduto")
+                        .HasColumnType("real");
 
                     b.Property<int>("produtoId")
                         .HasColumnType("int");
@@ -275,7 +249,38 @@ namespace ApiTcc.Migrations
 
                     b.HasIndex("clienteId");
 
+                    b.HasIndex("produtoId");
+
                     b.ToTable("ItensPedido");
+
+                    b.HasData(
+                        new
+                        {
+                            itemPedidoId = 1,
+                            associadoId = 0,
+                            clienteId = 1,
+                            precoProduto = 10f,
+                            produtoId = 1,
+                            qtdProduto = 10
+                        },
+                        new
+                        {
+                            itemPedidoId = 2,
+                            associadoId = 0,
+                            clienteId = 1,
+                            precoProduto = 10f,
+                            produtoId = 1,
+                            qtdProduto = 10
+                        },
+                        new
+                        {
+                            itemPedidoId = 3,
+                            associadoId = 0,
+                            clienteId = 1,
+                            precoProduto = 10f,
+                            produtoId = 1,
+                            qtdProduto = 10
+                        });
                 });
 
             modelBuilder.Entity("ApiTcc.Models.Pedido", b =>
@@ -284,6 +289,12 @@ namespace ApiTcc.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("StatusPedido")
+                        .HasColumnType("int");
+
+                    b.Property<int>("associadoId")
+                        .HasColumnType("int");
 
                     b.Property<int>("clienteId")
                         .HasColumnType("int");
@@ -294,23 +305,20 @@ namespace ApiTcc.Migrations
                     b.Property<DateTime?>("dataPedido")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("nomeProduto")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("precoProduto")
+                    b.Property<int?>("itemPedidoId")
                         .HasColumnType("int");
 
                     b.Property<int>("produtoId")
                         .HasColumnType("int");
 
-                    b.Property<int>("qtdProduto")
-                        .HasColumnType("int");
+                    b.Property<float>("valortotalPedido")
+                        .HasColumnType("real");
 
                     b.HasKey("pedidoId");
 
                     b.HasIndex("clienteId");
 
-                    b.HasIndex("produtoId");
+                    b.HasIndex("itemPedidoId");
 
                     b.ToTable("Pedidos");
 
@@ -318,82 +326,29 @@ namespace ApiTcc.Migrations
                         new
                         {
                             pedidoId = 1,
+                            StatusPedido = 0,
+                            associadoId = 0,
                             clienteId = 1,
-                            precoProduto = 20,
-                            produtoId = 1,
-                            qtdProduto = 0
+                            produtoId = 0,
+                            valortotalPedido = 0f
                         },
                         new
                         {
                             pedidoId = 2,
+                            StatusPedido = 0,
+                            associadoId = 0,
                             clienteId = 2,
-                            precoProduto = 150,
-                            produtoId = 2,
-                            qtdProduto = 0
+                            produtoId = 0,
+                            valortotalPedido = 0f
                         },
                         new
                         {
                             pedidoId = 3,
+                            StatusPedido = 0,
+                            associadoId = 0,
                             clienteId = 3,
-                            precoProduto = 146,
-                            produtoId = 3,
-                            qtdProduto = 0
-                        });
-                });
-
-            modelBuilder.Entity("ApiTcc.Models.Plano", b =>
-                {
-                    b.Property<int>("planoId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("dataFim")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("dataInicio")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("nome")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("percentual")
-                        .HasColumnType("int");
-
-                    b.Property<int>("valor")
-                        .HasColumnType("int");
-
-                    b.HasKey("planoId");
-
-                    b.ToTable("Planos");
-
-                    b.HasData(
-                        new
-                        {
-                            planoId = 1,
-                            dataFim = "31/10/2022",
-                            dataInicio = "05/04/2022",
-                            nome = "Premium Bronze",
-                            percentual = 5,
-                            valor = 100
-                        },
-                        new
-                        {
-                            planoId = 2,
-                            dataFim = "31/11/2022",
-                            dataInicio = "05/05/2022",
-                            nome = "Premium Gold",
-                            percentual = 5,
-                            valor = 300
-                        },
-                        new
-                        {
-                            planoId = 3,
-                            dataFim = "31/12/2022",
-                            dataInicio = "05/06/2022",
-                            nome = "Premium Black",
-                            percentual = 10,
-                            valor = 500
+                            produtoId = 0,
+                            valortotalPedido = 0f
                         });
                 });
 
@@ -494,21 +449,40 @@ namespace ApiTcc.Migrations
                     b.ToTable("Sac");
                 });
 
+            modelBuilder.Entity("BACK.Models.ComissoesRegistro", b =>
+                {
+                    b.Property<int>("comissoesregistroId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<float>("A")
+                        .HasColumnType("real");
+
+                    b.Property<float>("BXC")
+                        .HasColumnType("real");
+
+                    b.Property<int>("associadoId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("dataComissao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("pedidoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("statusComissao")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("comissoesregistroId");
+
+                    b.ToTable("ComissoesRegistros");
+                });
+
             modelBuilder.Entity("ApiTcc.Models.ItemPedido", b =>
                 {
                     b.HasOne("ApiTcc.Models.Cliente", "Cliente")
                         .WithMany()
-                        .HasForeignKey("clienteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Cliente");
-                });
-
-            modelBuilder.Entity("ApiTcc.Models.Pedido", b =>
-                {
-                    b.HasOne("ApiTcc.Models.Cliente", "Cliente")
-                        .WithMany("Pedido")
                         .HasForeignKey("clienteId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -524,9 +498,26 @@ namespace ApiTcc.Migrations
                     b.Navigation("Produto");
                 });
 
+            modelBuilder.Entity("ApiTcc.Models.Pedido", b =>
+                {
+                    b.HasOne("ApiTcc.Models.Cliente", "Cliente")
+                        .WithMany("Pedido")
+                        .HasForeignKey("clienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ApiTcc.Models.ItemPedido", "ItemPedido")
+                        .WithMany()
+                        .HasForeignKey("itemPedidoId");
+
+                    b.Navigation("Cliente");
+
+                    b.Navigation("ItemPedido");
+                });
+
             modelBuilder.Entity("ApiTcc.Models.Produto", b =>
                 {
-                    b.HasOne("ApiTcc.Models.Enuns.Associado", "Associado")
+                    b.HasOne("ApiTcc.Models.Associado", "Associado")
                         .WithMany("Produtos")
                         .HasForeignKey("associadoId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -535,14 +526,14 @@ namespace ApiTcc.Migrations
                     b.Navigation("Associado");
                 });
 
+            modelBuilder.Entity("ApiTcc.Models.Associado", b =>
+                {
+                    b.Navigation("Produtos");
+                });
+
             modelBuilder.Entity("ApiTcc.Models.Cliente", b =>
                 {
                     b.Navigation("Pedido");
-                });
-
-            modelBuilder.Entity("ApiTcc.Models.Enuns.Associado", b =>
-                {
-                    b.Navigation("Produtos");
                 });
 #pragma warning restore 612, 618
         }

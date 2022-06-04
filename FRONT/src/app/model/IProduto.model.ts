@@ -5,12 +5,14 @@ export interface IProduto {
 
   produtoId: number;
   associadoId: number;
+  categoriaProduto: number;
   codigoProduto: string;
   nomeProduto: string;
   qtdProduto: number;
   precoProduto: number;
   fabricanteProduto: string;
   descricaoProduto: string;
-  produtoReservado: boolean;
+  produtoImagem: any;
+  //produtoReservado: boolean;
 
 }

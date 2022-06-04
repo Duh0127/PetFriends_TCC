@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using ApiTcc.Models.Enuns;
 using System.Linq;
 using ApiTcc.Data;
 using System.Threading.Tasks;
@@ -12,6 +11,7 @@ using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Authorization;
+using ApiTcc.Models;
 
 namespace ApiTcc.Controllers
 {

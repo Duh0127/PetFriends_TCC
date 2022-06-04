@@ -45,3 +45,14 @@ h5{/* TEXTO DO CONTEUDO DO CARD */
   margin-right: 05px;
   margin-top: 10px;
 }
+
+
+@media (max-width: 424px) {
+
+  .card{/* TAMANHO DO CARD */
+    width: 57vw;
+    height: 40vh;
+    background-color: white;
+  }
+
+}

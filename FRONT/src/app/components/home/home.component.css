@@ -15,7 +15,7 @@ body {
   color: rgb(248, 183, 61);
 }
 
-botaocardslide
+
 
 /*TEXTO "SERVIÇOS PARA SEUS PETS"*/
 .margem-titulo2 {
@@ -59,9 +59,6 @@ botaocardslide
   margin-left: 100px;
   margin-right: 20px;
   align-items: center;
-}
-
-.mar-card-slider{/*MARGEN DO PRIMEIRO CARD*/
 }
 
 .mar2-card-slider{/*MARGEN DO SEGUNDO CARD*/
@@ -120,14 +117,14 @@ botaocardslide
 
 
 
-
+.fundocomponent
 
 
 
 /*DIVISOR DO DEPARTAMENTO E DO CADASTRE-SE*/
 .divisor{
   border-bottom: 2px solid rgb(223, 223, 223);
-  width: 199vh;
+  width: 99.6vw;
   margin-left: -15px;
   margin-top: 150px;
 }
@@ -147,6 +144,8 @@ botaocardslide
 
 
 /*------PARTE DE CADASTRO NA HOME-------*/
+
+
 .fundocad {
   width: 90%;
   height: 100px;
@@ -196,7 +195,7 @@ botaocardslide
 .footer {
   margin-top: 200px;
   height: 30vh;
-  width: 199vh;
+  width: 99.6vw;
   border-top: 2px solid rgb(223, 223, 223);
   margin-right: -15px;
   margin-left: -15px;
@@ -230,9 +229,6 @@ botaocardslide
 
 
 
-
-
-
               /*principais marcas imagens*/
               /*principais marcas imagens*/
 .marca{
@@ -260,6 +256,10 @@ botaocardslide
 
               /*------RESPONSIVO--------*/
               /*------RESPONSIVO--------*/
+
+/*1 = não responsivo*/
+/*2 = responsivo*/
+
 .carousel2 {
   margin: 0px;
   height: 0px;
@@ -274,26 +274,157 @@ botaocardslide
   background-color: none;
   display: none;
 }
+
 @media (max-width: 424px) {
+
+
+                  /*CARDS SLIDER*/
+                  /*CARDS SLIDER*/
+
+.cards{ /*TAMANHO DE LARGURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+  width: 98vw;
+}
+.card-slider{/*TAMANHO DE ALTURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+  height: 100vh;
+}
+.carousel{/*MARGINS PARA ESPAÇOS DA BORDAS*/
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.button-slider{/*POSICIONAMENTOS DOS BOTÕES*/
+  margin-top: 170px;
+  height: 50px;
+}
+.carousel-control-prev{/*COR E TAMANHO DO BOTÃO DE PREVIA*/
+  margin-left: 10px;
+  width: 40vw;
+  color: black;
+}
+.carousel-control-next{/*COR E TAMANHO DO BOTÃO DE NEXT*/
+  margin-right: 10px;
+  width: 40vw;
+  color: black;
+}
+
+.cards-slider{
+  margin-left: 65px;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.mar2-card-slider{/*MARGEN DO SEGUNDO CARD*/
+  margin-right: 100px;
+}
+
+.botaocard{/* BOTÃO RESERVAR */
+  background-color: rgb(255, 208, 0);
+  border: none;
+  margin-top: 1px;
+  margin-left: 6.5px;
+  width:56vw;
+  box-shadow: 0px 0px 3px black;
+}
+
+.botaocard:hover{/* AO PASSAR O MOUSE EM CIMA */
+  transform: scale(1.001);
+  transition: transform .1s ease;
+}
+
+
+                /*principais marcas imagens*/
+                /*principais marcas imagens*/
+  .marca{
+    text-align: center;
+  }
+
+  .marcas{
+    margin-left: 5px;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .image_marca{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+  }
+
+                /*IMAGENS DAS CATEGORIAS*/
+                /*IMAGENS DAS CATEGORIAS*/
+
+  .categorias{/*MARGENS PARA POSICIONAMENTO DE TODAS AS IMAGENS*/
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+    margin-left: 95px;
+  }
+  .categoria{/*MARGEM PARA ESPAÇO ENTRE AS IMAGENS*/
+    margin-top: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .linha1{/*MARGEM DA LINHA DE IMAGEM*/
+    margin-bottom: 50px;
+
+  }
+  .titulo-categoria{/*ALINHAMENTO DO TITULO*/
+    text-align: center;
+  }
+  .image_categoria{/*FORMATO E TAMANHO DAS IMAGENS*/
+    height: 210px;
+    width: 240px;
+    border-radius: 10px;
+    margin-left: 0px;
+  }
+  .icon-list{/*MARGEM DO ICONE DE LISTA*/
+    margin-top: 150px;
+    margin-left: 30px;
+  }
+  .title-categorias{
+    width: 300px;
+    margin-left: -20%;
+    margin-bottom: 10px;
+  }
+
+  /*DIVISOR DO DEPARTAMENTO E DO CADASTRE-SE*/
+  .divisor{
+    border-bottom: 2px solid rgb(223, 223, 223);
+    width: 1004vw;
+    margin-top: 150px;
+  }
+
+  .footer {
+    margin-top: 200px;
+    height: 30vh;
+    width: 45vh;
+    border-top: 2px solid rgb(223, 223, 223);
+    margin-right: -15px;
+    margin-left: -15px;
+    background-color: #ffff;
+  }
+
+
+
   .fundocomponent {
-    padding-left: 70px;
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
   }
   .margem-titulo {
     width: 300px;
-    margin: -15px;
-    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-bottom: 50px;
   }
   .margem-titulo2 {
     width: 300px;
     margin: -15px;
     margin-bottom: 10px;
   }
-  .footer {
-    background-color: black;
-  }
+
   .carousel2 {
-    margin-left: 5px;
-    margin-right: 40vh;
+    margin-left: 70px;
+    margin-right: 70px;
     margin-top: 30px;
     margin-bottom: 250px;
     width: 255px;
@@ -325,12 +456,8 @@ botaocardslide
     background: transparent;
     display: none;
   }
-  .carousel {
-    background-color: transparent;
-    width: 0;
-    height: 0;
-    display: none;
-  }
+
+
   .fundocad {
     width: 87%;
     height: 100px;
@@ -348,7 +475,8 @@ botaocardslide
     display: none;
   }
   .colunatres {
-    margin-left: 100px;
+    align-items: center;
+    margin-left: 135px;
   }
   #textocadastro {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -356,4 +484,54 @@ botaocardslide
     margin-left: 120px;
     font-size: 30px;
   }
+
+
+
+                  /*FOOTER*/
+                  /*FOOTER*/
+
+  .footer {
+    margin-top: 200px;
+    height: 30vh;
+    width: 104vw;
+    border-top: 2px solid rgb(223, 223, 223);
+    margin-right: -15px;
+    margin-left: -15px;
+    background-color: #ffff;
+  }
+
+.coluna{
+  border: 2px solid rgb(223, 223, 223);
+  height: 10vh;
+  padding-left: 140px;
+  padding-top: 10px;
+  margin-bottom: -50px;
+  margin-top: 25px;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
 }
+.sac:hover{
+  color: rgb(248, 183, 61);
+  cursor: pointer;
+}
+.rede{
+  text-align: center;
+}
+.redes{
+  align-items: center;
+  margin-top: 8%;
+  margin-left: -35px;
+}
+
+.image_redonda{
+  height: 50px;
+  width: 50px;
+  border-radius: 30%;
+}
+
+
+
+
+}
+

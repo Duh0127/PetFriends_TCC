@@ -1,11 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using ApiTcc.Data;
 using ApiTcc.Models;
 using ApiTcc.Models.Enuns;
+using BACK.Models.Enuns;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -123,6 +126,28 @@ namespace ApiTcc.Controllers
             }
         }
 
+        [HttpGet("GetByCategoria/{categoriaId}")]
+        
+         public async Task<IActionResult> GetByCategoria(int categoriaId)
+         {
+             try
+            {
+                List<Produto> listaFinal = await _context.Produtos
+                .Where(p => p.categoriaProduto == (CategoriaEnum)categoriaId)
+                .OrderByDescending(p => p.produtoId).ToListAsync();
+
+                if(listaFinal.Count == 0)
+                    return NotFound("Nenhum produto encontrado.");
+                
+                return Ok(listaFinal);
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+         }
+
 
         [HttpPost]
         public async Task<IActionResult> Add(Produto novoProduto)
@@ -132,7 +157,7 @@ namespace ApiTcc.Controllers
              {
                  if (await ProdutoExistente(novoProduto.codigoProduto))
                      throw new System.Exception("Código de produto já existe");
-                
+
                 novoProduto.Associado = _context.Associados.FirstOrDefault(aBusca => aBusca.associadoId == ObterUsuarioId());
 
 
@@ -147,10 +172,10 @@ namespace ApiTcc.Controllers
                 //  if(a == null)
                 //      throw new System.Exception("Não existe Associado com o Id Informado.");
                 
-                 await _context.Produtos.AddAsync(novoProduto);
-                 await _context.SaveChangesAsync();
+                await _context.Produtos.AddAsync(novoProduto);
+                await _context.SaveChangesAsync();
 
-                 return Ok(novoProduto.produtoId);
+                return Ok(novoProduto.produtoId);
              }
                 catch (Exception ex)
                 {

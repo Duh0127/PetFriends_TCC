@@ -30,13 +30,14 @@
             formControlName="senhaCadAssociado">
         </div>
 
-        <button type="submit" [disabled]="!loginForm.valid" (click)="LoginAssociado()" class="btn btn-warning">Entrar</button><!-- BOTÃO ENTRAR -->
+        <button type="submit" [disabled]="!loginForm.valid" (click)="LoginAssociado()" class="btn btn-warning button">Entrar</button><!-- BOTÃO ENTRAR -->
+
         <h3 class="criar-conta">Ainda não possui uma conta associado? <a routerLink="/cadastro-associado">Crie a sua!</a></h3> <!-- LINK PARA CADASTRO ASSOCIADO -->
       </div>
 
-      <div class="col coluna2"><!-- COLUNA DIREITA -->
+      <div class="col coluna2 image"><!-- COLUNA DIREITA -->
         <h3>Entre ou crie sua conta no PetFriends</h3><!-- TEXTO -->
-        <img src="/assets/img/logovert.png" style="width: 270px; height: 260px;"><!-- LOGO -->
+        <img class="image" src="/assets/img/logovert.png" style="width: 270px; height: 260px;"><!-- LOGO -->
       </div>
 
     </div>

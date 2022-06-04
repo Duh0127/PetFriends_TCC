@@ -19,8 +19,7 @@
             <th scope="col">Quantidade</th>
             <th scope="col">Valor Unitário</th>
             <th scope="col">Fabricante</th>
-            <th scope="col">Total</th>
-            <th scope="col">Remover</th>
+            <th scope="col">Ações</th>
           </tr>
         </thead>
 
@@ -32,18 +31,25 @@
             <td (submit)="salvarCadastroPedido(produto.qtdProduto)">{{ produto.qtdProduto}}</td>
             <td (submit)="salvarCadastroPedido(produto.precoProduto)">{{ produto.precoProduto | currency: 'BRL'}}</td>
             <td (submit)="salvarCadastroPedido(produto.fabricanteProduto)">{{ produto.fabricanteProduto}}</td>
-            <td></td>
             <td>
+
               <button class="btn btn-danger" (click)="removeItem(produto)">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="15" height="15" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                 </svg>
               </button>
+
+              <button type="submit" class="btn btn-success"  (click)="salvarCadastroPedido(produto)"><!-- RESERVAR PRODUTO -->
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="15" height="22" fill="currentColor" class="bi bi-credit-card-fill" viewBox="0 0 16 16">
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0V4zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7H0zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z" />
+                </svg>
+              </button>
+
             </td>
           </tr>
           <tr>
               <td colspan="6"></td>
-              <td><strong name="grandTotal"(submit)="salvarCadastroPedido(grandTotal)">Total : {{grandTotal | currency: 'BRL'}} </strong></td>
+              <td><strong name="grandTotal">Total : {{grandTotal | currency: 'BRL'}} </strong></td>
           </tr>
         </tbody>
       </table>
@@ -57,11 +63,7 @@
         </svg>
       </button>
 
-      <button  *ngFor="let produto of listarProduto" type="submit" class="btn btn-success"  (click)="salvarCadastroPedido(produto)">Reservar Produto<!-- RESERVAR PRODUTO -->
-        <svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 10px;" width="20" height="25" fill="currentColor" class="bi bi-credit-card-fill" viewBox="0 0 16 16">
-          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0V4zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7H0zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z" />
-        </svg>
-      </button>
+      
     </div>
 
   </div>

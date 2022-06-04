@@ -127,29 +127,26 @@ namespace ApiTcc.Controllers
         [HttpPost]
         public async Task<IActionResult> Add(ItemPedido novoItemPedido)
         {
-
-             try
+            try
              {
+                 
                 
                 novoItemPedido.Cliente = _context.Clientes.FirstOrDefault(cBusca => cBusca.clienteId == ObterUsuarioId());
-
 
                 // int associadoId = int.Parse(_httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
                 // novoProduto.Associado = _context.Associados.FirstOrDefault(aBusca => aBusca.associadoId == associadoId);
                 
-                //INSERIR FORNECENDO ID DO PRODUTO
-                  Produto p = await _context.Produtos
-                      .FirstOrDefaultAsync(p => p.produtoId == novoItemPedido.produtoId);
+                //INSERIR FORNECENDO ID DO ITENS PEDIDO
+                Produto p = await _context.Produtos
+                       .FirstOrDefaultAsync(p => p.produtoId == novoItemPedido.produtoId);
 
-                //INSERIR FORNECENDO ID DO USUARIO
-                //  Associado a = await _context.Associados
-                //      .FirstOrDefaultAsync(a => a.associadoId == novoProduto.associadoId);
 
                 //  if(a == null)
                 //      throw new System.Exception("Não existe Associado com o Id Informado.");
                 
-                 await _context.ItensPedido.AddAsync(novoItemPedido);
-                 await _context.SaveChangesAsync();
+                //novoItemPedido.dataPedido = System.DateTime.Now;
+                await _context.ItensPedido.AddAsync(novoItemPedido);
+                await _context.SaveChangesAsync();
 
                  return Ok(novoItemPedido.itemPedidoId);
              }

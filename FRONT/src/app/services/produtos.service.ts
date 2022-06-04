@@ -32,6 +32,13 @@ import { IProduto } from '../model/IProduto.model';
      );
    }
 
+   buscarByGategoria(categoriaProduto: number) : Observable<IProduto[]> {
+    return this.http.get<IProduto[]>(`${this.baseUrl}/GetByCategoria/${categoriaProduto}`).pipe(
+    map(retorno => retorno),
+    //catchError(erro => this.exibirErro(erro))
+   );
+ }
+
   //  buscarPorId(id: number) : Observable<IProduto> {
   //   return this.http.get<IProduto>(`${this.baseUrl}/${id}`).pipe(
   //     map(retorno => retorno),

@@ -11,23 +11,6 @@ namespace ApiTcc.Models
         public string telefoneSac { get; set; }
         public string emailSac { get; set; }
         public string descSac { get; set; }
-
-        //erro na conversão de int para string
         
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
-namespace ApiTcc.Models.Enuns
+namespace ApiTcc.Models
 {
     public class Associado
     {
@@ -16,16 +16,9 @@ namespace ApiTcc.Models.Enuns
         public string cnpjCadAssociado { get; set; } 
         public string enderecoCadAssociado { get; set; }
         public byte[] associadoImagem { get; set; }
-        public PlanoEnum tipoPlano { get; set; } //= PlanoEnum.PremiumBlack;
         public string senhaCadAssociado{ get; set; }
-        //[Required]
         public string Perfil {get; set; }
         public List<Produto> Produtos { get; set; }
-
-
-        // [NotMapped]
-        // public string senhaCadAssociado{ get; set; }
-
 
     }
 }

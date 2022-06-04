@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  UrlPrincipal: "http://backend.somee.com/BackendTCC2"
+  UrlPrincipal: "http://localhost:5000"
 };

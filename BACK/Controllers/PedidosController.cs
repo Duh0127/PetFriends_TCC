@@ -39,7 +39,7 @@ namespace ApiTcc.Controllers
             {
                 List<Pedido> lista = await _context.Pedidos
                     .OrderByDescending(p => p.pedidoId)
-                    .Include(p => p.Produto).ToListAsync();
+                    .Include(p => p.ItemPedido).ToListAsync();
                 return Ok(lista);
             }
             catch (Exception ex)
@@ -56,7 +56,7 @@ namespace ApiTcc.Controllers
             try
             {
                 Pedido p = await _context.Pedidos
-                    .Include(p => p.Produto).FirstOrDefaultAsync(pBusca => pBusca.pedidoId == id);
+                    .Include(p => p.ItemPedido).FirstOrDefaultAsync(pBusca => pBusca.pedidoId == id);
 
                 return Ok(p);
             }
@@ -77,7 +77,7 @@ namespace ApiTcc.Controllers
 
                 List<Pedido> lista = await _context.Pedidos
                     .OrderByDescending(p => p.pedidoId)
-                    .Include(p => p.Produto)
+                    .Include(p => p.ItemPedido)
                     
                     .Where(a => a.clienteId == id).ToListAsync();
 
@@ -103,15 +103,16 @@ namespace ApiTcc.Controllers
                 // novoProduto.Associado = _context.Associados.FirstOrDefault(aBusca => aBusca.associadoId == associadoId);
                 
                 //INSERIR FORNECENDO ID DO ITENS PEDIDO
-                   Produto p = await _context.Produtos
-                       .FirstOrDefaultAsync(p => p.produtoId == novoPedido.produtoId);
+                ItemPedido i = await _context.ItensPedido
+                       .FirstOrDefaultAsync(i => i.itemPedidoId == novoPedido.itemPedidoId);
+
 
                 //  if(a == null)
                 //      throw new System.Exception("Não existe Associado com o Id Informado.");
                 
                 novoPedido.dataPedido = System.DateTime.Now;
-                 await _context.Pedidos.AddAsync(novoPedido);
-                 await _context.SaveChangesAsync();
+                await _context.Pedidos.AddAsync(novoPedido);
+                await _context.SaveChangesAsync();
 
                  return Ok(novoPedido.pedidoId);
              }

@@ -42,6 +42,7 @@ export class IncluirProdutoComponent implements OnInit {
   //Objeto.atributo
   listarAssociado: ICadastroAssociado[] = [];
   listarProdutos: IProduto[] = [];
+  
 
   constructor(private formBuilder: FormBuilder,
               private cadastroService: CadastroAssociadoService,
@@ -55,6 +56,7 @@ export class IncluirProdutoComponent implements OnInit {
     this.incluirProdutoForm = this.formBuilder.group(
       {
         nomeProduto: ['', [Validators.required]],
+        categoriaProduto: ['', [Validators.required]],
         codigoProduto: ['', [Validators.required]],
         qtdProduto: ['', [Validators.required]],
         precoProduto:['', [Validators.required]],
@@ -63,6 +65,17 @@ export class IncluirProdutoComponent implements OnInit {
       }
     )
   };
+
+  // onFileSelected(event: any) {
+  //   if (event.target.files && event.target.files[0]) {
+  //     const produtoImagem = event.target.files[0];
+
+  //     const formData = new FormData();
+  //     formData.append('produtoImagem', produtoImagem);
+
+  //     this.produtosService.cadastrar(formData).subscribe(resp => console.log('Upload ok'));
+  //   }
+  // }
 
   carregarUsuario() : void{
     this.cadastroService.buscarByUser().subscribe(retorno => {

@@ -92,12 +92,39 @@
 
             </div>
             <!--ROW1-->
+            <div class="form-group titulo-desc" [formGroup]="incluirProdutoForm" (submit)="salvarProduto()"><!-- DESCRIÇÃO DO PRODUTO -->
+              <label for="exampleInputEmail1">CATEGORIA</label>
+              <br>
+              <select id="assunto" autofocus style="width: 350px;" formControlName="categoriaProduto">
+                <option value="1">Comedouros & Bebedouros (Cachorros)</option>
+                <option value="2">Higiene (Cachorros)</option>
+                <option value="3">Farmacia (Cachorros)</option>
+                <option value="4">Ossinhos (Cachorros)</option>
+                <option value="5">Petiscos (Cachorros)</option>
+                <option value="6">Comedouros & Bebedouros (Gatos)</option>
+                <option value="7">Escovas & Pentes (Gatos)</option>
+                <option value="8">Areia (Gatos)</option>
+                <option value="9">Transporte (Gatos)</option>
+                <option value="10">Higiene (Gatos)</option>
+                <option value="11">Bolinhas</option>
+                <option value="12">Frisbees</option>
+                <option value="13">Varinhas</option>
+                <option value="14">RacaoSeca</option>
+                <option value="15">RacaoUmida</option>
+                <option value="16">RacaoDiet</option>
+                <option value="17">Camas & Casinhas</option>
+                <option value="18">Coleiras, Guias & Peitorais</option>
+                <option value="19">Roupas</option>
+              </select>
+            </div>
 
 
             <div class="form-group titulo-desc" [formGroup]="incluirProdutoForm" (submit)="salvarProduto()"><!-- DESCRIÇÃO DO PRODUTO -->
               <label for="exampleInputEmail1">DESCRIÇÃO:</label>
               <textarea class="form-control desc" id="exampleFormControlTextarea1" rows="5" formControlName="descricaoProduto"></textarea>
             </div>
+
+           
 
 
           </form>

@@ -111,7 +111,7 @@ export class ReservaComponent implements OnInit {
           text: 'Entre em contato com o Associado responsável pelo produto, e informe o número do pedido.',
           showConfirmButton: true,
           confirmButtonColor: '#ffd13a'});
-        window.location.reload();
+          this.carrinhoService.removeCartItem(produto);
       } else {
         Swal.fire({icon: 'error',
           title: 'Falha ao efetuar reserva',
