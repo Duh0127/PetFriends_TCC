@@ -1,0 +1,123 @@
+<body>
+  <!-- INÍCIO NAVBAR DA PÁGINA -->
+  <nav class="navbar navbar-expand navbar-dark fundonav">
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand ">
+        <img src="/assets/img/logovert.png" routerLink="" width="80" height="80" class="d-inline-block logo">
+      </a>
+      <div class="form-group container-xl ">
+      </div>
+    </nav>
+  </nav>
+<!-- FIM NAVBAR DA PÁGINA -->
+
+  <div class="container-fluid">
+    <!--PRIMEIRO CARD-->
+    <form>
+      <div class="row">
+        <!--BEM-VINDO-->
+                <div class="fundo-tudo shadow-1">
+                  <div class="usuario-associado" *ngFor="let associado of listarAssociados">
+                    <!--Campo de imagem redondo -->
+                    <svg class="bd-placeholder-img rounded-circle" width="120" height="120" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <rect width="100%" height="100%" fill="#777"></rect>
+                    </svg>
+                    <h4 ngFor="let associado of listarAssociado" >Bem-vindo, {{associado.nomeCadAssociado}}</h4>
+
+                    <p ngFor="let associado of listarAssociado">{{associado.emailCadAssociado}}</p>
+
+                  </div>
+                </div>
+      </div>
+    </form>
+
+
+      <!-- INÍCIO SEGUNDO CARD -->
+        <div class="row">
+        <div class="fundo2 padding">
+          <!-- IMAGEM ACIMA DO TEXTO DENTRO DO CARD -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="text-usuario" width="" height="30" fill="currentColor"
+            class="bi bi-file-person-fill" viewBox="0 0 16 16">
+            <path
+              d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z" />
+          </svg>
+          <h5 class="text-usuario">ALTERAR DADOS</h5>
+          <form>
+
+            <!-- CORPO DO CARD COM CAMPOS PARA ALTERAÇÃO DE INFORMAÇÕES -->
+            <div class="nomecompleto form-group">
+              <label for="exampleInputEmail1">NOME COMPLETO</label>
+              <input type="text" class="form-control" name="nomeCadAssociado" placeholder="DIGITE O NOME DA SUA EMPRESA"
+                [(ngModel)]="cadastro.nomeCadAssociado">
+            </div>
+
+            <div class="row">
+              <!-- 1ª LINHA DAS INFORMAÇÕES -->
+              <div class="col coluna1">
+                <!-- 1ª COLUNA -->
+                <div class="form-group">
+                  <label for="exampleInputEmail1">ENDEREÇO</label>
+                  <input type="text" class="form-control" name="enderecoCadAssociado" placeholder="DIGITE O ENDEREÇO"
+                    [(ngModel)]="cadastro.enderecoCadAssociado">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">E-MAIL</label>
+                  <input type="email" class="form-control" name="emailCadAssociado" placeholder="DIGITE SEU EMAIL"
+                    [(ngModel)]="cadastro.emailCadAssociado">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">SENHA</label>
+                  <input type="password" class="form-control" name="senhaCadAssociado" placeholder="DIGITE SUA SENHA"
+                    [(ngModel)]="cadastro.senhaCadAssociado">
+                </div>
+
+              </div>
+              <!--COLUNA 1-->
+
+
+
+              <div class="col coluna2">
+                <!-- 2ª COLUNA -->
+                <div class="form-group">
+                  <label for="exampleInputPassword1">TELEFONE</label>
+                  <input type="tel" placeholder="TELEFONE" class="form-control" name="telCadAssociado"
+                    [(ngModel)]="cadastro.telCadAssociado">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">CNPJ</label>
+                  <input type="text" class="form-control" placeholder="DIGITE SEU CNPJ" name="cnpjCadAssociado"
+                    [(ngModel)]="cadastro.cnpjCadAssociado">
+                </div>
+
+              </div>
+            </div>
+          </form>
+
+          <!--<tbody>
+            <tr *ngFor="let associado of listarAssociados">
+              <td>{{ associado.associadoId }}</td>
+              <td>{{ associado.nomeCadAssociado }}</td>
+              <td>{{ associado.enderecoCadAssociado }}</td>
+              <td>{{ associado.emailCadAssociado }}</td>
+              <td>{{ associado.telCadAssociado }}</td>
+              <td>{{ associado.cnpjCadAssociado }}</td>
+              <td>{{ associado.senhaCadAssociado }}</td>-->
+          <!--</tr>
+        </tbody>-->
+
+
+          <!-- BOTÃO 'ATUALIZAR PERFIL' DENTRO DO CARD -->
+          <button type="submit" routerLink="" class="btn btn-primary" (click)="salvarCadastroAssoc()">Atualizar
+            Perfil</button>
+
+          <!-- BOTÃO 'DELETAR PERFIL' DENTRO DO CARD -->
+          <button type="submit" class="btn btn-warning">Deletar Perfil</button>
+
+        </div>
+      </div>
+        </div>
+</body>

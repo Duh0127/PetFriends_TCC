@@ -1,0 +1,53 @@
+<div id="imagemfundo">
+
+
+  <nav class="navbar navbar-expand navbar-dark fundonav"><!-- NAVBAR -->
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand ">
+        <img src="/assets/img/logovert.png" routerLink="" width="80" height="80" class="d-inline-block logo">
+      </a>
+      <div class="form-group container-xl ">
+      </div>
+    </nav>
+  </nav>
+<!--  -->
+
+
+  <form class="fundo shadow-2"><!-- FUNDO AMARELO -->
+    <div class="row"><!-- LINHA -->
+      <div class="col coluna1"><!-- COLUNA ESQUERDA -->
+
+        <h1 class="text-cliente">CLIENTE</h1><!-- TEXTO -->
+
+        <div class="form-group" [formGroup]="loginForm" (submit)="LoginCliente()"><!-- INPUT EMAIL -->
+          <label for="exampleInputEmail1"></label>
+          <input type="email" class="form-control" placeholder="Digite seu email" name="emailCadCliente"
+            formControlName="emailCadCliente">
+        </div>
+
+        <div class="form-group" [formGroup]="loginForm" (submit)="LoginCliente()"><!-- INPUT SENHA -->
+          <label for="exampleInputPassword1"></label>
+          <input type="password" class="form-control" name="senhaCadCliente" placeholder="Digite sua senha"
+            formControlName="senhaCadCliente">
+        </div>
+
+        <button type="submit" [disabled]="!loginForm.valid" (click)="LoginCliente()"
+          class="btn btn-warning">Entrar</button><!-- BOTÃO ENTRAR -->
+        <br>
+        <br>
+
+        <h3 class="criar-conta">Ainda não possui uma conta? <a routerLink="/cadastro-cliente">Crie a sua!</a></h3><!-- LINK PARA CADASTRO OU ASSOCIADO -->
+        <h3 class="cadastro-associado"><a routerLink="/login-associado">Entrar como Associado</a></h3>
+      </div>
+
+
+      <div class="col coluna2"><!-- COLUNA DIREITA -->
+        <h3>Entre ou crie sua conta no PetFriends</h3>
+        <img src="/assets/img/logovert.png" style="width: 270px; height: 280px;"><!-- LOGO -->
+      </div>
+    </div>
+  </form>
+
+
+
+</div>

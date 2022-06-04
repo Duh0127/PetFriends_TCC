@@ -1,0 +1,186 @@
+<body>
+
+  <!-- NAVBAR DA PAGINA -->
+  <nav class="navbar navbar-expand navbar-dark fundonav">
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand">
+        <img src="/assets/img/logovert.png" routerLink="" width="80" height="80" class="d-inline-block logo" />
+      </a>
+      <div class="form-group container-xl"></div>
+    </nav>
+  </nav>
+  <!-- NAVBAR DA PÁGINA -->
+
+
+  <div class="container-fluid">
+    <!--BEM-VINDO-->
+    <div class="fundo shadow-1">
+      <form>
+        <div class="row margin-associdado">
+          <div class="usuario-associado" *ngFor="let associado of listarAssociado">
+            <!--Campo de imagem redondo -->
+            <svg class="bd-placeholder-img rounded-circle" width="120" height="120" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <rect width="100%" height="100%" fill="#777"></rect>
+            </svg>
+            <h4 ngFor="let associado of listarAssociado">Bem-vindo, {{associado.nomeCadAssociado}}</h4>
+
+            <p ngFor="let associado of listarAssociado">{{associado.emailCadAssociado}}</p>
+
+          </div>
+
+        </div>
+
+        <!-- BOTOES PARA ABRIR O MODAL -->
+        <ul>
+          <button type="button" class="btnpg btn btn-outline-warning" routerLink="" data-target="#meusdados">
+            Página Inicial
+          </button> <!-- BOTÃO MODAL PÁGINA INICIAL -->
+
+          <button type="button" class="btnmds btn btn-outline-warning" data-toggle="modal" data-target="#meusdados">
+            Meus Dados
+          </button> <!-- BOTÃO MODAL MEUS DADOS -->
+        </ul>
+
+        <!-- TELA MODAL MEUS DADOS -->
+        <div class="modal fade" id="meusdados" tabindex="-1" aria-labelledby="meusDados" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="fundo2 padding">
+
+                  <!-- IMAGEM DE USUARIO DENTRO DO MODAL -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="text-usuario" width="" height="30" fill="currentColor"
+                    class="bi bi-file-person-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z" />
+                  </svg>
+                  <h5 class="modal-title" id="meusDados">MEUS DADOS</h5><!-- TEXTO 'ALTERAR DADOS' DENTRO DO MODAL -->
+
+                  <button type="button" class="btn btn-info" routerLink="/alterar-perfil-associado"
+                    data-dismiss="modal">
+                    <!-- BOTÃO 'EDITAR PERFIL' DO MODAL -->
+                    Editar Perfil
+                  </button>
+
+                  <!-- BOTÃO 'X' DE SAIR DO MODAL -->
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body" *ngFor="let associado of listarAssociado">
+                  <!-- CORPO DO MODAL -->
+                  <form>
+
+                    <div class="nomecompleto form-group" *ngFor="let associado of listarAssociado">
+                      <!-- NOME COMPLETO -->
+                      <label for="exampleInputEmail1">NOME COMPLETO</label>
+                      <input type="text" class="form-control" name="nomeCadAssociado"
+                        placeholder="{{associado.nomeCadAssociado}}" [(ngModel)]="cadastro.nomeCadAssociado" disabled>
+                    </div>
+
+                    <div class="row margin-dados">
+                      <!-- 1ª LINHA DAS INFORMAÇÕES -->
+                      <div class="col coluna1">
+                        <!-- 1ª COLUNA -->
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">ENDEREÇO</label><!-- ENDEREÇO -->
+                          <input type="text" class="form-control" name="enderecoCadAssociado"
+                            placeholder="{{associado.enderecoCadAssociado}}" [(ngModel)]="cadastro.enderecoCadAssociado"
+                            disabled>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">E-MAIL</label><!-- EMAIL -->
+                          <input type="email" class="form-control" name="emailCadAssociado"
+                            placeholder="{{associado.emailCadAssociado}}" [(ngModel)]="cadastro.emailCadAssociado"
+                            disabled>
+                        </div>
+
+
+                      </div>
+
+                      <!--COLUNA 1-->
+                      <div class="col coluna2">
+                        <!--COLUNA 2-->
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">TELEFONE</label><!-- TELEFONE -->
+                          <input type="tel" placeholder="{{associado.telCadAssociado}}" class="form-control"
+                            name="telCadAssociado" [(ngModel)]="cadastro.telCadAssociado" disabled>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">CNPJ</label><!-- CNPJ -->
+                          <input type="text" class="form-control" placeholder="{{associado.cnpjCadAssociado}}"
+                            name="cnpjCadAssociado" [(ngModel)]="cadastro.cnpjCadAssociado" disabled>
+                        </div>
+
+
+                      </div>
+                      <div class="modal-footer">
+                        <!-- BOTÃO 'FECHAR' DO MODAL -->
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                          Fechar
+                        </button>
+
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <!--TELA INCLUIR PRODUTO-->
+    <div class="row margin-incluir">
+      <div class="fundo3 padding">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+        </svg>
+        <h5 class="text-pedidos">MEUS PRODUTOS</h5>
+        <form>
+          <table class="table table-dark mt-5 bordinha">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nome Produto</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Associado</th>
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let produto of listarProdutos">
+                <td>{{ produto.produtoId}}</td>
+                <td>{{ produto.codigoProduto}}</td>
+                <td>{{ produto.nomeProduto}}</td>
+                <td>{{ produto.qtdProduto}}</td>
+                <td>{{ produto.precoProduto | currency: 'BRL'}}</td>
+                <td>{{ produto.fabricanteProduto}}</td>
+                <td>
+                  <button class="btn btn-danger" (click)="deletarProdutos(produto)">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16"
+                      fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" class="btn btn-primary" routerLink="/incluir-produto">Incluir Produto</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

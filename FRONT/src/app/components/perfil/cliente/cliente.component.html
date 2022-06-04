@@ -1,0 +1,140 @@
+<body>
+  <!-- NAVBAR DA PAGINA -->
+  <nav class="navbar navbar-expand navbar-dark fundonav">
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand">
+        <img src="/assets/img/logovert.png" routerLink="" width="80" height="80" class="d-inline-block logo" />
+      </a>
+      <div class="form-group container-xl"></div>
+    </nav>
+  </nav>
+  <!-- NAVBAR DA PÁGINA -->
+
+  <div class="fundo shadow-1">
+    <form>
+      <div class="row margin-cliente">
+        <div class="usuario-perfil">
+          <!--Campo de imagem redondo -->
+          <svg class="bd-placeholder-img rounded-circle" width="120" height="120" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777"></rect>
+          </svg>
+          <h4 class="nome-cliente" ngFor="let associado of listarAssociado" *ngFor="let cliente of listarCliente">
+            Bem-vindo, {{ cliente.nomeCadCliente }}
+          </h4>
+
+          <p class="email-cliente" ngFor="let associado of listarAssociado" *ngFor="let cliente of listarCliente">
+            {{ cliente.emailCadCliente }}
+          </p>
+        </div>
+      </div>
+
+
+
+      <!-- BOTOES PARA ABRIR O MODAL -->
+      <ul>
+        <button type="button" class="btnpg btn btn-outline-warning" routerLink="" data-target="#meusdados">
+          Página Inicial
+        </button>
+        <!-- BOTÃO MODAL PÁGINA INICIAL -->
+
+        <button type="button" class="btnmds btn btn-outline-warning" data-toggle="modal" data-target="#meusdados">
+          Meus Dados
+        </button>
+        <!-- BOTÃO MODAL MEUS DADOS -->
+      </ul>
+
+
+
+
+      <!-- TELA MODAL MEUS DADOS -->
+      <div class="modal fade" id="meusdados" tabindex="-1" aria-labelledby="meusDados" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="fundo2 padding">
+                <!-- IMAGEM DE USUARIO DENTRO DO MODAL -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-file-person-fill img-usuario" height="30"
+                  fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z" />
+                </svg>
+
+                <h5 class="modal-title" id="meusDados">MEUS DADOS</h5>
+                <!-- TEXTO 'ALTERAR DADOS' DENTRO DO MODAL -->
+
+                <button type="button" class="btn btn-info" routerLink="/alterar-perfil-cliente" data-dismiss="modal">
+                  <!-- BOTÃO 'EDITAR PERFIL' DO MODAL -->
+                  Editar Perfil
+                </button>
+
+                <!-- BOTÃO 'X' DE SAIR DO MODAL -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+
+
+              <div class="modal-body">
+                <!-- CORPO DO MODAL -->
+                <form>
+                  <div class="nomecompleto form-group" *ngFor="let cliente of listarCliente">
+                    <!-- NOME COMPLETO -->
+                    <label for="exampleInputEmail1">NOME COMPLETO</label>
+                    <input type="text" class="form-control inputnome" placeholder="{{ cliente.nomeCadCliente }}"
+                      name="nomeCadCliente" [(ngModel)]="cadastro.nomeCadCliente" disabled />
+                  </div>
+
+                  <div class="row margin-dados" *ngFor="let cliente of listarCliente">
+                    <!-- 1ª LINHA DAS INFORMAÇÕES -->
+                    <div class="col coluna1">
+                      <!-- 1ª COLUNA -->
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">ENDEREÇO</label>
+                        <!-- ENDEREÇO -->
+                        <input type="text" class="form-control" name="emailCadCliente"
+                          placeholder="{{ cliente.enderecoCadCliente }}" [(ngModel)]="cadastro.enderecoCadCliente"
+                          disabled />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">E-MAIL</label><!-- EMAIL -->
+                        <input type="email" class="form-control" placeholder="{{ cliente.emailCadCliente }}"
+                          name="emailCadCliente" [(ngModel)]="cadastro.emailCadCliente" disabled />
+                      </div>
+                    </div>
+
+                    <div class="col coluna2">
+                      <!--COLUNA 2-->
+
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">TELEFONE</label><!-- TELEFONE -->
+                        <input type="tel" placeholder="{{ cliente.telCadCliente }}" class="form-control"
+                          name="telCadCliente" [(ngModel)]="cadastro.telCadCliente" disabled />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">CPF</label><!-- CPF -->
+                        <input type="number" class="form-control" placeholder="{{ cliente.cpfCadCliente }}"
+                          name="cpfCadCliente" value="cpfCadCliente" [(ngModel)]="cadastro.cpfCadCliente" disabled />
+                      </div>
+                    </div>
+
+                    <div class="modal-footer">
+                      <!-- BOTÃO 'FECHAR' DO MODAL -->
+
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Fechar
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>

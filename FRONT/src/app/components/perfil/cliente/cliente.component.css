@@ -1,0 +1,193 @@
+/*HEADER*/
+.fundonav {
+  background-color: #ffd13a;
+  padding: 0px;
+}
+.logo {
+  /*IMAGEM LOGO*/
+  margin-left: 19vw;
+  margin-bottom: -5%;
+  margin-top: -2%;
+}
+
+
+
+
+
+
+      /*CORPO DA PAGINA PERFIL-CLIENTE*/
+      /*CORPO DA PAGINA PERFIL-CLIENTE*/
+      /*CORPO DA PAGINA PERFIL-CLIENTE*/
+
+body {
+  background-image: url("src/assets/img/fundocachorro.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 110vh;
+}
+.fundo { /*PARTE LARANJA QUE HOSPEDA AS INFORMAÇÕES DA PÁGINA*/
+  width: 50vw;
+  height: 38vh;
+  background-color: rgba(255, 219, 152, 0.808);
+  box-shadow: 2px 2px 10px rgb(117, 117, 117);
+  border-radius: 10px;
+  margin-top: 2vh;
+  margin-left: 25vw;
+}
+.margin-cliente { /*LINHA PARA AJUSTAR A POSIÇÃO DOS DADOS DO CLIENTE E OS BOTÕES*/
+  padding-top: 6vh;
+  width: 50vw;
+  margin-left: 0.02vw;
+  text-align: center;
+  align-items: center;
+}
+
+.margin-dados { /*LINHA PARA AJUSTAR A POSIÇÃO DOS DADOS De INCLUSÃO DE PRODUTOS*/
+  padding-top: 6vh;
+  margin-left: 3vw;
+}
+
+.usuario-perfil { /*LUGAR ONDE A IMAGEM DO CLIENTE ESTARÁ*/
+  font-size: 15px;
+  width: 50vw;
+  margin-left: 0.02vw;
+  text-align: center;
+  align-items: center;
+}
+.padding { /*ESPAÇAMENTO UTILIZADO NO SITE*/
+  padding-top: 25px;
+  margin-left: -6.5vw;
+}
+
+
+
+
+
+        /*BOTÕES MENU DO PERFIL*/
+        /*BOTÕES MENU DO PERFIL*/
+        /*BOTÕES MENU DO PERFIL*/
+
+ul{/*ESTRUTURA EM QUE OS BOTÕES, PARA ACESSAR OS MODALS, ESTÃO*/
+  margin-top: 3vh;
+  margin-left: 6vw;
+}
+
+.btnpg{ /*BOTÃO PÁGINA INICIAL*/
+  margin-right: 5vw;
+  background-color: #ffae00;
+  color: #000000;
+  border-color: #ff5e00;
+  width: 12vw;
+  margin-left: 2.5vw;
+}
+.btnmds{ /*BOTÃO MODAL MEUS DADOS*/
+  background-color: #ffae00;
+  color: #000000;
+  border-color: #ff5e00;
+  width: 12vw;
+}
+
+.btnpg:hover{/*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE PÁGINA INICIAL*/
+  transform: scale(1.1);
+  transition: transform .2s ease;
+}
+.btnmds:hover{/*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE MEUS DADOS*/
+  transform: scale(1.1);
+  transition: transform .2s ease;
+}
+
+
+
+
+
+
+
+          /* PARTE INTERNA MODAL'DADOS' */
+          /* PARTE INTERNA MODAL'DADOS' */
+          /* PARTE INTERNA MODAL'DADOS' */
+
+.bi-file-person-fill{ /*IMAGEM DE USER DO MODAL, ACIMA DO 'ALTERAR DADOS' */
+  margin-left: 30vw;
+}
+.close{ /*BOTÃO 'X' PARA SAIR DO MODAL*/
+  margin-right: -18vw;
+  margin-top: -11vh;
+  color: black;
+}
+#meusDados{/*TEXTO 'MEUS DADOS' */
+  margin-top: 1vh;
+  margin-left: 56vh;
+  width: 10vw;
+}
+
+.btn-info{/*BOTÃO 'EDITAR PERFIL' DENTRO DO MODAL*/
+  margin-left: 8vw;
+  margin-top: -15vh;
+  background-color: #ffd13a;
+  border-color: #ff9d00;
+  color: #000000;
+}
+
+.modal-body{/*CORPO DO MODAL ONDE LOCALIZAM AS INFORMAÇÕES*/
+  margin-left: -33vw;
+  margin-top: 7vh;
+}
+
+.modal-content{ /* CONTAINER DO MODAL, QUE POSSUI COR AMARELADA */
+  width: 50vw;
+  height: 50.2vh;
+  background-color: rgba(255, 219, 152, 0.808);
+  box-shadow: 2px 2px 10px rgb(117, 117, 117);
+  margin-left: -11.7vw;
+  margin-top: 17vh;
+}
+
+:disabled{
+  background-color: transparent;
+}
+
+.nomecompleto { /*CONFIGURAÇÃO DO INPUT DO NOME COMPLETO*/
+  width: 44vw;
+  margin-left: 3.7vw;
+}
+.coluna1 { /*COLUNA 1 QUE POSSUI ENDEREÇO, EMAIL E SENHA*/
+  margin-top: -5vh;
+  margin-right: -10px;
+}
+.coluna1 input { /*INPUT DA COLUNA 1*/
+  width: 400px;
+}
+.coluna2{ /*COLUNA QUE POSSUI TELEFONE E CPF*/
+  margin-top: -5.2vh;
+  margin-right: 30px;
+}
+input { /*PARTE DO INPUT, CAMPO DE ESCREVER*/
+  width: 100%;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background-color: transparent;
+  border-radius: 0px;
+}
+input:focus { /*CONFIGURAÇÃO AO SELECIONAR O INPUT*/
+  background-color: transparent;
+  box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+  border-bottom: 2px solid rgb(23, 162, 184);
+  border-radius: 0px;
+}
+
+.btn-secondary{ /*BOTÃO 'FECHAR' */
+  width: 13vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 15vw;
+  background-color: #ffae00;
+  border-color: #ffae00;
+  color: #000000;
+  }
+
+.modal-footer{ /*PARTE INTERNA DO BOTÃO *FECHAR*  */
+  border: none;
+}

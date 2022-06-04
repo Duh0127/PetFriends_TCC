@@ -1,0 +1,193 @@
+<body>
+  <nav class="navbar navbar-expand navbar-dark fundonav">
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand ">
+        <img src="/assets/img/logovert.png" routerLink="" width="80" height="80" class="d-inline-block logo">
+      </a>
+      <div class="form-group container-xl ">
+      </div>
+    </nav>
+  </nav>
+
+    <div class="container-fluid">
+
+
+      <!--PRIMEIRO CARD-->
+          <form>
+              <div class="row">
+                  <div class="fundo-tudo shadow-1">
+                      <div class="usuario-perfil">
+                          <!--Campo de imagem redondo --><svg class="bd-placeholder-img rounded-circle" width="120" height="120"
+                          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                          preserveAspectRatio="xMidYMid slice" focusable="false">
+                          <title>Placeholder</title>
+                          <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">
+                          </text>
+                          </svg>
+                          <h4>Bem-vindo, Usuario</h4>
+                          <b>
+                          <p>usuario@hotmail.com</p>
+                          <button type="button" routerLink="/plano-premium" class="btn btn-dark">Obter Plano Premium</button>
+                          </b>
+                      </div>
+                  </div>
+              </div>
+
+
+              <div class="row">
+                  <div class="fundo-lista padding">
+                      <!--TERCEIRO CARD-->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart-fill"
+                      viewBox="0 0 16 16">
+                      <path
+                          d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                      </svg>
+                      <h5 class="text-pedidos">MEUS PRODUTOS</h5>
+                      <form>
+
+                      <table class="table table-dark mt-5 bordinha">
+                          <thead>
+                          <tr>
+                              <th scope="col">ID</th>
+
+                              <th scope="col">Codigo</th>
+
+                              <th scope="col">Nome Produto</th>
+                              <!--NOME PRODUTO-->
+                              <th scope="col">Quantidade</th>
+                              <!--QUANTIDADE PRODUTO-->
+                              <th scope="col">Preço</th>
+                              <!--PREÇO PRODUTO-->
+                              <th scope="col">Associado</th>
+                              <!--NOME ASSOCIADO-->
+                              <th scope="col">Ações</th>
+                          </tr>
+                          </thead>
+
+                          <tbody>
+                          <tr *ngFor="let produto of listarProdutos">
+                              <td>{{ produto.produtoId}}</td>
+                              <td>{{ produto.codigoProduto}}</td>
+                              <td>{{ produto.nomeProduto}}</td>
+                              <td>{{ produto.qtdProduto}}</td>
+                              <td>{{ produto.precoProduto | currency: 'BRL'}}</td>
+                              <td>{{ produto.fabricanteProduto}}</td>
+                              <td>
+                              <button class="btn btn-secondary" routerLink="{{produto.produtoId}}">
+                                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16"
+                                  fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                  <path
+                                      d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                  <path fill-rule="evenodd"
+                                      d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                  </svg>
+                              </button>
+                              <button class="btn btn-outline-warning ml-2">
+                                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16"
+                                  fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd"
+                                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                  </svg>
+                              </button>
+                              </td>
+                          </tr>
+
+                          </tbody>
+                      </table>
+
+                      </form>
+                  </div>
+
+              </div>
+
+              <div class="row">
+                  <div class="fundo2 padding">
+                      <!--SEGUNDO CARD-->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="" height="45" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                      </svg>
+                      <h5 class="text-usuario" style="margin-top: 10px;">ALTERAR PRODUTO</h5>
+                      <form>
+
+                        <div class="row"><!--ROW1-->
+                          <div class="col coluna1">
+                            <!--COLUNA 1-->
+                            <div class="nomecompleto form-group">
+                              <label for="exampleInputEmail1">NOME:</label>
+                              <input type="text" class="form-control" name="" placeholder="Digite o nome do produto"
+                              [(ngModel)]="produto.nomeProduto">
+                            </div>
+
+                            <div class="form-group" style="margin-top: 40px; margin-left: 30px;">
+                              <label for="exampleInputEmail1">PREÇO:</label>
+                              <input type="number" class="form-control" name="" placeholder="Digite o preço do produto"
+                              [(ngModel)]="produto.precoProduto">
+                            </div>
+
+                          </div><!--COLUNA 1-->
+
+
+
+                          <div class="col coluna2"><!--COLUNA 2-->
+
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">QUANTIDADE:</label>
+                              <input type="number" min="0" placeholder="Digite a quantidade" class="form-control" name=""
+                              [(ngModel)]="produto.qtdProduto">
+                            </div>
+
+                            <div class="form-group" style="margin-top: 40px;">
+                              <label for="exampleInputEmail1">ASSOCIADO:</label>
+                              <input type="text" class="form-control" placeholder="Digite o nome do associado:" name=""
+                              [(ngModel)]="produto.fabricanteProduto">
+                            </div>
+
+                          </div><!--COLUNA 2-->
+
+                        </div><!--ROW1-->
+
+                        <div class="form-group desc">
+                          <label for="exampleInputEmail1">DESCRIÇÃO:</label>
+                          <input type="email" class="form-control" name="" placeholder="Digite a descrição do produto"
+                          [(ngModel)]="produto.descricaoProduto">
+                        </div>
+
+
+                      </form>
+                      <button type="button" class="btn btn-warning mt-6 button" (click)="salvarProduto()">Alterar</button>
+                    </div>
+              </div>
+      </form>
+  </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
