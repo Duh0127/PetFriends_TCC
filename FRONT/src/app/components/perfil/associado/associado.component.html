@@ -27,6 +27,10 @@
 
             <p ngFor="let associado of listarAssociado">{{associado.emailCadAssociado}}</p>
 
+            <!-- BOTÃO PARA LOGOUT -->
+            <button type="button" class="btn btn-warning" style="margin-top: -15px;" (click)="sair()">
+              LOGOUT
+            </button>
           </div>
 
         </div>
@@ -175,6 +179,7 @@
                     </svg>
                   </button>
                 </td>
+                
               </tr>
             </tbody>
           </table>

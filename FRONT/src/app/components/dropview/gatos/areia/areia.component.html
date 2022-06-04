@@ -3,15 +3,39 @@
     <a class="navbar-brand ">
       <img src="/assets/img/logovert.png" routerLink="" width="90" height="90" class="d-inline-block logo">
     </a>
+
     <div class="form-group container-xl ">
-      <input type="text" class="form-control box-search pesquisa" placeholder="Pesquise no PetFriends">
-      <svg xmlns="http://www.w3.org/2000/svg" id="login" class="zoom" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16" routerLink="/login-cliente">
+
+      <ng-autocomplete
+          [data]="data"
+          [searchKeyword]="keyword"
+          placeholder="Pesquise no PetFriends"
+          (selected)='itemSelecionadoPesquisa()'
+          [itemTemplate]="itemTemplate"
+          [notFoundTemplate]="notFoundTemplate">
+    </ng-autocomplete>
+
+      <ng-template #itemTemplate let-item>
+        <a [innerHTML]="item.name"></a>
+        </ng-template>
+
+        <ng-template #notFoundTemplate let-notFound>
+        <div [innerHTML]="notFound"></div>
+        </ng-template>
+
+      <svg xmlns="http://www.w3.org/2000/svg" id="login" class="zoom" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16" routerLink="/perfil-associado">
         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
       </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket2-fill" viewBox="0 0 16 16" id="carrinho" class="zoom" routerLink="/reserva">
-        <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z"/>
+
+      <b>{{totalProduto}}</b>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  class="bi bi-basket2-fill" viewBox="0 0 16 16" id="carrinho" class="zoom" routerLink="/reserva">
+        <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z" />
       </svg>
+
+
+
     </div>
+
     <ul class="nav tp">
       <li class="nav-item dropdown embaixo" id="embaixo">
         <a class="nav-link dropdown-toggle text-dark zoom" id="navbarDropdown" role="button" data-toggle="dropdown">Cachorros</a>
@@ -23,9 +47,11 @@
           <a class="dropdown-item zoomdrop" routerLink="/petiscos">Petiscos</a>
         </div>
       </li>
+
       <li class="nav-item mt-2" id="embaixo">
         <a></a>
       </li>
+
       <li class="nav-item dropdown embaixo" id="embaixo">
         <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gatos</a>
         <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
@@ -36,9 +62,12 @@
           <a class="dropdown-item zoomdrop" routerLink="/transporte">Transporte</a>
         </div>
       </li>
+
+
       <li class="nav-item mt-2" id="embaixo">
         <a></a>
       </li>
+
       <li class="nav-item dropdown embaixo" id="embaixo">
         <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Brinquedos</a>
         <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
@@ -47,9 +76,11 @@
           <a class="dropdown-item zoomdrop" routerLink="/varinhas">Varinhas</a>
         </div>
       </li>
+
       <li class="nav-item mt-2" id="embaixo">
         <a></a>
       </li>
+
       <li class="nav-item dropdown embaixo" id="embaixo">
         <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ração</a>
         <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
@@ -58,9 +89,11 @@
           <a class="dropdown-item zoomdrop" routerLink="/racao-diet">Ração Diet</a>
         </div>
       </li>
+
       <li class="nav-item mt-2" id="embaixo">
         <a></a>
       </li>
+
       <li class="nav-item dropdown embaixo" id="embaixo">
         <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acessórios</a>
         <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
@@ -70,9 +103,11 @@
         </div>
       </li>
     </ul>
+
   </nav>
-  <input type="text" class="form-control box-search pesquisa2" placeholder="Pesquise no PetFriends">
 </nav>
+
+
 
 <body class="container-fluid" >
 

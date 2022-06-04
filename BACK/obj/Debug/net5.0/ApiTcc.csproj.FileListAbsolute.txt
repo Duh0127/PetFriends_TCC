@@ -702,3 +702,8 @@ C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ApiTcc.dll
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ref\ApiTcc.dll
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ApiTcc.pdb
 C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\Debug\net5.0\ApiTcc.genruntimeconfig.cache
+C:\Users\RXpari\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\publish\publish\web.config
+C:\Users\RXpari\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\publish\publish\ApiTcc.deps.json
+C:\Users\RXpari\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\publish\publish\ApiTcc.runtimeconfig.json
+C:\Users\RXpari\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\publish\publish\appsettings.Development.json
+C:\Users\RXpari\Desktop\TCC_ETEC - GIT\BACK\bin\Debug\net5.0\publish\publish\appsettings.json

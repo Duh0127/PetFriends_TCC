@@ -26,6 +26,11 @@
           <p class="email-cliente" ngFor="let associado of listarAssociado" *ngFor="let cliente of listarCliente">
             {{ cliente.emailCadCliente }}
           </p>
+
+          <!-- BOTÃO PARA LOGOUT -->
+          <button type="button" class="btn btn-warning" style="margin-top: -15px;" (click)="sair()">
+            LOGOUT
+          </button>
         </div>
       </div>
 
@@ -42,6 +47,7 @@
           Meus Dados
         </button>
         <!-- BOTÃO MODAL MEUS DADOS -->
+
       </ul>
 
 

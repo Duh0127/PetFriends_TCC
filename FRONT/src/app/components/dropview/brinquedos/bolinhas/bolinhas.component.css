@@ -20,20 +20,27 @@
   height: 100vh;
   width: 100%;
 }
-.fundonav{
+.fundonav{/* FUNDO DA NAVBAR */
   background-color: #ffd13a;
   padding: 0px;
   margin: 0px;
 }
 
-.dropdown-menu{
+
+
+.dropdown-menu{/* DROPVIEW DOS CONTEÚDOS DA NAVBAR */
   background-color: rgb(254, 255, 199);
   border: 2px solid rgb(255, 255, 255);
 }
 
+
+
 .logo{ /*foto do logo*/
   margin-left: 19vw;
 }
+
+
+
 
 .box-search{ /*barra de pesquisa*/
   margin-left: -5%;
@@ -45,10 +52,14 @@
   box-shadow: 0px 5px 6px rgba(255, 255, 255, 0.274);
 }
 
+
+
 .tp{ /*topicos que estruturam os outros*/
   margin-left: 37.7vw;
   padding-bottom: 0.6%;
 }
+
+
 
 #embaixo{ /*topicos embaixo da barra de pesquisa*/
   margin-right: 11.9vw;
@@ -56,20 +67,37 @@
   margin-bottom: -1%;
 }
 
-#login{
+
+
+#login{/* LOGIN  */
   margin-top: 2%;
   width: 3%;
   height: 3.5%;
   cursor: pointer;
 }
 
-#carrinho{
+
+
+#carrinho{/* CARRINHO DE RESERVA */
   margin-top: 2%;
-  margin-right: 10%;
+  margin-right: 20%;
   width: 30px;
   height: 34px;
   cursor: pointer;
 }
+
+
+
+b{
+  margin-right: -5.7vw;
+}
+
+
+
+
+
+
+
 /*------RESPONSIVO--------*/
 .pesquisa2{
   margin: 0px;

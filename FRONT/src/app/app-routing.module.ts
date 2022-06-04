@@ -57,7 +57,7 @@ const routes: Routes = [
     {path:'recuperacao-senha', component:SenhaComponent},
     {path:'validacao-senha', component:ValidacaoComponent},
     {path:'redefinicao-senha', component:RedefinicaoComponent},
-    {path:'desc-produto', component:DescricaoProdutoComponent},
+    {path:'desc-produto/:produtoId', component:DescricaoProdutoComponent},
 
     {path:'perfil-cliente', component:ClienteComponent,
     canActivate: [AuthGuard]},

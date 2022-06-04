@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ICadastroAssociado } from 'src/app/model/ICadastroAssociado.model';
 import { IProduto } from 'src/app/model/IProduto.model';
+import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 import { CadastroAssociadoService } from 'src/app/services/cadassoc.service';
 import { ProdutosService } from 'src/app/services/produtos.service';
 
@@ -28,6 +29,7 @@ export class AssociadoComponent implements OnInit {
   constructor(
     private cadastroService: CadastroAssociadoService,
     private produtosService: ProdutosService,
+    private autenticacaoService: AutenticacaoService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -65,5 +67,11 @@ export class AssociadoComponent implements OnInit {
     });
     this.router.navigate(['']);
   };
+
+  sair(){
+    this.autenticacaoService.LimparToken();
+    this.router.navigate(["/login-cliente"])
+  }
+
 
 }

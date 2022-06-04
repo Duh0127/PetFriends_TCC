@@ -46,6 +46,9 @@
     padding: 0px;
     margin: 0px;
 }
+b{
+  margin-right: -5.7vw;
+}
 
 .dropdown-menu {
     background-color: rgb(254, 255, 199);

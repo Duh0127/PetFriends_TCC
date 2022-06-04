@@ -34,13 +34,9 @@ export class HomeComponent implements OnInit {
       Object.assign(a, {qtdProduto: 1, total: a.precoProduto});
       });
     })
-}
+  }
 
-    // carregarProdutos() : void{
-    //   this.produtosService.buscarTodos().subscribe(retorno => {
-    //     this.listarProdutos = retorno;
-    //   })
-    // };
+
 
     addtoCart(produto : any){
       this.carrinhoService.addtoCar(produto);

@@ -32,6 +32,20 @@ import { IProduto } from '../model/IProduto.model';
      );
    }
 
+  //  buscarPorId(id: number) : Observable<IProduto> {
+  //   return this.http.get<IProduto>(`${this.baseUrl}/${id}`).pipe(
+  //     map(retorno => retorno),
+  //    // catchError(erro => this.exibirErro(erro))
+  //   );
+  // }
+
+  buscarPorId(produtoId: number) {
+    return this.http.get<IProduto>(`${this.baseUrl}/${produtoId}`).pipe(
+      map(retorno => retorno),
+     // catchError(erro => this.exibirErro(erro))
+    );
+  }
+
      cadastrar(produto: any): Observable<IProduto>{
       return this.http.post<any>(`${this.baseUrl}`, produto).pipe(
         map(retorno => retorno),
@@ -48,33 +62,26 @@ import { IProduto } from '../model/IProduto.model';
 
 
 
-    buscarPorId(id: number) : Observable<IProduto> {
-      return this.http.get<IProduto>(`${this.baseUrl}/GetId`).pipe(
-        map(retorno => retorno),
-        //catchError(erro => this.exibirErro(erro))
-      );
-    }
+    // buscarPorId(id: number) : Observable<IProduto> {
+    //   return this.http.get<IProduto>(`${this.baseUrl}/GetId`).pipe(
+    //     map(retorno => retorno),
+    //     //catchError(erro => this.exibirErro(erro))
+    //   );
+    // }
 
 
-     atualizar( produto: IProduto): Observable<IProduto> {
-     return this.http.put<IProduto>(`${this.baseUrl}/`, produto).pipe(
-         map(retorno => retorno),
-         //catchError(erro => this.exibirErro(erro))
-       );
-     }
+      atualizar( produto: IProduto): Observable<IProduto> {
+      return this.http.put<IProduto>(`${this.baseUrl}/`, produto).pipe(
+          map(retorno => retorno),
+          //catchError(erro => this.exibirErro(erro))
+        );
+      }
 
 
 
     // listarProdutos(id: number){
     //   return this.http.get<IProduto>(this.URL);
     //   }
-
-    // buscarPorId(id: number) : Observable<IProduto> {
-    //   return this.http.get<IProduto>(`${this.URL}/${id}`).pipe(
-    //     map(retorno => retorno),
-    //    // catchError(erro => this.exibirErro(erro))
-    //   );
-    // }
 
 
     // atualizar( produto: IProduto): Observable<IProduto> {

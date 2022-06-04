@@ -28,7 +28,8 @@ export class HeaderComponent implements OnInit {
     },
     {
       id: 4,
-      name: "Ração"
+      name: "Ração",
+      RouterLink: "/racao-seca"
     },
     {
       id: 5,
@@ -51,20 +52,16 @@ export class HeaderComponent implements OnInit {
   public totalProduto : number = 0;
 
 
-  constructor(private router: Router, 
+  constructor(private router: Router,
               private autenticacaoService: AutenticacaoService,
               private cartService : CarrinhoService) { }
 
   ngOnInit(): void {
     this.cartService.getProducts().subscribe (res => {
       this.totalProduto = res.length
+
     })
   }
-
-
-
-
-
 
   sair(){
     this.autenticacaoService.LimparToken();

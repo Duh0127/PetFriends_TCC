@@ -15,9 +15,10 @@ export class CardProdutoComponent implements OnInit {
   @Input() nomeProduto: string = '';
   @Input() precoProduto: number = 0;
   @Input() associados: string = '';
-  
-  listarProdutos: IProduto[] = [];
-  
+
+
+  public listarProdutos: any ;
+
   constructor(private produtosService : ProdutosService,
               private carrinhoService: CarrinhoService,
               private activatedRouter: ActivatedRoute,
@@ -33,13 +34,9 @@ export class CardProdutoComponent implements OnInit {
       Object.assign(a, {qtdProduto: 1, total: a.precoProduto});
       });
     })
-}
+  }
 
-  // carregarProdutos() : void{
-  //     this.produtosService.buscarTodos().subscribe(retorno => {
-  //       this.listarProdutos = retorno;
-  //     })
-  //   };
+
 
   addtoCart(produto : any){
       this.carrinhoService.addtoCar(produto);

@@ -15,7 +15,7 @@ body {
   color: rgb(248, 183, 61);
 }
 
-
+botaocardslide
 
 /*TEXTO "SERVIÇOS PARA SEUS PETS"*/
 .margem-titulo2 {
@@ -54,12 +54,33 @@ body {
   width: 40vw;
   color: black;
 }
-.mar-card-slider{/*MARGEN DO PRIMEIRO CARD*/
+
+.cards-slider{
   margin-left: 100px;
-}
-.mar2-card-slider{/*MARGEN DO SEGUNDO CARD*/
   margin-right: 20px;
+  align-items: center;
 }
+
+.mar-card-slider{/*MARGEN DO PRIMEIRO CARD*/
+}
+
+.mar2-card-slider{/*MARGEN DO SEGUNDO CARD*/
+  margin-right: 100px;
+}
+
+.botaocard{/* BOTÃO RESERVAR */
+  background-color: rgb(255, 208, 0);
+  border: none;
+  margin-top: 1px;
+  margin-left: 6.5px;
+  width:246px;
+  box-shadow: 0px 0px 3px black;
+}
+.botaocard:hover{/* AO PASSAR O MOUSE EM CIMA */
+  transform: scale(1.001);
+  transition: transform .1s ease;
+}
+
 
 
 
