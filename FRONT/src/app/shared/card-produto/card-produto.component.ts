@@ -2,6 +2,7 @@ import { ProdutosService } from './../../services/produtos.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { IProduto } from 'src/app/model/IProduto.model';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CarrinhoService } from 'src/app/services/carrinho.service';
 
 @Component({
   selector: 'app-card-produto',
@@ -14,19 +15,28 @@ export class CardProdutoComponent implements OnInit {
   @Input() nomeProduto: string = '';
   @Input() precoProduto: number = 0;
   @Input() associados: string = '';
-  
-  listarProdutos: IProduto[] = [];
-  
+
+
+  public listarProdutos: any ;
+
   constructor(private produtosService : ProdutosService,
+              private carrinhoService: CarrinhoService,
               private activatedRouter: ActivatedRoute,
               private router: Router) { }
 
   ngOnInit(): void {
-    this.carregarProdutos();
-    }
-    carregarProdutos() : void{
-      this.produtosService.buscarTodos().subscribe(retorno => {
-        this.listarProdutos = retorno;
-      })
-    };
+
+
+    this.produtosService.buscarTodos().subscribe( res => {
+      this.listarProdutos = res;
+
+    this.listarProdutos.forEach((a:any) => {
+      Object.assign(a, {qtdProduto: 1, total: a.precoProduto});
+      });
+    })
+  }
+
+
+
+
 }

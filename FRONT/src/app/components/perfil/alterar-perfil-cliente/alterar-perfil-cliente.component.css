@@ -1,0 +1,294 @@
+body {
+  /*NAVBAR DA PÁGINA*/
+  background-image: url("src/assets/img/fundocachorro.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 110vh;
+}
+
+.fundonav {
+  /*HEADER*/
+  background-color: #ffd13a;
+  padding: 0px;
+}
+
+.logo {
+  /*FOTO DO LOGO*/
+  margin-left: 19vw;
+  margin-bottom: -5%;
+  margin-top: -2%;
+}
+
+.fundo {
+  /*CARD DE BEM VINDO*/
+  background-color: transparent;
+  width: 50vw;
+  height: 23vh;
+  background-color: rgba(255, 219, 152, 0.808);
+  box-shadow: 2px 2px 10px rgb(117, 117, 117);
+  border-radius: 10px;
+  margin-top: 2vh;
+  margin-left: 25vw;
+}
+
+.usuario-perfil {
+  /*IMAGEM DO USUÁRIO E TEXTO COM NOME E EMAIL*/
+  margin: 0;
+}
+
+.usuario-cliente {
+  /*LUGAR ONDE A IMAGEM DO CLIENTE ESTARÁ*/
+  font-size: 15px;
+  width: 50vw;
+  text-align: center;
+  align-items: center;
+  padding-top: 3vh;
+}
+
+.fundo2 {
+  /*SEGUNDO CARD COM CAMPOS PARA ALTERAÇÃO DE DADOS*/
+  width: 50vw;
+  height: 56vh;
+  background-color: rgba(255, 219, 152, 0.808);
+  box-shadow: 2px 2px 10px rgb(117, 117, 117);
+  border-radius: 10px;
+  margin-top: -4.3vh;
+}
+
+.text-usuario {
+  /*TEXTO 'ALTERAR DADOS' E IMAGEM ACIMA*/
+  text-align: center;
+}
+
+.row {
+  /*ESPAÇAMENTO DE CIMA E MARGEM ESQUERDA DAS LINHAS DOS CAMPOS DAS INFOS*/
+  padding-top: 6%;
+  margin-left: 6%;
+  margin-top: 0;
+}
+
+.nomecompleto {
+  /*CORPO DO CARD*/
+  width: 41.3vw;
+  margin-left: 7.5%;
+}
+
+.coluna1 {
+  /*PRIMEIRA COLUNA E LINHA DAS INFORMAÇÕES*/
+  margin-top: -5%;
+}
+
+.coluna1 input {
+  /*INPUT COLUNA 1*/
+  width: 330px;
+}
+
+.coluna2 {
+  /*SEGUNDA COLUNA E LINHA DAS INFORMAÇÕES*/
+  margin-left: 1%;
+  margin-top: -5.2%;
+}
+
+.coluna2 input {
+  /*INPUT COLUNA 2*/
+  width: 330px;
+}
+
+.btn-primary {
+  /*BOTÃO 'ATUALIZAR PERFIL' DENTRO DO CARD*/
+  width: 15vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 7vw;
+  background-color: #ffd13a;
+  border-color: #ff9d00;
+  color: #000000;
+}
+
+.btn-warning {
+  /*BOTÃO 'DELETAR PERFIL' DENTRO DO CARD*/
+  width: 15vw;
+  margin-left: 4vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  background-color: #ff0000;
+  border-color: #ff0000;
+  color: #ffffff;
+}
+
+input {
+  /*CAMPOS DE ENTRADA DOS DADOS*/
+  width: 100%;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background-color: transparent;
+  border-radius: 0px;
+}
+
+input:focus {
+  /*FOCO DO MOUSE NOS CAMPOS DE ENTRADA DE DADOS*/
+  background-color: transparent;
+  box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+  border-bottom: 2px solid rgb(23, 162, 184);
+  border-radius: 0px;
+}
+
+.padding {
+  /*ESPAÇAMENTO DA BORDA SUPERIOR DA PÁGINA*/
+  padding-top: 25px;
+  margin-left: -6.5%;
+}
+
+/*RESPONSIVO*/
+@media (max-width: 424px) {
+  /* HEADER */
+
+  .fundonav {
+    /* FUNDO NAVBAR */
+    background-color: #ffd13a;
+    padding: 0px;
+  }
+  .logo {
+    /* IMG LOGO NAVBAR */
+    margin-left: 0vw;
+    margin-bottom: -5%;
+    margin-top: -2%;
+  }
+
+  /*BODY*/
+
+  body {
+    /*NAVBAR DA PÁGINA*/
+    background-image: url("src/assets/img/fundocachorro.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 120vh;
+  }
+
+  .fundo {
+    /*CARD DE BEM VINDO*/
+    background-color: transparent;
+    width: 90vw;
+    height: 23vh;
+    background-color: rgba(255, 219, 152, 0.808);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-left: 5vw;
+  }
+
+  .usuario-perfil {
+    /*IMAGEM DO USUÁRIO E TEXTO COM NOME E EMAIL*/
+    margin: 0;
+  }
+
+  .usuario-cliente {
+    /*LUGAR ONDE A IMAGEM DO CLIENTE ESTARÁ*/
+    font-size: 15px;
+    width: 90vw;
+    text-align: center;
+    align-items: center;
+    padding-top: 2vh;
+  }
+
+  .fundo2 {
+    /*SEGUNDO CARD COM CAMPOS PARA ALTERAÇÃO DE DADOS*/
+    width: 90.5vw;
+    height: 78%;
+    background-color: rgba(255, 219, 152, 0.808);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    border-radius: 10px;
+    margin-top: -2.3vh;
+  }
+
+  .text-usuario {
+    /*TEXTO 'ALTERAR DADOS' E IMAGEM ACIMA*/
+    text-align: center;
+  }
+
+  .row {
+    /*ESPAÇAMENTO DE CIMA E MARGEM ESQUERDA DAS LINHAS DOS CAMPOS DAS INFOS*/
+    padding-top: 6%;
+    margin-left: 6%;
+    margin-top: 0;
+  }
+
+  .nomecompleto {
+    /*CORPO DO CARD*/
+    width: 72vw;
+    margin-left: 9vw;
+    margin-top: 3vh;
+  }
+
+  .coluna1 {
+    /*PRIMEIRA COLUNA E LINHA DAS INFORMAÇÕES*/
+    margin-top: -5%;
+  }
+
+  .coluna1 input {
+    /*INPUT COLUNA 1*/
+    width: 72vw;
+  }
+
+  .coluna2 {
+    /*SEGUNDA COLUNA E LINHA DAS INFORMAÇÕES*/
+    margin-left: 1%;
+    margin-top: -5.2%;
+  }
+
+  .coluna2 input {
+    /*INPUT COLUNA 2*/
+    width: 72vw;
+  }
+
+  .btn-primary {
+    /*BOTÃO 'ATUALIZAR PERFIL' DENTRO DO CARD*/
+    width: 25vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 18vw;
+    background-color: #ffd13a;
+    border-color: #ff9d00;
+    color: #000000;
+  }
+
+  .btn-warning {
+    /*BOTÃO 'DELETAR PERFIL' DENTRO DO CARD*/
+    width: 25vw;
+    margin-left: 4vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    background-color: #ff0000;
+    border-color: #ff0000;
+    color: #ffffff;
+  }
+
+  input {
+    /*CAMPOS DE ENTRADA DOS DADOS*/
+    width: 72vw;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: transparent;
+    border-radius: 0px;
+  }
+
+  input:focus {
+    /*FOCO DO MOUSE NOS CAMPOS DE ENTRADA DE DADOS*/
+    background-color: transparent;
+    box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+    border-bottom: 2px solid rgb(23, 162, 184);
+    border-radius: 0px;
+  }
+
+  .padding {
+    /*ESPAÇAMENTO DA BORDA SUPERIOR DA PÁGINA*/
+    padding-top: 25px;
+    margin-left: -6.5%;
+  }
+}

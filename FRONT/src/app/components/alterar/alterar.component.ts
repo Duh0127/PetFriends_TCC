@@ -18,12 +18,14 @@ export class AlterarComponent implements OnInit {
     produtoId: 0,
     associadoId: 0,
     nomeProduto: '',
+    categoriaProduto: 0,
     codigoProduto: '',
     qtdProduto: 0,
     precoProduto: 0,
     fabricanteProduto: '',
     descricaoProduto: '',
-    produtoReservado: false,
+    produtoImagem: '',
+    enderecoCadAssociado: ''
   };
 
   listarAssociados: ICadastroAssociado[] = [];

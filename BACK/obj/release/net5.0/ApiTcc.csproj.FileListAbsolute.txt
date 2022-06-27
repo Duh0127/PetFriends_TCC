@@ -1,194 +1,129 @@
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\appsettings.Development.json
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\appsettings.json
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\ApiTcc.exe
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\ApiTcc.deps.json
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\ApiTcc.runtimeconfig.json
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\ApiTcc.runtimeconfig.dev.json
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\ApiTcc.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\ref\ApiTcc.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\ApiTcc.pdb
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Humanizer.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.Data.SqlClient.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.EntityFrameworkCore.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.Identity.Client.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.IdentityModel.Logging.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.IdentityModel.Protocols.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Microsoft.OpenApi.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Newtonsoft.Json.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\System.Configuration.ConfigurationManager.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\System.Runtime.Caching.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\System.Security.Cryptography.ProtectedData.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Angular\TCC\ApiTcc\bin\release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\ApiTcc.csproj.AssemblyReference.cache
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\ApiTcc.GeneratedMSBuildEditorConfig.editorconfig
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\ApiTcc.AssemblyInfoInputs.cache
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\ApiTcc.AssemblyInfo.cs
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\ApiTcc.csproj.CoreCompileInputs.cache
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cs
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cache
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\scopedcss\bundle\ApiTcc.styles.css
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\staticwebassets\ApiTcc.StaticWebAssets.Manifest.cache
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\ApiTcc.RazorTargetAssemblyInfo.cache
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\ApiTcc.csproj.CopyComplete
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\ApiTcc.dll
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\ref\ApiTcc.dll
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\ApiTcc.pdb
-C:\Angular\TCC\ApiTcc\obj\release\net5.0\ApiTcc.genruntimeconfig.cache
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\appsettings.Development.json
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\appsettings.json
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\ApiTcc.exe
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\ApiTcc.deps.json
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\ApiTcc.runtimeconfig.json
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\ApiTcc.runtimeconfig.dev.json
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\ApiTcc.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\ref\ApiTcc.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\ApiTcc.pdb
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Humanizer.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.Data.SqlClient.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.Identity.Client.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.OpenApi.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Newtonsoft.Json.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\System.Configuration.ConfigurationManager.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\System.Runtime.Caching.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\ApiTcc.csproj.AssemblyReference.cache
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\ApiTcc.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\ApiTcc.AssemblyInfoInputs.cache
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\ApiTcc.AssemblyInfo.cs
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\ApiTcc.csproj.CoreCompileInputs.cache
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\staticwebassets\ApiTcc.StaticWebAssets.Manifest.cache
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\staticwebassets\ApiTcc.StaticWebAssets.xml
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\scopedcss\bundle\ApiTcc.styles.css
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\ApiTcc.RazorTargetAssemblyInfo.cache
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\ApiTcc.csproj.CopyComplete
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\ApiTcc.dll
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\ref\ApiTcc.dll
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\ApiTcc.pdb
-C:\Users\Lucas\Desktop\ApiTcc\obj\release\net5.0\ApiTcc.genruntimeconfig.cache
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\Lucas\Desktop\ApiTcc\bin\release\net5.0\Newtonsoft.Json.Bson.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\appsettings.Development.json
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\publish\web.config
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\appsettings.json
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\publish\ApiTcc.deps.json
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\publish\ApiTcc.runtimeconfig.json
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\publish\appsettings.Development.json
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\publish\appsettings.json
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.exe
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.deps.json
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.runtimeconfig.json
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.runtimeconfig.dev.json
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ref\ApiTcc.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.pdb
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Humanizer.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.Data.SqlClient.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.Identity.Client.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.OpenApi.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Newtonsoft.Json.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Newtonsoft.Json.Bson.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.Configuration.ConfigurationManager.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.Runtime.Caching.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.csproj.AssemblyReference.cache
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.AssemblyInfoInputs.cache
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.AssemblyInfo.cs
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.csproj.CoreCompileInputs.cache
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\staticwebassets\ApiTcc.StaticWebAssets.Manifest.cache
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\staticwebassets\ApiTcc.StaticWebAssets.xml
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\scopedcss\bundle\ApiTcc.styles.css
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.RazorTargetAssemblyInfo.cache
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.csproj.CopyComplete
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ref\ApiTcc.dll
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.pdb
-C:\Users\Lucas\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.genruntimeconfig.cache
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\appsettings.Development.json
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\appsettings.json
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.exe
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.deps.json
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.runtimeconfig.json
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.runtimeconfig.dev.json
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ref\ApiTcc.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.pdb
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Humanizer.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.Identity.Client.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.OpenApi.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Newtonsoft.Json.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.Runtime.Caching.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.csproj.AssemblyReference.cache
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.AssemblyInfoInputs.cache
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.AssemblyInfo.cs
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\scopedcss\bundle\ApiTcc.styles.css
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\staticwebassets\ApiTcc.StaticWebAssets.Manifest.cache
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.RazorTargetAssemblyInfo.cache
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.csproj.CopyComplete
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ref\ApiTcc.dll
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.pdb
+C:\Users\Aluno\Desktop\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.genruntimeconfig.cache
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\appsettings.Development.json
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\appsettings.json
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.exe
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.deps.json
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.runtimeconfig.json
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.runtimeconfig.dev.json
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\ref\ApiTcc.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\ApiTcc.pdb
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Humanizer.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.Identity.Client.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Microsoft.OpenApi.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Newtonsoft.Json.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.Runtime.Caching.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\bin\release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.csproj.AssemblyReference.cache
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.AssemblyInfoInputs.cache
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.AssemblyInfo.cs
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\staticwebassets\ApiTcc.StaticWebAssets.Manifest.cache
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\staticwebassets\ApiTcc.StaticWebAssets.xml
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\scopedcss\bundle\ApiTcc.styles.css
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.RazorTargetAssemblyInfo.cache
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.csproj.CopyComplete
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\ref\ApiTcc.dll
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.pdb
+C:\Users\Lucas\Desktop\TCC\TCC_ETEC - GIT\BACK\obj\release\net5.0\ApiTcc.genruntimeconfig.cache

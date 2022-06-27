@@ -20,7 +20,7 @@ export class CadastroAssociadoService {
   cadastrar(associado: ICadastroAssociado): Observable<ICadastroAssociado> {
     return this.http.post<ICadastroAssociado>(`${this.baseUrl}/Registrar`, associado).pipe(
       map(retorno => retorno)
-      //catchError(erro => this.exibirErro(erro))
+
     );
   }
 
@@ -33,8 +33,22 @@ export class CadastroAssociadoService {
   buscarByUser() : Observable<ICadastroAssociado[]> {
     return this.http.get<ICadastroAssociado[]>(`${this.baseUrl}/GetByUser`).pipe(
     map(retorno => retorno)
-    //catchError(erro => this.exibirErro(erro))
+
    );
+  }
+
+  excluir(id: number): Observable<ICadastroAssociado> {
+    return this.http.delete<ICadastroAssociado>(`${this.baseUrl}/${id}`).pipe(
+      map(retorno => retorno),
+
+    );
+  }
+
+  atualizar(associado: ICadastroAssociado): Observable<ICadastroAssociado> {
+    return this.http.put<ICadastroAssociado>(`${this.baseUrl}/${associado.associadoId}`, associado).pipe(
+      map(retorno => retorno),
+
+    );
   }
 
 

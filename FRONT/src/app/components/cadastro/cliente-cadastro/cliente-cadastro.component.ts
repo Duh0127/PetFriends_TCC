@@ -2,7 +2,8 @@ import { ICadastroCliente } from './../../../model/ICadastroCliente.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CadastroClienteService } from 'src/app/services/cadcliente.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cliente-cadastro',
@@ -11,21 +12,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ClienteCadastroComponent implements OnInit {
 
-  cadastroForm!: FormGroup;
+  cadastroForm!: UntypedFormGroup;
 
-  // cadastro: ICadastroCliente = {
-  //   clienteId: 0,
-  //   nomeCadCliente: '',
-  //   enderecoCadCliente: '',
-  //   emailCadCliente: '',
-  //   telCadCliente: '',
-  //   cpfCadCliente: '',
-  //   senhaCadCliente: ''
-  // };
 
 
   constructor(private cadastroService: CadastroClienteService,
-              private formBuilder: FormBuilder,
+              private formBuilder: UntypedFormBuilder,
               private router: Router) { }
 
   ngOnInit(): void {
@@ -49,16 +41,28 @@ export class ClienteCadastroComponent implements OnInit {
 
     this.cadastroService.cadastrar(dadosCadastro).subscribe(cadastro => {
       if (cadastro) {
-        alert('Cliente Cadastrado com Sucesso');
+        Swal.fire({icon: 'success',
+        title: 'Cliente Cadastrado com Sucesso',
+        text: 'Entre agora',
+        showConfirmButton: true,
+        confirmButtonColor: '#ffd13a'});
         this.router.navigate(['/login-cliente']);
       } else {
-        alert('Parabéns SQL');
+        Swal.fire({icon: 'error',
+        title: 'Falha ao Cadastrar Cliente',
+        text: 'Algo deu errado',
+        showConfirmButton: true,
+        confirmButtonColor: '#ffd13a'});
       }
    }, error => {
      console.log(error);
-     alert('erro interno do sistema');
+
+     Swal.fire({icon: 'error',
+      title: 'Email de usuário já existe!',
+      showConfirmButton: true,
+      confirmButtonColor: '#ffd13a',});
    });
-    // this.router.navigate(['']);
+
   }
 
 }

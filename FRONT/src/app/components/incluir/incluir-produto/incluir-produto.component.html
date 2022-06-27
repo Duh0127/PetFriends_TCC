@@ -1,109 +1,238 @@
 <body>
-
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand navbar-dark fundonav">
     <nav class="navbar navbar-light">
-      <a class="navbar-brand ">
-        <img src="/assets/img/logovert.png" routerLink="" width="80" height="80" class="d-inline-block logo">
+      <a class="navbar-brand">
+        <img
+          src="/assets/img/logovert.png"
+          routerLink=""
+          width="80"
+          height="80"
+          class="d-inline-block logo"
+        />
       </a>
-      <div class="form-group container-xl ">
-      </div>
+      <div class="form-group container-xl"></div>
     </nav>
   </nav>
   <!-- NAVBAR -->
 
   <div class="container-fluid">
-
     <form>
       <div class="row">
         <!-- LINHA -->
         <div class="fundo-perfil shadow-1">
           <div class="associado-perfil">
+            <img src="/assets/img/dog.png" /><!-- ICONE DO PERFIL -->
 
-            <svg class="bd-placeholder-img rounded-circle" width="120" height="120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <rect width="100%" height="100%" fill="#777"></rect>
-            </svg><!-- ICONE DO PERFIL -->
-
-            <h4 *ngFor="let associado of listarAssociado">Bem-vindo, {{associado.nomeCadAssociado}}</h4>
+            <h4 *ngFor="let associado of listarAssociado">
+              Bem-vindo, {{ associado.nomeCadAssociado }}
+            </h4>
 
             <b>
-              <p *ngFor="let associado of listarAssociado">{{associado.emailCadAssociado}}</p>
-              <button type="button" routerLink="/plano-premium" class="btn btn-dark">Obter Plano Premium</button><!-- BOTÃO PARA ASSINAR UM PLANO PREMIUM -->
+              <p *ngFor="let associado of listarAssociado">
+                {{ associado.emailCadAssociado }}
+              </p>
             </b>
-
           </div>
         </div>
       </div>
 
-
       <div class="row">
         <div class="fundoincluir padding">
           <!--SEGUNDO BLOCO-->
-          <svg xmlns="http://www.w3.org/2000/svg" width="" height="35" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width=""
+            height="35"
+            fill="currentColor"
+            class="bi bi-arrow-up-circle-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+            />
           </svg>
 
-          <h5 class="text-incluir" style="margin-top: 10px;">INCLUIR PRODUTO</h5><!--  -->
+          <h5 class="text-incluir" style="margin-top: 10px">INCLUIR PRODUTO</h5>
+          <!--  -->
 
-          <div class="nomeproduto form-group" [formGroup]="incluirProdutoForm" (submit)="salvarProduto()"><!-- NOME DO PRODUTO -->
+          <div
+            class="nomeproduto form-group"
+            [formGroup]="incluirProdutoForm"
+            (submit)="salvarProduto()"
+          >
+            <!-- NOME DO PRODUTO -->
             <label for="exampleInputEmail1">NOME:</label>
-            <input type="text" class="form-control" name="nomeProduto" placeholder="Digite o nome do produto"
-              formControlName="nomeProduto">
+            <input
+              type="text"
+              class="form-control"
+              name="nomeProduto"
+              placeholder="Digite o nome do produto"
+              formControlName="nomeProduto"
+            />
           </div>
           <form>
-
-            <div class="row">
+            <div class="row inputs">
               <!--ROW1-->
               <div class="col coluna1">
                 <!--COLUNA 1-->
 
-                <div class="form-group" style="margin-left: 30px;" [formGroup]="incluirProdutoForm" (submit)="salvarProduto()"><!-- PREÇO DO PRODUTO -->
+                <div
+                  class="form-group"
+                  style="margin-left: 30px"
+                  [formGroup]="incluirProdutoForm"
+                  (submit)="salvarProduto()"
+                >
+                  <!-- PREÇO DO PRODUTO -->
                   <label for="exampleInputEmail1">PREÇO:</label>
-                  <input type="number" class="form-control" name="precoProduto" placeholder="Digite o preço do produto" formControlName="precoProduto">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="precoProduto"
+                    placeholder="Digite o preço do produto"
+                    formControlName="precoProduto"
+                    min="0"
+                  />
                 </div>
 
-                <div class="form-group div-codigo" style="margin-top: 40px; margin-left: 30px;" [formGroup]="incluirProdutoForm" (submit)="salvarProduto()"><!-- CÓDIGO DO PRODUTO -->
+                <div
+                  class="form-group div-codigo"
+                  style="margin-top: 40px; margin-left: 30px"
+                  [formGroup]="incluirProdutoForm"
+                  (submit)="salvarProduto()"
+                >
+                  <!-- CÓDIGO DO PRODUTO -->
                   <label for="exampleInputCode1">CÓDIGO: </label>
-                  <input type="number" class="form-control" name="codigoProduto" placeholder="Digite o codigo do produto" formControlName="codigoProduto">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="codigoProduto"
+                    placeholder="Digite o codigo do produto"
+                    formControlName="codigoProduto"
+                    min="1"
+                  />
                 </div>
-
               </div>
               <!--COLUNA 1-->
-
-
-
 
               <div class="col coluna2">
                 <!--COLUNA 2-->
 
-                <div class="form-group" [formGroup]="incluirProdutoForm" (submit)="salvarProduto()"><!-- QUANTIDADE DO PRODUTO -->
+                <div
+                  class="form-group"
+                  [formGroup]="incluirProdutoForm"
+                  (submit)="salvarProduto()"
+                >
+                  <!-- QUANTIDADE DO PRODUTO -->
                   <label for="exampleInputPassword1">QUANTIDADE:</label>
-                  <input type="number" min="0" placeholder="Digite a quantidade" class="form-control" name="qtdProduto"
-                    formControlName="qtdProduto">
+                  <input
+                    type="number"
+                    min="0"
+                    placeholder="Digite a quantidade"
+                    class="form-control"
+                    name="qtdProduto"
+                    min="1"
+                    formControlName="qtdProduto"
+                  />
                 </div>
 
-                <div class="form-group" style="margin-top: 40px;" [formGroup]="incluirProdutoForm" (submit)="salvarProduto()"><!-- FABRICANTE DO PRODUTO -->
+                <div
+                  class="form-group"
+                  style="margin-top: 40px"
+                  [formGroup]="incluirProdutoForm"
+                  (submit)="salvarProduto()"
+                >
+                  <!-- FABRICANTE DO PRODUTO -->
                   <label for="exampleInputEmail1">FABRICANTE:</label>
-                  <input type="text" class="form-control" placeholder="Digite o nome do fabricante" name=""
-                    formControlName="fabricanteProduto">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Digite o nome do fabricante"
+                    name="fabricanteProduto"
+                    formControlName="fabricanteProduto"
+                  />
                 </div>
 
+                <div
+                  for="formFile"
+                  class="form-group fotoProduto"
+                  [formGroup]="incluirProdutoForm"
+                  (submit)="salvarProduto()"
+                >
+                  <label for="exampleInputEmail1">IMAGEM DO PRODUTO</label>
+                  <br />
+                  <input
+                    class="form-control"
+                    type="file"
+                    id="formFile"
+                    #inputFile
+                  />
+                </div>
               </div>
               <!--COLUNA 2-->
-
             </div>
             <!--ROW1-->
 
-
-            <div class="form-group titulo-desc" [formGroup]="incluirProdutoForm" (submit)="salvarProduto()"><!-- DESCRIÇÃO DO PRODUTO -->
-              <label for="exampleInputEmail1">DESCRIÇÃO:</label>
-              <textarea class="form-control desc" id="exampleFormControlTextarea1" rows="5" formControlName="descricaoProduto"></textarea>
+            <div
+              class="form-group titulo-desc"
+              [formGroup]="incluirProdutoForm"
+              (submit)="salvarProduto()"
+            >
+              <!-- DESCRIÇÃO DO PRODUTO -->
+              <label for="exampleInputEmail1" class="titulo-categoria">CATEGORIA</label>
+              <br />
+              <select
+                id="categoria"
+                autofocus
+                style="width: 300px"
+                formControlName="categoriaProduto"
+              >
+                <option value="1">Comedouros & Bebedouros (Cachorros)</option>
+                <option value="2">Higiene (Cachorros)</option>
+                <option value="3">Farmacia (Cachorros)</option>
+                <option value="4">Ossinhos (Cachorros)</option>
+                <option value="5">Petiscos (Cachorros)</option>
+                <option value="6">Comedouros & Bebedouros (Gatos)</option>
+                <option value="7">Escovas & Pentes (Gatos)</option>
+                <option value="8">Areia (Gatos)</option>
+                <option value="9">Transporte (Gatos)</option>
+                <option value="10">Higiene (Gatos)</option>
+                <option value="11">Bolinhas</option>
+                <option value="12">Frisbees</option>
+                <option value="13">Varinhas</option>
+                <option value="14">Ração Seca</option>
+                <option value="15">Ração Umida</option>
+                <option value="16">Ração Diet</option>
+                <option value="17">Camas & Casinhas</option>
+                <option value="18">Coleiras, Guias & Peitorais</option>
+                <option value="19">Roupas</option>
+              </select>
             </div>
 
-
+            <div
+              class="form-group titulo-desc"
+              [formGroup]="incluirProdutoForm"
+              (submit)="salvarProduto()"
+            >
+              <!-- DESCRIÇÃO DO PRODUTO -->
+              <label for="exampleInputEmail1">DESCRIÇÃO:</label>
+              <textarea
+                class="form-control desc"
+                id="exampleFormControlTextarea1"
+                rows="5"
+                formControlName="descricaoProduto"
+                placeholder="Digite a descrição"
+              ></textarea>
+            </div>
           </form>
-          <button type="button" class="btn btn-warning mt-6 button" [disabled]="!incluirProdutoForm.valid" (click)="salvarProduto()">Incluir</button><!-- BOTÃO DE INCLUIR PRODUTO -->
-
+          <button
+            type="submit"
+            class="btn btn-warning mt-6 button"
+            [disabled]="!incluirProdutoForm.valid"
+            (click)="salvarProduto()"
+          >
+            Incluir</button
+          ><!-- BOTÃO DE INCLUIR PRODUTO -->
         </div>
       </div>
     </form>

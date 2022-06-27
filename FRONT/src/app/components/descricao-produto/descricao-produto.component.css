@@ -1,196 +1,431 @@
-#box-white {
-    background-color: #fff;
-    width: 50vw;
-    height: 65vh;
-    border-radius: 3%;
-    margin: auto;
-    margin-top: 5vh;
-    border: 5px solid rgba(255, 165, 0, 0.5);
-    margin-left: 25%;
-}
-
-.padding {
-    padding: 20px;
-}
-
 .inputmargin {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .button {
+  margin-left: 10%;
+  width: 80%;
+  height: 20%;
+  border: 0px;
+  font-size: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border-radius: 10px;
+}
+
+.radiobox {
+  margin-left: 31%;
+}
+
+.descricao {
+  margin-left: 20px;
+}
+
+.marginb {
+  margin-bottom: 40px;
+}
+
+.fundo {
+  /*PARTE LARANJA QUE HOSPEDA AS INFORMAÇÕES DA PÁGINA*/
+  width: 50vw;
+  height: auto;
+  margin-top: 5vh;
+  margin-left: 25vw;
+  padding: 30px;
+}
+
+.text-descricao {
+  margin-left: 5%;
+}
+
+/*CARDS SLIDER*/
+/*CARDS SLIDER*/
+
+.cards {
+  /*TAMANHO DE LARGURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+  width: 50vw;
+}
+
+.card-slider {
+  /*TAMANHO DE ALTURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+  height: 100vh;
+}
+
+.carousel {
+  /*MARGINS PARA ESPAÇOS DA BORDAS*/
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.button-slider {
+  /*POSICIONAMENTOS DOS BOTÕES*/
+  margin-top: 170px;
+  height: 50px;
+}
+
+.carousel-control-prev {
+  /*COR E TAMANHO DO BOTÃO DE PREVIA*/
+  width: 40vw;
+  color: black;
+}
+
+.carousel-control-next {
+  /*COR E TAMANHO DO BOTÃO DE NEXT*/
+  width: 40vw;
+  color: black;
+}
+
+.cards-slider {
+  margin-left: 35px;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.mar-card-slider {
+  margin-bottom: 200px;
+}
+
+.botaocard {
+  /* BOTÃO RESERVAR */
+  background-color: rgb(255, 208, 0);
+  border: none;
+  margin-top: 1px;
+  margin-left: 6.5px;
+  width: 12.85vw;
+  box-shadow: 0px 0px 3px black;
+}
+.botaocard:hover {
+  /* AO PASSAR O MOUSE EM CIMA */
+  transform: scale(1.001);
+  transition: transform 0.1s ease;
+}
+
+.fundonav {
+  /* FUNDO DA NAVBAR */
+  background-color: #ffd13a;
+  padding: 0px;
+  margin: 0px;
+}
+.navbar-light {
+  width: 100vw;
+}
+
+.logo {
+  /*foto do logo*/
+  position: absolute;
+  margin-left: 19vw;
+  margin-top: -3vh;
+}
+.divLinha {
+  margin-left: 33vw;
+  height: 10vh;
+}
+.topicos1 {
+  /*topicos que estruturam os outros*/
+  margin-left: 25vw;
+  width: 100%;
+}
+.dropdown-menu {
+  /* DROPVIEW DOS CONTEÚDOS DA NAVBAR */
+  background-color: rgb(254, 255, 199);
+  border: 2px solid rgb(255, 255, 255);
+}
+.embaixo {
+  margin-left: 3.5vw;
+}
+
+#login {
+  /* LOGIN  */
+  width: 3%;
+  height: 34px;
+  cursor: pointer;
+  margin-left: 5vw;
+}
+#carrinho {
+  /* CARRINHO DE RESERVA */
+  margin-right: 8vw;
+  width: 30px;
+  height: 34px;
+  cursor: pointer;
+}
+b {
+  margin-right: -4.5vw;
+  margin-top: -2%;
+}
+
+ng-autocomplete {
+  width: auto;
+}
+
+.tam-search {
+  width: 31.25vw;
+}
+
+/*FOOTER*/
+/*FOOTER*/
+
+.footer {
+  margin-top: 200px;
+  height: 21vh;
+  width: 99.6vw;
+  border-top: 2px solid rgb(223, 223, 223);
+  margin-right: -15px;
+  margin-left: -15px;
+  background-color: #ffff;
+}
+.coluna {
+  border: 2px solid rgb(223, 223, 223);
+  height: 10vh;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+}
+.sac:hover {
+  color: rgb(248, 183, 61);
+  cursor: pointer;
+}
+.rede {
+  text-align: center;
+}
+.redes {
+  align-items: center;
+  margin-top: 2%;
+}
+.image_redonda {
+  height: 50px;
+  width: 50px;
+  border-radius: 30%;
+}
+
+/*------RESPONSIVO--------*/
+.pesquisa2 {
+  margin: 0px;
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+
+.topicos2 {
+  display: none;
+  background-color: transparent;
+}
+
+@media (max-width: 424px) {
+  /*HEADER*/
+  .nav1 {
+    width: 104vw;
+  }
+
+  .nav2 {
+    width: 104vw;
+  }
+
+  .topicos1 {
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+    display: none;
+    background-color: transparent;
+  }
+
+  .topicos2 {
+    display: flex;
+  }
+  .tp {
+    margin-left: 10px;
+  }
+
+  .pesquisa {
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+    display: none;
+    background-color: transparent;
+  }
+
+  .pesquisa2 {
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 100vw;
+    display: block;
+  }
+
+  .logo {
+    margin-left: -10px;
+    margin-top: -75px;
+  }
+
+  #login {
+    margin-top: 33px;
+    margin-left: 100px;
+    width: 35px;
+    height: 39px;
+    cursor: pointer;
+  }
+
+  #carrinho {
+    margin-top: 30px;
+    margin-right: 1px;
+    width: 35px;
+    height: 39px;
+    cursor: pointer;
+  }
+
+  /*BODY*/
+
+  body {
+    /*base de tudo na home*/
+    width: 104vw;
+    height: 104vh;
+    background-color: rgba(255, 255, 255, 0.712);
+  }
+  .inputmargin {
+    margin-left: 20px;
+  }
+
+  .button {
     margin-left: 10%;
     width: 80%;
     height: 20%;
     border: 0px;
     font-size: 25px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
     border-radius: 10px;
-}
+  }
 
-.radiobox {
+  .radiobox {
     margin-left: 31%;
-}
+  }
 
-.descricao {
+  .descricao {
     margin-left: 20px;
-}
+  }
 
-.marginb {
+  .marginb {
     margin-bottom: 40px;
-}
+    width: 60vw;
+    margin-left: 7vw;
+  }
 
+  .imagem {
+    margin-bottom: 30px;
+    padding-left: 30px;
+  }
 
+  .fundo {
+    /*PARTE LARANJA QUE HOSPEDA AS INFORMAÇÕES DA PÁGINA*/
+    width: 90vw;
+    height: auto;
+    margin-top: 5vh;
+    margin-left: 4vw;
+    padding: 30px;
+  }
 
-.fundonav {
-    background-color: #ffd13a;
-    padding: 0px;
-    margin: 0px;
-}
+  /*CARDS SLIDER*/
+  /*CARDS SLIDER*/
 
-.dropdown-menu {
-    background-color: rgb(254, 255, 199);
-    border: 2px solid rgb(255, 255, 255);
-}
+  .cards {
+    /*TAMANHO DE LARGURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+    width: 80vw;
+  }
 
+  .card-slider {
+    /*TAMANHO DE ALTURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+    height: 100vh;
+  }
 
-.logo {
-    /*foto do logo*/
-    margin-left: 19vw;
-}
+  .carousel {
+    /*MARGINS PARA ESPAÇOS DA BORDAS*/
+    margin-right: -5px;
+    margin-left: -40px;
+  }
 
-.box-search {
-    /*barra de pesquisa*/
-    margin-left: -5%;
-    margin-top: 2%;
-    width: 70%;
+  .button-slider {
+    /*POSICIONAMENTOS DOS BOTÕES*/
+    margin-top: 170px;
+    height: 50px;
+  }
+
+  .carousel-control-prev {
+    /*COR E TAMANHO DO BOTÃO DE PREVIA*/
+    margin-left: -10px;
+    width: 40vw;
+    color: black;
+  }
+
+  .carousel-control-next {
+    /*COR E TAMANHO DO BOTÃO DE NEXT*/
+    margin-right: -20px;
+    width: 40vw;
+    color: black;
+  }
+
+  .cards-slider {
+    margin-left: 35px;
+    margin-right: 35px;
+    align-items: center;
+  }
+
+  .botaocard {
+    /* BOTÃO RESERVAR */
+    background-color: rgb(255, 208, 0);
     border: none;
-}
+    margin-top: 1px;
+    margin-left: 6.5px;
+    width: 56vw;
+    box-shadow: 0px 0px 3px black;
+  }
 
-.box-search:focus {
-    /*barra de pesquisa*/
-    box-shadow: 0px 5px 6px rgba(255, 255, 255, 0.274);
+  .botaocard:hover {
+    /* AO PASSAR O MOUSE EM CIMA */
+    transform: scale(1.001);
+    transition: transform 0.1s ease;
+  }
 
-}
+  /*FOOTER*/
+  /*FOOTER*/
 
-.tp {
-    /*topicos que estruturam os outros*/
-    margin-left: 37.7vw;
-    padding-bottom: 1%;
-}
+  .footer {
+    margin-top: 200px;
+    height: 30vh;
+    width: 104vw;
+    border-top: 2px solid rgb(223, 223, 223);
+    margin-right: -15px;
+    margin-left: -15px;
+    background-color: #ffff;
+  }
 
-#embaixo {
-    /*topicos embaixo da barra de pesquisa*/
-    margin-right: 11.9vw;
-    margin-left: -10vw;
-    margin-bottom: -1%;
-}
-
-#login {
-    margin-top: 2%;
-    width: 2.5%;
-    height: 3%;
+  .coluna {
+    border: 2px solid rgb(223, 223, 223);
+    height: 10vh;
+    padding-left: 140px;
+    padding-top: 10px;
+    margin-bottom: -50px;
+    margin-top: 25px;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+  }
+  .sac:hover {
+    color: rgb(248, 183, 61);
     cursor: pointer;
-}
+  }
+  .rede {
+    text-align: center;
+  }
+  .redes {
+    align-items: center;
+    margin-top: 8%;
+    margin-left: -20px;
+  }
 
-#carrinho {
-    margin-top: 2%;
-    margin-right: 10%;
-    width: 25px;
-    height: 29px;
-    cursor: pointer;
-}
-
-
-
-
-
-/*------RESPONSIVO--------*/
-.pesquisa2 {
-    margin: 0px;
-    width: 0px;
-    height: 0px;
-    display: none;
-}
-
-@media (max-width: 424px) {
-
-    .tp {
-        margin-left: 10px;
-    }
-
-    .pesquisa {
-        margin: 0px;
-        width: 0px;
-        height: 0px;
-        display: none;
-        background-color: transparent;
-    }
-
-    .pesquisa2 {
-        margin: auto;
-        margin: 10px;
-        margin-left: 10px;
-        height: 50px;
-        width: 1000px;
-        display: block;
-    }
-
-    .logo {
-        margin-left: -10px;
-    }
-
-    #login {
-        margin-top: -80px;
-        margin-left: 250px;
-        width: 25px;
-        height: 29px;
-        cursor: pointer;
-    }
-
-    #carrinho {
-        margin-top: -80px;
-        margin-right: 1px;
-        width: 25px;
-        height: 29px;
-        cursor: pointer;
-    }
-}
-
-@media (max-width: 400px) {
-
-    #login {
-        margin-top: -80px;
-        margin-left: 220px;
-        width: 25px;
-        height: 29px;
-        cursor: pointer;
-    }
-
-    #carrinho {
-        margin-top: -80px;
-        margin-right: 1px;
-        width: 25px;
-        height: 29px;
-        cursor: pointer;
-    }
-}
-
-@media (max-width: 361px) {
-    /*config do s8+*/
-
-    #login {
-        margin-top: -80px;
-        margin-left: 200px;
-        width: 25px;
-        height: 29px;
-        cursor: pointer;
-    }
-
-    #carrinho {
-        margin-top: -80px;
-        margin-right: 1px;
-        width: 25px;
-        height: 29px;
-        cursor: pointer;
-    }
+  .image_redonda {
+    height: 50px;
+    width: 50px;
+    border-radius: 30%;
+  }
 }

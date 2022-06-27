@@ -42,9 +42,9 @@ namespace ApiTcc.Controllers
             }
         }
 
-        public async Task<bool> ClienteExistente(string email)
+        public async Task<bool> ClienteExistente(string email, string nome)
         {
-            if (await _context.Clientes.AnyAsync(x => x.emailCadCliente.ToLower() == email.ToLower()))
+            if (await _context.Clientes.AnyAsync(x => x.emailCadCliente.ToLower() == email.ToLower() && x.nomeCadCliente.ToLower() == nome.ToLower()))
             {
                 return true;
             }
@@ -72,7 +72,9 @@ namespace ApiTcc.Controllers
             List<Claim> claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, cliente.clienteId.ToString()),
-                new Claim(ClaimTypes.Name, cliente.emailCadCliente),
+                new Claim(ClaimTypes.Name, cliente.nomeCadCliente),
+                new Claim(ClaimTypes.Email, cliente.emailCadCliente),
+                new Claim(ClaimTypes.MobilePhone, cliente.telCadCliente),
                 new Claim(ClaimTypes.Role, cliente.Perfil)
             };
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8
@@ -103,7 +105,6 @@ namespace ApiTcc.Controllers
             }
             catch (Exception ex)
             {
-
                 return BadRequest(ex.Message);
             }
         }
@@ -117,7 +118,7 @@ namespace ApiTcc.Controllers
                 int id = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value);
 
                 List<Cliente> lista = await _context.Clientes
-                    .Where(a => a.clienteId == id).ToListAsync();
+                    .Where(a => a.clienteId == id).Include(p => p.Pedido).ToListAsync();
 
                 return Ok(lista);
             }
@@ -139,7 +140,6 @@ namespace ApiTcc.Controllers
             }
             catch (Exception ex)
             {
-
                 return BadRequest(ex.Message);
             }
         }
@@ -167,23 +167,22 @@ namespace ApiTcc.Controllers
         //     }
         // }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Update(Cliente novoCliente)
         {
             try
             {
-                if (novoCliente.nomeCadCliente == "" && novoCliente.cpfCadCliente == "")
+                if (novoCliente.nomeCadCliente == "" )
                 {
                     throw new Exception("Campos Nome e CPF não podem estar vazios!");
                 }
                 _context.Clientes.Update(novoCliente);
-                int linhasAfestadas = await _context.SaveChangesAsync();
+                int linhasAfetadas = await _context.SaveChangesAsync();
 
-                return Ok(linhasAfestadas);
+                return Ok(linhasAfetadas);
             }
             catch (Exception ex)
             {
-
                 return BadRequest(ex.Message);
             }
         }
@@ -197,13 +196,12 @@ namespace ApiTcc.Controllers
                     .FirstOrDefaultAsync(c => c.clienteId == id);
 
                 _context.Clientes.Remove(cRemover);
-                int linhasAfestadas = await _context.SaveChangesAsync();
+                int linhasAfetadas = await _context.SaveChangesAsync();
 
-                return Ok(linhasAfestadas);
+                return Ok(linhasAfetadas);
             }
             catch (Exception ex)
             {
-
                 return BadRequest(ex.Message);
             }
         }
@@ -216,8 +214,8 @@ namespace ApiTcc.Controllers
         {
             try
             {
-                if (await ClienteExistente(cliente.emailCadCliente))
-                    throw new SystemException("Email de usuário já existe");
+                if (await ClienteExistente(cliente.emailCadCliente, cliente.nomeCadCliente))
+                    throw new SystemException("Email ou Nome de usuário já existe");
 
                 CriarPasswordHash(cliente.senhaCadCliente, out byte[] hash, out byte[] salt);
                 cliente.senhaCadCliente = string.Empty;
@@ -259,8 +257,6 @@ namespace ApiTcc.Controllers
 
                     var token = CriarToken(cliente);
 
-                    
-
                     return Ok(token);
                 }
             }
@@ -269,5 +265,7 @@ namespace ApiTcc.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        
     }
 }

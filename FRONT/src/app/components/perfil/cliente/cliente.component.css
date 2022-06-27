@@ -10,153 +10,196 @@
   margin-top: -2%;
 }
 
-
-
-
-
-      /*CORPO DA PAGINA PERFIL-CLIENTE*/
-      /*CORPO DA PAGINA PERFIL-CLIENTE*/
-      /*CORPO DA PAGINA PERFIL-CLIENTE*/
+/*CORPO DA PAGINA PERFIL-CLIENTE*/
+/*CORPO DA PAGINA PERFIL-CLIENTE*/
+/*CORPO DA PAGINA PERFIL-CLIENTE*/
 
 body {
-  background-image: url("src/assets/img/fundocachorro.jpg");
+  background-image: url("src/assets/img/menina-cachorro2.jpg");
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 110vh;
+  height: 100vh;
 }
-
-.fundo { /*PARTE LARANJA QUE HOSPEDA AS INFORMAÇÕES DA PÁGINA*/
+.fundo {
+  /*PARTE LARANJA QUE HOSPEDA AS INFORMAÇÕES DA PÁGINA*/
   width: 50vw;
-  height: 35vh;
+  height: auto;
   background-color: rgba(255, 219, 152, 0.808);
   box-shadow: 2px 2px 10px rgb(117, 117, 117);
   border-radius: 10px;
   margin-top: 2vh;
   margin-left: 25vw;
-  border: none;
+  padding-bottom: 2vh;
+}
+.margin-cliente {
+  /*LINHA PARA AJUSTAR A POSIÇÃO DOS DADOS DO CLIENTE E OS BOTÕES*/
+  padding-top: 6vh;
+  width: 50vw;
+  margin-left: 0.02vw;
+  text-align: center;
+  align-items: center;
 }
 
-.row { /*LINHA PARA AJUSTAR A POSIÇÃO DOS DADOS DO CLIENTE E OS BOTÕES*/
+.margin-dados {
+  /*LINHA PARA AJUSTAR A POSIÇÃO DOS DADOS De INCLUSÃO DE PRODUTOS*/
   padding-top: 6vh;
   margin-left: 3vw;
-  border: none;
 }
 
-.usuario-perfil { /*LUGAR ONDE A IMAGEM DO CLIENTE ESTARÁ*/
+.usuario-perfil {
+  /*LUGAR ONDE A IMAGEM DO CLIENTE ESTARÁ*/
   font-size: 15px;
-  margin-left: 31.3%;
-  margin-top: -4.5vh;
+  width: 50vw;
+  margin-left: 0.02vw;
   text-align: center;
-  border: none;
+  align-items: center;
 }
-
-.padding { /*ESPAÇAMENTO UTILIZADO NO SITE*/
+.padding {
+  /*ESPAÇAMENTO UTILIZADO NO SITE*/
   padding-top: 25px;
   margin-left: -6.5vw;
 }
 
+/*BOTÕES MENU DO PERFIL*/
+/*BOTÕES MENU DO PERFIL*/
+/*BOTÕES MENU DO PERFIL*/
 
-
-
-
-
-
-        /*BOTÕES MENU DO PERFIL*/
-        /*BOTÕES MENU DO PERFIL*/
-        /*BOTÕES MENU DO PERFIL*/
-
-ul{/*ESTRUTURA EM QUE OS BOTÕES, PARA ACESSAR OS MODALS, ESTÃO*/
+ul {
+  /*ESTRUTURA EM QUE OS BOTÕES, PARA ACESSAR OS MODALS, ESTÃO*/
   margin-top: 3vh;
-  margin-left: 6vw;
 }
 
-.btnpg{ /*BOTÃO PÁGINA INICIAL*/
-  margin-right: 4vw;
+.btnpg {
+  /*BOTÃO PÁGINA INICIAL*/
+  margin-right: 5vw;
+  background-color: #ffae00;
+  color: #000000;
+  border-color: #ff5e00;
+  width: 12vw;
+  margin-left: vw;
+}
+.btnmds {
+  /*BOTÃO MODAL MEUS DADOS*/
+  margin-right: 5vw;
+  background-color: #ffae00;
+  color: #000000;
+  border-color: #ff5e00;
+  width: 12vw;
+}
+.btnprod-reservados {
   background-color: #ffae00;
   color: #000000;
   border-color: #ff5e00;
   width: 12vw;
 }
 
-.btnmds{ /*BOTÃO MODAL MEUS DADOS*/
-  background-color: #ffae00;
+.btnpg:hover {
+  /*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE PÁGINA INICIAL*/
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+.btnmds:hover {
+  /*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE MEUS DADOS*/
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+.btnprod-reservados:hover {
+  /*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE MEUS DADOS*/
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* PARTE INTERNA MODAL'DADOS' */
+/* PARTE INTERNA MODAL'DADOS' */
+/* PARTE INTERNA MODAL'DADOS' */
+
+.bi-file-person-fill {
+  /*IMAGEM DE USER DO MODAL, ACIMA DO 'ALTERAR DADOS' */
+  margin-left: 23.5vw;
+}
+.close {
+  /*BOTÃO 'X' PARA SAIR DO MODAL*/
+  margin-top: -9vh;
+  color: black;
+}
+#meusDados-text {
+  /*TEXTO 'MEUS DADOS' */
+  margin-top: 1vh;
+  height: auto;
+}
+
+.btn-info {
+  /*BOTÃO 'EDITAR PERFIL' DENTRO DO MODAL*/
+  margin-left: 1vw;
+  margin-top: -13vh;
+  background-color: #ffd13a;
+  border-color: #ff9d00;
   color: #000000;
-  border-color: #ff5e00;
-  width: 12vw;
-}
-.btnpg:hover{/*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE PÁGINA INICIAL*/
-  transform: scale(1.1);
-  transition: transform .2s ease;
-}
-.btnmds:hover{/*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE MEUS DADOS*/
-  transform: scale(1.1);
-  transition: transform .2s ease;
 }
 
+.fade {
+  width: 100vw;
+}
+.fundo2 {
+  width: 100%;
+}
+.modal-header {
+  border: none;
+}
+.modal-content {
+  /* CONTAINER DO MODAL, QUE POSSUI COR AMARELADA */
+  width: 50vw;
+  height: auto;
+  background-color: rgba(255, 219, 152, 0.808);
+  box-shadow: 2px 2px 10px rgb(117, 117, 117);
+  margin-right: 20vw;
+  margin-top: 17vh;
+  border: none;
+  margin-left: -11.9vw;
+}
+.modal-body {
+  /*CORPO DO MODAL ONDE LOCALIZAM AS INFORMAÇÕES*/
+  border: none;
+  height: auto;
+}
+.modal-footer {
+  /*PARTE INTERNA DO BOTÃO *FECHAR*  */
+  border: none;
+  padding: 0;
+  width: 100%;
+}
+.modal-title {
+  width: 100%;
+  text-align: center;
+}
 
-
-
-
-
-          /* PARTE INTERNA MODAL'DADOS' */
-          /* PARTE INTERNA MODAL'DADOS' */
-          /* PARTE INTERNA MODAL'DADOS' */
-
-:disabled{
+:disabled {
   background-color: transparent;
 }
 
-.bi-file-person-fill{ /*IMAGEM DE USER DO MODAL, ACIMA DO 'ALTERAR DADOS' */
-  margin-left: 30vw;
+.nomecompleto {
+  /*CONFIGURAÇÃO DO INPUT DO NOME COMPLETO*/
+  width: 43vw;
+  margin-left: 3vw;
 }
-
-.close{ /*BOTÃO 'X' PARA SAIR DO MODAL*/
-  margin-right: -18vw;
-  margin-top: -11vh;
-  color: black;
-}
-
-#meusDados{/*TEXTO 'ALTERAR DADOS' */
-  margin-top: 1vh;
-  margin-left: 54vh;
-  width: 10vw;
-}
-
-.modal-body{/*CORPO DO MODAL ONDE LOCALIZAM AS INFORMAÇÕES*/
-  margin-left: -33vw;
-  margin-top: 10vh;
-  border: none;
-}
-
-.modal-content{ /* CONTAINER DO MODAL, QUE POSSUI COR AMARELADA */
-  width: 50vw;
-  height: 60vh;
-  background-color: rgba(255, 219, 152, 0.808);
-  box-shadow: 2px 2px 10px rgb(117, 117, 117);
-  margin-left: -11.7vw;
-  margin-top: 17vh;
-  border: none;
-}
-
-.nomecompleto { /*CONFIGURAÇÃO DO INPUT DO NOME COMPLETO*/
-  width: 44vw;
-  margin-left: 3.7vw;
-}
-
-
-.coluna1 { /*COLUNA 1 QUE POSSUI ENDEREÇO, EMAIL E SENHA*/
+.coluna1 {
+  /*COLUNA 1 QUE POSSUI ENDEREÇO, EMAIL E SENHA*/
   margin-top: -5vh;
   margin-right: -10px;
+  margin-left: -1vw;
 }
-.coluna1 input { /*INPUT DA COLUNA 1*/
-  width: 400px;
+.coluna1 input {
+  /*INPUT DA COLUNA 1*/
+  width: 100%;
 }
-.coluna2{ /*COLUNA QUE POSSUI TELEFONE E CPF*/
-  margin-top: -5.2vh;
-  margin-right: 30px;
+.coluna2 {
+  /*COLUNA QUE POSSUI TELEFONE E CPF*/
+  margin-top: -5.05vh;
+  margin-right: 3vw;
 }
-input { /*PARTE DO INPUT, CAMPO DE ESCREVER*/
+input {
+  /*PARTE DO INPUT, CAMPO DE ESCREVER*/
   width: 100%;
   border-top: transparent;
   border-left: transparent;
@@ -165,26 +208,328 @@ input { /*PARTE DO INPUT, CAMPO DE ESCREVER*/
   background-color: transparent;
   border-radius: 0px;
 }
-input:focus { /*CONFIGURAÇÃO AO SELECIONAR O INPUT*/
+input:focus {
+  /*CONFIGURAÇÃO AO SELECIONAR O INPUT*/
   background-color: transparent;
   box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
   border-bottom: 2px solid rgb(23, 162, 184);
   border-radius: 0px;
 }
 
+.btn-secondary {
+  /*BOTÃO 'FECHAR' */
+  width: 13vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 15vw;
+  background-color: #ffae00;
+  border-color: #ffae00;
+  color: #000000;
+}
+.btn-fecharmodal {
+  width: 13vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-right: 18vw;
+  background-color: #ffae00;
+  border-color: #ffae00;
+  color: #000000;
+}
 
-.btn-secondary{ /*BOTÃO 'FECHAR' */
-  width: 13vw;
-  margin-left: 4vw;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+.btn-warning {
+  /*BOTÕES WARNING*/
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.modal-footer{ /*PARTE INTERNA DO BOTÃO *FECHAR*  */
-  border: none;
+
+.btn-warning:hover {
+  /*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE DELETAR PRODUTO*/
+  background-color: rgb(255, 217, 0);
+  box-shadow: 0px 0px 15px rgb(255, 217, 0);
 }
-.btn-primary{ /*BOTÃO 'SALVAR' */
-  width: 13vw;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
-  margin-left: 10vw;
+
+/*-----------*/
+.img-usuario-sacola {
+  margin-left: 23.6vw;
+}
+
+#lista-reserva {
+  margin-top: 2vh;
+}
+.close-reserva {
+  margin-left: 1vw;
+}
+#meusDados-text-reserva {
+  margin-left: -10vw;
+}
+
+/*RESPONSIVO*/
+@media (max-width: 424px) {
+  /* HEADER */
+
+  .fundonav {
+    /* FUNDO NAVBAR */
+    background-color: #ffd13a;
+    padding: 0px;
+  }
+  .logo {
+    /* IMG LOGO NAVBAR */
+    margin-left: 0vw;
+    margin-bottom: -5%;
+    margin-top: -2%;
+  }
+
+  /*BODY*/
+
+  /*CORPO DA PAGINA PERFIL-CLIENTE*/
+  /*CORPO DA PAGINA PERFIL-CLIENTE*/
+  /*CORPO DA PAGINA PERFIL-CLIENTE*/
+
+  body {
+    background-image: url("src/assets/img/fundocachorro.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 104vh;
+  }
+  .fundo {
+    /*PARTE LARANJA QUE HOSPEDA AS INFORMAÇÕES DA PÁGINA*/
+    width: 90vw;
+    height: 78%;
+    background-color: rgba(255, 219, 152, 0.808);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-left: 5vw;
+    padding-bottom: 2vh;
+  }
+  .margin-cliente {
+    /*LINHA PARA AJUSTAR A POSIÇÃO DOS DADOS DO CLIENTE E OS BOTÕES*/
+    padding-top: 6vh;
+    width: 50vw;
+    margin-left: 19.5vw;
+    margin-bottom: 5vh;
+    text-align: center;
+    align-items: center;
+  }
+
+  .margin-dados {
+    /*LINHA PARA AJUSTAR A POSIÇÃO DOS DADOS De INCLUSÃO DE PRODUTOS*/
+    padding-top: 6vh;
+    margin-left: 3vw;
+  }
+
+  .usuario-perfil {
+    /*LUGAR ONDE A IMAGEM DO CLIENTE ESTARÁ*/
+    font-size: 15px;
+    width: 50vw;
+    margin-left: 0.02vw;
+    text-align: center;
+    align-items: center;
+  }
+  .padding {
+    /*ESPAÇAMENTO UTILIZADO NO SITE*/
+    padding-top: 25px;
+    margin-left: -6.5vw;
+  }
+
+  /*BOTÕES MENU DO PERFIL*/
+  /*BOTÕES MENU DO PERFIL*/
+  /*BOTÕES MENU DO PERFIL*/
+
+  ul {
+    /*ESTRUTURA EM QUE OS BOTÕES, PARA ACESSAR OS MODALS, ESTÃO*/
+    margin-top: 2vh;
+    margin-left: 5vw;
+  }
+
+  .btnpg {
+    /*BOTÃO PÁGINA INICIAL*/
+    margin-right: 5vw;
+    background-color: #ffae00;
+    color: #000000;
+    border-color: #ff5e00;
+    width: 25vw;
+    margin-left: 2.5vw;
+    margin-bottom: 2vh;
+  }
+  .btnmds {
+    /*BOTÃO MODAL MEUS DADOS*/
+    background-color: #ffae00;
+    color: #000000;
+    border-color: #ff5e00;
+    width: 25vw;
+    margin-bottom: 2vh;
+  }
+  .btnprod-reservados {
+    background-color: #ffae00;
+    color: #000000;
+    border-color: #ff5e00;
+    width: 25vw;
+    margin-left: 17vw;
+  }
+
+  .btnpg:hover {
+    /*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE PÁGINA INICIAL*/
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+  .btnmds:hover {
+    /*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE MEUS DADOS*/
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+  .btnprod-reservados:hover {
+    /*AO PASSAR O MOUSE POR CIMA DO BOTÃO DE MEUS DADOS*/
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+
+  /* PARTE INTERNA MODAL'DADOS' */
+  /* PARTE INTERNA MODAL'DADOS' */
+  /* PARTE INTERNA MODAL'DADOS' */
+
+  .modal {
+    padding-left: 105px;
+  }
+
+  .bi-file-person-fill {
+    /*IMAGEM DE USER DO MODAL, ACIMA DO 'ALTERAR DADOS' */
+    margin-left: 0vw;
+  }
+  .close {
+    /*BOTÃO 'X' PARA SAIR DO MODAL*/
+    margin-top: -9vh;
+    color: black;
+  }
+  #meusDados-text {
+    /*TEXTO 'MEUS DADOS' */
+    margin-top: 1vh;
+    height: auto;
+  }
+
+  .btn-info {
+    /*BOTÃO 'EDITAR PERFIL' DENTRO DO MODAL*/
+    margin-bottom: -15vh;
+    background-color: #ffd13a;
+    border-color: #ff9d00;
+    color: #000000;
+  }
+
+  .fundo2 {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .modal-header {
+    border: none;
+  }
+  .modal-content {
+    /* CONTAINER DO MODAL, QUE POSSUI COR AMARELADA */
+    width: 90vw;
+    height: auto;
+    background-color: rgba(255, 219, 152, 0.808);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    margin-top: 15vh;
+    border: none;
+    margin-left: -23vw;
+  }
+  .modal-body {
+    /*CORPO DO MODAL ONDE LOCALIZAM AS INFORMAÇÕES*/
+    border: none;
+    height: auto;
+  }
+  .modal-footer {
+    /*PARTE INTERNA DO BOTÃO *FECHAR*  */
+    border: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  :disabled {
+    background-color: transparent;
+  }
+
+  .nomecompleto {
+    /*CONFIGURAÇÃO DO INPUT DO NOME COMPLETO*/
+    width: 60vw;
+    margin-left: 2vw;
+  }
+  .coluna1 {
+    /*COLUNA 1 QUE POSSUI ENDEREÇO, EMAIL E SENHA*/
+    margin-top: -5vh;
+    margin-left: -5vw;
+  }
+
+  .coluna1 input {
+    /*INPUT DA COLUNA 1*/
+    width: 60vw;
+  }
+  .coluna2 input {
+    /*INPUT DA COLUNA 2*/
+    width: 60vw;
+  }
+  .coluna2 {
+    /*COLUNA QUE POSSUI TELEFONE E CPF*/
+    margin-top: 1vh;
+    margin-left: -5vw;
+  }
+  input {
+    /*PARTE DO INPUT, CAMPO DE ESCREVER*/
+    width: 100%;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: transparent;
+    border-radius: 0px;
+  }
+  input:focus {
+    /*CONFIGURAÇÃO AO SELECIONAR O INPUT*/
+    background-color: transparent;
+    box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+    border-bottom: 2px solid rgb(23, 162, 184);
+    border-radius: 0px;
+  }
+
+  .btn-secondary {
+    /*BOTÃO 'FECHAR' */
+    width: 13vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 15vw;
+    background-color: #ffae00;
+    border-color: #ffae00;
+    color: #000000;
+  }
+  .btn-fecharmodal {
+    width: 13vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-right: 18vw;
+    background-color: #ffae00;
+    border-color: #ffae00;
+    color: #000000;
+  }
+
+  /*-----------*/
+  .img-usuario-sacola {
+    margin-left: 0vw;
+  }
+
+  #lista-reserva {
+    margin-top: 2vh;
+  }
+
+  .close-reserva {
+    margin-left: 1vw;
+  }
+
+  #meusDados-text-reserva {
+    margin-left: 0vw;
+  }
 }

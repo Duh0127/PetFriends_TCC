@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using ApiTcc.Models.Enuns;
 using System.Linq;
 using ApiTcc.Data;
 using System.Threading.Tasks;
@@ -12,6 +11,7 @@ using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Authorization;
+using ApiTcc.Models;
 
 namespace ApiTcc.Controllers
 {
@@ -39,9 +39,9 @@ namespace ApiTcc.Controllers
             }
         }
 
-         public async Task<bool> AssociadoExistente(string email)
+        public async Task<bool> AssociadoExistente(string email, string nome)
         {
-            if (await _context.Associados.AnyAsync(x => x.emailCadAssociado.ToLower() == email.ToLower()))
+            if (await _context.Associados.AnyAsync(x => x.emailCadAssociado.ToLower() == email.ToLower() && x.nomeCadAssociado.ToLower() == nome.ToLower()))
             {
                 return true;
             }
@@ -69,7 +69,10 @@ namespace ApiTcc.Controllers
             List<Claim> claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, associado.associadoId.ToString()),
-                new Claim(ClaimTypes.Name, associado.emailCadAssociado),
+                new Claim(ClaimTypes.Name, associado.nomeCadAssociado),
+                new Claim(ClaimTypes.Email, associado.emailCadAssociado),
+                new Claim(ClaimTypes.Country, associado.enderecoCadAssociado),
+                new Claim(ClaimTypes.MobilePhone, associado.telCadAssociado),
                 new Claim(ClaimTypes.Role, associado.Perfil)
             };
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8
@@ -102,11 +105,12 @@ namespace ApiTcc.Controllers
                 return Ok(lista);
             }
             catch (Exception ex)
-            {
-                
+            {  
                 return BadRequest(ex.Message);
             }
         }
+
+        
 
         [HttpGet("GetByUser")]
         
@@ -117,7 +121,7 @@ namespace ApiTcc.Controllers
                 int id = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value);
 
                 List<Associado> lista = await _context.Associados
-                    .Where(a => a.associadoId == id).ToListAsync();
+                    .Where(a => a.associadoId == id).Include(p => p.Produtos).ToListAsync();
 
                 return Ok(lista);
             }
@@ -160,26 +164,27 @@ namespace ApiTcc.Controllers
         //     //  }           
         // }
 
-        [HttpPut]
-        public async Task<IActionResult> Update(Associado novoAssociado)
-        {
-            try
-             {
-                 if (novoAssociado.cnpjCadAssociado == "" && novoAssociado.nomeCadAssociado == "")
-                 {
-                     throw new Exception("Campos CNPJ e Nome não podem estar vazios!");
-                 }
-                 _context.Associados.Update(novoAssociado);
-                 int linhasAfestadas = await _context.SaveChangesAsync();
 
-                 return Ok(linhasAfestadas);
-             }
-             catch (Exception ex)
-            {
+          [HttpPut]
+          public async Task<IActionResult> Update(Associado novoAssociado)
+          {
+              try
+               {
+                   if (novoAssociado.nomeCadAssociado == "")
+                   {
+                       throw new Exception("Nome não pode estar vazio!");
+                   }
+                   _context.Associados.Update(novoAssociado);
+                   int linhasAfetadas = await _context.SaveChangesAsync();
+
+                   return Ok(linhasAfetadas);
+               }
+               catch (Exception ex)
+              {
                 
-                 return BadRequest(ex.Message);
-             }
-        }
+                   return BadRequest(ex.Message);
+               }
+          }
 
       
         [HttpDelete("{id}")]
@@ -191,9 +196,9 @@ namespace ApiTcc.Controllers
                 .FirstOrDefaultAsync(a => a.associadoId == id);
 
                 _context.Associados.Remove(aRemover);
-                int linhasAfestadas = await _context.SaveChangesAsync();
+                int linhasAfetadas = await _context.SaveChangesAsync();
 
-                return Ok(linhasAfestadas);
+                return Ok(linhasAfetadas);
             }
             catch (Exception ex)
             {
@@ -209,8 +214,8 @@ namespace ApiTcc.Controllers
         {
             try
             {
-                if (await AssociadoExistente(associado.emailCadAssociado))
-                    throw new SystemException("Email de usuário já existe");
+                if (await AssociadoExistente(associado.emailCadAssociado, associado.nomeCadAssociado))
+                    throw new SystemException("Email ou Nome de usuário já existe");
 
                 CriarPasswordHash(associado.senhaCadAssociado, out byte[] hash, out byte[] salt);
                 associado.senhaCadAssociado = string.Empty;

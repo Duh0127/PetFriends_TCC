@@ -1,0 +1,168 @@
+<body>
+  <!-- INÍCIO NAVBAR DA PÁGINA -->
+  <nav class="navbar navbar-expand navbar-dark fundonav">
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand">
+        <img
+          src="/assets/img/logovert.png"
+          routerLink=""
+          width="80"
+          height="80"
+          class="d-inline-block logo"
+        />
+      </a>
+      <div class="form-group container-xl"></div>
+    </nav>
+  </nav>
+  <!-- FIM NAVBAR DA PÁGINA -->
+
+  <div class="fundo shadow-1">
+    <!--PRIMEIRO CARD-->
+    <form>
+      <div class="usuario-perfil">
+        <!--BEM-VINDO-->
+        <div class="usuario-cliente">
+          <!--Campo de imagem redondo -->
+
+          <img src="assets/img/cat.png" />
+
+          <h4
+            class="nome-cliente"
+            ngFor="let associado of listarAssociado"
+            *ngFor="let cliente of listarCliente"
+          >
+            Bem-vindo, {{ cliente.nomeCadCliente }}
+          </h4>
+
+          <p
+            class="email-cliente"
+            ngFor="let associado of listarAssociado"
+            *ngFor="let cliente of listarCliente"
+          >
+            {{ cliente.emailCadCliente }}
+          </p>
+        </div>
+      </div>
+
+      <!-- INÍCIO SEGUNDO CARD -->
+      <div class="row">
+        <div class="fundo2 padding">
+          <!-- IMAGEM ACIMA DO TEXTO DENTRO DO CARD -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="text-usuario"
+            width=""
+            height="30"
+            fill="currentColor"
+            class="bi bi-file-person-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"
+            />
+          </svg>
+          <h5 class="text-usuario">ALTERAR DADOS</h5>
+          <form>
+            <!-- CORPO DO CARD COM CAMPOS PARA ALTERAÇÃO DE INFORMAÇÕES -->
+            <div class="nomecompleto form-group">
+              <label for="exampleInputEmail1">NOME COMPLETO</label>
+              <input
+                type="text"
+                class="form-control inputnome"
+                placeholder="DIGITE SEU NOME"
+                name="nomeCadCliente"
+                [(ngModel)]="cadastro.nomeCadCliente"
+              />
+            </div>
+
+            <div class="row">
+              <!-- 1ª LINHA DAS INFORMAÇÕES -->
+              <div class="col coluna1">
+                <!-- 1ª COLUNA -->
+                <div class="form-group">
+                  <label for="exampleInputEmail1">ENDEREÇO</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="emailCadCliente"
+                    placeholder="DIGITE SEU ENDEREÇO"
+                    [(ngModel)]="cadastro.enderecoCadCliente"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">E-MAIL</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="E-MAIL"
+                    name="emailCadCliente"
+                    [(ngModel)]="cadastro.emailCadCliente"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">SENHA</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="senhaCadCliente"
+                    placeholder="DIGITE SUA SENHA"
+                    [(ngModel)]="cadastro.senhaCadCliente"
+                  />
+                </div>
+              </div>
+              <!--COLUNA 1-->
+
+              <div class="col coluna2">
+                <!--COLUNA 2-->
+                <div class="form-group">
+                  <label for="exampleInputPassword1">TELEFONE</label>
+                  <input
+                    type="tel"
+                    placeholder="TELEFONE"
+                    class="form-control"
+                    name="telCadCliente"
+                    [(ngModel)]="cadastro.telCadCliente"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">CPF</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="CPF"
+                    name="cpfCadCliente"
+                    value="cpfCadCliente"
+                    [(ngModel)]="cadastro.cpfCadCliente"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <!-- BOTÃO 'ATUALIZAR PERFIL' DENTRO DO CARD -->
+          <button
+            *ngFor="let cliente of listarCliente"
+            type="submit"
+            class="btn btn-primary"
+            (click)="atualizarPerfilCliente(cliente)"
+          >
+            Atualizar Perfil
+          </button>
+
+          <!-- BOTÃO 'DELETAR PERFIL' DENTRO DO CARD -->
+          <button
+            *ngFor="let cliente of listarCliente"
+            type="submit"
+            class="btn btn-warning"
+            (click)="deletarPerfilCliente(cliente)"
+          >
+            Deletar Perfil
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>

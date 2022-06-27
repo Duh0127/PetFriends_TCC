@@ -1,90 +1,87 @@
-.fundonav{/* FUNDO DA NAVBAR */
+.fundonav {
+  /* FUNDO DA NAVBAR */
   background-color: #ffd13a;
   padding: 0px;
   margin: 0px;
 }
+.navbar-light {
+  width: 100vw;
+}
 
-
-
-.dropdown-menu{/* DROPVIEW DOS CONTEÚDOS DA NAVBAR */
+.logo {
+  /*foto do logo*/
+  position: absolute;
+  margin-left: 19vw;
+  margin-top: -3vh;
+}
+.divLinha {
+  margin-left: 33vw;
+  height: 10vh;
+}
+.topicos1 {
+  /*topicos que estruturam os outros*/
+  margin-left: 25vw;
+  width: 100%;
+}
+.dropdown-menu {
+  /* DROPVIEW DOS CONTEÚDOS DA NAVBAR */
   background-color: rgb(254, 255, 199);
   border: 2px solid rgb(255, 255, 255);
 }
-
-
-
-.logo{ /*foto do logo*/
-  margin-left: 19vw;
+.embaixo {
+  margin-left: 3.5vw;
 }
 
-
-
-
-.box-search{ /*barra de pesquisa*/
-  margin-left: -5%;
-  margin-top: 2%;
-  width: 70%;
-  border: none;
-}
-.box-search:focus{ /*barra de pesquisa*/
-  box-shadow: 0px 5px 6px rgba(255, 255, 255, 0.274);
+ng-autocomplete {
+  width: auto;
 }
 
-
-
-.tp{ /*topicos que estruturam os outros*/
-  margin-left: 37.7vw;
-  padding-bottom: 0.6%;
+.tam-search {
+  width: 31.25vw;
 }
 
-
-
-#embaixo{ /*topicos embaixo da barra de pesquisa*/
-  margin-right: 11.9vw;
-  margin-left: -10vw;
-  margin-bottom: -1%;
-}
-
-
-
-#login{/* LOGIN  */
-  margin-top: 2%;
+#login {
+  /* LOGIN  */
   width: 3%;
-  height: 3.5%;
+  height: 34px;
   cursor: pointer;
+  margin-left: 5vw;
 }
-
-
-
-#carrinho{/* CARRINHO DE RESERVA */
-  margin-top: 2%;
-  margin-right: 10%;
+#carrinho {
+  /* CARRINHO DE RESERVA */
+  margin-right: 8vw;
   width: 30px;
   height: 34px;
   cursor: pointer;
 }
-
-
-
-
-
-
+b {
+  margin-right: -4.5vw;
+  margin-top: -2%;
+}
 
 /*------RESPONSIVO--------*/
-.pesquisa2{
+.pesquisa2 {
   margin: 0px;
   width: 0px;
   height: 0px;
   display: none;
 }
 
-@media (max-width: 424px) {
+.topicos2 {
+  display: none;
+  background-color: transparent;
+}
 
-  .tp{
-    margin-left: 10px;
+@media (max-width: 424px) {
+  .nav1 {
+    width: 104vw;
   }
 
-  .pesquisa{
+  .nav2 {
+    width: 104vw;
+  }
+
+  .topicos1 {
     margin: 0px;
     width: 0px;
     height: 0px;
@@ -92,59 +89,121 @@
     background-color: transparent;
   }
 
-  .pesquisa2{
-    margin: auto;
-    margin: 10px;
+  .topicos2 {
+    display: flex;
+  }
+  .tp {
     margin-left: 10px;
+  }
+
+  .pesquisa {
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+    display: none;
+    background-color: transparent;
+  }
+
+  .pesquisa2 {
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
     height: 50px;
-    width: 1000px;
+    width: 100vw;
     display: block;
   }
 
-  .logo{
+  .logo {
     margin-left: -10px;
+    margin-top: -75px;
   }
 
-  #login{
-    margin-top: -80px;
-    margin-left: 250px;
-    width: 25px;
-    height: 29px;
+  #login {
+    margin-top: 33px;
+    margin-left: 100px;
+    width: 35px;
+    height: 39px;
     cursor: pointer;
   }
 
-  #carrinho{
-    margin-top: -80px;
+  #carrinho {
+    margin-top: 30px;
     margin-right: 1px;
-    width: 25px;
-    height: 29px;
-    cursor: pointer;
-  }
-
-}
-
-@media (max-width: 400px){
-
-  #login{
-    margin-top: -80px;
-    margin-left: 220px;
-    width: 25px;
-    height: 29px;
-    cursor: pointer;
-  }
-
-  #carrinho{
-    margin-top: -80px;
-    margin-right: 1px;
-    width: 25px;
-    height: 29px;
+    width: 35px;
+    height: 39px;
     cursor: pointer;
   }
 }
 
-@media (max-width: 361px){ /*config do s8+*/
+@media (max-width: 400px) {
+  .nav1 {
+    width: 115.2vw;
+  }
 
-  #login{
+  .nav2 {
+    width: 115.2vw;
+  }
+
+  .topicos1 {
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+    display: none;
+    background-color: transparent;
+  }
+
+  .topicos2 {
+    display: inline-flex;
+  }
+  .tp {
+    margin-left: 10px;
+  }
+
+  .pesquisa {
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+    display: none;
+    background-color: transparent;
+  }
+
+  .pesquisa2 {
+    margin-top: 35px;
+    margin-left: 60px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 100vw;
+    display: block;
+  }
+
+  .logo {
+    margin-left: -10px;
+    margin-top: -65px;
+  }
+
+  #login {
+    margin-top: 35px;
+    margin-left: 100px;
+    width: 40px;
+    height: 44px;
+    cursor: pointer;
+  }
+
+  #carrinho {
+    margin-top: 30px;
+    margin-right: -35px;
+    width: 40px;
+    height: 44px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 361px) {
+  /*config do s8+*/
+
+  #login {
     margin-top: -80px;
     margin-left: 200px;
     width: 25px;
@@ -152,7 +211,7 @@
     cursor: pointer;
   }
 
-  #carrinho{
+  #carrinho {
     margin-top: -80px;
     margin-right: 1px;
     width: 25px;

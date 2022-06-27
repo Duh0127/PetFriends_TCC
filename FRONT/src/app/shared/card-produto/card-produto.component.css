@@ -1,62 +1,56 @@
-.img{/* IMAGEM DO CARD */
+.img {
+  /* IMAGEM DO CARD */
   height: 100px;
   width: 120px;
 }
 
-
-.img-area{/* TAMANHO DA IMAGEM DO CARD */
+.img-area {
+  /* TAMANHO DA IMAGEM DO CARD */
   width: 60%;
-  height: 50%;
+  height: 40%;
   padding-top: 10px;
   margin: auto;
 }
 
-
-.card{/* TAMANHO DO CARD */
-  width: 15rem;
-  height: 22rem;
+.card {
+  /* TAMANHO DO CARD */
+  width: 13vw;
+  height: 40vh;
   background-color: white;
 }
-.card:hover{/* AO PASSAR O MOUSE EM CIMA */
+.card:hover {
+  /* AO PASSAR O MOUSE EM CIMA */
   border: 1px solid rgb(255, 153, 0);
 }
 
-
 /*  */
-.font{/* TAMANHO DO TEXTO */
-  font-size:100%;
+.font {
+  /* TAMANHO DO TEXTO */
+  font-size: 100%;
 }
 
-
-
-
-h5{/* TEXTO DO CONTEUDO DO CARD */
+h5 {
+  /* TEXTO DO CONTEUDO DO CARD */
   font-size: 20px;
   font-weight: bold;
-  font-style:unset;
+  font-style: unset;
   text-decoration: none;
   margin: auto;
   margin-bottom: 6px;
 }
 
-
-.margem{/* MARGEM DO CARD */
+.margem {
+  /* MARGEM DO CARD */
   margin-left: 05px;
   margin-right: 05px;
   margin-top: 10px;
 }
 
-
-#botaocard{/* BOTÃO RESERVAR */
-  background-color: rgb(255, 208, 0);
-  border: none;
-  margin-top: 1px;
-  margin-left: 6.5px;
-  width:237px;
-  box-shadow: 0px 0px 3px black;
+@media (max-width: 424px) {
+  .card {
+    /* TAMANHO DO CARD */
+    width: 57vw;
+    height: 40vh;
+    background-color: white;
+  }
 }
-#botaocard:hover{/* AO PASSAR O MOUSE EM CIMA */
-  transform: scale(1.001);
-  transition: transform .1s ease;
-}
-

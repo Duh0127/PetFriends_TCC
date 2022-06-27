@@ -1,20 +1,19 @@
 /*  */
 /* HEADER */
-.fundonav {/* FUNDO NAVBAR */
+.fundonav {
+  /* FUNDO NAVBAR */
   background-color: #ffd13a;
   padding: 0px;
 }
-.logo {/* IMG LOGO NAVBAR */
+.logo {
+  /* IMG LOGO NAVBAR */
   margin-left: 19vw;
   margin-bottom: -5%;
   margin-top: -2%;
 }
 
-
-
-
-
-body {/* FUNDO DA PAGINA */
+body {
+  /* FUNDO DA PAGINA */
   background-image: url("src/assets/img/fundocachorro.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -22,11 +21,8 @@ body {/* FUNDO DA PAGINA */
   height: 130vh;
 }
 
-
-
-
-
-.fundo-atendimento {/* FUNDO ATENDIMENTO PETFRIENDS */
+.fundo-atendimento {
+  /* FUNDO ATENDIMENTO PETFRIENDS */
   background-color: transparent;
   width: 40vw;
   height: 8vh;
@@ -36,23 +32,21 @@ body {/* FUNDO DA PAGINA */
   margin-left: 30vw;
   border-radius: 10px;
 }
-.texto-atendimento {/* TEXTO */
+.texto-atendimento {
+  /* TEXTO */
   font-size: 15px;
   margin-left: 25%;
   margin-top: -5%;
   text-align: center;
 }
-.titulo-text {/*TEXTO 'FORMULÁRIO' E 'PROBLEMA' */
+.titulo-text {
+  /*TEXTO 'FORMULÁRIO' E 'PROBLEMA' */
   text-align: center;
   justify-content: center;
 }
 
-
-
-
-
-
-.fundo-formulario {/* FUNDO FORMULARIO */
+.fundo-formulario {
+  /* FUNDO FORMULARIO */
   width: 40vw;
   height: 56vh;
   background-color: rgba(255, 219, 152, 0.808);
@@ -62,22 +56,24 @@ body {/* FUNDO DA PAGINA */
   border-radius: 10px;
 }
 
-
-.row {/* LINHA */
+.row {
+  /* LINHA */
   padding-top: 6%;
   margin-left: 6%;
 }
-.coluna1 {/* COLUNA DOS INPUTS */
+.coluna1 {
+  /* COLUNA DOS INPUTS */
   margin-top: -5%;
   margin-left: 20%;
 }
-.coluna1 input {/* INPUTS DA COLUNA */
+.coluna1 input {
+  /* INPUTS DA COLUNA */
   width: 350px;
 }
 
-
-#assunto{/* TIPO DO PROBLEMA, ASSUNTO */
-  width: 500px;
+#assunto {
+  /* TIPO DO PROBLEMA, ASSUNTO */
+  width: 350px;
   border-top: transparent;
   border-left: transparent;
   border-right: transparent;
@@ -86,7 +82,8 @@ body {/* FUNDO DA PAGINA */
   border-radius: 0px;
   margin-bottom: 2%;
 }
-#assunto:focus{/* SELECIONADO */
+#assunto:focus {
+  /* SELECIONADO */
   width: 350px;
   border-top: transparent;
   border-left: transparent;
@@ -97,8 +94,8 @@ body {/* FUNDO DA PAGINA */
   border-radius: 0px;
 }
 
-
-input {/* CONFIG DOS INPUTS */
+input {
+  /* CONFIG DOS INPUTS */
   width: 100%;
   border-top: transparent;
   border-left: transparent;
@@ -107,23 +104,31 @@ input {/* CONFIG DOS INPUTS */
   background-color: transparent;
   border-radius: 0px;
 }
-input:focus {/* SELECIONADO */
+input:focus {
+  /* SELECIONADO */
   background-color: transparent;
   box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
   border-bottom: 2px solid rgb(23, 162, 184);
   border-radius: 0px;
 }
 
+.sac-descricao {
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background-color: transparent;
+  border-radius: 0px;
+}
+.sac-descricao:focus {
+  background-color: transparent;
+  box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+  border-bottom: 2px solid rgb(23, 162, 184);
+  border-radius: 0px;
+}
 
-
-
-
-
-
-
-
-
-.fundo-problema {/* FUNDO PROBLEMA */
+.fundo-problema {
+  /* FUNDO PROBLEMA */
   width: 40vw;
   height: 35vh;
   background-color: rgba(255, 219, 152, 0.808);
@@ -133,22 +138,183 @@ input:focus {/* SELECIONADO */
   border-radius: 10px;
 }
 
-
-.descricaoPrb {/* CONFIG CAMPO DESCRIÇÃO */
+.descricaoPrb {
+  /* CONFIG CAMPO DESCRIÇÃO */
   margin-left: 12%;
   width: 70%;
   margin-top: -5%;
 }
 
-
-.btn-dark {/* BOTÃO DE ENVIAR RECLAMAÇÃO */
+.btn-dark {
+  /* BOTÃO DE ENVIAR RECLAMAÇÃO */
   width: 19.1vw;
   margin-left: 27.3%;
   margin-top: 1vw;
 }
 
-
-.padding {/* MARGEM INTERNA DO SITE */
+.padding {
+  /* MARGEM INTERNA DO SITE */
   padding-top: 25px;
   margin-left: -6.5%;
+}
+
+@media (max-width: 424px) {
+  /* HEADER */
+
+  .fundonav {
+    /* FUNDO NAVBAR */
+    background-color: #ffd13a;
+    padding: 0px;
+  }
+  .logo {
+    /* IMG LOGO NAVBAR */
+    margin-left: 0vw;
+    margin-bottom: -5%;
+    margin-top: -2%;
+  }
+
+  /*BODY*/
+
+  body {
+    /* FUNDO DA PAGINA */
+    background-image: url("src/assets/img/fundocachorro.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 130vh;
+  }
+
+  .fundo-atendimento {
+    /* FUNDO ATENDIMENTO PETFRIENDS */
+    background-color: transparent;
+    width: 90vw;
+    height: 11.5vh;
+    background-color: rgba(255, 219, 152, 0.808);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    margin-top: 5vh;
+    margin-left: 5vw;
+    border-radius: 10px;
+  }
+  .texto-atendimento {
+    /* TEXTO */
+    font-size: 15px;
+    margin-left: 15%;
+    margin-right: 25%;
+    margin-top: -5%;
+    text-align: center;
+  }
+  .titulo-text {
+    /*TEXTO 'FORMULÁRIO' E 'PROBLEMA' */
+    text-align: center;
+    justify-content: center;
+  }
+
+  .fundo-formulario {
+    /* FUNDO FORMULARIO */
+    width: 90vw;
+    height: 80%;
+    background-color: rgba(255, 219, 152, 0.808);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    margin-top: 0.5vh;
+    border-radius: 10px;
+  }
+
+  .row {
+    /* LINHA */
+    padding-top: 6%;
+    margin-left: 6%;
+  }
+  .coluna1 {
+    /* COLUNA DOS INPUTS */
+    margin-top: -5%;
+    margin-left: -2.3vw;
+  }
+  .coluna1 input {
+    /* INPUTS DA COLUNA */
+    width: 77vw;
+  }
+
+  #assunto {
+    /* TIPO DO PROBLEMA, ASSUNTO */
+    width: 77vw;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: transparent;
+    border-radius: 0px;
+    margin-bottom: 2%;
+  }
+  #assunto:focus {
+    /* SELECIONADO */
+    width: 77vw;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+    border-bottom: 2px solid rgb(23, 162, 184);
+    background-color: transparent;
+    border-radius: 0px;
+  }
+
+  input {
+    /* CONFIG DOS INPUTS */
+    width: 77vw;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: transparent;
+    border-radius: 0px;
+  }
+  input:focus {
+    /* SELECIONADO */
+    background-color: transparent;
+    box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+    border-bottom: 2px solid rgb(23, 162, 184);
+    border-radius: 0px;
+  }
+
+  .sac-descricao {
+    width: 82vw;
+    margin-left: -2vw;
+  }
+
+  .fundo-problema {
+    /* FUNDO PROBLEMA */
+    width: 90vw;
+    height: 39vh;
+    background-color: rgba(255, 219, 152, 0.808);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    margin-top: 0.5vh;
+    margin-left: 4.5vw;
+    border-radius: 10px;
+  }
+
+  .descricaoPrb {
+    /* CONFIG CAMPO DESCRIÇÃO */
+    margin-left: 1%;
+    width: 70%;
+    margin-top: -5%;
+  }
+
+  .btn-dark {
+    /* BOTÃO DE ENVIAR RECLAMAÇÃO */
+    width: 19.1vw;
+    margin-left: 27.3%;
+    margin-top: 1vw;
+  }
+
+  .padding {
+    /* MARGEM INTERNA DO SITE */
+    padding-top: 25px;
+    margin-left: -6.5%;
+  }
+
+  .button {
+    margin-top: 10px;
+    width: 67vw;
+    margin-left: 12.3%;
+    margin-right: 10%;
+  }
 }

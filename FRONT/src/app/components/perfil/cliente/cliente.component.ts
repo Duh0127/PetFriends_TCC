@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ICadastroCliente } from 'src/app/model/ICadastroCliente.model';
+import { IPedido } from 'src/app/model/IPedido.model';
 import { IProduto } from 'src/app/model/IProduto.model';
+import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 import { CadastroClienteService } from 'src/app/services/cadcliente.service';
+import { CarrinhoService } from 'src/app/services/carrinho.service';
+import { PedidoService } from 'src/app/services/pedido.service';
 import { ProdutosService } from 'src/app/services/produtos.service';
 
 @Component({
@@ -11,6 +15,8 @@ import { ProdutosService } from 'src/app/services/produtos.service';
   styleUrls: ['./cliente.component.css']
 })
 export class ClienteComponent implements OnInit {
+
+  
 
 
   cadastro: ICadastroCliente = {
@@ -25,14 +31,18 @@ export class ClienteComponent implements OnInit {
 
   listarCliente: ICadastroCliente[] = [];
   listarProdutos: IProduto[] = [];
+  listarPedidos: IPedido[] = [];
 
   constructor(private cadastroService: CadastroClienteService,
     private produtosService: ProdutosService,
+    private pedidoService: PedidoService, 
+    private autenticacaoService: AutenticacaoService,
+    private carrinhoService: CarrinhoService,
     private router: Router) { }
 
   ngOnInit(): void {
-    this.carregarProdutos();
     this.carregarUsuario();
+    this.carregarPedidos();
   }
 
   carregarUsuario() : void{
@@ -41,12 +51,11 @@ export class ClienteComponent implements OnInit {
     })
   }
 
-  carregarProdutos() : void{
-    this.produtosService.buscarTodos().subscribe(retorno => {
-      this.listarProdutos = retorno;
+  carregarPedidos() : void{
+    this.pedidoService.buscarByUser().subscribe(retorno => {
+      this.listarPedidos = retorno;
     })
   };
-
 
   salvarCadastroCliente(): void {
     this.cadastroService.cadastrar(this.cadastro).subscribe(retorno => {
@@ -55,4 +64,8 @@ export class ClienteComponent implements OnInit {
     this.router.navigate(['']);
   }
 
+  sair(){
+    this.autenticacaoService.LimparToken();
+    this.router.navigate(["/login-cliente"])
+  }
 }

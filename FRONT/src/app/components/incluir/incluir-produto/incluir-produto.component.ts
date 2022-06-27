@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ICadastroAssociado } from 'src/app/model/ICadastroAssociado.model';
 import { IProduto } from 'src/app/model/IProduto.model';
 import { CadastroAssociadoService } from 'src/app/services/cadassoc.service';
 import { ProdutosService } from 'src/app/services/produtos.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-incluir-produto',
@@ -13,7 +14,7 @@ import { ProdutosService } from 'src/app/services/produtos.service';
 })
 export class IncluirProdutoComponent implements OnInit {
 
-  incluirProdutoForm!: FormGroup;
+  incluirProdutoForm!: UntypedFormGroup;
 
   cadastro: ICadastroAssociado = {
     associadoId: 0,
@@ -42,18 +43,18 @@ export class IncluirProdutoComponent implements OnInit {
   listarAssociado: ICadastroAssociado[] = [];
   listarProdutos: IProduto[] = [];
 
-  constructor(private formBuilder: FormBuilder,
+
+  constructor(private formBuilder: UntypedFormBuilder,
               private cadastroService: CadastroAssociadoService,
               private produtosService: ProdutosService,
               private router: Router) { }
 
   ngOnInit(): void {
-    this.carregarUsuario();
-    this.carregarProdutos();
 
     this.incluirProdutoForm = this.formBuilder.group(
       {
         nomeProduto: ['', [Validators.required]],
+        categoriaProduto: ['', [Validators.required]],
         codigoProduto: ['', [Validators.required]],
         qtdProduto: ['', [Validators.required]],
         precoProduto:['', [Validators.required]],
@@ -61,7 +62,13 @@ export class IncluirProdutoComponent implements OnInit {
         descricaoProduto: ['', [Validators.required]],
       }
     )
+
+    this.carregarUsuario();
+    this.carregarProdutos();
+
+
   };
+
 
   carregarUsuario() : void{
     this.cadastroService.buscarByUser().subscribe(retorno => {
@@ -75,36 +82,118 @@ export class IncluirProdutoComponent implements OnInit {
     })
   };
 
-   deletarProdutos(produto: IProduto) {
-     this.produtosService.excluir(produto.produtoId).subscribe(produto => {
-      if (produto) {
-        alert('Produto Deletado com Sucesso');
-      } else {
-        alert('Falha ao Deletar Produto ');
-      }
-       this.carregarProdutos();
-     });
-   };
-
    salvarProduto() {
 
-    var dadosProduto = this.incluirProdutoForm.getRawValue() as ProdutosService;
+    var dadosProduto = this.incluirProdutoForm.getRawValue() as IProduto;
 
       this.produtosService.cadastrar(dadosProduto).subscribe(produto => {
         if (produto) {
-          alert('Produto Cadastrado com Sucesso');
+          Swal.fire({icon: 'success',
+            title: 'Produto Cadastrado com Sucesso',
+            text: 'Tudo certo!',
+            showConfirmButton: true,
+            confirmButtonColor: '#ffd13a'});
+
+          window.location.reload();
           this.carregarProdutos();
         } else {
-          alert('Falha ao Cadastrar Produto ');
+          Swal.fire({icon: 'error',
+            title: 'Falha ao Cadastrar Produto',
+            text: 'Algo deu errado',
+            showConfirmButton: true,
+            confirmButtonColor: '#ffd13a'});
         }
+
      }, error => {
        console.log(error);
-       alert('erro interno do sistema');
      });
       this.router.navigate(['perfil-associado']);
     }
 
-}
+    deletarProdutos(produto: IProduto) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Confirma a exclusão do(a) ' + produto.nomeProduto + '?',
+        text: 'Esta ação não poderá ser desfeita',
+        showCancelButton: true,
+        confirmButtonText: 'Sim',
+        cancelButtonText: 'Não',
+        confirmButtonColor: '#ffd13a'
+      })
+      .then(result => {
+        if(result.value){
+          this.produtosService.excluir(produto.produtoId).subscribe(produto => {
+            if (produto) {
+              Swal.fire({icon: 'success',
+                title: 'Produto Deletado com Sucesso',
+                text: 'Tudo certo!',
+                showConfirmButton: true,
+                confirmButtonColor: '#ffd13a'});
+            } else {
+              Swal.fire({icon: 'error',
+                title: 'Falha ao Deletar Produto',
+                text: 'Algo deu errado',
+                showConfirmButton: true,
+                confirmButtonColor: '#ffd13a'});
+            }
+             this.carregarProdutos();
+           });
+        }
+      })
+    };
+
+    addProduto(
+      idProd: number,
+      idAssoc: number,
+      catProd: number,
+      codProd: string,
+      nomeProd: string,
+      qtdProd: number,
+      precoProd: number,
+      fabProd: string,
+      descProd: string,
+      fotoProd: FileList | null,
+      endAssoc: string
+    ) : void {
+      var produto: IProduto = {
+        "produtoId": idProd,
+        "associadoId": idAssoc,
+        "categoriaProduto": catProd,
+        "codigoProduto": codProd,
+        "nomeProduto": nomeProd,
+        "qtdProduto": qtdProd,
+        "precoProduto": precoProd,
+        "fabricanteProduto": fabProd,
+        "descricaoProduto": descProd,
+        "enderecoCadAssociado": endAssoc
+      }
+      var addProduto = (prodToAdd: IProduto) => {
+        console.log(prodToAdd)
+        this.produtosService.addProduto(prodToAdd).subscribe(result => {
+          Swal.fire({icon: 'success',
+          title: 'Produto Cadastrado com Sucesso',
+          text: 'Tudo certo!',
+          showConfirmButton: true,
+          confirmButtonColor: '#ffd13a'});
+
+          window.location.reload();
+          this.carregarProdutos();
+        })
+      }
+      if (fotoProd != null) {
+        this.produtosService.addProdPhoto(fotoProd[0], progress => {
+          console.log("Progress: " + progress)
+        }, file => {
+          produto.produtoImagem = file
+          addProduto(produto)
+        }).subscribe()
+      } else {
+        addProduto(produto)
+      }
+    }
+  }
+
+
 
 
 

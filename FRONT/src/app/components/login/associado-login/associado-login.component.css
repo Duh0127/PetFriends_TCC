@@ -1,19 +1,19 @@
 /* HEADER */
-.fundonav {/* FUNDO NAVBAR */
+.fundonav {
+  /* FUNDO NAVBAR */
   background-color: #ffd13a;
   padding: 0px;
 }
-.logo {/* IMG LOGO NAVBAR */
+.logo {
+  /* IMG LOGO NAVBAR */
   margin-left: 19vw;
   margin-bottom: -5%;
   margin-top: -2%;
 }
 
-
-
-
 /*  */
-#imagemfundo{/* IMAGEM DO FUNDO DA PÁGINA */
+#imagemfundo {
+  /* IMAGEM DO FUNDO DA PÁGINA */
   background: #ffffff url("src/assets/img/fundocachorro.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -21,8 +21,8 @@
   height: 100vh;
 }
 
-
-.fundo{/* FUNDO AMARELO  */
+.fundo {
+  /* FUNDO AMARELO  */
   margin-top: 6%;
   width: 50%;
   background-color: rgba(255, 219, 152, 0.808);
@@ -32,23 +32,24 @@
   margin-left: 25%;
 }
 
-
-.row{/* LINHA */
+.row {
+  /* LINHA */
   padding-top: 6%;
   margin-left: 6%;
 }
 
-
-
-.coluna1{/* COLUNA ESQUERDA */
+.coluna1 {
+  /* COLUNA ESQUERDA */
   margin-top: 6%;
 }
-.text-associado{/* TEXTO 'ASSOCIADO' */
+.text-associado {
+  /* TEXTO 'ASSOCIADO' */
   margin-top: -15%;
   margin-left: 22%;
   margin-bottom: 4vh;
 }
-input{/* CONFIG DO INPUT  */
+input {
+  /* CONFIG DO INPUT  */
   width: 100%;
   border-top: transparent;
   border-left: transparent;
@@ -57,37 +58,135 @@ input{/* CONFIG DO INPUT  */
   background-color: transparent;
   border-radius: 0px;
 }
-input:focus{/* QUANDO SELECIONADO */
+input:focus {
+  /* QUANDO SELECIONADO */
   background-color: transparent;
   box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
   border-bottom: 2px solid rgb(23, 162, 184);
   border-radius: 0px;
 }
 
-
-
-
-
-
-.coluna2{/* COLUNA DIREITA */
+.coluna2 {
+  /* COLUNA DIREITA */
   margin-left: 8%;
   padding-top: -2%;
 }
-h3{/* TEXTO 'ENTRE OU CRIE SUA CONTA NO PETFRIENDS' */
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+h3 {
+  /* TEXTO 'ENTRE OU CRIE SUA CONTA NO PETFRIENDS' */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   margin-left: -6%;
 }
 
-
-
-.btn-warning{/* BOTÃO DE LOGIN */
+.btn-warning {
+  /* BOTÃO DE LOGIN */
   margin-top: 2%;
   width: 20.8vw;
   box-shadow: 2px 3px 10px rgb(221, 163, 3);
 }
-.criar-conta{/* LINK PARA CRIAR CONTA ASSOCIADO */
+.criar-conta {
+  /* LINK PARA CRIAR CONTA ASSOCIADO */
   margin-left: 6%;
   margin-top: 10%;
   font-size: 15px;
+}
+
+/*RESPONSIVO*/
+@media (max-width: 424px) {
+  /* HEADER */
+
+  .fundonav {
+    /* FUNDO NAVBAR */
+    background-color: #ffd13a;
+    padding: 0px;
+  }
+  .logo {
+    /* IMG LOGO NAVBAR */
+    margin-left: 0vw;
+    margin-bottom: -5%;
+    margin-top: -2%;
+  }
+
+  /*BODY*/
+
+  .image {
+    /*IMAGEM LOGO*/
+    display: none;
+  }
+
+  button {
+    width: 300vw;
+  }
+
+  .fundo {
+    /* FUNDO AMARELO  */
+    margin-top: 30%;
+    width: 80vw;
+    background-color: rgba(255, 219, 152, 0.808);
+    height: 45%;
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+    border-radius: 40px;
+    margin-left: 45px;
+    padding-top: 2vh;
+  }
+
+  .row {
+    /* LINHA */
+    padding-top: 6%;
+    margin-right: 20px;
+  }
+
+  .coluna1 {
+    /* COLUNA ESQUERDA */
+    margin-top: 6%;
+  }
+  .text-associado {
+    /* TEXTO 'ASSOCIADO' */
+    margin-top: -10%;
+    margin-left: 8%;
+    margin-bottom: 4.7vh;
+  }
+
+  input {
+    /* CONFIG DO INPUT  */
+    width: 100%;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: transparent;
+    border-radius: 0px;
+  }
+  input:focus {
+    /* QUANDO SELECIONADO */
+    background-color: transparent;
+    box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+    border-bottom: 2px solid rgb(23, 162, 184);
+    border-radius: 0px;
+  }
+
+  .coluna2 {
+    /* COLUNA DIREITA */
+    margin-left: 0%;
+    padding-top: -2%;
+  }
+  h3 {
+    /* TEXTO 'ENTRE OU CRIE SUA CONTA NO PETFRIENDS' */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-left: -6%;
+  }
+
+  .btn-warning {
+    /* BOTÃO DE LOGIN */
+    margin-top: 2%;
+    width: 20.8vw;
+    box-shadow: 2px 3px 10px rgb(221, 163, 3);
+  }
+  .criar-conta {
+    /* LINK PARA CRIAR CONTA ASSOCIADO */
+    margin-left: 6%;
+    margin-top: 10%;
+    font-size: 15px;
+  }
 }

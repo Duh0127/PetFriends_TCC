@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ICadastroCliente } from 'src/app/model/ICadastroCliente.model';
 import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 import { CadastroClienteService } from 'src/app/services/cadcliente.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cliente-login',
@@ -12,7 +13,7 @@ import { CadastroClienteService } from 'src/app/services/cadcliente.service';
 })
 export class ClienteLoginComponent implements OnInit {
 
-  loginForm!: FormGroup;
+  loginForm!: UntypedFormGroup;
 
   // login: ICadastroCliente = {
   //   clienteId: 0,
@@ -24,7 +25,7 @@ export class ClienteLoginComponent implements OnInit {
   //   senhaCadCliente: '',
   // };
 
-  constructor(private formBuilder: FormBuilder,
+  constructor(private formBuilder: UntypedFormBuilder,
               private autenticacaoService: AutenticacaoService,
               private cadastroService: CadastroClienteService,
               private router: Router) { }
@@ -45,11 +46,23 @@ export class ClienteLoginComponent implements OnInit {
     this.cadastroService.login(dadosLogin).subscribe(
       tokenCliente => {
         this.autenticacaoService.DefineToken(tokenCliente);
+        sessionStorage.setItem('Cliente', 'Perfil');
         this.router.navigate(['/perfil-cliente']);
-        alert('Bem-Vindo Cliente');
+
+        Swal.fire({icon: 'success',
+          title: 'Bem-Vindo Cliente',
+          text: 'Entre agora!',
+          showConfirmButton: false,
+          timer: 1800
+        })
       }, error => {
            console.log(error);
-           alert('Cliente Não Cadastrado');
+           Swal.fire({icon: 'error',
+            title: 'Cliente Não Cadastrado',
+           text: 'Revise as credenciais',
+           showConfirmButton: false,
+           timer: 1800
+          });
       }
     )
   }

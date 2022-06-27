@@ -5,17 +5,17 @@ body {
   width: 100%;
   height: 180vh;
 }
-.fundo2{
-width: 50vw;
-height: 55vh;
-background-color: rgba(255, 219, 152, 0.808);
-box-shadow: 2px 2px 10px rgb(117, 117, 117);
-border-radius: 10px;
-margin-top: 3vh;
-margin-left: 25vw;
+.fundo2 {
+  width: 50vw;
+  height: 55vh;
+  background-color: rgba(255, 219, 152, 0.808);
+  box-shadow: 2px 2px 10px rgb(117, 117, 117);
+  border-radius: 10px;
+  margin-top: 3vh;
+  margin-left: 25vw;
 }
 
-.fundo-tudo{
+.fundo-tudo {
   width: 50vw;
   height: 27vh;
   background-color: rgba(255, 219, 152, 0.808);
@@ -25,7 +25,7 @@ margin-left: 25vw;
   margin-top: 50px;
 }
 
-.fundo-incluir{
+.fundo-incluir {
   width: 50vw;
   height: 64vh;
   background-color: rgba(255, 219, 152, 0.808);
@@ -35,7 +35,7 @@ margin-left: 25vw;
   margin-left: 25vw;
 }
 
-.fundo-lista{
+.fundo-lista {
   width: 50vw;
   height: 64vh;
   background-color: rgba(255, 219, 152, 0.808);
@@ -45,89 +45,88 @@ margin-left: 25vw;
   margin-left: 25vw;
 }
 
-.padding-incluir{
-    padding-top: 25px;
-    align-items: center;
+.padding-incluir {
+  padding-top: 25px;
+  align-items: center;
 }
 
-.usuario-perfil{
+.usuario-perfil {
   font-size: 15px;
   padding-top: 10px;
   text-align: center;
 }
 
-.text-usuario{
+.text-usuario {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.text-pedidos{
+.text-pedidos {
   text-align: center;
   margin-top: 1%;
 }
 
-.coluna2{
+.coluna2 {
   margin-left: 70px;
 }
 
-.coluna1{
+.coluna1 {
   margin-left: 50px;
 }
 
-.btn-primary{
+.btn-primary {
   width: 20.8vw;
   margin-left: 28%;
   margin-bottom: 2%;
 }
 
-.criar-conta{
+.criar-conta {
   margin-left: 31%;
   margin-top: 1%;
   font-size: 15px;
 }
 
-.cadastro-usuario{
+.cadastro-usuario {
   font-size: 15px;
   margin-left: 33%;
   margin-top: 4%;
 }
 
-.coluna1 input{
+.coluna1 input {
   width: 300px;
 }
 
-.coluna2 input{
+.coluna2 input {
   width: 300px;
 }
 
-
-.bi-cart-fill{
+.bi-cart-fill {
   margin-left: 48.2%;
 }
 
-.btn-primary{
+.btn-primary {
   width: 20.8vw;
   margin-left: 28%;
   margin-top: 2%;
 }
 
-.criar-conta{
+.criar-conta {
   margin-left: 31%;
   margin-top: 1%;
   font-size: 15px;
 }
 
-.cadastro-usuario{
+.cadastro-usuario {
   font-size: 15px;
   margin-left: 33%;
   margin-top: 4%;
 }
 
-.divlabel{
+.divlabel {
   margin-bottom: 6.8%;
 }
 
-input{
+input {
   width: 100%;
   border-top: transparent;
   border-left: transparent;
@@ -136,75 +135,69 @@ input{
   background-color: transparent;
   border-radius: 0px;
 }
-input:focus{
+input:focus {
   background-color: transparent;
   box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
   border-bottom: 2px solid rgb(23, 162, 184);
   border-radius: 0px;
 }
 
-.padding{
+.padding {
   padding-top: 25px;
 }
 
-
-.fundo-input{
+.fundo-input {
   color: rgb(161, 160, 160);
 }
 
-.cardproduto{
+.cardproduto {
   border: 5px solid rgb(255, 199, 96);
   width: 70%;
   height: 40%;
   margin: auto;
   background-color: rgba(49, 49, 49, 0.945);
-
 }
 
-
-h1{
+h1 {
   margin-left: 15%;
   margin-bottom: -2%;
 }
 
-.btn-warning{
+.btn-warning {
   width: 10%;
   font-size: 18px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   box-shadow: 0px 0px 10px rgb(255, 220, 21);
 }
-.btn-warning:hover{
+.btn-warning:hover {
   background-color: rgb(255, 217, 0);
   box-shadow: 0px 0px 15px rgb(255, 217, 0);
 }
 
-
 .nomecompleto {
-width: 100%;
-margin-left:  7.5%;
-margin-right: 5.7%;
+  width: 100%;
+  margin-left: 7.5%;
+  margin-right: 5.7%;
 }
 
-.button{
-width: 80%;
-margin-left: 10%;
+.button {
+  width: 80%;
+  margin-left: 10%;
 }
 
-.labels{
-width: 85%;
-margin-left: 7.5%;
-margin-right: 7.5%;
+.labels {
+  width: 85%;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
 }
 
-.desc{
-width: 800px;
-height: 90px;
-margin: auto;
-margin-top: 20px;
-
+.desc {
+  width: 800px;
+  height: 90px;
+  margin: auto;
+  margin-top: 20px;
 }
-
-
 
 /*header*/
 .fundonav {

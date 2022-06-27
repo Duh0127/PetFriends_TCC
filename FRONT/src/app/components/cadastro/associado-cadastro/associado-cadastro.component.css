@@ -1,4 +1,4 @@
-body{
+body {
   background: #ffffff url("src/assets/img/fundocachorro.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -6,86 +6,86 @@ body{
   height: 100vh;
 }
 
-.nomecompleto{
+.nomecompleto {
   margin-left: 7.6%;
 }
 
-.inputnome{
+.inputnome {
   width: 91.6%;
 }
 
-.padding{
+.padding {
   padding-top: 25px;
 }
 
-.fundo{
+.fundo {
   margin-top: 6%;
   position: relative;
   width: 50%;
-  height: 55%;
+  height: auto;
   background-color: rgba(255, 219, 152, 0.808);
   margin-left: 25%;
   border-radius: 20px;
   box-shadow: 2px 3px 18px rgb(117, 117, 117);
-
+  padding-bottom: 15px;
 }
 
-.row{
+.row {
   padding-top: 6%;
   margin-left: 6%;
 }
 
-.telefone{
-  margin-top: -13px
+.telefone {
+  margin-top: -13px;
 }
 
-h3{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   margin-left: -6%;
 }
 
-.text-usuario{
+.text-usuario {
   margin-left: 37%;
 }
 
-.coluna2{
+.coluna2 {
   margin-left: 1%;
   margin-top: -5.2%;
 }
 
-.coluna1{
+.coluna1 {
   margin-top: -5%;
 }
 
-.btn-warning{
+.btn-warning {
   width: 20.8vw;
   margin-left: 28%;
   margin-top: 2%;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.452);
 }
 
-.criar-conta{
+.criar-conta {
   margin-left: 31%;
   margin-top: 1%;
   font-size: 15px;
 }
 
-.cadastro-usuario{
+.cadastro-usuario {
   font-size: 15px;
   margin-left: 33%;
   margin-top: 4%;
 }
 
-.divlabel{
+.divlabel {
   margin-bottom: 6.8%;
 }
 
-.coluna1 input{
+.coluna1 input {
   width: 330px;
 }
 
-input{
+input {
   width: 350px;
   border-top: transparent;
   border-left: transparent;
@@ -94,14 +94,14 @@ input{
   background-color: transparent;
   border-radius: 0px;
 }
-input:focus{
+input:focus {
   background-color: transparent;
   box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
   border-bottom: 2px solid rgb(255, 150, 52);
   border-radius: 0px;
 }
 
-#tipo{
+#tipo {
   width: 500px;
   border-top: transparent;
   border-left: transparent;
@@ -110,7 +110,7 @@ input:focus{
   background-color: transparent;
   border-radius: 0px;
 }
-#tipo:focus{
+#tipo:focus {
   width: 350px;
   border-top: transparent;
   border-left: transparent;
@@ -120,7 +120,7 @@ input:focus{
   border-radius: 0px;
 }
 
-.opcao{
+.opcao {
   border-top: transparent;
   border-left: transparent;
   border-right: transparent;
@@ -143,3 +143,154 @@ input:focus{
   margin-top: -2%;
 }
 
+/*RESPONSIVO*/
+@media (max-width: 424px) {
+  /* HEADER */
+
+  .fundonav {
+    /* FUNDO NAVBAR */
+    background-color: #ffd13a;
+    padding: 0px;
+  }
+  .logo {
+    /* IMG LOGO NAVBAR */
+    margin-left: 0vw;
+    margin-bottom: -5%;
+    margin-top: -2%;
+  }
+
+  /*BODY*/
+  .fundo {
+    margin-top: 6%;
+    position: relative;
+    width: 90vw;
+    height: 78%;
+    background-color: rgba(255, 219, 152, 0.808);
+    margin-left: 5%;
+    border-radius: 20px;
+    box-shadow: 2px 3px 18px rgb(117, 117, 117);
+  }
+
+  .nomecompleto {
+    margin-left: 7.6%;
+  }
+
+  .inputnome {
+    width: 91.6%;
+  }
+
+  .padding {
+    padding-top: 25px;
+  }
+
+  .row {
+    padding-top: 6%;
+    margin-left: 6%;
+  }
+
+  .telefone {
+    margin-top: 15px;
+  }
+
+  h3 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-left: -6%;
+  }
+
+  .text-usuario {
+    margin-left: 20%;
+    margin-bottom: 40px;
+  }
+
+  .coluna2 {
+    margin-left: -2.3vw;
+    margin-top: -5.2%;
+  }
+
+  .coluna1 {
+    margin-top: -5%;
+    margin-left: -2.3vw;
+  }
+
+  .btn-warning {
+    width: 20.8vw;
+    margin-left: 28%;
+    margin-top: 2%;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.452);
+  }
+
+  .criar-conta {
+    margin-left: 31%;
+    margin-top: 1%;
+    font-size: 15px;
+  }
+
+  .cadastro-usuario {
+    font-size: 15px;
+    margin-left: 33%;
+    margin-top: 4%;
+  }
+
+  .divlabel {
+    margin-bottom: 6.8%;
+  }
+
+  .coluna1 input {
+    width: 76vw;
+  }
+
+  input {
+    width: 350px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: transparent;
+    border-radius: 0px;
+  }
+  input:focus {
+    background-color: transparent;
+    box-shadow: 0px 0px 15px rgba(68, 68, 68, 0.274);
+    border-bottom: 2px solid rgb(255, 150, 52);
+    border-radius: 0px;
+  }
+
+  #tipo {
+    width: 500px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: transparent;
+    border-radius: 0px;
+  }
+  #tipo:focus {
+    width: 350px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: transparent;
+    border-radius: 0px;
+  }
+
+  .opcao {
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: transparent;
+    border-radius: 0px;
+  }
+
+  .form-control {
+    width: 76vw;
+  }
+
+  .button {
+    width: 50vw;
+    margin-top: 20px;
+    margin-left: 75px;
+  }
+}

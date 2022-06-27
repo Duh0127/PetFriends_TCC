@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  UrlPrincipal: "http://localhost:5000"
+  UrlPrincipal: "https://bsite.net/EtecTccPetFriends"
+  // https://bsite.net/EtecTccPetFriends
+  //http://localhost:5000
 };
 
 /*

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SharedModule } from './shared/shared.module';
 
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -12,14 +14,10 @@ import { ClienteCadastroComponent } from './components/cadastro/cliente-cadastro
 import { ReservaComponent } from './components/reserva/reserva.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { FooterComponent } from './templates/footer/footer.component';
-import { SenhaComponent } from './components/senha/senha.component';
-import { RedefinicaoComponent } from './components/senha/redefinicao/redefinicao.component';
-import { ValidacaoComponent } from './components/senha/validacao/validacao.component';
 import { ClienteComponent } from './components/perfil/cliente/cliente.component';
 import { AssociadoComponent } from './components/perfil/associado/associado.component';
 import { DescricaoProdutoComponent } from './components/descricao-produto/descricao-produto.component';
 import { SacComponent } from './components/sac/sac.component';
-import { ProdutosComponent } from './components/listar/produtos/produtos.component';
 import { IncluirProdutoComponent } from './components/incluir/incluir-produto/incluir-produto.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -42,10 +40,14 @@ import { ComedourosBebedourosCachorrosComponent } from './components/dropview/ca
 import { OssinhosComponent } from './components/dropview/cachorros/ossinhos/ossinhos.component';
 import { PetiscosComponent } from './components/dropview/cachorros/petiscos/petiscos.component';
 import { HigieneGatosComponent } from './components/dropview/gatos/higiene-gatos/higiene-gatos.component';
-import { PremiumComponent } from './components/premium/premium.component';
 import { AlterarComponent } from './components/alterar/alterar.component';
 import { Interceptor } from './interceptor/interceptor';
 import { AuthGuard } from './guard/auth.guard';
+import { AlterarPerfilAssociadoComponent } from './components/perfil/alterar-perfil-associado/alterar-perfil-associado.component';
+import { AlterarPerfilClienteComponent } from './components/perfil/alterar-perfil-cliente/alterar-perfil-cliente.component';
+import { PerfilGuard } from './guard/perfil.guard';
+import { NgxMaskModule } from 'ngx-mask';
+import { FilterPipe } from './shared/filter.pipe';
 
 
 const serviceAutenticacao = [Interceptor]
@@ -62,14 +64,10 @@ const serviceAutenticacao = [Interceptor]
     ReservaComponent,
     HeaderComponent,
     FooterComponent,
-    SenhaComponent,
-    RedefinicaoComponent,
-    ValidacaoComponent,
     ClienteComponent,
     AssociadoComponent,
     DescricaoProdutoComponent,
     SacComponent,
-    ProdutosComponent,
     IncluirProdutoComponent,
     HigieneComponent,
     FarmaciaComponent,
@@ -90,8 +88,10 @@ const serviceAutenticacao = [Interceptor]
     OssinhosComponent,
     PetiscosComponent,
     HigieneGatosComponent,
-    PremiumComponent,
-    AlterarComponent
+    AlterarComponent,
+    AlterarPerfilAssociadoComponent,
+    AlterarPerfilClienteComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -99,11 +99,16 @@ const serviceAutenticacao = [Interceptor]
     FormsModule,
     SharedModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AutocompleteLibModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false
+    }),
   ],
   providers: [
 
     AuthGuard,
+    PerfilGuard,
     serviceAutenticacao,
     { provide : HTTP_INTERCEPTORS, useClass:Interceptor, multi: true}
   ],

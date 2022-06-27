@@ -22,7 +22,7 @@ export class AutenticacaoService {
 
   public LimparToken()
   {
-    sessionStorage.removeItem('token');
+    sessionStorage.clear();
   }
 
 }

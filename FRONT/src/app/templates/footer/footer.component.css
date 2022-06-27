@@ -1,4 +1,12 @@
-*{
-    margin: 0;
-    padding: 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  height: 4vh;
+}
+.texto {
+  margin-top: 0.5vh;
+  font-weight: bold;
+  font-size: 17px;
+}

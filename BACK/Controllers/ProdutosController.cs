@@ -1,11 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using ApiTcc.Data;
 using ApiTcc.Models;
 using ApiTcc.Models.Enuns;
+using BACK.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -29,6 +32,15 @@ namespace ApiTcc.Controllers
             _httpContextAccessor = httpContextAccessor;
         }
 
+        public async Task<bool> ProdutoExistente (string codigoProduto)
+        {
+            if(await _context.Produtos.AnyAsync(x => x.codigoProduto.ToLower() == codigoProduto.ToLower()))
+            {
+                return true;
+            }
+            return false;
+        }
+
         private int ObterUsuarioId()
         {
             return int.Parse(_httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -44,7 +56,9 @@ namespace ApiTcc.Controllers
         {
             try
             {
-                List<Produto> lista = await _context.Produtos.ToListAsync();
+                List<Produto> lista = await _context.Produtos.OrderByDescending(p => p.produtoId) 
+                    .Where(p => p.qtdProduto != 0)
+                    .ToListAsync();
                 return Ok(lista);
             }
             catch (Exception ex)
@@ -53,6 +67,7 @@ namespace ApiTcc.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
 
 
         [HttpGet("{id}")]
@@ -114,6 +129,29 @@ namespace ApiTcc.Controllers
             }
         }
 
+        [HttpGet("GetByCategoria/{categoriaId}")]
+        
+         public async Task<IActionResult> GetByCategoria(int categoriaId)
+         {
+             try
+            {
+                List<Produto> listaFinal = await _context.Produtos
+                .Where(p => p.categoriaProduto == (CategoriaEnum)categoriaId)
+                .Where(p => p.qtdProduto != 0)
+                .OrderByDescending(p => p.produtoId).ToListAsync();
+
+                if(listaFinal.Count == 0)
+                    return NotFound("Nenhum produto encontrado.");
+                
+                return Ok(listaFinal);
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+         }
+
 
         [HttpPost]
         public async Task<IActionResult> Add(Produto novoProduto)
@@ -121,27 +159,19 @@ namespace ApiTcc.Controllers
 
              try
              {
-                 if (novoProduto.nomeProduto == "" && novoProduto.precoProduto == 0)
-                     throw new Exception("Campos Nome e Preço não podem estar vazios!");
-                
+                 if (await ProdutoExistente(novoProduto.codigoProduto))
+                     throw new System.Exception("Código de produto já existe");
+
                 novoProduto.Associado = _context.Associados.FirstOrDefault(aBusca => aBusca.associadoId == ObterUsuarioId());
 
+                novoProduto.nomeCadAssociado = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Name);
+                novoProduto.emailCadAssociado = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Email);
+                novoProduto.telCadAssociado = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.MobilePhone);
+                novoProduto.enderecoCadAssociado = _httpContextAccessor.HttpContext .User.FindFirstValue(ClaimTypes.Country);
+                await _context.Produtos.AddAsync(novoProduto);
+                await _context.SaveChangesAsync();
 
-                // int associadoId = int.Parse(_httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
-                // novoProduto.Associado = _context.Associados.FirstOrDefault(aBusca => aBusca.associadoId == associadoId);
-                
-
-                //INSERIR FORNECENDO ID DO USUARIO
-                //  Associado a = await _context.Associados
-                //      .FirstOrDefaultAsync(a => a.associadoId == novoProduto.associadoId);
-
-                //  if(a == null)
-                //      throw new System.Exception("Não existe Associado com o Id Informado.");
-                
-                 await _context.Produtos.AddAsync(novoProduto);
-                 await _context.SaveChangesAsync();
-
-                 return Ok(novoProduto.produtoId);
+                return Ok(novoProduto.produtoId);
              }
                 catch (Exception ex)
                 {
@@ -150,30 +180,23 @@ namespace ApiTcc.Controllers
                 }
         }
 
-        // [HttpPut]
-        // public async Task<IActionResult> Update(Produto p)
-        // {
-        //     Produtos produtosAlterado = persoagens.Find(produto => produto.Id)
-        // }
 
          [HttpPut]
          public async Task<IActionResult> Update(Produto novoProduto)
          {
-             try
-             {
-                 if (novoProduto.nomeProduto == "" && novoProduto.precoProduto == 0)
-                 {
-                     throw new Exception("Campos Nome e Preço não podem estar vazios!");
+            try
+            {
+                if (novoProduto.nomeProduto == "" && novoProduto.precoProduto == 0)
+                {
+                    throw new Exception("Campos Nome e Preço não podem estar vazios!");
                 }
 
                  novoProduto.Associado = _context.Associados.FirstOrDefault(aBusca => aBusca.associadoId == ObterUsuarioId());
-                 // int associadoId = int.Parse(_httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
-                 // novoProduto.Associado = _context.Associados.FirstOrDefault(aBusca => aBusca.associadoId == associadoId);
                 
                  _context.Produtos.Update(novoProduto);
-                 int linhasAfestadas = await _context.SaveChangesAsync();
+                 int linhasAfetadas = await _context.SaveChangesAsync();
 
-                 return Ok(linhasAfestadas);
+                 return Ok(linhasAfetadas);
              }
              catch (Exception ex)
              {
@@ -192,14 +215,46 @@ namespace ApiTcc.Controllers
                 .FirstOrDefaultAsync(pd => pd.produtoId == id);
 
                 _context.Produtos.Remove(pdRemover);
-                int linhasAfestadas = await _context.SaveChangesAsync();
+                int linhasAfetadas = await _context.SaveChangesAsync();
 
-                return Ok(linhasAfestadas);
+                return Ok(linhasAfetadas);
             }
             catch (Exception ex)
             {
                 
                 return BadRequest(ex.Message);
+            }
+        }
+
+
+    [HttpPost("PhotoUpload"), DisableRequestSizeLimit]
+        public async Task<IActionResult> UploadProdPhoto()
+        {
+            try
+            {
+                var formCollection = await Request.ReadFormAsync();
+                var file = formCollection.Files.First();
+                var folderName = Path.Combine("Resources", "Images");
+                var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
+                if (file.Length > 0)
+                {
+                    var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+                    var fullPath = Path.Combine(pathToSave, fileName);
+                    var prodPhoto = Path.Combine(folderName, fileName);
+                    using (var stream = new FileStream(fullPath, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                    }
+                    return Ok(new { prodPhoto });
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex}");
             }
         }
 

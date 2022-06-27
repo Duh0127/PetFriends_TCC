@@ -5,8 +5,6 @@ body {
   background-color: rgba(255, 255, 255, 0.712);
 }
 
-
-
 /*TEXTO "PRODUTOS PARA SEUS PETS"*/
 .margem-titulo {
   text-align: center;
@@ -15,8 +13,6 @@ body {
   color: rgb(248, 183, 61);
 }
 
-
-
 /*TEXTO "SERVIÇOS PARA SEUS PETS"*/
 .margem-titulo2 {
   margin-left: 41.7vw;
@@ -24,128 +20,197 @@ body {
   margin-bottom: 2%;
 }
 
+/*CARDS SLIDER*/
+/*CARDS SLIDER*/
 
-
-
-
-                  /*CARDS SLIDER*/
-                  /*CARDS SLIDER*/
-
-.cards{ /*TAMANHO DE LARGURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+.cards {
+  /*TAMANHO DE LARGURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
   width: 98vw;
 }
-.card-slider{/*TAMANHO DE ALTURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+.card-slider {
+  /*TAMANHO DE ALTURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
   height: 100vh;
 }
-.carousel{/*MARGINS PARA ESPAÇOS DA BORDAS*/
+.carousel {
+  /*MARGINS PARA ESPAÇOS DA BORDAS*/
   margin-right: -15px;
   margin-left: -15px;
 }
-.button-slider{/*POSICIONAMENTOS DOS BOTÕES*/
+.button-slider {
+  /*POSICIONAMENTOS DOS BOTÕES*/
   margin-top: 170px;
   height: 50px;
 }
-.carousel-control-prev{/*COR E TAMANHO DO BOTÃO DE PREVIA*/
+.carousel-control-prev {
+  /*COR E TAMANHO DO BOTÃO DE PREVIA*/
   margin-left: 10px;
   width: 40vw;
   color: black;
 }
-.carousel-control-next{/*COR E TAMANHO DO BOTÃO DE NEXT*/
+.carousel-control-next {
+  /*COR E TAMANHO DO BOTÃO DE NEXT*/
   width: 40vw;
   color: black;
 }
-.mar-card-slider{/*MARGEN DO PRIMEIRO CARD*/
-  margin-left: 100px;
+
+.cards-slider {
+  margin-left: 205px;
+  align-items: center;
+  margin-right: 150px;
 }
-.mar2-card-slider{/*MARGEN DO SEGUNDO CARD*/
-  margin-right: 20px;
+
+.mar-card-slider {
+  /*MARGEN DO SEGUNDO CARD*/
+  width: 2vw;
+  margin-right: 260px;
+  margin-bottom: 200px;
 }
 
+.botaocard {
+  /* BOTÃO RESERVAR */
+  background-color: rgb(255, 208, 0);
+  border: none;
+  margin-top: 1px;
+  margin-left: 6.5px;
+  width: 12.85vw;
+  box-shadow: 0px 0px 3px black;
+}
+.botaocard:hover {
+  /* AO PASSAR O MOUSE EM CIMA */
+  transform: scale(1.001);
+  transition: transform 0.1s ease;
+}
 
+/*IMAGENS DAS CATEGORIAS*/
+/*IMAGENS DAS CATEGORIAS*/
 
-
-
-              /*IMAGENS DAS CATEGORIAS*/
-              /*IMAGENS DAS CATEGORIAS*/
-
-.categorias{/*MARGENS PARA POSICIONAMENTO DE TODAS AS IMAGENS*/
+.categorias {
+  /*MARGENS PARA POSICIONAMENTO DE TODAS AS IMAGENS*/
   margin-top: 50px;
   margin-left: 19%;
   margin-right: 16%;
+  margin-bottom: 20vh;
+  width: 75vw;
 }
-.categoria{/*MARGEM PARA ESPAÇO ENTRE AS IMAGENS*/
+.categoria {
+  /*MARGEM PARA ESPAÇO ENTRE AS IMAGENS*/
   margin-right: 70px;
   margin-top: 20px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   cursor: pointer;
 }
-.linha1{/*MARGEM DA LINHA DE IMAGEM*/
+.linha1 {
+  /*MARGEM DA LINHA DE IMAGEM*/
   margin-bottom: 50px;
+  width: 80vw;
 }
-.titulo-categoria{/*ALINHAMENTO DO TITULO*/
+.titulo-categoria {
+  /*ALINHAMENTO DO TITULO*/
   text-align: center;
 }
-.image_categoria{/*FORMATO E TAMANHO DAS IMAGENS*/
+.image_categoria {
+  /*FORMATO E TAMANHO DAS IMAGENS*/
   height: 210px;
   width: 240px;
   border-radius: 10px;
   margin-left: 0px;
 }
-.icon-list{/*MARGEM DO ICONE DE LISTA*/
+.icon-list {
+  /*MARGEM DO ICONE DE LISTA*/
   margin-top: 150px;
   margin-left: 30px;
 }
 
-
-
-
-
-
-
 /*DIVISOR DO DEPARTAMENTO E DO CADASTRE-SE*/
-.divisor{
+.divisor {
   border-bottom: 2px solid rgb(223, 223, 223);
-  width: 199vh;
+  width: 99.6vw;
   margin-left: -15px;
-  margin-top: 150px;
 }
 
+/*MARCAS*/
+/*MARCAS*/
+/*MARCAS*/
+.fundo-marcas {
+  background-color: rgb(248, 237, 219);
+  width: auto;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-top: 9vh;
+  padding-bottom: 9vh;
+}
 
+.margem-titulo-marcas {
+  text-align: center;
+  margin-bottom: 5vh;
+}
 
+.marca {
+  text-align: center;
+}
 
+.marcas {
+  align-items: center;
+  margin-right: 0%;
+}
+
+.image_marca {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+/*COMO FUNCIONA O SITE*/
+.text-site {
+  text-align: center;
+  margin-left: 14vw;
+  margin-right: 14vw;
+  width: auto;
+  font-size: 23px;
+}
 
 /*--------MARGEM CARDS----------*/
 .mar1 {
   margin-left: 5%;
 }
 
-
-
-
-
-
 /*------PARTE DE CADASTRO NA HOME-------*/
+
 .fundocad {
   width: 90%;
-  height: 100px;
+  height: auto;
   margin-left: 5.4%;
   margin-top: 80px;
   border-radius: 10px;
-  background-color: antiquewhite;
+  padding: 10px;
+  background-color: rgb(245, 219, 186);
+}
+.colunaum {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-items: center;
 }
 .colunadois {
   font-size: larger;
   margin-top: 25px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-items: center;
 }
 .colunatres {
   margin-left: 100px;
+  width: 900px;
 }
 #textocadastro {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  width: 900px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  width: auto;
   margin-left: 120px;
   font-size: 30px;
+  text-align: center;
 }
 #buttonbtn {
   width: 150px;
@@ -156,7 +221,7 @@ body {
   background-color: rgb(255, 238, 0);
   box-shadow: 0px 0px 15px rgb(255, 251, 21);
   border-radius: 15px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 #buttonbtn:hover {
   background-color: rgb(255, 217, 0);
@@ -164,81 +229,48 @@ body {
 }
 /*-----PARTE DE CADASTRO NA HOME-----*/
 
-
-
-
-
-
-                  /*FOOTER*/
-                  /*FOOTER*/
+/*FOOTER*/
+/*FOOTER*/
 
 .footer {
   margin-top: 200px;
-  height: 30vh;
-  width: 199vh;
+  height: 21vh;
+  width: 99.6vw;
   border-top: 2px solid rgb(223, 223, 223);
   margin-right: -15px;
   margin-left: -15px;
   background-color: #ffff;
 }
-.coluna{
+.coluna {
   border: 2px solid rgb(223, 223, 223);
   height: 10vh;
   border-top: none;
   border-bottom: none;
   border-right: none;
 }
-.sac:hover{
+.sac:hover {
   color: rgb(248, 183, 61);
   cursor: pointer;
 }
-.rede{
+.rede {
   text-align: center;
 }
-.redes{
+.redes {
   align-items: center;
-  margin-top: 5%;
+  margin-top: 2%;
 }
-.image_redonda{
+.image_redonda {
   height: 50px;
   width: 50px;
   border-radius: 30%;
 }
 
+/*------RESPONSIVO--------*/
+/*------RESPONSIVO--------*/
 
+/*1 = não responsivo*/
+/*2 = responsivo*/
 
-
-
-
-
-
-              /*principais marcas imagens*/
-              /*principais marcas imagens*/
-.marca{
-  text-align: center;
-}
-
-.marcas{
-  margin-left: -75px;
-  align-items: center;
-  margin-right: 20px;
-}
-
-.image_marca{
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-}
-
-
-
-
-
-
-
-
-              /*------RESPONSIVO--------*/
-              /*------RESPONSIVO--------*/
 .carousel2 {
   margin: 0px;
   height: 0px;
@@ -253,26 +285,182 @@ body {
   background-color: none;
   display: none;
 }
+
 @media (max-width: 424px) {
+  /*CARDS SLIDER*/
+  /*CARDS SLIDER*/
+
+  .cards {
+    /*TAMANHO DE LARGURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+    width: 98vw;
+  }
+  .card-slider {
+    /*TAMANHO DE ALTURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+    height: 100vh;
+  }
+  .carousel {
+    /*MARGINS PARA ESPAÇOS DA BORDAS*/
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .button-slider {
+    /*POSICIONAMENTOS DOS BOTÕES*/
+    margin-top: 170px;
+    height: 50px;
+  }
+  .carousel-control-prev {
+    /*COR E TAMANHO DO BOTÃO DE PREVIA*/
+    margin-left: 10px;
+    width: 40vw;
+    color: black;
+  }
+  .carousel-control-next {
+    /*COR E TAMANHO DO BOTÃO DE NEXT*/
+    margin-right: 10px;
+    width: 40vw;
+    color: black;
+  }
+
+  .cards-slider {
+    margin-left: 65px;
+    margin-right: 20px;
+    align-items: center;
+  }
+
+  .mar2-card-slider {
+    /*MARGEN DO SEGUNDO CARD*/
+    margin-right: 100px;
+  }
+
+  .botaocard {
+    /* BOTÃO RESERVAR */
+    background-color: rgb(255, 208, 0);
+    border: none;
+    margin-top: 1px;
+    margin-left: 6.5px;
+    width: 56vw;
+    box-shadow: 0px 0px 3px black;
+  }
+
+  .botaocard:hover {
+    /* AO PASSAR O MOUSE EM CIMA */
+    transform: scale(1.001);
+    transition: transform 0.1s ease;
+  }
+
+  /*MARCAS*/
+  /*MARCAS*/
+  /*MARCAS*/
+  .fundo-marcas {
+    background-color: rgb(248, 237, 219);
+    width: 106vw;
+    margin-left: -24px;
+    padding-top: 9vh;
+    padding-bottom: 9vh;
+  }
+
+  .margem-titulo-marcas {
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+
+  .marca {
+    text-align: center;
+    margin-bottom: 2%;
+  }
+
+  .marcas {
+    margin-left: 15px;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .image_marca {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  /*IMAGENS DAS CATEGORIAS*/
+  /*IMAGENS DAS CATEGORIAS*/
+
+  .categorias {
+    /*MARGENS PARA POSICIONAMENTO DE TODAS AS IMAGENS*/
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+    margin-left: 95px;
+  }
+  .categoria {
+    /*MARGEM PARA ESPAÇO ENTRE AS IMAGENS*/
+    margin-top: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .linha1 {
+    /*MARGEM DA LINHA DE IMAGEM*/
+    margin-bottom: 50px;
+  }
+  .titulo-categoria {
+    /*ALINHAMENTO DO TITULO*/
+    text-align: center;
+  }
+  .image_categoria {
+    /*FORMATO E TAMANHO DAS IMAGENS*/
+    height: 210px;
+    width: 240px;
+    border-radius: 10px;
+    margin-left: 0px;
+  }
+  .icon-list {
+    /*MARGEM DO ICONE DE LISTA*/
+    margin-top: 150px;
+    margin-left: 30px;
+  }
+  .title-categorias {
+    width: 300px;
+    margin-left: -20%;
+    margin-bottom: 10px;
+  }
+
+  /*DIVISOR DO DEPARTAMENTO E DO CADASTRE-SE*/
+  .divisor {
+    border-bottom: 2px solid rgb(223, 223, 223);
+    width: 104vw;
+    padding-left: 104vw;
+    margin-top: 0;
+  }
+
+  .footer {
+    margin-top: 200px;
+    height: 30vh;
+    width: 45vh;
+    border-top: 2px solid rgb(223, 223, 223);
+    margin-right: -15px;
+    margin-left: -15px;
+    background-color: #ffff;
+  }
+
   .fundocomponent {
-    padding-left: 70px;
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
   }
   .margem-titulo {
     width: 300px;
-    margin: -15px;
-    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-bottom: 50px;
   }
   .margem-titulo2 {
     width: 300px;
     margin: -15px;
     margin-bottom: 10px;
   }
-  .footer {
-    background-color: black;
-  }
+
   .carousel2 {
-    margin-left: 5px;
-    margin-right: 40vh;
+    margin-left: 70px;
+    margin-right: 70px;
     margin-top: 30px;
     margin-bottom: 250px;
     width: 255px;
@@ -304,12 +492,7 @@ body {
     background: transparent;
     display: none;
   }
-  .carousel {
-    background-color: transparent;
-    width: 0;
-    height: 0;
-    display: none;
-  }
+
   .fundocad {
     width: 87%;
     height: 100px;
@@ -327,12 +510,57 @@ body {
     display: none;
   }
   .colunatres {
-    margin-left: 100px;
+    align-items: center;
+    margin-left: 135px;
   }
   #textocadastro {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
     width: 900px;
     margin-left: 120px;
     font-size: 30px;
+  }
+
+  /*FOOTER*/
+  /*FOOTER*/
+
+  .footer {
+    margin-top: 200px;
+    height: 30vh;
+    width: 104vw;
+    border-top: 2px solid rgb(223, 223, 223);
+    margin-right: -15px;
+    margin-left: -15px;
+    background-color: #ffff;
+  }
+
+  .coluna {
+    border: 2px solid rgb(223, 223, 223);
+    height: 10vh;
+    padding-left: 140px;
+    padding-top: 10px;
+    margin-bottom: -50px;
+    margin-top: 25px;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+  }
+  .sac:hover {
+    color: rgb(248, 183, 61);
+    cursor: pointer;
+  }
+  .rede {
+    text-align: center;
+  }
+  .redes {
+    align-items: center;
+    margin-top: 8%;
+    margin-left: -35px;
+  }
+
+  .image_redonda {
+    height: 50px;
+    width: 50px;
+    border-radius: 30%;
   }
 }

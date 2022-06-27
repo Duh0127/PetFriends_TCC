@@ -22,7 +22,7 @@ export class CadastroClienteService {
  cadastrar(cliente: ICadastroCliente): Observable<ICadastroCliente> {
    return this.http.post<ICadastroCliente>(`${this.baseUrl}/Registrar`, cliente).pipe(
      map(retorno => retorno)
-     //catchError(erro => this.exibirErro(erro))
+
    );
  }
 
@@ -35,21 +35,23 @@ export class CadastroClienteService {
   buscarByUser() : Observable<ICadastroCliente[]> {
     return this.http.get<ICadastroCliente[]>(`${this.baseUrl}/GetByUser`).pipe(
     map(retorno => retorno)
-    //catchError(erro => this.exibirErro(erro))
+
    );
   }
 
+  excluir(id: number): Observable<ICadastroCliente> {
+    return this.http.delete<ICadastroCliente>(`${this.baseUrl}/${id}`).pipe(
+      map(retorno => retorno),
 
+    );
+  }
 
+  atualizar(cliente: ICadastroCliente): Observable<ICadastroCliente> {
+    return this.http.put<ICadastroCliente>(`${this.baseUrl}/${cliente.clienteId}`, cliente).pipe(
+      map(retorno => retorno),
 
-
- // login(login: ICadastroCliente,) {
- //   return this.http.post<ICadastroCliente>(`${this.baseUrl}/Autenticar`, login).pipe(
- //     map(retorno => retorno ),
- //   );
- // }
-
-
+    );
+  }
 
 
 

@@ -1,87 +1,199 @@
-.zoom{
-  max-width: 100%;
-  transition: translate(5%,5%);
-}
-
-.zoom:hover{
-  transform: scale(1.1);
-  transition: transform .2s ease;
-}
-
-.centro{
+.centro {
   margin-left: 8%;
 }
 
-.my-3{
+.text-center {
   text-align: center;
 }
 
-.container-fluid{
+.container-fluid {
   height: 100vh;
   width: 100%;
 }
 .fundonav {
+  /* FUNDO DA NAVBAR */
   background-color: #ffd13a;
   padding: 0px;
   margin: 0px;
 }
-
-.dropdown-menu {
-  background-color: rgb(254, 255, 199);
-  border: 2px solid rgb(255, 255, 255);
+.navbar-light {
+  width: 100vw;
 }
-
 
 .logo {
   /*foto do logo*/
+  position: absolute;
   margin-left: 19vw;
+  margin-top: -3vh;
 }
-
-.box-search {
-  /*barra de pesquisa*/
-  margin-left: -5%;
-  margin-top: 2%;
-  width: 70%;
-  border: none;
+.divLinha {
+  margin-left: 33vw;
+  height: 10vh;
 }
-
-.box-search:focus {
-  /*barra de pesquisa*/
-  box-shadow: 0px 5px 6px rgba(255, 255, 255, 0.274);
-
-}
-
-.tp {
+.topicos1 {
   /*topicos que estruturam os outros*/
-  margin-left: 37.7vw;
-  padding-bottom: 1%;
+  margin-left: 25vw;
+  width: 100%;
 }
-
-#embaixo {
-  /*topicos embaixo da barra de pesquisa*/
-  margin-right: 11.9vw;
-  margin-left: -10vw;
-  margin-bottom: -1%;
+.dropdown-menu {
+  /* DROPVIEW DOS CONTEÚDOS DA NAVBAR */
+  background-color: rgb(254, 255, 199);
+  border: 2px solid rgb(255, 255, 255);
+}
+.embaixo {
+  margin-left: 3.5vw;
 }
 
 #login {
-  margin-top: 2%;
-  width: 2.5%;
-  height: 3%;
+  /* LOGIN  */
+  width: 3%;
+  height: 34px;
   cursor: pointer;
+  margin-left: 5vw;
 }
-
 #carrinho {
-  margin-top: 2%;
-  margin-right: 10%;
-  width: 25px;
-  height: 29px;
+  /* CARRINHO DE RESERVA */
+  margin-right: 8vw;
+  width: 30px;
+  height: 34px;
   cursor: pointer;
 }
+b {
+  margin-right: -4.5vw;
+  margin-top: -2%;
+}
 
+ng-autocomplete {
+  width: auto;
+}
 
+.tam-search {
+  width: 31.25vw;
+}
 
+/*CARDS SLIDER*/
+/*CARDS SLIDER*/
 
+.cards {
+  /*TAMANHO DE LARGURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+  width: 98vw;
+}
+.card-slider {
+  /*TAMANHO DE ALTURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+  height: auto;
+}
+.carousel {
+  /*MARGINS PARA ESPAÇOS DA BORDAS*/
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: 5%;
+}
+.button-slider {
+  /*POSICIONAMENTOS DOS BOTÕES*/
+  margin-top: 170px;
+  height: 50px;
+}
+.carousel-control-prev {
+  /*COR E TAMANHO DO BOTÃO DE PREVIA*/
+  margin-left: 10px;
+  width: 40vw;
+  color: black;
+}
+.carousel-control-next {
+  /*COR E TAMANHO DO BOTÃO DE NEXT*/
+  width: 40vw;
+  color: black;
+}
+
+.cards-slider {
+  margin-left: 19vw;
+  align-items: center;
+  margin-right: 15vw;
+}
+
+.mar-card-slider {
+  /*MARGEN DO SEGUNDO CARD*/
+  width: 2vw;
+  margin-right: 250px;
+  margin-bottom: 50px;
+}
+
+.botaocard {
+  /* BOTÃO RESERVAR */
+  background-color: rgb(255, 208, 0);
+  border: none;
+  margin-top: 1px;
+  margin-left: 6.5px;
+  width: 12.85vw;
+  box-shadow: 0px 0px 3px black;
+}
+.botaocard:hover {
+  /* AO PASSAR O MOUSE EM CIMA */
+  transform: scale(1.001);
+  transition: transform 0.1s ease;
+}
+
+/*CARDS SLIDER*/
+/*CARDS SLIDER*/
+
+.cards {
+  /*TAMANHO DE LARGURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+  width: 98vw;
+}
+.card-slider {
+  /*TAMANHO DE ALTURA PARA EXIBIÇÃO COMPLETA DOS CARDS*/
+  height: auto;
+}
+.carousel {
+  /*MARGINS PARA ESPAÇOS DA BORDAS*/
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: 5%;
+}
+.button-slider {
+  /*POSICIONAMENTOS DOS BOTÕES*/
+  margin-top: 170px;
+  height: 50px;
+}
+.carousel-control-prev {
+  /*COR E TAMANHO DO BOTÃO DE PREVIA*/
+  margin-left: 10px;
+  width: 40vw;
+  color: black;
+}
+.carousel-control-next {
+  /*COR E TAMANHO DO BOTÃO DE NEXT*/
+  width: 40vw;
+  color: black;
+}
+
+.cards-slider {
+  margin-left: 19vw;
+  align-items: center;
+  margin-right: 15vw;
+}
+
+.mar-card-slider {
+  /*MARGEN DO SEGUNDO CARD*/
+  width: 2vw;
+  margin-right: 250px;
+  margin-bottom: 50px;
+}
+
+.botaocard {
+  /* BOTÃO RESERVAR */
+  background-color: rgb(255, 208, 0);
+  border: none;
+  margin-top: 1px;
+  margin-left: 6.5px;
+  width: 12.85vw;
+  box-shadow: 0px 0px 3px black;
+}
+.botaocard:hover {
+  /* AO PASSAR O MOUSE EM CIMA */
+  transform: scale(1.001);
+  transition: transform 0.1s ease;
+}
 
 /*------RESPONSIVO--------*/
 .pesquisa2 {
@@ -91,8 +203,31 @@
   display: none;
 }
 
-@media (max-width: 424px) {
+.topicos2 {
+  display: none;
+  background-color: transparent;
+}
 
+@media (max-width: 424px) {
+  .nav1 {
+    width: 104vw;
+  }
+
+  .nav2 {
+    width: 104vw;
+  }
+
+  .topicos1 {
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+    display: none;
+    background-color: transparent;
+  }
+
+  .topicos2 {
+    display: flex;
+  }
   .tp {
     margin-left: 10px;
   }
@@ -106,37 +241,60 @@
   }
 
   .pesquisa2 {
-    margin: auto;
-    margin: 10px;
-    margin-left: 10px;
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
     height: 50px;
-    width: 1000px;
+    width: 100vw;
     display: block;
   }
 
   .logo {
     margin-left: -10px;
+    margin-top: -75px;
   }
 
   #login {
-    margin-top: -80px;
-    margin-left: 250px;
-    width: 25px;
-    height: 29px;
+    margin-top: 33px;
+    margin-left: 100px;
+    width: 35px;
+    height: 39px;
     cursor: pointer;
   }
 
   #carrinho {
-    margin-top: -80px;
+    margin-top: 30px;
     margin-right: 1px;
-    width: 25px;
-    height: 29px;
+    width: 35px;
+    height: 39px;
     cursor: pointer;
+  }
+
+  .cards-slider {
+    margin-left: 15vw;
+    align-items: center;
+    margin-right: 15vw;
+  }
+
+  .botaocard {
+    /* BOTÃO RESERVAR */
+    background-color: rgb(255, 208, 0);
+    border: none;
+    margin-top: 1px;
+    margin-left: 6.5px;
+    width: 56vw;
+    box-shadow: 0px 0px 3px black;
+  }
+
+  .botaocard:hover {
+    /* AO PASSAR O MOUSE EM CIMA */
+    transform: scale(1.001);
+    transition: transform 0.1s ease;
   }
 }
 
 @media (max-width: 400px) {
-
   #login {
     margin-top: -80px;
     margin-left: 220px;

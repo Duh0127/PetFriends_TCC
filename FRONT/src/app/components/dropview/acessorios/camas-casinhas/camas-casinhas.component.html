@@ -1,177 +1,423 @@
-<nav class="navbar navbar-expand navbar-dark fundonav">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand navbar-dark fundonav nav1">
   <nav class="navbar navbar-light">
-    <a class="navbar-brand ">
-      <img src="/assets/img/logovert.png" routerLink="" width="80" height="80" class="d-inline-block logo">
-    </a>
-    <div class="form-group container-xl ">
-      <input type="text" class="form-control box-search pesquisa" placeholder="Pesquise no PetFriends">
-      <img src="/assets/img/user.png" id="login" class="zoom" routerLink="/login-cliente">
-      <img src="/assets/img/carrinho-de-compras.png" id="carrinho" class="zoom" routerLink="/reserva">
+    <img
+      src="/assets/img/logovert.png"
+      routerLink=""
+      width="90"
+      height="90"
+      class="d-inline-block logo"
+    />
+
+    <div class="divLinha form-group container-xl">
+      <div class="tam-search">
+        <ng-autocomplete
+          class="pesquisa"
+          placeholder="Pesquise no PetFriends"
+          (selected)="itemSelecionadoPesquisa()"
+          [itemTemplate]="itemTemplate"
+          [(ngModel)]="searchTerm"
+          (keyup)="search($event)"
+        >
+        </ng-autocomplete>
+
+
+        <ng-template #itemTemplate let-item>
+          <a [innerHTML]="item.name"></a>
+        </ng-template>
+
+        <ng-template #notFoundTemplate let-notFound>
+          <div [innerHTML]="notFound"></div>
+        </ng-template>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        id="login"
+        class="zoom"
+        fill="currentColor"
+        class="bi bi-person-fill"
+        viewBox="0 0 16 16"
+        routerLink="/perfil-associado"
+      >
+        <path
+          d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+        />
+      </svg>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-basket2-fill"
+        viewBox="0 0 16 16"
+        id="carrinho"
+        class="zoom"
+        routerLink="/reserva"
+      >
+        <path
+          d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z"
+        />
+      </svg>
     </div>
-    <ul class="nav tp">
-      <li class="nav-item dropdown embaixo" id="embaixo">
-        <a class="nav-link dropdown-toggle text-dark zoom" id="navbarDropdown" role="button" data-toggle="dropdown">Cachorros</a>
+
+    <ng-autocomplete
+      class="pesquisa2"
+      placeholder="Pesquise no PetFriends"
+      (selected)="itemSelecionadoPesquisa()"
+      [itemTemplate]="itemTemplate"
+      [(ngModel)]="searchTerm"
+      (keyup)="search($event)"
+    >
+    </ng-autocomplete>
+
+    <ul class="nav topicos1">
+      <li class="nav-item dropdown embaixo">
+        <a
+          class="nav-link dropdown-toggle text-dark zoom"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          >Cachorros</a
+        >
         <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item zoomdrop" routerLink="/comedouros-bebeoduros-cachorros">Comedouros e Bebedouros</a>
-          <a class="dropdown-item zoomdrop" routerLink="/farmacia">Farmácia</a>
+          <a
+            class="dropdown-item zoomdrop"
+            routerLink="/comedouros-bebeoduros-cachorros"
+            >Comedouros e Bebedouros</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/farmacia"
+            >Farmácia</a
+          >
           <a class="dropdown-item zoomdrop" routerLink="/higiene">Higiene</a>
-          <a class="dropdown-item zoomdrop" routerLink="/ossinhos">Ossinhos</a>
-          <a class="dropdown-item zoomdrop" routerLink="/petiscos">Petiscos</a>
+          <a class="dropdown-item zoomdrop" routerLink="/ossinhos"
+            >Ossinhos</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/petiscos"
+            >Petiscos</a
+          >
         </div>
       </li>
-      <li class="nav-item mt-2" id="embaixo">
-        <a></a>
-      </li>
-      <li class="nav-item dropdown embaixo" id="embaixo">
-        <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gatos</a>
+
+      <li class="nav-item dropdown embaixo">
+        <a
+          class="nav-link dropdown-toggle text-dark zoom"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Gatos</a
+        >
         <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
           <a class="dropdown-item zoomdrop" routerLink="/areia">Areia</a>
-          <a class="dropdown-item zoomdrop" routerLink="/comedouros-bebedouros-gatos">Comedouros e Bebedouros</a>
-          <a class="dropdown-item zoomdrop" routerLink="/escovas-pentes">Escovas e Pentes</a>
-          <a class="dropdown-item zoomdrop" routerLink="/higiene-gatos">Higiene</a>
-          <a class="dropdown-item zoomdrop" routerLink="/transporte">Transporte</a>
+          <a
+            class="dropdown-item zoomdrop"
+            routerLink="/comedouros-bebedouros-gatos"
+            >Comedouros e Bebedouros</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/escovas-pentes"
+            >Escovas e Pentes</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/higiene-gatos"
+            >Higiene</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/transporte"
+            >Transporte</a
+          >
         </div>
       </li>
-      <li class="nav-item mt-2" id="embaixo">
-        <a></a>
-      </li>
-      <li class="nav-item dropdown embaixo" id="embaixo">
-        <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Brinquedos</a>
+
+      <li class="nav-item dropdown embaixo">
+        <a
+          class="nav-link dropdown-toggle text-dark zoom"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Brinquedos</a
+        >
         <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item zoomdrop" routerLink="/bolinhas">Bolinhas</a>
-          <a class="dropdown-item zoomdrop" routerLink="/frisbees">Frisbees</a>
-          <a class="dropdown-item zoomdrop" routerLink="/varinhas">Varinhas</a>
+          <a class="dropdown-item zoomdrop" routerLink="/bolinhas"
+            >Bolinhas</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/frisbees"
+            >Frisbees</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/varinhas"
+            >Varinhas</a
+          >
         </div>
       </li>
-      <li class="nav-item mt-2" id="embaixo">
-        <a></a>
-      </li>
-      <li class="nav-item dropdown embaixo" id="embaixo">
-        <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ração</a>
+
+      <li class="nav-item dropdown embaixo">
+        <a
+          class="nav-link dropdown-toggle text-dark zoom"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Ração</a
+        >
         <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item zoomdrop" routerLink="/racao-seca">Ração Seca</a>
-          <a class="dropdown-item zoomdrop" routerLink="/racao-umida">Ração Úmida</a>
-          <a class="dropdown-item zoomdrop" routerLink="/racao-diet">Ração Diet</a>
+          <a class="dropdown-item zoomdrop" routerLink="/racao-seca"
+            >Ração Seca</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/racao-umida"
+            >Ração Úmida</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/racao-diet"
+            >Ração Diet</a
+          >
         </div>
       </li>
-      <li class="nav-item mt-2" id="embaixo">
-        <a></a>
-      </li>
-      <li class="nav-item dropdown embaixo" id="embaixo">
-        <a class="nav-link dropdown-toggle text-dark zoom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acessórios</a>
+
+      <li class="nav-item dropdown embaixo">
+        <a
+          class="nav-link dropdown-toggle text-dark zoom"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Acessórios</a
+        >
         <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item zoomdrop" routerLink="/camas-casinhas">Camas e Casinhas</a>
-          <a class="dropdown-item zoomdrop" routerLink="/coleiras-guias-peitorais">Coleiras, Guias e Peitorais</a>
+          <a class="dropdown-item zoomdrop" routerLink="/camas-casinhas"
+            >Camas e Casinhas</a
+          >
+          <a
+            class="dropdown-item zoomdrop"
+            routerLink="/coleiras-guias-peitorais"
+            >Coleiras, Guias e Peitorais</a
+          >
           <a class="dropdown-item zoomdrop" routerLink="/roupas">Roupas</a>
         </div>
       </li>
     </ul>
   </nav>
-  <input type="text" class="form-control box-search pesquisa2" placeholder="Pesquise no PetFriends">
 </nav>
+<!-- NABAR -->
+<!-- NAVBAR RESPONSIVA APP -->
+<nav class="navbar navbar-expand navbar-dark fundonav nav2">
+  <nav class="navbar navbar-light">
+    <ul class="nav topicos2">
+      <li class="nav-item dropdown embaixo">
+        <a
+          class="nav-link dropdown-toggle text-dark zoom"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          >Cachorros</a
+        >
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a
+            class="dropdown-item zoomdrop"
+            routerLink="/comedouros-bebeoduros-cachorros"
+            >Comedouros e Bebedouros</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/farmacia"
+            >Farmácia</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/higiene">Higiene</a>
+          <a class="dropdown-item zoomdrop" routerLink="/ossinhos"
+            >Ossinhos</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/petiscos"
+            >Petiscos</a
+          >
+        </div>
+      </li>
 
+      <li class="nav-item dropdown embaixo">
+        <a
+          class="nav-link dropdown-toggle text-dark zoom"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Gatos</a
+        >
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/areia">Areia</a>
+          <a
+            class="dropdown-item zoomdrop"
+            routerLink="/comedouros-bebedouros-gatos"
+            >Comedouros e Bebedouros</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/escovas-pentes"
+            >Escovas e Pentes</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/higiene-gatos"
+            >Higiene</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/transporte"
+            >Transporte</a
+          >
+        </div>
+      </li>
+
+      <li class="nav-item dropdown embaixo">
+        <a
+          class="nav-link dropdown-toggle text-dark zoom"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Brinquedos</a
+        >
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/bolinhas"
+            >Bolinhas</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/frisbees"
+            >Frisbees</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/varinhas"
+            >Varinhas</a
+          >
+        </div>
+      </li>
+
+      <li class="nav-item dropdown embaixo">
+        <a
+          class="nav-link dropdown-toggle text-dark zoom"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Ração</a
+        >
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/racao-seca"
+            >Ração Seca</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/racao-umida"
+            >Ração Úmida</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/racao-diet"
+            >Ração Diet</a
+          >
+        </div>
+      </li>
+
+      <li class="nav-item dropdown embaixo">
+        <a
+          class="nav-link dropdown-toggle text-dark zoom"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Acessórios</a
+        >
+        <div class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item zoomdrop" routerLink="/camas-casinhas"
+            >Camas e Casinhas</a
+          >
+          <a
+            class="dropdown-item zoomdrop"
+            routerLink="/coleiras-guias-peitorais"
+            >Coleiras, Guias e Peitorais</a
+          >
+          <a class="dropdown-item zoomdrop" routerLink="/roupas">Roupas</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</nav>
+<!-- NAVBAR RESPONSIVA APP -->
 
 <div class="container-fluid">
-  <div class="my-3 text-warning">
-    <h2>CAMAS E CASINHAS</h2>
-  </div>
+  <div class="my-3 text-warning text-center"><h2>CAMAS E CASINHAS</h2></div>
 
-  <div class="row centro">
-    <!--inicio row 1-->
-    <div class="col">
-      <!--inicio col 1-->
-      <app-card-produto
-        foto='https://www.petlove.com.br/images/products/215603/product/Toca_do_Gato_Furac%C3%A3o_Pet_Rosa_-_Rosa_2424465.jpg?1627692669'
-        nomeProduto="Toca do Gato Furacão Pet Rosa" [precoProduto]="73.90">
-      </app-card-produto>
+  <!--TELA NORMAL-->
+  <!--CAROUSEL CARDS-->
+  <div class="my-3" style="margin-left: 9px">
+    <div class="row mx-auto my-auto cards">
+      <div
+        id="recipeCarousel"
+        class="carousel slide w-100"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner w-100" role="listbox">
+          <!--PRIMEIRO CONJUNTO DE CARDS DO CAROUSEL-->
 
-      <div class="card">
-        <div class="card-body">
-          <details>
-            <summary>Ver Detalhes</summary>
-            - Resistente;
-            <br>
-            - Fácil de montar;
-            <br>
-            - Design moderno;
-            <br>
-            - De prática higienização;
-            <br>
-            - Base e cobertura ventilada.
-          </details>
-          <button routerLink="" class="btn btn-success mt-2" id="resbut">
-            <img src="/assets/img/icons8-comprar.png" id="imagemBotao">Reservar Produto
-          </button>
+          <div
+            class="carousel-item active card-slider"
+            style="height: auto"
+            data-interval="4000"
+          >
+            <div class="row cards-slider">
+              <!--inicio row 1-->
+              <div
+                *ngFor="
+                  let produto of listarProdutos
+                    | filter: searchKey:'nomeProduto'
+                "
+              >
+                <div class="col mar-card-slider">
+                  <!--inicio col 1-->
+                  <app-card-produto
+                    [routerLink]="['/desc-produto/' + produto.produtoId]"
+                    foto="data:image/jpeg;base64,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"
+                    nomeProduto="{{ produto.nomeProduto }}"
+                    [precoProduto]="produto.precoProduto"
+                  >
+                  </app-card-produto>
+                  <input
+                    type="button"
+                    class="botaocard"
+                    value="Adicionar ao Carrinho"
+                  />
+                </div>
+                <!--fim col 1-->
+              </div>
+              <!--TELA NORMAL-->
+            </div>
+            <!--fim row 1-->
+          </div>
+          <!--FIM PRIMEIRO CONJUNTO DO CAROUSEL-->
         </div>
+        <!--FIM CONJUNTO DE CARDS CAROUSEL-->
+
+        <!--BOTÕES CAROUSEL-->
+        <a
+          class="carousel-control-prev w-auto button-slider"
+          href="#recipeCarousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="sr-only">Previous</span>
+          <!--Botão de voltar-->
+        </a>
+
+        <a
+          class="carousel-control-next w-auto button-slider"
+          href="#recipeCarousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="sr-only">Next</span>
+          <!--Botão de avançar-->
+        </a>
+
+        <!--FIM BOTÕES DO CAROUSEL CARDS-->
       </div>
-
-      <br>
-      <br>
-      <br>
     </div>
-    <!--fim col 1-->
-
-    <div class="col">
-      <!--inicio col 2-->
-      <app-card-produto
-        foto='https://www.petlove.com.br/images/products/197744/large/Toca_Ecol%C3%B3gica_Recriar_Pet_2_Andares_Rosa_para_Gatos_1913399_3.jpg?1627635115'
-        nomeProduto="Toca Ecológica Recriar Pet 2 Andares Rosa para Gatos" [precoProduto]="243.00">
-      </app-card-produto>
-    </div>
-    <!--fim col 2-->
-
-    <div class="col">
-      <!--inicio col 3-->
-      <app-card-produto
-        foto='https://www.petlove.com.br/images/products/233857/product/Cama_Catbed_Chevron_Wave_para_Gatos_2625970.jpg?1627750073'
-        nomeProduto="Cama Catbed Chevron Wave para Gatos" [precoProduto]="153.00">
-      </app-card-produto>
-    </div>
-    <!--fim col 3-->
-
-    <div class="col">
-      <!--inicio col 4-->
-      <app-card-produto
-        foto='https://www.petlove.com.br/images/products/207901/product/Cama_com_Cabeceira_2G_Acess%C3%B3rios_Pet_Dream_Drog_Cor_4_-_Azul_2309988_%281%29.jpg?1627666294'
-        nomeProduto="Cama com Cabeceira 2G Acessórios Pet Dream Drog" [precoProduto]="180.00">
-      </app-card-produto>
-    </div>
-    <!--fim col 4-->
   </div>
-
-  <div class="row centro">
-    <div class="col">
-      <!--inicio col 5-->
-      <app-card-produto foto='https://static.petz.com.br/fotos/1633381262290.jpg' nomeProduto="Cama Lisa Petz Cinza"
-        [precoProduto]="179.99">
-      </app-card-produto>
-    </div>
-    <!--fim col 5-->
-
-    <div class="col">
-      <!--inicio col 3-->
-      <app-card-produto foto='https://static.petz.com.br/fotos/1567174074730.jpg'
-        nomeProduto="Cama Lisa Oval Sarja para Cães e Gatos Caqui" [precoProduto]="169.99">
-      </app-card-produto>
-    </div>
-    <!--fim col 3-->
-
-    <div class="col">
-      <!--inicio col 4-->
-      <app-card-produto foto='https://static.petz.com.br/fotos/10037100000162-1.jpg'
-        nomeProduto="Dogvilla Ferplast Casa Para Cães" [precoProduto]="1229.99">
-      </app-card-produto>
-    </div>
-    <!--fim col 4-->
-
-    <div class="col">
-      <!--inicio col 5-->
-      <app-card-produto foto='https://static.petz.com.br/fotos/1443788736268.jpg'
-        nomeProduto="Casa Furacão para Cães Preta" [precoProduto]="169.90">
-      </app-card-produto>
-    </div>
-    <!--fim col 5-->
-
-  </div>
-  <!--fim row 1-->
+  <!--FIM CAROUSEL CARDS-->
 </div>

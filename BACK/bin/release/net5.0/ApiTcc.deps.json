@@ -35,6 +35,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.15",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "5.0.15",
+          "Microsoft.EntityFrameworkCore.Analyzers": "5.0.15",
           "Microsoft.EntityFrameworkCore.Design": "5.0.15",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.15",
           "Microsoft.IdentityModel.Tokens": "6.7.1",
