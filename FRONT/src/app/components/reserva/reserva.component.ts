@@ -84,7 +84,7 @@ export class ReservaComponent implements OnInit {
       if (cadastro) {
         Swal.fire({icon: 'success',
           title: 'Pedido efetuado com sucesso!',
-          text: 'Espere o Associado entrar em contato com o você.',
+          text: 'Espere o Associado entrar em contato.',
           showConfirmButton: true,
           confirmButtonColor: '#ffd13a'});
       } else {
